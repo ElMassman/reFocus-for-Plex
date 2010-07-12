@@ -922,6 +922,8 @@
 
 <!---------- BANNER VIEW ------------------------------------------------------------------------------>
 	<include name="ListViewBanner">
+		<control type="group">
+			<visible>Container.Content(episodes)</visible><!--Brian-->
 		<control type="fixedlist" id="54">
 			<viewtype label="535">List</viewtype> 	
 			<posx>225</posx>
@@ -939,7 +941,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>!Container.Content(movies) + !Container.Content(seasons) + !Container.Content(episodes)</visible>
+			<!--visible>Container.Content(tvshows)</visible-->
 			<itemlayout condition="Container.Content(tvshows)" width="560" height="65">
 				<control type="label">
 					<posx>75</posx>
@@ -1025,7 +1027,7 @@
 					<align>left</align>
 					<width>900</width>
 					<include>bannerFocus</include>
-					<visible>![IsEmpty(ListItem.TVShowTitle) + IsEmpty(ListItem.Property(UnWatchedEpisodes))]</visible>
+					<visible>!Container.Content(TVShows)</visible>
 				</control>
 				<control type="label">
 					<posx>34</posx>
@@ -1050,6 +1052,7 @@
 					<include>bannerFocus</include>
 					</control>
 			</focusedlayout>
+		</control>
 		</control>
 	</include>
 
