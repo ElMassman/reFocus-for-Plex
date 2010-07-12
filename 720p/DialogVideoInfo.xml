@@ -1,0 +1,450 @@
+<window id="2003">
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+
+	<controls>
+<!-- FAKE INFO BUTTONS ------------------------------------------------------------------------------------------>
+		<control type="button" id="8000">
+			<label>SHOULD NOT SEE ME</label>
+			<onleft>9000</onleft>
+			<onright>-</onright>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="button" id="7000">
+			<label>SHOULD NOT SEE ME</label>
+			<onleft>9000</onleft>
+			<onright>-</onright>
+			<width>200</width>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+
+
+<!-- PAGELABELS ------------------------------------------------------------------------------------------------->
+		<control type="label">
+			<label>[LOWERCASE][COLOR=Color2]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Title][/LOWERCASE]</label>
+			<include>videoPageLabel</include>
+			<visible>Container.Content(movies) + !stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
+		</control>
+		<control type="label">
+			<label>[LOWERCASE][COLOR=Color2]$LOCALIZE[20410][/COLOR] $INFO[ListItem.Title][/LOWERCASE]</label>
+			<include>videoPageLabel</include>
+			<visible>Container.Content(movies) + stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
+		</control>
+		<control type="label">
+			<description>tv shows</description>
+			<label>[LOWERCASE][COLOR=Color2]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.TVShowTitle][/LOWERCASE]</label>
+			<include>videoPageLabel</include>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+		<control type="label">
+			<description>episodes</description>
+			<label>[LOWERCASE]$INFO[ListItem.TVShowTitle][/LOWERCASE]</label>
+			<include>videoPageLabel</include>
+			<visible>Container.Content(episodes)</visible>
+		</control>
+	
+<!-- IMAGES ------------------------------------------------------------------------------------------------------>	
+	<control type="group">
+		<posy>65</posy>
+		<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes)] + !Window.IsActive(101)</visible>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		<control type="image">
+			<width>482</width>
+			<height>625</height>
+			<texture border="48">frames/posterFrame3.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>thumbFadeTime</include>
+			<visible>!IsEmpty(ListItem.Title) + ![Container.Content(episodes) + !ControlGroup(9001).HasFocus()]</visible>
+		</control>
+		<control type="image">
+			<posx>33</posx>
+			<posy>32</posy>
+			<width>395</width>
+			<height>569</height>
+			<texture diffuse="frames/posterFrameMask.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<visible>!Container.Content(episodes)</visible>
+		</control>
+		<control type="image">
+			<description>Actor image</description>
+			<posx>33</posx>
+			<posy>32</posy>
+			<width>395</width>
+			<height>569</height>
+			<texture diffuse="frames/posterFrameMask.png" scalediffuse="false">$INFO[Container(50).Listitem.Icon]</texture>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<!--<control type="image">
+			<posx>33</posx>
+			<posy>33</posy>
+			<width>219</width>
+			<height>203</height>
+			<texture>frames/posterframes/Gloss.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>!Container.Content(episodes)</visible>
+		</control>-->
+	</control>
+	
+	<control type="group">
+		<posx>8</posx>
+		<posy>70</posy>
+		<visible>[Container.Content(episodes) | Container.Content(musicvideos)] + !Window.IsActive(101) + !ControlGroup(9001).HasFocus()</visible>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		<control type="image">
+			<width>452</width>
+			<height>280</height>
+			<texture border="48">frames/wideFrame.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="largeimage">
+			<posx>26</posx>
+			<posy>27</posy>
+			<width>402</width>
+			<height>227</height>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<texture background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
+		</control>
+	</control>
+	
+	
+	
+	
+	<control type="group">
+		<posx>440</posx>
+		<posy>117</posy>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		<visible>!Container.Content(episodes) + !Window.IsActive(101)</visible>
+		<control type="label">
+			<posx>30</posx>
+			<width>780</width>
+			<label>$INFO[ListItem.Tagline]</label>
+			<include>Heading1</include>
+			<visible>Container.Content(movies) + !ControlGroup(9001).HasFocus()</visible>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<width>750</width>
+			<label>$INFO[ListItem.PlotOutline]</label>
+			<include>Heading1</include>
+			<visible>Container.Content(movies) + !ControlGroup(9001).HasFocus() + IsEmpty(ListItem.Tagline) + !IsEmpty(ListItem.PlotOutline)</visible>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<width>750</width>
+			<label>$INFO[ListItem.Plot]</label>
+			<include>Heading1</include>
+			<visible>Container.Content(movies) + !ControlGroup(9001).HasFocus() + [IsEmpty(ListItem.Tagline) + IsEmpty(ListItem.PlotOutline)]</visible>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<width>780</width>
+			<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
+			<include>Heading1</include>
+			<visible>ControlGroup(9001).HasFocus()</visible>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<width>780</width>
+			<textcolor>Color7</textcolor>
+			<include>Heading1</include>
+			<label>[UPPERCASE]$INFO[ListItem.PlotOutline][/UPPERCASE]</label>
+			<visible>Container.Content(movies) + IsEmpty(ListItem.Tagline) + !stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<width>780</width>
+			<include>Heading1</include>
+			<label>[UPPERCASE]$INFO[ListItem.Property(ReleaseDate)][/UPPERCASE]</label>
+			<visible>Container.Content(movies) + stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
+		</control>
+		<control type="label">
+			<posx>30</posx>
+			<width>780</width>
+			<include>Heading1</include>
+			<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+			<visible>Container.Content(tvshows) + !ControlGroup(9001).HasFocus()</visible>
+		</control>
+
+		<control type="textbox" id="4">
+			<posx>30</posx>
+			<posy>185</posy>
+			<width>760</width>
+			<height>240</height>
+			<onleft>5</onleft>
+			<onright>999</onright>
+			<onup>50</onup>
+			<ondown>5</ondown>
+			<label>$INFO[ListItem.PlotOutline] $INFO[ListItem.MPAA]</label>
+			<include>textBox</include>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.PlotOutline)</visible>
+		</control>
+		<control type="textbox" id="4">
+			<posx>30</posx>
+			<posy>185</posy>
+			<width>760</width>
+			<height>240</height>
+			<onleft>5</onleft>
+			<onright>999</onright>
+			<onup>50</onup>
+			<ondown>5</ondown>
+			<label>$INFO[ListItem.Plot] $INFO[ListItem.MPAA]</label>
+			<include>textBox</include>
+			<visible>IsEmpty(ListItem.PlotOutline)</visible>
+		</control>
+		
+	</control>
+	
+
+
+<!--=== MOVIES ===------------------------------------------------------------------------------------------------------------------------------->
+	<control type="grouplist" id="1000">
+		<visible>Container.Content(movies) + !Window.IsActive(101) + !ControlGroup(9001).HasFocus()</visible>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		<posx>470</posx>
+		<posy>167</posy>
+		<itemgap>6</itemgap>
+		
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[LOWERCASE]$INFO[ListItem.Genre][/LOWERCASE]</label>
+			<include>infoDialogMeta</include>
+		</control>
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[LOWERCASE]$LOCALIZE[31091] $INFO[ListItem.Writer][/LOWERCASE]</label>
+			<include>infoDialogMeta</include>
+		</control>
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[LOWERCASE]$LOCALIZE[31090] $INFO[ListItem.Director][/LOWERCASE]</label>
+			<include>infoDialogMeta</include>
+		</control>
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[LOWERCASE]$INFO[ListItem.Studio][/LOWERCASE]</label>
+			<include>infoDialogMeta</include>
+			<visible>!stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
+		</control>
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[UPPERCASE]$INFO[ListItem.Studio][/UPPERCASE]</label>
+			<include>infoDialogMeta</include>
+			<visible>stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
+		</control>
+	</control>
+	
+	
+	<control type="group">
+		<posx>470</posx>
+		<posy>600</posy>
+		<include>typeFlagsGroupI</include>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+	</control>
+	<control type="label" id="1">
+		<posx>470</posx>
+		<posy>630</posy>
+		<width>620</width>
+		<label>[LOWERCASE]$INFO[ListItem.Path][/LOWERCASE]</label>
+		<include>infoDialogMeta2</include>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+	</control>
+
+	
+
+<!--=== TVSHOWS ===------------------------------------------------------------------------------------------------------------------------------->
+	<control type="grouplist" id="1000">
+		<visible>Container.Content(tvshows) + !Window.IsActive(101) + !ControlGroup(9001).HasFocus()</visible>
+		<include>transition2</include> 
+		<include>contextMenuHide</include>
+		<posx>470</posx>
+		<posy>167</posy>
+		<itemgap>6</itemgap>
+
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[LOWERCASE]$LOCALIZE[31080][/LOWERCASE]</label>
+			<include>infoDialogMeta</include>
+		</control>
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[LOWERCASE]$LOCALIZE[31081][/LOWERCASE]</label>>
+			<include>infoDialogMeta</include>
+		</control>
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[LOWERCASE]$INFO[ListItem.Premiered][/LOWERCASE]</label>
+			<include>infoDialogMeta</include>
+		</control>
+		<control type="label" id="1">
+			<width>770</width>
+			<label>[LOWERCASE]$INFO[ListItem.Studio][/LOWERCASE]</label>
+			<include>infoDialogMeta</include>
+		</control>
+	</control>
+
+
+<!--- EPISODES ---------------------------------------------------------------------------------------------------------------------->
+	<control type="group">
+		<posx>470</posx>
+		<posy>117</posy>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		<visible>Container.Content(episodes) + !Window.IsActive(101)</visible>
+		
+		<control type="label">
+			<width>780</width>
+			<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+			<include>Heading1</include>
+			<visible>!ControlGroup(9001).HasFocus()</visible>
+		</control>
+		<control type="label">
+			<width>780</width>
+			<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
+			<include>Heading1</include>
+			<visible>ControlGroup(9001).HasFocus()</visible>
+		</control>
+	
+		<control type="grouplist" id="1000">
+			<posy>50</posy>
+			<itemgap>6</itemgap>
+			<visible>!ControlGroup(9001).HasFocus()</visible>
+	
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[31074]</label>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[31091] $INFO[ListItem.Writer]</label>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[31090] $INFO[ListItem.Director]</label>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$INFO[ListItem.Premiered]</label>
+				<include>infoDialogMeta</include>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$INFO[ListItem.MPAA]</label>
+				<include>infoDialogMeta</include>
+			</control>
+		</control>
+		
+		
+		<control type="textbox" id="4">
+			<posy>210</posy>
+			<width>700</width>
+			<height>240</height>
+			<onleft>5</onleft>
+			<onright>999</onright>
+			<onup>50</onup>
+			<ondown>5</ondown>
+			<label>$INFO[ListItem.Plot]</label>
+			<include>textBox</include>
+		</control>
+		
+		<control type="label" id="1">
+			<posx>470</posx>
+			<posy>630</posy>
+			<width>620</width>
+			<label>[LOWERCASE]$INFO[ListItem.Path][/LOWERCASE]</label>
+			<include>infoDialogMeta2</include>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+		</control>
+	
+	</control>
+	
+
+
+<!--- FLAGS ---------------------------------------------------------------------------------------------------------------->
+<control type="group">
+	<include>transition2</include>
+	<include>contextMenuHide</include>
+	<visible>!ControlGroup(9001).HasFocus()</visible>
+	<control type="group">
+		<posx>200r</posx>
+		<posy>125r</posy>
+		<include>studioFlagsBig</include>
+		<visible>Container.Content(movies)</visible>
+	</control>
+	<control type="group">
+		<posx>200r</posx>
+		<posy>117r</posy>
+		<include>networkFlagsBig</include>
+		<visible>Container.Content(tvshows)</visible>
+	</control>
+</control>		
+		
+	
+		
+<!---== CAST LIST ==--->
+<control type="group" id="9001">
+	<control type="list" id="50">
+		<posx>450</posx>
+		<posy>167</posy>
+		<width>765</width>
+		<height>480</height>
+		<onleft>9000</onleft>
+		<onright>-</onright>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<scrolltime>200</scrolltime>
+		<include>transition2</include>
+		<include>contextMenuHide</include>
+		
+		<itemlayout height="40">
+			<control type="label">
+				<posx>20</posx>
+				<height>35</height>
+				<width>720</width>
+				<label>$INFO[ListItem.Label]</label>
+				<font>normalLow</font>
+				<textcolor>Color1</textcolor>
+			</control>
+		</itemlayout>
+		<focusedlayout height="40">
+			<control type="image">
+				<posy>0</posy>
+				<width>760</width>
+				<height>42</height>
+				<texture border="16,16,16,16">settings/list-focus.png</texture>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<width>720</width>
+				<height>35</height>
+				<font>normalLow</font>
+				<textcolor>Color5</textcolor>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+		</focusedlayout>
+	</control>
+</control>
+
+
+
+		
+<!--=== FUNCTIONS ===------------------------------------------------------------------------------------------------------------------------------->
+	<control type="group">
+		<include>transition1</include>
+		<include>InfoDialogMenu</include>
+	</control>
+	</controls>
+</window>

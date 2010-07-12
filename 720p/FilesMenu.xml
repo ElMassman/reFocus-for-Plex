@@ -1,0 +1,481 @@
+<includes>
+	<include name="FilesMenu">
+	
+		<include>pageContextMenu</include>
+		
+		<control type="group" id="9000">
+			<posx>-275</posx>
+			<posy>20</posy>
+			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
+			<onright>50</onright>
+			<include>pagemenus</include>
+			<include>transition2</include>
+			
+			<control type="group">
+				<visible>Window.IsActive(2)</visible>
+				
+				<control type="button" id="1">
+					<description>Choose Viewtype</description>
+					<label>[UPPERCASE]$LOCALIZE[31930][/UPPERCASE]</label>
+					<onleft>1</onleft>
+					<onup>90</onup>
+					<ondown>3</ondown>
+					<onright>50</onright>
+					<onclick>SetFocus(40)</onclick>
+					<include>contextButton</include>
+					<visible allowhiddenfocus="true">!ControlGroup(40).HasFocus()</visible>
+					<enable>!IsEmpty(Container.FolderPath)</enable>
+				</control>
+
+				<control type="grouplist" id="40">
+					<onup>40</onup>
+					<ondown>40</ondown>
+					<onleft>1</onleft>
+					<onright>1</onright>
+					<itemgap>-125</itemgap>
+					<visible allowhiddenfocus="true">ControlGroup(40).HasFocus()</visible>
+
+					<control type="button" id="41">
+						<label>[UPPERCASE]$LOCALIZE[535][/UPPERCASE]</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onup>1</onup>
+						<onclick>Container.SetViewMode(50)</onclick>
+						<include>contextButton</include>
+					</control>
+					<control type="button" id="43">
+						<label>[UPPERCASE]$LOCALIZE[31014][/UPPERCASE]</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onclick>Container.SetViewMode(57)</onclick>
+						<include>contextButton</include>
+						<visible>Container().HasFiles</visible>
+					</control>
+					<control type="button" id="44">
+						<label>[UPPERCASE]$LOCALIZE[31002][/UPPERCASE]</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onclick>Container.SetViewMode(53)</onclick>
+						<include>contextButton</include>
+					</control>
+					<control type="button" id="45">
+						<label>next</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onclick>Container.NextViewMode</onclick>
+						<include>contextButton</include>
+					</control>
+				</control>
+
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posy>43</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>1</onup>
+					<ondown>4</ondown>
+					<include>contextButton</include>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>ascending / descending</description>
+					<posy>86</posy>
+					<label>$LOCALIZE[584]</label>
+					<altlabel>$LOCALIZE[585]</altlabel>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>6</ondown>
+					<include>contextButton</include>
+					<onclick>Container.SortDirection</onclick>
+					<onclick>Container.SortDirection</onclick>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="button" id="6">
+					<description>SlideShow button</description>
+					<posy>129</posy>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>7</ondown>
+					<label>108</label>
+					<include>contextButton</include>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="button" id="7">
+					<description>recursive slideshow</description>
+					<label>361</label>
+					<posy>171</posy>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>6</onup>
+					<ondown>9</ondown>
+					<label>361</label>
+					<include>contextButton</include>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="button" id="9">
+					<description>Randomize button</description>
+					<posy>214</posy>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>7</onup>
+					<ondown>30</ondown>
+					<label>13319</label>
+					<include>contextButton</include>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posy>256</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>9</onup>
+					<ondown>90</ondown>
+					<include>contextButton</include>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+			
+				<control type="button" id="90">
+					<description>GALLERY: no fullscreen</description>
+					<label>$LOCALIZE[31063]</label>
+					<posy>299</posy>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<onup>30</onup>
+					<ondown>1</ondown>
+					<onclick>Skin.ToggleSetting(galleryFull)</onclick>
+					<onclick>Container.SetViewMode(53)</onclick>
+					<selected>!Skin.HasSetting(galleryFull)</selected>
+					<include>contextButton</include>
+					<visible>Control.IsVisible(56) + ![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="button" id="90">
+					<description>GALLERY: fullscreen</description>
+					<label>$LOCALIZE[31062]</label>
+					<posy>299</posy>
+					<onleft>2</onleft>
+					<onright>50</onright>
+					<onup>30</onup>
+					<ondown>1</ondown>
+					<onclick>Skin.ToggleSetting(galleryFull)</onclick>
+					<onclick>Container.SetViewMode(56)</onclick>
+					<selected>Skin.HasSetting(galleryFull)</selected>
+					<include>contextButton</include>
+					<visible>Control.IsVisible(53) + ![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+			</control>
+
+
+
+
+			<control type="group">
+				<description>Slide Menu for Videos</description>
+				<visible>Window.IsActive(MyVideoFiles)</visible>
+				
+				<control type="button" id="1">
+					<description>Choose Viewtype</description>
+					<label>[UPPERCASE]$LOCALIZE[31930][/UPPERCASE]</label>
+					<onleft>-</onleft>
+					<onup>32</onup>
+					<ondown>3</ondown>
+					<onright>50</onright>
+					<onclick>SetFocus(40)</onclick>
+					<include>contextButton</include>
+					<visible allowhiddenfocus="true">!ControlGroup(40).HasFocus()</visible>
+				</control>
+				
+				<control type="grouplist" id="40">
+					<onup>40</onup>
+					<ondown>40</ondown>
+					<onleft>1</onleft>
+					<onright>1</onright>
+					<itemgap>-125</itemgap>
+					<visible allowhiddenfocus="true">ControlGroup(40).HasFocus()</visible>
+	
+					<control type="button" id="41">
+						<label>[UPPERCASE]$LOCALIZE[535][/UPPERCASE]</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onup>1</onup>
+						<onclick>Container.SetViewMode(50)</onclick>
+						<include>contextButton</include>
+					</control>
+					<control type="button" id="43">
+						<label>[UPPERCASE]$LOCALIZE[31003][/UPPERCASE]</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onclick>Container.SetViewMode(58)</onclick>
+						<include>contextButton</include>
+					</control>
+					<control type="button" id="44">
+						<label>next</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onclick>Container.NextViewMode</onclick>
+						<include>contextButton</include>
+					</control>
+				</control>
+				
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posy>43</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>1</onup>
+					<ondown>4</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>ascending / descending</description>
+					<posy>86</posy>
+					<label>$LOCALIZE[584]</label>
+					<altlabel>$LOCALIZE[585]</altlabel>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<include>contextButton</include>
+					<onclick>Container.SortDirection</onclick>
+					<onclick>Container.SortDirection</onclick>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="togglebutton" id="5">
+					<description>Library button</description>
+					<posy>129</posy>
+					<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+					<altlabel>[LOWERCASE]$LOCALIZE[31901][/LOWERCASE]</altlabel>
+					<onclick>ReplaceWindow(myvideolibrary)</onclick>
+					<selected>Window.IsVisible(myvideolibrary)</selected>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>7</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+				<control type="togglebutton" id="7">
+					<description>Stacking</description>
+					<posy>172</posy>
+					<label>$LOCALIZE[14000]</label>
+					<altlabel>$LOCALIZE[14001]</altlabel>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>5</onup>
+					<ondown>30</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posy>215</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>7</onup>
+					<ondown>31</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+				<control type="button" id="31">
+					<description>LastFM Love button</description>
+					<posy>258</posy>
+					<label>LastFM Love</label>
+					<onleft>50</onleft>
+					<onright>50	</onright>
+					<onup>30</onup>
+					<ondown>32</ondown>
+					<onclick>XBMC.LastFM.Love</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+				<control type="button" id="32">
+					<description>LastFM Ban button</description>
+					<posy>301</posy>
+					<label>LastFM Ban</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>31</onup>
+					<ondown>1</ondown>
+					<onclick>XBMC.LastFM.Ban</onclick>
+					<visible>LastFM.RadioPlaying</visible>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+			</control>
+			
+			
+			<control type="group">
+				<description>Slide Menu for Music</description>
+				<visible>Window.IsActive(501) | Window.IsActive(502)</visible>
+				<control type="button" id="1">
+					<description>Choose Viewtype</description>
+					<label>[UPPERCASE]$LOCALIZE[31930][/UPPERCASE]</label>
+					<onleft>-</onleft>
+					<onup>90</onup>
+					<ondown>3</ondown>
+					<onright>50</onright>
+					<onclick>SetFocus(40)</onclick>
+					<include>contextButton</include>
+					<visible allowhiddenfocus="true">!ControlGroup(40).HasFocus()</visible>
+					<enable>false</enable>
+				</control>
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posy>43</posy>
+					<label>103</label>
+					<onleft>-</onleft>
+					<onright>50</onright>
+					<onup>1</onup>
+					<ondown>4</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+				<control type="togglebutton" id="4">
+					<description>ascending / descending</description>
+					<posy>86</posy>
+					<label>$LOCALIZE[584]</label>
+					<altlabel>$LOCALIZE[585]</altlabel>
+					<onleft>-</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>5</ondown>
+					<include>contextButton</include>
+					<onclick>Container.SortDirection</onclick>
+					<onclick>Container.SortDirection</onclick>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="togglebutton" id="5">
+					<description>Library button</description>
+					<posy>129</posy>
+					<label>[LOWERCASE]$LOCALIZE[14022] $LOCALIZE[456][/LOWERCASE]</label>
+					<altlabel>[LOWERCASE]$LOCALIZE[31901][/LOWERCASE]</altlabel>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>4</onup>
+					<ondown>30</ondown>
+					<onclick>ReplaceWindow(myvideofiles)</onclick>
+					<selected>Window.IsVisible(myvideolibrary)</selected>
+					<include>contextButton</include>
+					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
+				</control>
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posy>172</posy>
+					<label>1036</label>
+					<onleft>-</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>5</onup>
+					<ondown>1</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Slide Menu for Scripts</description>
+				<visible>Window.IsActive(20)</visible>
+				
+				<include>filesMenuConstants</include>
+				
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posy>43</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>1</onup>
+					<ondown>5</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posy>86</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>9</onup>
+					<ondown>2</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Slide Menu for Programs</description>
+				<visible>Window.IsActive(1)</visible>
+				
+				<include>filesMenuConstants</include>
+				
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posy>43</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>1</onup>
+					<ondown>5</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posy>86</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>9</onup>
+					<ondown>2</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Slide Menu for addons</description>
+				<visible>Window.IsActive(addonbrowser)</visible>
+
+				<include>filesMenuConstants</include>
+
+				<control type="button" id="3">
+					<description>Sort by button</description>
+					<posy>43</posy>
+					<label>103</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>1</onup>
+					<ondown>5</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+
+				<control type="button" id="30">
+					<description>Favourites Button</description>
+					<posy>86</posy>
+					<label>1036</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<onup>9</onup>
+					<ondown>2</ondown>
+					<include>contextButton</include>
+					<visible>!ControlGroup(40).HasFocus()</visible>
+				</control>
+			</control>	
+												
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,22 @@
+<window id="2004">
+
+	<controls>
+		<control type="label" id="200">
+			<posx>130r</posx>
+			<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
+			<include>notificationTop</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0)]</visible>
+		</control>
+		<control type="label" id="200">
+			<posx>130r</posx>
+			<label>[UPPERCASE]$INFO[MusicPlayer.Artist][/UPPERCASE]</label>
+			<include>notificationBottom</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0)]</visible>
+		</control>
+		<control type="label" id="1">
+			<label>$INFO[MusicPlayer.TimeRemaining]</label>
+			<include>notificationSide</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(overlay) + ![Window.IsActive(107) | Window.IsActive(104) | Window.IsActive(10133) | Window.IsActive(10112) | Window.IsActive(0)]</visible>
+		</control>
+	</controls>
+</window>

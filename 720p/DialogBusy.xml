@@ -1,0 +1,23 @@
+<window id="136">
+
+	<coordinates>
+		<system>1</system>
+		<posx>604</posx>
+		<posy>324</posy>
+	</coordinates>
+	
+	<include>fadeinout</include>
+	
+	<controls>
+		<control type="group">
+			<visible>![Window.IsVisible(InfoDialog) | Window.IsVisible(SliderDialog) | Window.IsVisible(VolumeBar)]</visible>
+			<control type="multiimage">
+				<width>72</width>
+				<height>72</height>
+				<imagepath>busy</imagepath>
+				<timeperimage>300</timeperimage>
+				<fadetime>0</fadetime>
+			</control>
+		</control>
+	</controls>
+</window>

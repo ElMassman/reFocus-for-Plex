@@ -1,0 +1,105 @@
+<window id="12">
+	<defaultcontrol>0</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<previouswindow>Home</previouswindow>
+
+	<controls>
+		<include>themeBackground2</include>
+		<include>allscreens</include>
+		<control type="group">
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[UPPERCASE]$LOCALIZE[10507] [/UPPERCASE]</label>
+				<visible>Window.IsActive(settings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[LOWERCASE]$LOCALIZE[5] [COLOR=Color2]$LOCALIZE[480][/COLOR][/LOWERCASE]</label>
+				<visible>Window.IsActive(appearancesettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[LOWERCASE]$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<visible>Window.IsActive(videossettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[LOWERCASE]$LOCALIZE[0] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<visible>Window.IsActive(programssettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[LOWERCASE]$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<visible>Window.IsActive(musicsettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[LOWERCASE]$LOCALIZE[1] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<visible>Window.IsActive(picturessettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[LOWERCASE]$LOCALIZE[705] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<visible>Window.IsActive(networksettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[LOWERCASE]$LOCALIZE[12600] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>>
+				<visible>Window.IsActive(weathersettings)</visible>
+			</control>
+			<control type="label">
+				<include>PageLabel</include>
+				<label>[LOWERCASE]$LOCALIZE[13000] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<visible>Window.IsActive(systemsettings)</visible>
+			</control>
+		</control>
+
+		<control type="group">
+			<control type="grouplist" id="3">
+				<description>button area</description>
+				<posx>50</posx>
+				<posy>105</posy>
+				<width>271</width>
+				<height>410</height>
+				<itemgap>0</itemgap>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<include>transition2</include>
+			</control>
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<posx>350</posx>
+				<posy>105</posy>
+				<width>850</width>
+				<height>600</height>
+				<itemgap>0</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<include>transition2</include>
+			</control>
+
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<include>settingsButton</include>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<include>settingsButton</include>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Default SpinControlex</description>
+				<reverse>yes</reverse>
+				<include>settingsButton</include>
+			</control>
+			<control type="button" id="10">
+				<description>Default Category Button</description>
+				<label>[UPPERCASE]224[/UPPERCASE]</label>
+				<include>categoryButton</include>
+			</control>
+		</control>
+	</controls>
+</window>

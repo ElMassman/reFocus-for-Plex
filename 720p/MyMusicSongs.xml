@@ -1,0 +1,51 @@
+<window id="501">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<previouswindow>Home</previouswindow>
+	<allowoverlay>yes</allowoverlay>
+	
+	<controls>
+		<include>themeBackground2</include>
+		<control type="image">
+			<posx>575</posx>
+			<posy>242</posy>
+			<width>860</width>
+			<height>145</height>
+			<texture border="0,30,0,30">views/list-focus.png</texture>
+			<visible>Control.IsVisible(51)</visible>
+			<include>contextMenuHide</include>
+			<include>transition2</include>
+			<animation effect="slide" start="0" end="-117" time="0" condition="Control.IsVisible(51) + !Container(51).HasFiles">Conditional</animation>
+		</control>
+		
+		<include>PageControl</include>
+		<include>pageslide</include>
+		<include>ListViewNodes</include>
+		<include>AllViewCommonPageControls</include>
+		<include>MusicLibPageLabels</include>
+		<include>allscreens</include>
+		<include>FilesMenu</include>
+		
+		<!--- LIST VIEW ------------------------>
+			<control type="group">
+				<include>infoDialogHide</include>
+				<include>transition2</include>
+				<include>contextMenuHide</include>
+				<visible>Control.IsVisible(50)</visible>
+				<control type="group">
+					<posx>620</posx>
+					<posy>85</posy>
+					<control type="largeimage">
+						<width>512</width>
+						<height>512</height>
+						<aspectratio scalediffuse="true" align="center">keep</aspectratio>
+						<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[ListItem.Thumb]</texture>
+						<bordertexture border="28">frames/wideFrame.png</bordertexture>
+						<bordersize>32</bordersize>
+						<include>thumbFadeTime</include>
+						<visible>!IsEmpty(ListItem.Thumb)</visible>
+					</control>
+				</control>
+			</control>
+		
+	</controls>
+</window>  

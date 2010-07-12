@@ -1,0 +1,25 @@
+<window id="2006">
+	<defaultcontrol>-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<include>screentype</include>
+			<visible>IsEmpty(MusicPlayer.Property(Fanart_Image) + !Skin.HasSetting(musicVis) | Skin.HasSetting(musicVisBlend)</visible>
+		</control>
+		
+		<control type="image">
+			<description>Fanart image</description>
+			<include>screentype</include>
+			<texture fallback="special://skin/backgrounds/library/artistNoFanart.png">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			<visible>Skin.HasSetting(musicVis)</visible>
+			<include>fadeinout</include>
+			<animation effect="fade" start="100" end="80" time="0" condition="Skin.HasSetting(musicVisBlend)">Conditional</animation>
+		</control>
+		
+		<include>musicOSDInfo</include>
+
+
+	</controls>
+</window>

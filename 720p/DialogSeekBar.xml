@@ -1,0 +1,169 @@
+﻿<window id="115">
+	<defaultcontrol>901</defaultcontrol>
+	<visible>![Window.IsActive(101) | Window.IsActive(2901) | Player.ShowInfo] + [Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+
+	<controls>
+		<control type="group" id="213">
+			<posx>0</posx>
+			<posy>635</posy>
+			<include>videoFullScreenInfo</include>
+			
+			<control type="image" id="1">
+				<include>screenwidth</include>
+				<height>230</height>
+				<texture flipy="false">OSD/fullscreenInfo.png</texture>
+			</control>
+
+			<control type="progress" id="1">
+				<description>Progressbar</description>
+				<posx>220</posx>
+				<posy>47</posy>
+				<width>800</width>
+				<height>22</height>
+				<info>Player.Progress</info>
+			</control>
+			
+			<control type="group" id="901">
+				<posx>200</posx>
+				<posy>46</posy>
+				<include>fadeinout</include>
+				<control type="label" id="24">
+					<align>right</align>
+					<label>[UPPERCASE]$LOCALIZE[15107][/UPPERCASE]</label>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+					<visible>Player.Caching</visible>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31051]</label>
+					<visible>Player.Playing + !Control.IsVisible(24)</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31040]</label>
+					<visible>Player.Paused + !Control.IsVisible(24)</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31040]</label>
+					<visible>Player.Paused + !Control.IsVisible(24)</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31041]</label>
+					<visible>Player.Forwarding2x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31042]</label>
+					<visible>Player.Forwarding4x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31043]</label>
+					<visible>Player.Forwarding8x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31044]</label>
+					<visible>Player.Forwarding16x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31045]</label>
+					<visible>Player.Forwarding32x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31046]</label>
+					<visible>Player.Rewinding2x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31047]</label>
+					<visible>Player.Rewinding4x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31048]</label>
+					<visible>Player.Rewinding8x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31049]</label>
+					<visible>Player.Rewinding16x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="0">
+					<align>right</align>
+					<label>$LOCALIZE[31050]</label>
+					<visible>Player.Rewinding32x</visible>
+					<textcolor>Color4</textcolor>
+					<include>screenwidth</include>
+					<include>Heading3</include>
+				</control>
+			</control>
+		
+			<control type="group" id="901">
+				<posx>1000</posx>
+				<posy>46</posy>
+				<include>fadeinout</include>
+				<control type="label" id="22">
+					<posx>40</posx>
+					<description>seek time</description>
+					<width>300</width>
+					<align>left</align>
+					<label>$INFO[Player.Time]</label>
+					<textcolor>Color4</textcolor>
+					<include>Heading3</include>
+				</control>
+				<control type="label" id="22">
+					<description>duration</description>
+					<posx>1240</posx>
+					<width>300</width>
+					<align>left</align>
+					<label>$INFO[Player.Duration]</label>
+					<textcolor>Color4</textcolor>
+					<include>Heading3</include>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

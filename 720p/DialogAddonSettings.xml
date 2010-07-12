@@ -1,0 +1,145 @@
+<window id="10140">
+	<defaultcontrol always="true">9</defaultcontrol>
+	
+	<include>dialogOpen</include>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>290</posx>
+		<posy>125</posy>
+	</coordinates>
+
+	<controls>
+		<control type="image">
+			<width>700</width>
+			<height>515</height>
+			<include>dialogWindow</include>
+		</control>
+		
+		<control type="label" id="20">
+			<description>heading label</description>
+			<width>532</width>
+			<include>dialogHeading</include>
+		</control>
+
+		<control type="image">
+			<posx>19</posx>
+			<posy>75</posy>
+			<width>663</width>
+			<include>dialogSeparator</include>
+		</control>
+		<control type="image">
+			<posx>19</posx>
+			<posy>116</posy>
+			<width>663</width>
+			<include>dialogSeparator</include>
+		</control>
+
+		<control type="grouplist" id="9">
+			<description>button area</description>
+			<posx>19</posx>
+			<posy>76</posy>
+			<width>663</width>
+			<height>481</height>
+			<itemgap>0</itemgap>
+			<onleft>9</onleft>
+			<onright>9</onright>
+			<onup>9001</onup>
+			<ondown>2</ondown>
+			<orientation>horizontal</orientation>
+		</control>
+		
+		<control type="grouplist" id="2">
+			<description>control area</description>
+			<posx>19</posx>
+			<posy>115</posy>
+			<width>663</width>
+			<height>480</height>
+			<itemgap>0</itemgap>
+			<pagecontrol>60</pagecontrol>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>9</onup>
+			<ondown>9001</ondown>
+		</control>
+		
+		<control type="scrollbar" id="30">
+			<visible>false</visible>
+		</control>
+
+		<control type="button" id="13">
+			<width>221</width>
+			<texturenofocus border="20">-</texturenofocus>
+			<texturefocus border="20">dialogs/list-focus.png</texturefocus>
+			<font>normalBoldLow</font>
+			<height>40</height>
+			<include>dialogButton</include>
+		</control>
+		
+		<control type="button" id="3">
+			<include>dialogListButton</include>
+		</control>
+		<control type="radiobutton" id="4">
+			<include>dialogRadio</include>
+		</control>
+		<control type="spincontrolex" id="5">
+			<include>dialogSpin</include>
+		</control>
+		
+		<control type="label" id="7">
+			<height>45</height>
+			<font>normalLow</font>
+			<label>-</label>
+			<textcolor>Color2</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+		</control>
+		<control type="image" id="6">
+			<visible>false</visible>
+		</control>
+		
+		<control type="sliderex" id="8">
+			<description>Default Slider</description>
+			<height>40</height>
+			<font>font13</font>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
+			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+		</control>
+		
+		<control type="group" id="9001">
+			<posx>34</posx>
+			<posy>440</posy>
+			<control type="button" id="12">
+				<description>Defaults Button</description>
+				<label>409</label>
+				<onup>2</onup>
+				<onleft>11</onleft>
+				<onright>10</onright>
+				<ondown>9</ondown>
+				<include>dialogButton</include>
+			</control>
+			<control type="button" id="10">
+				<description>Ok Button</description>
+				<posx>375</posx>
+				<label>186</label>
+				<onup>2</onup>
+				<onleft>12</onleft>
+				<onright>11</onright>
+				<ondown>9</ondown>
+				<include>dialogButton</include>
+			</control>
+			<control type="button" id="11">
+				<description>Cancel Button</description>
+				<posx>515</posx>
+				<label>222</label>
+				<onup>2</onup>
+				<onleft>10</onleft>
+				<onright>12</onright>
+				<ondown>9</ondown>
+				<include>dialogButton</include>
+			</control>
+		</control>
+	</controls>
+</window>

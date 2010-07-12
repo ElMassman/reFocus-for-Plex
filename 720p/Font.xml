@@ -1,0 +1,309 @@
+<fonts>
+	<fontset id="Default" unicode="true">
+
+<!-- pagelabels ----------------------------------------------------->
+		<font>
+			<name>special</name>
+			<filename>Light.ttf</filename>
+			<size>52</size>
+		</font>
+		
+<!-- dialogvideoinfo ----------------------------------------------------->		
+		<font>
+			<name>special6</name>
+			<filename>RegularLow.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>special5</name>
+			<filename>LightCaps.ttf</filename>
+			<size>42</size>
+		</font>
+
+<!-- pagemenu ----------------------------------------------------->			
+		<font>
+			<name>pagemenu</name>
+			<filename>ZegoeLight-U-L.ttf</filename>
+			<size>34</size>
+		</font>
+		
+		
+		<font>
+			<name>normalBoldLow</name>
+			<filename>Light.ttf</filename>
+			<style>bold</style>
+			<size>22</size>
+		</font>
+	
+<!-- settings ------------------------------------------------>
+		<font>
+			<name>category</name>
+			<filename>ZegoeLight-U-L.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>special2Low</name>
+			<filename>Light.ttf</filename>
+			<size>42</size>
+		</font>
+
+
+<!-- small titleheader ---------------------------------------------->
+		<font>
+			<name>special3</name>
+			<filename>LightAlt.ttf</filename>
+			<size>28</size>
+		</font>
+
+
+<!-- home screen menu --------------------------------------------->	
+		<font>
+			<name>homeMenu</name>
+			<filename>Light.ttf</filename>
+			<size>55</size>
+		</font>
+		<!--<font>
+			<name>homeMenuFocus</name>
+			<filename>Light.ttf</filename>
+			<size>80</size>
+		</font>-->
+		<font>
+			<name>homeMenuInfo</name>
+			<filename>Light.ttf</filename>
+			<size>42</size>
+		</font>
+
+
+<!-- general ------------------------------------------------------>
+		<font>
+			<name>normal</name>
+			<filename>RegularOrg.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>normalLow</name>
+			<filename>RegularLow.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>normalCaps</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>medium</name>
+			<filename>RegularOrg.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>mediumCaps</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>mediumLow</name>
+			<filename>RegularLow.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>big</name>
+			<filename>RegularOrg.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>bigLow</name>
+			<filename>RegularLow.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>smallCaps</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>18</size>
+		</font>
+
+
+<!-- dialogs ------------------------------------------------------>	
+		<font>
+			<name>dialog1</name>
+			<filename>RegularLow.ttf</filename>
+			<size>32</size>
+			<aspect>0.90</aspect>
+		</font>
+		<font>
+			<name>dialog2</name>
+			<filename>RegularLow.ttf</filename>
+			<size>20</size>
+		</font>
+
+
+<!-- osd ------------------------------------------------------>	
+		<font>
+			<name>osd1</name>
+			<filename>LightCaps.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>osd2</name>
+			<filename>BoldCaps.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>osd3</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>20</size>
+		</font>
+
+
+
+
+
+
+	
+
+<!--- ORIGINALS FOR SCRIPT REFERENCE/LEGACY ---------------------------------------->
+		<font>
+			<name>font101</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>14</size>
+		</font>
+		<font>
+			<name>font10</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>14</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font12</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>16</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font13</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>17</size>
+		</font>
+		<font>
+			<name>special12</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>19</size>
+		</font>
+		<font>
+			<name>special13</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>19</size>
+			<style>bold</style>
+		</font>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!--<font>
+			<name>smallLow</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>18</size>
+		</font>-->
+		
+		<!---->
+		
+		<!---->
+		
+		<!--<font>
+			<name>listLow</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>24</size>
+		</font>-->
+		
+		<!--<font>
+			<name>xbigLow</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>36</size>
+		</font>-->
+
+		<!---->
+		
+		
+		<!-- visualisation -----------------------------------------		
+		<font>
+			<name>vis1</name>
+			<filename>BoldCaps.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>vis2</name>
+			<filename>LightCaps.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
+			<name>vis3</name>
+			<filename>LightCaps.ttf</filename>
+			<size>20</size>
+		</font>---->
+		
+		
+		<!--<font>
+			<name>lyrics</name>
+			<filename>Light.ttf</filename>
+			<size>28</size>
+		</font>-->
+		
+		<!--<font>
+			<name>vis4</name>
+			<filename>ZegoeUI-UBold.ttf</filename>
+			<size>200</size>
+		</font>-->
+		
+		
+		<!---->
+		
+		
+		<!-- fat titleheader --------------------------------------------	
+		<font>
+			<name>special4</name>
+			<filename>ZegoeUI-U-L.ttf</filename>
+			<size>32</size>
+		</font>---->
+
+<!-- obsolete --------------------------------------------------	
+		----->
+
+<!-- subheader ----------------------------------------------
+		-------->
+
+<!-- now playing screen artist -------------------------------------------	
+		-------->
+
+<!-- now playing screen title --------------------------------------------
+		<font>
+			<name>special8</name>
+			<filename>ZegoeLight-U.ttf</filename>
+			<size>250</size>
+		</font>-------->
+
+<!-- now playing screen album ---------------------------------------------	
+		<font>
+			<name>special9</name>
+			<filename>ZegoeLight-U.ttf</filename>
+			<size>55</size>
+		</font>------->
+
+<!-- ????????? ----------------------------------------------	
+		<font>
+			<name>special10</name>
+			<filename>ZegoeCapsBold.ttf</filename>
+			<size>180</size>
+		</font>
+		<font>
+			<name>special11</name>
+			<filename>ZegoeLight-U-L.ttf</filename>
+			<size>34</size>
+		</font>----->
+		
+	</fontset>
+</fonts>

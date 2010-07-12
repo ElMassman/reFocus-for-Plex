@@ -1,0 +1,641 @@
+<includes>
+
+<!---------- LIST VIEW NODES -------------------------------------------------------------------------------------------->
+	<include name="ListViewNodes">
+		<control type="list" id="50">
+			<viewtype label="535">List</viewtype> 	
+			<posy>76</posy>
+			<width>625</width>
+			<height>605</height>
+			<onleft>9000</onleft>
+			<onright>23</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>150</scrolltime>
+			<pagecontrol>23</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			
+			<!--<visible>IsEmpty(container.folderpath) | !Container(50).HasFiles |  [Window.IsActive(501) | Window.IsActive(502)] + Container(50).HasFiles</visible>-->
+
+			<itemlayout width="570" height="40">
+				<control type="label">
+					<posx>40</posx>
+					<width>570</width>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<include>listMenu</include>
+				</control>
+			</itemlayout>
+			<focusedlayout width="570" height="40">
+				<control type="image">
+					<posy>-28</posy>
+					<width>570</width>
+					<height>100</height>
+					<texture border="0,30,0,30">views/list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<width>570</width>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<include>listMenuFocus</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+
+<!---------- LIST VIEW -------------------------------------------------------------------------------------------->
+	<include name="ListViewFiles">
+		<control type="fixedlist" id="51">
+			<viewtype label="535">list</viewtype> 	
+			<posx>620</posx>
+			<posy>90</posy>
+			<width>600</width>
+			<height>580</height>
+			<onleft>9000</onleft>
+			<onright>23</onright>
+			<onup>51</onup>
+			<ondown>51</ondown>
+			<scrolltime>150</scrolltime>
+			<orientation>vertical</orientation>
+			<focusposition>3</focusposition>
+			<pagecontrol>23</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>[!IsEmpty(container.folderpath) + Container(51).HasFiles]</visible>
+
+			<itemlayout width="600" height="65">
+				<control type="label">
+					<posx>0</posx>
+					<width>600</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow</font>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>600</width>
+					<label>$INFO[ListItem.Size]</label>
+					<include>amtIgnore</include>
+					<font>smallCaps</font>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+				</control>
+			</itemlayout>
+			<focusedlayout width="600" height="70">
+				<control type="label">
+					<posx>0</posx>
+					<width>600</width>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<font>bigLow</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>600</width>
+					<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+					<include>amtIgnore</include>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>	
+
+
+<!---------- SLIDE VIEW (FILES)---------------------------------------------------------------------------->
+	<include name="VideoFilesSlide">
+		<control type="wraplist" id="58">
+			<viewtype label="Slide">wrap</viewtype>
+			<posx>-590</posx>
+			<posy>110</posy>
+			<width>2060</width>
+			<height>430</height>
+			<onleft>58</onleft>
+			<onright>58</onright>
+			<onup>9000</onup>
+			<ondown>67</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>67</pagecontrol>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Container.HasFiles</visible>
+
+			<itemlayout width="415" height="300">
+				<control type="image">
+					<width>432</width>
+					<height>268</height>
+					<texture border="48">frames/wideFrame.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>thumbFadeTime</include>
+				</control>
+				<control type="image">
+					<posx>26</posx>
+					<posy>27</posy>
+					<width>382</width>
+					<height>215</height>
+					<texture background="true" diffuse="frames/wideFrameMask.png" fallback="special://skin/backgrounds/library/moviesNoFanart.png">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>381</posx>
+					<posy>216</posy>
+					<include>watchedOverlay</include>
+				</control>
+			</itemlayout>
+			<focusedlayout height="300" width="415">
+				<control type="image">
+					<width>432</width>
+					<height>268</height>
+					<texture border="48">frames/wideFrame.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>thumbFadeTime</include>
+					<include>artSlideFocus</include>
+				</control>
+				<control type="image">
+					<posx>26</posx>
+					<posy>27</posy>
+					<width>382</width>
+					<height>215</height>
+					<texture background="true" diffuse="frames/wideFrameMask.png" fallback="special://skin/backgrounds/library/moviesNoFanart.png">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<include>artSlideFocus</include>
+				</control>
+				<control type="image">
+					<posx>381</posx>
+					<posy>216</posy>
+					<include>watchedOverlay</include>
+					<include>artSlideFocusOverlay</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+
+<!---------- THUMBNAILS VIEW (MUSIC) ---------------------------------------------------------------------------------->
+	<include name="ThumbnailsMF">
+		<control type="panel" id="59">
+			<viewtype label="Thumbnails">bigicon</viewtype>
+			<posx>35</posx>
+			<posy>95</posy>
+			<width>1320</width>
+			<height>600</height>
+			<onleft>9000</onleft>
+			<onup>59</onup>
+			<ondown>59</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>25</pagecontrol>
+
+			<itemlayout height="205" width="172">
+				<control type="image">
+					<width>162</width>
+					<height>162</height>
+					<texture border="2">outline-nofocus.png</texture>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>1</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<aspectratio>scale</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>1</posy>
+					<width>160</width>
+					<height>160</height>
+					<info>ListItem.Thumb</info>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>16</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+				</control>
+				<control type="label">
+					<posx>81</posx>
+					<posy>152</posy>
+					<width>160</width>
+					<height>40</height>
+					<font>smallCaps</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<textcolor>Color3</textcolor>
+				</control>
+			</itemlayout>
+
+			<focusedlayout height="205" width="172">
+				<control type="image">
+					<width>162</width>
+					<height>162</height>
+					<texture border="2">outline-focus.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>filesPanelFocus</include>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>1</posy>
+					<width>160</width>
+					<height>160</height>
+					<texture>DefaultMoviePoster.png</texture>
+					<info>ListItem.Thumb</info>
+					<aspectratio>scale</aspectratio>
+					<visible>!IsEmpty(ListItem.Thumb)</visible>
+					<include>filesPanelFocus</include>
+				</control>
+				<control type="image">
+					<posx>34</posx>
+					<posy>16</posy>
+					<width>96</width>
+					<height>96</height>
+					<info>ListItem.Icon</info>
+					<visible>IsEmpty(ListItem.Thumb)</visible>
+					<include>filesPanelFocus</include>
+				</control>
+				<control type="label">
+					<posx>81</posx>
+					<posy>152</posy>
+					<width>160</width>
+					<height>40</height>
+					<font>smallCaps</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<textcolor>Color1</textcolor>
+				</control>
+			</focusedlayout>			
+		</control>
+	</include>
+
+	
+<!---------- PLAYLIST VIEW ---------------------------------------------------------------------------------->
+	<include name="PlaylistView">
+		<control type="fixedlist" id="50">
+			<viewtype label="535">List</viewtype>
+			<posx>620</posx>
+			<posy>76</posy>
+			<width>600</width>
+			<height>605</height>
+			<onleft>9000</onleft>
+			<onright>23</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>150</scrolltime>
+			<focusposition>3</focusposition>
+			<pagecontrol>23</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+
+			<itemlayout width="600" height="65">
+				<control type="label">
+					<posx>0</posx>
+					<width>600</width>
+					<label>$INFO[ListItem.Title]</label>
+					<font>bigLow</font>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<width>600</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow</font>
+					<include>listMenu</include>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>600</width>
+					<label>$INFO[ListItem.Genre]</label>
+					<font>smallCaps</font>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+					<visible>VideoPlayer.Content(movies)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>600</width>
+					<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+					<font>normal</font>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+					<visible>VideoPlayer.Content(files)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout width="600" height="88">
+				<control type="label">
+					<posx>0</posx>
+					<width>600</width>
+					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+					<font>bigLow</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<width>600</width>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<font>bigLow</font>
+					<include>listMenuFocus</include>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>600</width>
+					<label>[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</label>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+					<visible>VideoPlayer.Content(movies)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>600</width>
+					<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+					<font>normal</font>
+					<include>listMenuFocus</include>
+					<visible>VideoPlayer.Content(files)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>600</width>
+					<label>[UPPERCASE]$LOCALIZE[31110][/UPPERCASE]</label>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+					<visible>VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>45</posy>
+					<width>600</width>
+					<label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration]</label>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+					<visible>!VideoPlayer.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>45</posy>
+					<width>600</width>
+					<label>$INFO[ListItem.Premiered]</label>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+					<visible>VideoPlayer.Content(episodes)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>		
+		
+	<include name="PlaylistViewM">
+		<control type="fixedlist" id="50">
+			<viewtype label="535">List</viewtype>
+			<posx>466</posx>
+			<posy>76</posy>
+			<width>625</width>
+			<height>605</height>
+			<onleft>9000</onleft>
+			<onright>23</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>150</scrolltime>
+			<focusposition>3</focusposition>
+			<pagecontrol>23</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+
+			<itemlayout width="770" height="65">
+				<control type="label">
+					<posx>0</posx>
+					<width>770</width>
+					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+					<font>bigLow</font>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<width>770</width>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<font>bigLow</font>
+					<include>listMenu</include>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>770</width>
+					<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+					<font>smallCaps</font>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+				</control>
+			</itemlayout>
+			<focusedlayout width="770" height="88">
+				<control type="label">
+					<posx>0</posx>
+					<width>770</width>
+					<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+					<font>bigLow</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<width>770</width>
+					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+					<font>bigLow</font>
+					<include>listMenuFocus</include>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>770</width>
+					<label>[UPPERCASE]$INFO[ListItem.Artist][/UPPERCASE]</label>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>45</posy>
+					<width>770</width>
+					<label>[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</label>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>																										
+
+																															
+<!---------- PAGECONTROL ------------------------------------------------------------------------------------------>
+	<include name="AllViewCommonPageControls">							
+		<control type="scrollbar" id="23">
+			<description>list</description>
+			<posx>1240</posx>
+			<posy>85</posy>
+			<height>590</height>
+			<onleft>50</onleft>
+			<visible>Control.IsVisible(50)</visible>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="23">
+			<description>list</description>
+			<posx>1240</posx>
+			<posy>85</posy>
+			<height>590</height>
+			<onleft>50</onleft>
+			<visible>Control.IsVisible(51)</visible>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="64">
+			<description>thumbnails</description>
+			<posx>1200</posx>
+			<posy>97</posy>
+			<height>497</height>
+			<onleft>50</onleft>
+			<visible>Control.IsVisible(57) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<animation effect="slide" start="0" end="-35" time="0" condition="Window.IsActive(2)">Conditional</animation>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="65">
+			<description>slide posters</description>
+			<posx>30</posx>
+			<posy>400</posy>
+			<width>1220</width>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<onleft>65</onleft>
+			<onright>65</onright>
+			<visible>Control.IsVisible(52) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+			<include>transition2</include>
+			<include>xScroller</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="66">
+			<description>slide fanart</description>
+			<posx>30</posx>
+			<posy>400</posy>
+			<width>1220</width>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<onleft>66</onleft>
+			<onright>66</onright>
+			<visible>Control.IsVisible(55) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+			<include>transition2</include>
+			<include>xScroller</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="67">
+			<description>slide episodes</description>
+			<posx>30</posx>
+			<posy>360</posy>
+			<width>1220</width>
+			<onup>58</onup>
+			<ondown>58</ondown>
+			<onleft>67</onleft>
+			<onright>67</onright>
+			<visible>Control.IsVisible(58)</visible>
+			<include>transition2</include>
+			<include>xScroller</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="70">
+			<description>slide albums</description>
+			<posx>30</posx>
+			<posy>385</posy>
+			<width>1220</width>
+			<onup>52</onup>
+			<ondown>52</ondown>
+			<onleft>70</onleft>
+			<onright>70</onright>
+			<visible>Control.IsVisible(52) + [Container.Content(albums)]</visible>
+			<include>transition2</include>
+			<include>xScroller</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="71">
+			<description>slide artists</description>
+			<posx>30</posx>
+			<posy>385</posy>
+			<width>1220</width>
+			<onup>55</onup>
+			<ondown>55</ondown>
+			<onleft>71</onleft>
+			<onright>71</onright>
+			<visible>Control.IsVisible(55) + Container.Content(artists)</visible>
+			<include>transition2</include>
+			<include>xScroller</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="75">
+			<description>thumbnails pictures</description>
+			<posx>1190</posx>
+			<posy>102</posy>
+			<height>497</height>
+			<onleft>50</onleft>
+			<visible>Control.IsVisible(57) + Window.IsActive(2)</visible>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+		<control type="scrollbar" id="76">
+			<description>banners</description>
+			<posx>1240</posx>
+			<posy>85</posy>
+			<height>596</height>
+			<onleft>50</onleft>
+			<visible>Control.IsVisible(54) + Container.Content(tvshows)</visible>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>Skin.HasSetting(scrollbar)</visible>
+			<enable>Skin.HasSetting(scrollbar)</enable>
+		</control>
+	</include>
+</includes>

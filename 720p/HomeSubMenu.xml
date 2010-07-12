@@ -1,0 +1,429 @@
+<includes>
+	<include name="homeSubMenu">
+	<control type="group" id="1100">
+		<posy>20</posy>
+
+<!-- VIDEO SUBMENU ----------------------------------------------------------------------------------------------->	
+			<control type="list" id="1110">
+				<posx>-800</posx>
+				<width>900</width>
+				<height>800</height>
+				<onup>1110</onup>
+				<ondown>1110</ondown>
+				<onleft>300</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<focusposition>1</focusposition>
+				<scrolltime>150</scrolltime>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(1)</visible>
+				<include>homeSubFocus</include>
+				<include>homeMenusLayout</include>
+				<content>
+
+					<item id="2">
+						<label>[LOWERCASE]$LOCALIZE[342][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,movietitles)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Library.HasContent(movies)</visible>
+					</item>
+					<item id="3">
+						<label>[LOWERCASE]$LOCALIZE[31023][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Library.HasContent(tvshows)</visible>
+					</item>
+					<item id="4">
+						<label>[LOWERCASE]$LOCALIZE[31095][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,recentlyaddedmovies)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Library.HasContent(movies) + Skin.HasSetting(homemenuRecentVideo)</visible>
+					</item>
+					<!--
+					<item id="4">
+						<label>[LOWERCASE]$LOCALIZE[31095][/LOWERCASE]</label>
+						<onclick>SetFocus(2110)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Library.HasContent(movies) + Skin.HasSetting(homemenuRecentVideo)</visible>
+					</item>
+					-->
+					<item id="5">
+						<label>[LOWERCASE]$LOCALIZE[31094][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,recentlyaddedepisodes)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Library.HasContent(tvshows) + Skin.HasSetting(homemenuRecentVideo)</visible>
+					</item>
+					<!--
+					<item id="5">
+						<label>[LOWERCASE]$LOCALIZE[31094][/LOWERCASE]</label>
+						<onclick>SetFocus(2120)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Library.HasContent(tvshows) + Skin.HasSetting(homemenuRecentVideo)</visible>
+					</item>
+					-->
+					<item id="6">
+						<label>[LOWERCASE]$LOCALIZE[31024][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,musicvideotitles)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Library.HasContent(musicvideos)</visible>
+					</item>
+					<item id="7">
+						<label>[LOWERCASE]$LOCALIZE[31052][/LOWERCASE]</label>
+						<onclick>XBMC.ActivateWindow(MyVideoLibrary, plugin://plugin.video.applemovietrailerlight/)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<!--<item id="8">
+						<label>[LOWERCASE]$LOCALIZE[31914][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,plugin://video)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>-->
+					<item id="9">
+						<label>[LOWERCASE]$LOCALIZE[136][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,playlists)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="10">
+						<label>[LOWERCASE]$LOCALIZE[1024][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoFiles)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="11">
+						<label>[LOWERCASE]$LOCALIZE[13350][/LOWERCASE]</label>
+						<onclick>ActivateWindow(28)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Player.HasVideo</visible>
+					</item>
+				</content>
+			</control>
+
+<!-- MUSIC SUBMENU ----------------------------------------------------------------------------------------------->	
+			<control type="list" id="1120">
+				<posx>-800</posx>
+				<width>900</width>
+				<height>800</height>
+				<onup>1120</onup>
+				<ondown>1120</ondown>
+				<onleft>300</onleft>
+				<onright>8000</onright>
+				<orientation>vertical</orientation>
+				<focusposition>1</focusposition>
+				<scrolltime>150</scrolltime>
+				<visible>Container(300).HasFocus(2)</visible>
+				<include>homeSubFocus</include>
+				<include>homeMenusLayout</include>
+				<content>
+					
+					<item id="1">
+						<label>[LOWERCASE]$LOCALIZE[132][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicLibrary,albums)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="2">
+						<label>[LOWERCASE]$LOCALIZE[31970][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicLibrary,recentlyaddedalbums)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Skin.HasSetting(homemenuRecentMusic)</visible>
+					</item>
+					<item id="3">
+						<label>[LOWERCASE]$LOCALIZE[31971][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicLibrary,recentlyplayedalbums)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Skin.HasSetting(homemenuRecentMusic)</visible>
+					</item>
+					<item id="4">
+						<label>[LOWERCASE]$LOCALIZE[133][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicLibrary,artists)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Skin.HasSetting(homemenuArtists)</visible>
+					</item>
+					<item id="5">
+						<label>[LOWERCASE]$LOCALIZE[135][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicLibrary,genres)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Skin.HasSetting(homemenuGenres)</visible>
+					</item>
+					<item id="6">
+						<label>[LOWERCASE]$LOCALIZE[136][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicLibrary,playlists)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Skin.HasSetting(homemenuPlaylists)</visible>
+					</item>
+					<!--<item id="7">
+						<label>[LOWERCASE]$LOCALIZE[31914][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicFiles,plugin://music/)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>-->
+					<item id="8">
+						<label>[LOWERCASE]$LOCALIZE[589][/LOWERCASE]</label>
+						<onclick>XBMC.PlayerControl(Partymode)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Skin.HasSetting(homemenuPartyMode)</visible>
+					</item>
+					<item id="9">
+						<label>[LOWERCASE]LastFM[/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicLibrary,lastfm://)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>AudioScrobbler.Enabled</visible>
+					</item>
+					<item id="10">
+						<label>[LOWERCASE]LastFM Love[/LOWERCASE]</label>
+						<onclick>XBMC.LastFM.Love</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>LastFM.RadioPlaying</visible>
+					</item>
+					<item id="11">
+						<label>[LOWERCASE]LastFM Ban[/LOWERCASE]</label>
+						<onclick>XBMC.LastFM.Ban</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>LastFM.RadioPlaying</visible>
+					</item>
+					<!--<item id="12">
+						<label>[LOWERCASE]Shoutcast[/LOWERCASE]</label>
+						<onclick>XBMC.ActivateWindow(MyMusicLibrary,shout://)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>-->
+					<item id="13">
+						<label>[LOWERCASE]$LOCALIZE[31024][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyVideoLibrary,musicvideotitles)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>Library.HasContent(musicvideos)</visible>
+					</item>
+					<item id="14">
+						<label>[LOWERCASE]$LOCALIZE[1024][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyMusicFiles)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+				</content>
+			</control>
+
+
+<!-- PICTURES SUBMENU ----------------------------------------------------------------------------------------------->	
+			<control type="list" id="1130">
+				<posx>-800</posx>
+				<width>900</width>
+				<height>800</height>
+				<onup>1130</onup>
+				<ondown>1130</ondown>
+				<onleft>300</onleft>
+				<onright>8000</onright>
+				<orientation>vertical</orientation>
+				<focusposition>1</focusposition>
+				<scrolltime>150</scrolltime>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(3)</visible>
+				<include>homeSubFocus</include>
+				<include>homeMenusLayout</include>
+				<content>
+					<item id="1">
+						<label>[LOWERCASE]$LOCALIZE[1024][/LOWERCASE]</label>
+						<onclick>ActivateWindow(2)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="3">
+						<label>[LOWERCASE]$LOCALIZE[31914][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyPictures,plugin://pictures/)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+				</content>
+			</control>
+		
+		
+<!-- ACCESSORIES SUBMENU ----------------------------------------------------------------------------------------------->	
+			<control type="list" id="1140">
+				<posx>-800</posx>
+				<width>900</width>
+				<height>800</height>
+				<onup>1140</onup>
+				<ondown>1140</ondown>
+				<onleft>300</onleft>
+				<onright>8000</onright>
+				<orientation>vertical</orientation>
+				<focusposition>1</focusposition>
+				<scrolltime>150</scrolltime>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(4)</visible>
+				<include>homeSubFocus</include>
+				<include>homeMenusLayout</include>
+				<content>
+					<item id="1">
+						<label>[LOWERCASE]$LOCALIZE[1036][/LOWERCASE]</label>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>!Skin.HasSetting(homemenuFavourites)</visible>
+					</item>
+					<item id="2">
+						<label>[LOWERCASE]$LOCALIZE[0][/LOWERCASE]</label>
+						<onclick>ActivateWindow(1)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>!Skin.HasSetting(homemenuPrograms)</visible>
+					</item>
+					<item id="3">
+						<label>[LOWERCASE]$LOCALIZE[10020][/LOWERCASE]</label>
+						<onclick>ActivateWindow(MyScripts)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>!Skin.HasSetting(homemenuScripts)</visible>
+					</item>
+					<item id="4">
+						<label>[LOWERCASE]$LOCALIZE[8][/LOWERCASE]</label>
+						<onclick>ActivateWindow(2600)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+						<visible>!Skin.HasSetting(homemenuWeather)</visible>
+					</item>
+					<item id="5">
+						<label>[LOWERCASE]$LOCALIZE[7][/LOWERCASE]</label>
+						<onclick>ActivateWindow(Filemanager)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="6">
+						<label>[LOWERCASE]$LOCALIZE[130][/LOWERCASE]</label>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+				</content>
+			</control>
+		
+		
+<!-- SETTINGS SUBMENU ----------------------------------------------------------------------------------------------->	
+			<control type="list" id="1150">
+				<posx>-800</posx>
+				<width>900</width>
+				<height>800</height>
+				<onup>1150</onup>
+				<ondown>1150</ondown>
+				<onleft>300</onleft>
+				<onright>8000</onright>
+				<orientation>vertical</orientation>
+				<focusposition>1</focusposition>
+				<scrolltime>150</scrolltime>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(5)</visible>
+				<include>homeSubFocus</include>
+				<include>homeMenusLayout</include>
+				<content>
+					<item id="0">
+						<label>[LOWERCASE]reFocus[/LOWERCASE]</label>
+						<onclick>ActivateWindow(59)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="1">
+						<label>[LOWERCASE]$LOCALIZE[480][/LOWERCASE]</label>
+						<onclick>ActivateWindow(appearancesettings)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="2">
+						<label>[LOWERCASE]$LOCALIZE[1212][/LOWERCASE]</label>
+						<onclick>ActivateWindow(videossettings)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="3">
+						<label>[LOWERCASE]$LOCALIZE[10001][/LOWERCASE]</label>
+						<onclick>ActivateWindow(programssettings)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="4">
+						<label>[LOWERCASE]$LOCALIZE[10005][/LOWERCASE]</label>
+						<onclick>ActivateWindow(musicsettings)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="5">
+						<label>[LOWERCASE]$LOCALIZE[10002][/LOWERCASE]</label>
+						<onclick>ActivateWindow(picturessettings)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>	
+					<item id="6">
+						<label>[LOWERCASE]$LOCALIZE[24001][/LOWERCASE]</label>
+						<onclick>ActivateWindow(addonbrowser)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>	
+					<item id="7">
+						<label>[LOWERCASE]$LOCALIZE[13279][/LOWERCASE]</label>
+						<onclick>ActivateWindow(networksettings)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="8">
+						<label>[LOWERCASE]$LOCALIZE[8][/LOWERCASE]</label>
+						<onclick>ActivateWindow(weathersettings)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="9">
+						<label>[LOWERCASE]$LOCALIZE[13000][/LOWERCASE]</label>
+						<onclick>ActivateWindow(systemsettings)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+					<item id="10">
+						<label>[LOWERCASE]$LOCALIZE[13200][/LOWERCASE]</label>
+						<onclick>ActivateWindow(34)</onclick>
+						<onclick>Dialog.Close(111)</onclick>
+					</item>
+				</content>
+			</control>
+		
+	
+<!-- EXIT SUBMENU ----------------------------------------------------------------------------------------------->	
+			<control type="list" id="1160">
+				<posx>-800</posx>
+				<width>900</width>
+				<height>800</height>
+				<onup>1160</onup>
+				<ondown>1160</ondown>
+				<onleft>300</onleft>
+				<onright>800</onright>
+				<orientation>vertical</orientation>
+				<focusposition>1</focusposition>
+				<scrolltime>150</scrolltime>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(11)</visible>
+				<include>homeSubFocus</include>
+				<include>homeMenusLayout</include>
+				<content>
+					<item id="1">
+						<label>[LOWERCASE]$LOCALIZE[20126][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>dialog.close(all,true)</onclick>
+						<onclick>system.logoff</onclick>
+					</item>
+					<item id="2">
+						<label>[LOWERCASE]$LOCALIZE[13009][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.Quit()</onclick>
+					</item>
+					<item id="3">
+						<label>[LOWERCASE]$LOCALIZE[13011][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.Suspend</onclick>
+						<visible>System.CanSuspend</visible>
+					</item>
+					<item id="4">
+						<label>[LOWERCASE]$LOCALIZE[13010][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.Hibernate</onclick>
+						<visible>System.CanHibernate</visible>
+					</item>
+					<item id="5">
+						<label>[LOWERCASE]$LOCALIZE[13005][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.ShutDown</onclick>
+					</item>
+					<item id="6">
+						<label>[LOWERCASE]$LOCALIZE[31911][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),30)</onclick>
+						<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
+					</item>
+					<item id="7">
+						<label>[LOWERCASE]$LOCALIZE[31912][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),60)</onclick>
+						<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
+					</item>
+					<item id="8">
+						<label>[LOWERCASE]$LOCALIZE[31913][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),120)</onclick>
+						<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
+					</item>
+					<item id="9">
+						<label>[LOWERCASE]$LOCALIZE[13014][/LOWERCASE]</label>
+						<onclick>Dialog.Close(111)</onclick>
+						<onclick>XBMC.Minimize()</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+	</include>
+</includes>

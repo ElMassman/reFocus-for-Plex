@@ -1,0 +1,312 @@
+<includes>
+	<include name="homeRecent">
+	
+	
+	<control type="group">
+		<visible>ControlGroup(2100).HasFocus</visible>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">special://skin/backgrounds/library/moviesNoFanart.png</texture>
+			<fadetime>850</fadetime>
+			<include>fadeinout</include>
+			<visible>Container(2110).HasFocus(1)</visible>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.1.Fanart)]</texture>
+			<fadetime>850</fadetime>
+			<include>fadeinout</include>
+			<visible>Container(2110).HasFocus(2)</visible>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.2.Fanart)]</texture>
+			<fadetime>850</fadetime>
+			<include>fadeinout</include>
+			<visible>Container(2110).HasFocus(3)</visible>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.3.Fanart)]</texture>
+			<fadetime>850</fadetime>
+			<include>fadeinout</include>
+			<visible>Container(2110).HasFocus(4)</visible>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.4.Fanart)]</texture>
+			<fadetime>850</fadetime>
+			<include>fadeinout</include>
+			<visible>Container(2110).HasFocus(5)</visible>
+		</control>
+		<control type="largeimage">
+			<include>screentype</include>
+			<aspectratio>scale</aspectratio>
+			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.5.Fanart)]</texture>
+			<fadetime>850</fadetime>
+			<include>fadeinout</include>
+			<visible>Container(2110).HasFocus(6)</visible>
+		</control>
+	</control>
+	
+	<control type="image">
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio align="left">stretch</aspectratio>
+		<texture>home/menuBackground.png</texture>
+	</control>
+	
+	<!--
+	<control type="image">
+		<posx>-20</posx>
+		<posy>435</posy>
+		<width>1320</width>
+		<height>295</height>
+		<texture border="0,0,0,15">osd/fullscreenInfo.png</texture>
+		<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+		<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		<include>transition2</include>
+		<include>infoDialogHide</include>
+		<visible>ControlGroup(2100).HasFocus + !Container(2110).HasFocus(1)</visible>
+	</control>
+	-->
+
+	<control type="group">
+		<visible>ControlGroup(2100).HasFocus</visible>
+		<control type="image">
+			<posx>7</posx>
+			<posy>385</posy>
+			<width>242</width>
+			<height>331</height>
+			<texture border="48">frames/posterFrameSmall.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>thumbFadeTime</include>
+			<include>fadeinout</include>
+			<visible>!Container(2110).HasFocus(1)</visible>
+		</control>
+		<control type="largeimage">
+			<posx>23</posx>
+			<posy>400</posy>
+			<width>210</width>
+			<height>300</height>
+			<include>homeRecentThumb</include>
+			<texture diffuse="frames/posterFrameMask.png">$INFO[Window.Property(LatestMovie.1.Thumb)]</texture>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<include>thumbFadeTime</include>
+			<visible>Container(2110).HasFocus(2)</visible>
+		</control>
+		<control type="largeimage">
+			<posx>23</posx>
+			<posy>400</posy>
+			<width>210</width>
+			<height>300</height>
+			<include>homeRecentThumb</include>
+			<texture diffuse="frames/posterFrameMask.png">$INFO[Window.Property(LatestMovie.2.Thumb)]</texture>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<include>thumbFadeTime</include>
+			<visible>Container(2110).HasFocus(3)</visible>
+		</control>
+		<control type="largeimage">
+			<posx>23</posx>
+			<posy>400</posy>
+			<width>210</width>
+			<height>300</height>
+			<include>homeRecentThumb</include>
+			<texture diffuse="frames/posterFrameMask.png">$INFO[Window.Property(LatestMovie.3.Thumb)]</texture>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<include>thumbFadeTime</include>
+			<visible>Container(2110).HasFocus(4)</visible>
+		</control>
+		<control type="largeimage">
+			<posx>23</posx>
+			<posy>400</posy>
+			<width>210</width>
+			<height>300</height>
+			<include>homeRecentThumb</include>
+			<texture diffuse="frames/posterFrameMask.png">$INFO[Window.Property(LatestMovie.4.Thumb)]</texture>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<include>thumbFadeTime</include>
+			<visible>Container(2110).HasFocus(5)</visible>
+		</control>
+		<control type="largeimage">
+			<posx>23</posx>
+			<posy>400</posy>
+			<width>210</width>
+			<height>300</height>
+			<include>homeRecentThumb</include>
+			<texture diffuse="frames/posterFrameMask.png">$INFO[Window.Property(LatestMovie.5.Thumb)]</texture>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<include>thumbFadeTime</include>
+			<visible>Container(2110).HasFocus(2)</visible>
+		</control>
+	</control>
+	
+	<!--
+	<control type="group">
+		<visible>ControlGroup(2100).HasFocus</visible>
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>490</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>[B]$INFO[Window.Property(LatestMovie.1.Genre)][/B]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalCaps</font>
+			<visible>Container(2110).HasFocus(2)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>490</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>[B]$INFO[Window.Property(LatestMovie.2.Genre)][/B]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalCaps</font>
+			<visible>Container(2110).HasFocus(3)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>	
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>490</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>[B]$INFO[Window.Property(LatestMovie.3.Genre)][/B]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalCaps</font>
+			<visible>Container(2110).HasFocus(4)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>	
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>490</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>[B]$INFO[Window.Property(LatestMovie.4.Genre)][/B]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalCaps</font>
+			<visible>Container(2110).HasFocus(5)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>	
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>490</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>[B]$INFO[Window.Property(LatestMovie.5.Genre)][/B]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalCaps</font>
+			<visible>Container(2110).HasFocus(6)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>	
+	</control>
+	
+	
+	<control type="group">
+		<visible>ControlGroup(2100).HasFocus</visible>
+		
+		
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>525</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$INFO[Window.Property(LatestMovie.1.Plot)]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalLow</font>
+			<visible>Container(2110).HasFocus(2)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>525</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$INFO[Window.Property(LatestMovie.2.Plot)]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalLow</font>
+			<visible>Container(2110).HasFocus(3)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>525</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$INFO[Window.Property(LatestMovie.3.Plot)]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalLow</font>
+			<visible>Container(2110).HasFocus(4)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>525</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$INFO[Window.Property(LatestMovie.4.Plot)]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalLow</font>
+			<visible>Container(2110).HasFocus(5)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>
+		<control type="textbox" id="8">
+			<posx>270</posx>
+			<posy>525</posy>
+			<width>975</width>
+			<height>182</height>
+			<align>left</align>
+			<aligny>top</aligny>
+			<label>$INFO[Window.Property(LatestMovie.5.Plot)]</label>
+			<textcolor>Color4</textcolor>
+			<font>normalLow</font>
+			<visible>Container(2110).HasFocus(6)</visible>
+			<animation effect="slide" start="0,600" end="0,0" easing="Out" tween="Quadratic" time="350">Visible</animation>
+			<animation effect="slide" start="0,0" end="0,600" easing="Out" tween="Quadratic" time="350">Hidden</animation>
+		</control>
+	</control>
+	
+	-->
+	
+	
+	
+	
+	
+		
+	
+	
+		
+	</include>
+</includes>
