@@ -656,7 +656,7 @@
 		<control type="group">
 				<posx>640</posx>
 				<posy>110</posy>
-				<visible>Control.IsVisible(50) + stringcompare(container.folderpath,plugin://video/)</visible>
+				<visible>Control.IsVisible(50)</visible>
 				<include>infoDialogHide</include>
 				<include>transition2</include>
 				<include>contextMenuHide</include>

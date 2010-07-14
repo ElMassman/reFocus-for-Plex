@@ -181,7 +181,7 @@
 				</control>
 			</focusedlayout>	
 			
-			<itemlayout condition="Container.Content(episodes) + !stringcompare(container.folderpath,videodb://5/)" width="560" height="65">
+			<itemlayout condition="Container.Content(episodes)" width="560" height="65">
 				<control type="label">
 					<posx>0</posx>
 					<width>540</width>
@@ -207,7 +207,7 @@
 					<include>listMenu</include>
 				</control>
 			</itemlayout>
-			<focusedlayout condition="Container.Content(episodes) + !stringcompare(container.folderpath,videodb://5/)" width="560" height="90">
+			<focusedlayout condition="Container.Content(episodes)" width="560" height="90">
 				<control type="label">
 					<posx>0</posx>
 					<width>540</width>
@@ -241,7 +241,7 @@
 				</control>
 			</focusedlayout>
 			
-			<itemlayout condition="Container.Content(episodes) + stringcompare(container.folderpath,videodb://5/)" width="560" height="65">
+			<itemlayout condition="Container.Content(episodes)" width="560" height="65">
 				<control type="label">
 					<posx>0</posx>
 					<width>540</width>
@@ -267,7 +267,7 @@
 					<include>listMenu</include>
 				</control>
 			</itemlayout>
-			<focusedlayout condition="Container.Content(episodes) + stringcompare(container.folderpath,videodb://5/)" width="560" height="90">
+			<focusedlayout condition="Container.Content(episodes)" width="560" height="90">
 				<control type="label">
 					<posx>0</posx>
 					<width>540</width>
@@ -506,7 +506,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>Container.Content(genres) | Container.Content(years) | Container.Content(directors) | Container.Content(Studios) | IsEmpty(container.folderpath) | stringcompare(container.folderpath,videodb://1/) | stringcompare(container.folderpath,videodb://2/) | stringcompare(container.folderpath,videodb://3/) | stringcompare(container.folderpath,videodb://1/7/) | stringcompare(container.folderpath,special://videoplaylists/) | stringcompare(container.folderpath,special://musicplaylists/) | stringcompare(container.folderpath,plugin://video/) | !IsEmpty(Container.PLuginName)</visible>
+			<visible>Container.Content(genres) | Container.Content(years) | Container.Content(directors) | Container.Content(Studios) | IsEmpty(container.folderpath)</visible>
 
 			<itemlayout width="625" height="40">
 				<control type="label">
@@ -923,7 +923,7 @@
 <!---------- BANNER VIEW ------------------------------------------------------------------------------>
 	<include name="ListViewBanner">
 		<control type="group">
-			<visible>Container.Content(episodes)</visible><!--Brian-->
+			<visible>Container.Content(tvshows)</visible><!--Brian-->
 		<control type="fixedlist" id="54">
 			<viewtype label="535">List</viewtype> 	
 			<posx>225</posx>
@@ -941,7 +941,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<!--visible>Container.Content(tvshows)</visible-->
+			<visible>Container.Content(tvshows)</visible>
 			<itemlayout condition="Container.Content(tvshows)" width="560" height="65">
 				<control type="label">
 					<posx>75</posx>
@@ -1027,7 +1027,6 @@
 					<align>left</align>
 					<width>900</width>
 					<include>bannerFocus</include>
-					<visible>!Container.Content(TVShows)</visible>
 				</control>
 				<control type="label">
 					<posx>34</posx>
@@ -1185,7 +1184,7 @@
 					<include>screentype</include>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" fallback="special://skin/backgrounds/library/moviesNoFanart.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
-					<!--visible>Container.Content(movies)</visible-->
+					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<include>screentype</include>
@@ -1199,7 +1198,7 @@
 					<include>screentype</include>
 					<aspectratio aligny="left">scale</aspectratio>
 					<texture background="true" fallback="special://skin/backgrounds/library/moviesNoFanart.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
-					<!--visible>Container.Content(movies)</visible-->
+					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<include>screentype</include>

@@ -1,4 +1,4 @@
-﻿<window>
+<window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
@@ -13,10 +13,10 @@
 		</control>
 		
 		<control type="image">
-			<posx>512</posx>
-			<posy>333</posy>
-			<width>256</width>
-			<height>53</height>
+			<posx>545</posx>
+			<posy>295</posy>
+			<width>245</width>
+			<height>130</height>
 			<texture>startuplogo.png</texture>
 			<aspectratio>keep</aspectratio>
 			<animation type="WindowOpen">
