@@ -205,7 +205,7 @@
 		
 		
 <!-- ACCESSORIES SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="list" id="1140">
+			<control type="fixedlist" id="1140">
 				<posx>-800</posx>
 				<width>900</width>
 				<height>800</height>
@@ -213,11 +213,20 @@
 				<ondown>1140</ondown>
 				<onleft>300</onleft>
 				<orientation>vertical</orientation>
+				<focusposition>4</focusposition>
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(300).HasFocus(4)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
+					<item id="5">
+						<label>Plex Online</label>
+						<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+					</item>
+					<item id="6">
+						<label>Help</label>
+						<onclick>Plex.ActivateWindow(1,plex://localhost/system/help,return)</onclick>
+					</item>
 					<item id="1">
 						<label>$LOCALIZE[1036]</label>
 						<onclick>ActivateWindow(Favourites)</onclick>
@@ -241,17 +250,12 @@
 						<onclick>ActivateWindow(Filemanager)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 					</item>
-					<item id="5">
-						<label>$LOCALIZE[130]</label>
-						<onclick>ActivateWindow(SystemInfo)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
 				</content>
 			</control>
 		
 		
 <!-- SETTINGS SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="list" id="1150">
+			<control type="fixedlist" id="1150">
 				<posx>-800</posx>
 				<posy>-0</posy>
 				<width>900</width>
@@ -260,6 +264,7 @@
 				<ondown>1150</ondown>
 				<onleft>300</onleft>
 				<orientation>vertical</orientation>
+				<focusposition>4</focusposition>
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(300).HasFocus(5)</visible>
 				<include>homeSubFocus</include>
@@ -320,7 +325,7 @@
 
 
 <!-- EXIT SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="list" id="1160">
+			<control type="fixedlist" id="1160">
 				<posx>-800</posx>
 				<width>900</width>
 				<height>800</height>
@@ -328,61 +333,28 @@
 				<ondown>1160</ondown>
 				<onleft>300</onleft>
 				<orientation>vertical</orientation>
+				<focusposition>4</focusposition>
 				<scrolltime>150</scrolltime>
 				<visible allowhiddenfocus="true">Container(300).HasFocus(11)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
 					<item id="1">
-						<label>$LOCALIZE[20126]</label>
+						<label>Quit Plex</label>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 						<onclick>dialog.close(all,true)</onclick>
-						<onclick>system.logoff</onclick>
+						<onclick>Plex.Shutdown()</onclick>
 					</item>
 					<item id="2">
-						<label>$LOCALIZE[13009]</label>
+						<label>Sleep System</label>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.Quit()</onclick>
+						<onclick>XBMC.SleepSystem()</onclick>
 					</item>
 					<item id="3">
-						<label>$LOCALIZE[13011]</label>
+						<label>Shutdown</label>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.Suspend</onclick>
+						<onclick>XBMC.ShutDownSystem()</onclick>
 						<visible>System.CanSuspend</visible>
-					</item>
-					<item id="4">
-						<label>$LOCALIZE[13010]</label>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.Hibernate</onclick>
-						<visible>System.CanHibernate</visible>
-					</item>
-					<item id="5">
-						<label>$LOCALIZE[13005]</label>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.ShutDown</onclick>
-					</item>
-					<item id="6">
-						<label>$LOCALIZE[31911]</label>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),30)</onclick>
-						<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
-					</item>
-					<item id="7">
-						<label>$LOCALIZE[31912]</label>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),60)</onclick>
-						<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
-					</item>
-					<item id="8">
-						<label>$LOCALIZE[31913]</label>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.ShutDown(),120)</onclick>
-						<visible>System.LoggedOn + Skin.HasSetting(advancedShutdown)</visible>
-					</item>
-					<item id="9">
-						<label>$LOCALIZE[13014]</label>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<onclick>XBMC.Minimize()</onclick>
 					</item>
 				</content>
 			</control>

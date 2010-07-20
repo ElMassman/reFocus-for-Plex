@@ -366,7 +366,7 @@
 					<onleft>-</onleft>
 					<onup>30</onup>
 					<ondown>3</ondown>
-					<onright>50</onright>
+					<onright>573</onright>
 					<onclick>SetFocus(40)</onclick>
 					<include>contextButton</include>
 					<visible allowhiddenfocus="true">!ControlGroup(40).HasFocus()</visible>

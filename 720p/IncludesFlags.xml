@@ -203,7 +203,6 @@
 				<aspectratio align="center">keep</aspectratio>
 				<include>typeFlagV</include>
 				<colordiffuse>Color7</colordiffuse>
-				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 			</control>
 			<!--control type="image">
 				<width>128</width>
@@ -565,9 +564,11 @@
 				<include>Heading</include>
 				<visible>Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
 			</control>
+		</control>
 			<control type="label">
 				<label>$INFO[ListItem.Property(UnWatchedEpisodes),,/]$INFO[ListItem.Episode]</label>
 				<font>osd1</font>
+				<posx>400</posx>
 				<height>36</height>
 				<width>128</width>
 				<align>right</align>
@@ -575,7 +576,6 @@
 				<include>screenwidth</include>
 				<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Title)</visible>
 			</control>
-		</control>
 	</include>
 	
 	<include name="typeFlagsFS">

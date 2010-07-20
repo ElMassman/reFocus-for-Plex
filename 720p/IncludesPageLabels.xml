@@ -53,7 +53,7 @@
 		<font>special</font>
 		<textcolor>Color1</textcolor>
 		<include>transition3</include>
-		<visible>!Window.IsActive(busydialog) + !Container.Scrolling</visible>
+		<visible>!Container.Scrolling</visible>
 	</include>
 	<include name="videoPageSubLabel">
 		<posx>34</posx>
@@ -62,7 +62,7 @@
 		<aligny>center</aligny>
 		<font>special2</font>
 		<textcolor>Color2</textcolor>
-		<visible>!Window.IsActive(busydialog) + !Container.Scrolling</visible>
+		<visible>!Container.Scrolling</visible>
 	</include>
 
 	<include name="videoFanartPageLabels">
@@ -73,7 +73,6 @@
 			<include>videoPageLabel</include>
 			<visible>IsEmpty(Container.FolderPath)</visible>
 		</control>
-	
 	<!-- movies ---------------------------------------------------------------->
 		<control type="label">
 			<label>$LOCALIZE[20342] [COLOR=Color2]$LOCALIZE[14022][/COLOR]</label>

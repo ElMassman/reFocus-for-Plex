@@ -560,8 +560,22 @@
 				<textcolor>ff000000</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>![Container(300).HasFocus(6) | Container(300).HasFocus(13) | Container(300).HasFocus(12)]</visible>
+				<visible>IsEmpty(Listitem.Label2)</visible>
 			</control>
 			<control type="label">
+				<posy>70</posy>
+				<posx>20</posx>
+				<width>1200</width>
+				<height>52</height>
+				<font>homeMenu</font>
+				<align>left</align>
+				<textcolor>ff000000</textcolor>
+				<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE] [COLOR 99000000]$INFO[ListItem.Label][COLOR]</label>
+				<visible>![Container(300).HasFocus(6) | Container(300).HasFocus(13) | Container(300).HasFocus(12)]</visible>
+				
+				<visible>!IsEmpty(Listitem.Label2)</visible>
+			</control>
+			<!--control type="label">
 				<posy>74</posy>
 				<posx>15</posx>
 				<width>1300</width>
@@ -570,7 +584,7 @@
 				<align>left</align>
 				<textcolor>ff000000</textcolor>
 				<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE]</label>
-			</control>
+			</control-->
 		</focusedlayout>
 	</include>
 	

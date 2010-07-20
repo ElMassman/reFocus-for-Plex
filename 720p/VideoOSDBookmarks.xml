@@ -75,7 +75,7 @@
 									
 				<itemlayout width="400" height="300">
 
-				<control type="image">
+				<control type="largeimage">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>400</width>
@@ -85,7 +85,7 @@
 				</control>
 				</itemlayout>
 				<focusedlayout width="400" height="300">
-					<control type="image">
+					<control type="largeimage">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>400</width>
