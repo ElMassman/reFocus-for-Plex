@@ -38,13 +38,13 @@
 		<control type="label">
 			<label>[COLOR=Color2]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.Title]</label>
 			<include>videoPageLabel</include>
-			<visible>Container.Content(movies) + !stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
+			<visible>Container.Content(movies)</visible>
 		</control>
-		<control type="label">
+		<!--control type="label">
 			<label>[COLOR=Color2]$LOCALIZE[20410][/COLOR] $INFO[ListItem.Title]</label>
 			<include>videoPageLabel</include>
 			<visible>Container.Content(movies) + stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
-		</control>
+		</control-->
 		<control type="label">
 			<description>tv shows</description>
 			<label>[COLOR=Color2]$INFO[ListItem.Year][/COLOR] $INFO[ListItem.TVShowTitle]</label>
@@ -109,7 +109,7 @@
 		<posx>470</posx>
 		<posy>160</posy>
 		<itemgap>6</itemgap>
-		
+
 		<control type="label" id="1">
 			<width>740</width>
 			<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
@@ -185,7 +185,7 @@
 			<include>textBox</include>
 		</control>
 	</control>
-	
+
 
 
 <!--=== TVSHOWS ===------------------------------------------------------------------------------------------------------------------------------->
@@ -251,7 +251,7 @@
 		<include>transition2</include>
 		<include>contextMenuHide</include>
 		<visible>Container.Content(episodes) + !Window.IsActive(101)</visible>
-		
+
 		<control type="label">
 			<width>780</width>
 			<label>$INFO[ListItem.Title]</label>
@@ -264,12 +264,12 @@
 			<include>Heading1</include>
 			<visible>ControlGroup(9001).HasFocus()</visible>
 		</control>
-	
+
 		<control type="grouplist" id="1000">
 			<posy>35</posy>
 			<itemgap>6</itemgap>
 			<visible>!ControlGroup(9001).HasFocus()</visible>
-			
+
 			<control type="label" id="1">
 				<width>690</width>
 				<label>$LOCALIZE[31074]</label>
@@ -403,11 +403,11 @@
 		<animation effect="slide" start="0" end="50" time="0" condition="Container.Content(episodes) | Container.Content(musicvideos)">Conditional</animation>
 	</control>
 
-	
-		
+
+
 <!---== CAST LIST ==--->
 <control type="group" id="9001">
-	
+
 	<control type="list" id="50">
 		<posx>429</posx>
 		<posy>345</posy>
