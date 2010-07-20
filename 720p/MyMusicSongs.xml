@@ -17,35 +17,12 @@
 			<animation effect="slide" start="0" end="-117" time="0" condition="Control.IsVisible(51) + !Container(51).HasFiles">Conditional</animation>
 		</control>
 		
-		<include>PageControl</include>
-		<include>pageslide</include>
-		<include>ListViewNodes</include>
+		<include>view_List</include>
 		<include>AllViewCommonPageControls</include>
 		<include>MusicLibPageLabels</include>
 		<include>allscreens</include>
 		<include>FilesMenu</include>
-		
-		<!--- LIST VIEW ------------------------>
-			<control type="group">
-				<include>infoDialogHide</include>
-				<include>transition2</include>
-				<include>contextMenuHide</include>
-				<visible>Control.IsVisible(50)</visible>
-				<control type="group">
-					<posx>620</posx>
-					<posy>85</posy>
-					<control type="largeimage">
-						<width>512</width>
-						<height>512</height>
-						<aspectratio scalediffuse="true" align="center">keep</aspectratio>
-						<texture background="true" diffuse="frames/albumFrameMask.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture border="28">frames/wideFrame.png</bordertexture>
-						<bordersize>32</bordersize>
-						<include>thumbFadeTime</include>
-						<visible>!IsEmpty(ListItem.Thumb)</visible>
-					</control>
-				</control>
-			</control>
-		
+		<include>info_MusicList</include>
+			
 	</controls>
 </window>  

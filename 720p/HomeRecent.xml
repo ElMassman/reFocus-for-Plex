@@ -4,7 +4,7 @@
 	
 	<control type="group">
 		<visible>ControlGroup(2100).HasFocus</visible>
-		<control type="largeimage">
+		<control type="image">
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<texture background="true">special://skin/backgrounds/library/moviesNoFanart.png</texture>
@@ -12,7 +12,7 @@
 			<include>fadeinout</include>
 			<visible>Container(2110).HasFocus(1)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.1.Fanart)]</texture>
@@ -20,7 +20,7 @@
 			<include>fadeinout</include>
 			<visible>Container(2110).HasFocus(2)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.2.Fanart)]</texture>
@@ -28,7 +28,7 @@
 			<include>fadeinout</include>
 			<visible>Container(2110).HasFocus(3)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.3.Fanart)]</texture>
@@ -36,7 +36,7 @@
 			<include>fadeinout</include>
 			<visible>Container(2110).HasFocus(4)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.4.Fanart)]</texture>
@@ -44,7 +44,7 @@
 			<include>fadeinout</include>
 			<visible>Container(2110).HasFocus(5)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
 			<texture fallback="special://skin/backgrounds/library/moviesNoFanart.png" background="true">$INFO[Window.Property(LatestMovie.5.Fanart)]</texture>
@@ -89,7 +89,7 @@
 			<include>fadeinout</include>
 			<visible>!Container(2110).HasFocus(1)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<posx>23</posx>
 			<posy>400</posy>
 			<width>210</width>
@@ -100,7 +100,7 @@
 			<include>thumbFadeTime</include>
 			<visible>Container(2110).HasFocus(2)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<posx>23</posx>
 			<posy>400</posy>
 			<width>210</width>
@@ -111,7 +111,7 @@
 			<include>thumbFadeTime</include>
 			<visible>Container(2110).HasFocus(3)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<posx>23</posx>
 			<posy>400</posy>
 			<width>210</width>
@@ -122,7 +122,7 @@
 			<include>thumbFadeTime</include>
 			<visible>Container(2110).HasFocus(4)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<posx>23</posx>
 			<posy>400</posy>
 			<width>210</width>
@@ -133,7 +133,7 @@
 			<include>thumbFadeTime</include>
 			<visible>Container(2110).HasFocus(5)</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<posx>23</posx>
 			<posy>400</posy>
 			<width>210</width>

@@ -1,5 +1,5 @@
 <window id="129">
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">300</defaultcontrol>
 	
 	<coordinates>
 		<system>1</system>
@@ -76,7 +76,7 @@
 			<height>160</height>
 			<onup>12</onup>
 			<onleft>-</onleft>
-			<onright>9000</onright>
+			<onright>300</onright>
 			<ondown>12</ondown>
 			<scrolltime>200</scrolltime>
 			<itemlayout height="40">
@@ -122,7 +122,7 @@
 			<width>460</width>		
 			<onup>10</onup>
 			<onleft>-</onleft>
-			<onright>9000</onright>
+			<onright>300</onright>
 			<ondown>10</ondown>
 			<include>dialogTextField</include>
 		</control>
@@ -140,7 +140,7 @@
 		</control>
 
 	
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>535</posx>
 			<posy>75</posy>
 			<control type="button" id="11">

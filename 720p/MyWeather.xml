@@ -12,7 +12,7 @@
 			<label>SHOULD NOT SEE ME</label>
 			<onup>53</onup>
 			<ondown>53</ondown>
-			<onleft>9000</onleft>
+			<onleft>300</onleft>
 			<onright>53</onright>
 			<width>200</width>
 			<visible allowhiddenfocus="true">false</visible>
@@ -91,7 +91,7 @@
 	<control type="group" id="5000">
 		<include>transition2</include>
 		<include>contextMenuHide</include>
-		<onleft>9000</onleft>
+		<onleft>300</onleft>
 		<animation effect="slide" start="0,0" end="0,-150" time="0" condition="!Skin.HasSetting(weatherFanart)">Conditional</animation>
 		
 		<control type="label">
@@ -414,6 +414,14 @@
 	<width>32</width>
 	<include>scrollLeftView</include>
 </control>
+
+<!--<control type="image">
+	<posx>92r</posx>
+	<posy>79r</posy>
+	<width>72</width>
+	<height>59</height>
+	<texture>weather_channel_logo.png</texture>
+</control>-->
 
 			
 	</controls>

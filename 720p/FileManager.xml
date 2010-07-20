@@ -12,7 +12,7 @@
 			
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[31969][/LOWERCASE]</label>
+				<label>$LOCALIZE[31969]</label>
 			</control>
 			
 			<!--<control type="label">
@@ -84,7 +84,7 @@
 					<control type="image">
 						<width>550</width>
 						<height>45</height>
-						<texture border="16,16,16,16">settings/list-focus.png</texture>
+						<texture border="16,16,16,16">settings/list-focus2.png</texture>
 					</control>
 					<control type="label">
 						<posx>15</posx>
@@ -142,7 +142,7 @@
 					<control type="image">
 						<width>550</width>
 						<height>45</height>
-						<texture border="16,16,16,16">settings/list-focus.png</texture>
+						<texture border="16,16,16,16">settings/list-focus2.png</texture>
 					</control>
 					<control type="label">
 						<posx>15</posx>
@@ -164,6 +164,16 @@
 				</focusedlayout>
 			</control>
 			
+			<!--<control type="image">
+				<posx>611</posx>
+				<posy>15</posy>
+				<height>1192</height>
+				<width>58</width>
+				<texture>settings/separatorFM.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+				<include>transition2</include>
+			</control>-->
+	
 		<!--	<control type="group">
 				<include>fadeinout</include>
 				<posy>680</posy>

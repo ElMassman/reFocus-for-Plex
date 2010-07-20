@@ -1,5 +1,5 @@
 <window id="34">
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>0</previouswindow>
 	
@@ -9,10 +9,10 @@
 		
 		<control type="label">
 			<include>PageLabel</include>
-			<label>[LOWERCASE]$LOCALIZE[5] [COLOR=Color2]$LOCALIZE[13200][/COLOR][/LOWERCASE]</label>
+			<label>$LOCALIZE[5] [COLOR=Color2]$LOCALIZE[13200][/COLOR]</label>
 		</control>
 		
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>50</posx>
 			<posy>105</posy>
 			<include>transition2</include>
@@ -43,9 +43,9 @@
 			<posy>105</posy>
 			<width>850</width>
 			<height>45</height>
-			<onleft>9000</onleft>
-			<label>[UPPERCASE]$LOCALIZE[31026][/UPPERCASE]</label>
-			<include>systemButton</include>
+			<onleft>300</onleft>
+			<label>$LOCALIZE[31026]</label>
+			<include>settingsButton</include>
 			<visible>Skin.String(ProfileSettings,1)</visible>
 			<include>transition2</include>
 		</control>
@@ -60,8 +60,8 @@
 			<control type="list" id="2">
 				<width>850</width>
 				<height>600</height>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
+				<onleft>300</onleft>
+				<onright>300</onright>
 				<onup>2</onup>
 				<ondown>2</ondown>
 				<viewtype label="List">List</viewtype>

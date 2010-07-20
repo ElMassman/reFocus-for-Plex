@@ -1,1 +1,0 @@
-put morning themed backdrops in this folder, and they will show upon booting during the morning

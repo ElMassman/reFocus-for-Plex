@@ -1,9 +1,8 @@
 <includes>
 	
-<!-- GENERAL ANIMATIONS ------------------------------------------------------------------------->
-
+<!-- GENERAL ------------------------------------------------------------------------->
 	<include name="thumbFadeTime">
-		<fadetime>100</fadetime>
+		<fadetime>300</fadetime>
 	</include>
 	<include name="fanartFadeTime">
 		<fadetime>300</fadetime>
@@ -12,7 +11,6 @@
 	<include name="autoscroll-plot">
 		<autoscroll delay="10000" time="3300" repeat="10000">!Control.HasFocus(4)</autoscroll>
 	</include>
-
 	<include name="autoscroll-line">
 		<scrollspeed>20</scrollspeed>
 	</include>
@@ -31,33 +29,31 @@
 			<effect type="fade" start="100" end="0" time="250" />
 		</animation>
 	</include>
-	<include name="fadeout">
-		<animation type="WindowClose">
-			<effect type="fade" start="100" end="0" time="250" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="fade" start="100" end="0" time="250" />
-		</animation>
+
+
+<!-- VIEWTYPE ------------------------------------------------------------------------->
+	<include name="focus_ThumbPoster">
+		<animation effect="zoom" tween="Back" start="100" end="130" center="90,125" time="200">Focus</animation>
 	</include>
-	
-	
-	<!-- VIEWTYPE INCLUDES ------------------------------------------------------------------------->
-	<include name="bannerFocus">
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" center="360,100" start="90" end="100" time="250" tween="Cubic" easing="out" />
-			<effect type="fade" start="0" end="100" time="250" />
-		</animation>
+	<include name="focus_ThumbPosterInfo">
+		<animation effect="zoom" tween="Back" start="100" end="150" center="65,90" time="200">Focus</animation>
 	</include>
-	
-	<include name="posterSlideFocus">
+	<include name="focus_Thumbs">
+		<animation effect="zoom" tween="Cubic" easing="In" start="100" end="135" center="80,80" time="150">Focus</animation>
+		<animation effect="zoom" tween="Cubic" easing="Out" start="135" end="100" center="70,70" time="100">UnFocus</animation>
+	</include>
+	<include name="focus_WideThumbs">
+		<animation effect="zoom" tween="Back" start="100" end="130" center="110,80" time="200">Focus</animation>
+	</include>
+	<include name="focus_SlidePoster">
 		<animation type="focus">
 			<effect type="zoom" tween="Back" start="100,100" end="130,130" easing="Out" reversible="false" center="105,150" time="250"/>
 		</animation>
 		<animation type="unfocus">
-			<effect type="zoom" tween="Cubic" start="130,130" end="100,100" center="105,150" time="250" />
+			<effect type="zoom" tween="Cubic" start="130,130" end="100,100" easing="Out" reversible="false" center="105,150" time="250" />
 		</animation>
 	</include>
-	<include name="posterSlideFocusOverlay">
+	<include name="focus_SlidePosterOverlay">
 		<animation type="focus">
 			<effect type="zoom" tween="Back" start="100" end="120" easing="Out" reversible="false" center="55,85" time="250"/>
 		</animation>
@@ -65,21 +61,7 @@
 			<effect type="zoom" tween="Cubic" start="120" end="100" center="105,150" time="250" />
 		</animation>
 	</include>
-	
-	<include name="posterPanelFocus">
-		<animation effect="zoom" tween="Back" start="100" end="130" center="90,125" time="200">Focus</animation>
-		<animation effect="zoom" tween="Back" start="130" end="100" center="90,125" time="200">Focus</animation>
-	</include>
-	<include name="posterPanelFocus2">
-		<animation effect="zoom" tween="Back" start="100" end="130" center="72,125" time="200">Focus</animation>
-		<animation effect="zoom" tween="Back" start="130" end="100" center="72,125" time="200">UnFocus</animation>
-	</include>
-	
-	<include name="thumbPanelFocus">
-		<animation effect="zoom" tween="Back" start="100" end="130" center="110,80" time="200">Focus</animation>
-	</include>
-
-	<include name="artSlideFocus">
+	<include name="focus_SlideWide">
 		<animation type="focus">
 			<effect type="zoom" tween="quadratic" start="100,100" end="125,125" reversible="false" center="auto" time="250"/>
 		</animation>
@@ -87,12 +69,34 @@
 			<effect type="zoom" tween="quadratic" start="125,125" end="100,100" reversible="false" center="auto" time="250" />
 		</animation>
 	</include>
-	<include name="artSlideFocusOverlay">
+	<include name="focus_SlideWideOverlay">
 		<animation type="focus">
 			<effect type="zoom" tween="quadratic" start="100,100" end="125,125" reversible="false" center="250,158" time="250"/>
 		</animation>
 		<animation type="unfocus">
 			<effect type="zoom" tween="quadratic" start="125,125" end="100,100" reversible="false" center="250,158" time="250" />
+		</animation>
+	</include>
+	<include name="focus_SlideEpisode">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" reversible="false" center="auto" time="250"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="130,130" end="100,100" reversible="false" center="auto" time="250" />
+		</animation>
+	</include>
+	<include name="focus_SlideEpisodeOverlay">
+		<animation type="focus">
+			<effect type="zoom" tween="quadratic" start="100,100" end="120,120" reversible="false" center="125,95" time="250"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="quadratic" start="120,120" end="100,100" reversible="false" center="125,95" time="250" />
+		</animation>
+	</include>
+	<include name="focus_Banner">
+		<animation type="Focus" reversible="false">
+			<effect type="zoom" center="360,100" start="90" end="100" time="250" tween="Cubic" easing="out" />
+			<effect type="fade" start="0" end="100" time="250" />
 		</animation>
 	</include>
 	
@@ -102,158 +106,8 @@
 		</animation>
 	</include>
 
-	<include name="moviePanelFocus">
-		<animation type="focus">
-			<effect type="zoom" start="100,100" end="120,120" center="120,126" time="0"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" start="120,120" end="100,100" center="120,126" time="0"/>
-		</animation>
-	</include>
-	
-	<include name="episodeSlideFocus">
-		<animation type="focus">
-			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" reversible="false" center="auto" time="250"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="quadratic" start="130,130" end="100,100" reversible="false" center="auto" time="250" />
-		</animation>
-	</include>
-	<include name="episodeSlideFocusOverlay">
-		<animation type="focus">
-			<effect type="zoom" tween="quadratic" start="100,100" end="120,120" reversible="false" center="125,95" time="250"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="quadratic" start="120,120" end="100,100" reversible="false" center="125,95" time="250" />
-		</animation>
-	</include>
-	
-	<include name="bookmarkSlideFocus">
-		<animation type="focus">
-			<effect type="zoom" tween="quadratic" start="100,100" end="125,125" reversible="false" center="130,0" time="250"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" reversible="false" center="130,0" time="250" />
-		</animation>
-	</include>
 
-	<include name="PictureSlideFocus">
-		<animation type="focus">
-			<effect type="zoom" tween="quadratic" start="100,100" end="115,115" center="auto" time="250"/>
-		</animation>
-		<animation type="unfocus">
-			<effect type="zoom" tween="quadratic" start="115,115" end="100,100" center="auto" time="150"/>
-		</animation>
-	</include>
-
-	<include name="musicPanelFocus">
-		<animation effect="zoom" tween="Cubic" easing="In" start="100" end="135" center="80,80" time="150">Focus</animation>
-		<animation effect="zoom" tween="Cubic" easing="Out" start="135" end="100" center="70,70" time="100">UnFocus</animation>
-	</include>
-
-
-
-
-<!-- PAGE ANIMATIONS ------------------------------------------------------------------------->	
-	<include name="viewsmenu">
-		<animation effect="slide" start="0" end="134" time="150" condition="ControlGroup(9000).HasFocus(0) | Window.IsActive(106)" >Conditional</animation>
-		<animation effect="slide" start="134" end="0" time="150" condition="![ControlGroup(9000).HasFocus(0) | Window.IsActive(106)]" >Conditional</animation>
-	</include>
-	<include name="pagemenus">
-		<animation type="Visible">
-			<effect type="slide" start="0" end="275" time="150" reversible="false" />
-			<effect type="zoom" time="400" center="640,360" start="140" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="400" center="640,360" start="0" end="100" />
-		</animation>			
-		<animation type="Hidden">
-
-			<effect type="zoom" time="250" center="640,360" start="100" end="140" tween="cubic" easing="in" />
-			<effect type="fade" time="250" center="640,360" start="100" end="0" />
-		</animation>	
-	</include>	
-	
-	<include name="infoDialogShow">		
-		<animation type="WindowOpen">
-			<effect type="fade" start="0" end="100" time="250" />
-			<effect type="zoom" start="140" end="100" tween="Cubic" easing="Out" center="640,360" time="250"/>
-		</animation>
-		<animation type="WindowClose">
-			<effect type="fade" start="100" end="0" time="250" />
-			<effect type="zoom" start="100" end="340" tween="Cubic" easing="Out" center="640,360" time="450"/>
-		</animation>
-	</include>
-	<include name="infoDialogHide">		
-		<animation type="Conditional" condition="[Window.IsActive(2003) | Window.IsActive(2001)]">
-			<effect type="fade" start="100" end="0" time="250" />
-			<effect type="zoom" start="100" end="80" tween="Cubic" easing="Out" center="640,360" time="250"/>
-		</animation>
-		<animation type="Conditional" condition="![Window.IsActive(2003) | Window.IsActive(2001)]">
-			<effect type="fade" start="0" end="100" time="150" />
-			<effect type="zoom" start="40" end="100" tween="Quadratic" easing="Out" center="640,360" time="250"/>
-		</animation>
-	</include>
-	
-	
-	
-
-	
-	<include name="dialogOpen">
-		<animation type="WindowOpen">
-			<effect type="zoom" start="80" end="100" center="640,110" tween="back" time="250" />
-			<effect type="fade" start="0" end="100" time="400" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="zoom" start="100" end="90" center="640,110" time="150" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
-		<animation type="Visible">
-			<effect type="zoom" start="90" end="100" center="640,110" tween="back" time="250" />
-			<effect type="fade" start="0" end="100" time="400" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="zoom" start="100" end="90" center="640,110" time="150" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
-	</include>
-	
-	<include name="contextOpen">
-		<animation type="WindowOpen">
-			<effect type="slide" start="-100" end="0" center="640,110" tween="Cubic" time="400" />
-			<effect type="fade" start="0" end="100" time="200" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="slide" start="0" end="100" center="640,110" tween="Cubic" time="400" />
-			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
-	</include>
-	
-	
-	
-	
-	
-	
-	
-	
-	<include name="contextMenuHide">
-		<animation type="Conditional" condition="ControlGroup(9000).HasFocus">
-			<effect type="zoom" time="250" center="640,360" start="100" end="55" />
-			<effect type="fade" time="250" center="640,360" start="100" end="20" />
-		</animation>			
-		<animation type="Conditional" condition="!ControlGroup(9000).HasFocus">
-			<effect type="zoom" time="250" center="640,360" start="140" end="100" />
-			<effect type="fade" time="250" center="640,360" start="20" end="100" />
-		</animation>
-	</include>
-	
-	<include name="transition1">		
-		<animation type="WindowOpen">
-			<effect type="fade" start="0" end="100" time="250" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="fade" start="100" end="0" time="250" />
-		</animation>
-	</include>
-
+<!-- TRANSITIONS ------------------------------------------------------------------------->
 	<include name="transition2">		
 		<animation type="WindowOpen">
 			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
@@ -263,18 +117,7 @@
 			<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in" />
 			<effect type="fade" time="250" center="640,360" start="100" easing="in" end="0" />
 		</animation>
-		<!--<animation type="Visible">
-			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
-			<effect type="fade" time="400" center="640,360" start="0" end="100" />
-		</animation>			
-		<animation type="Hidden">
-			<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in" />
-			<effect type="fade" time="250" center="640,360" start="100" end="0" />
-		</animation>-->
-
-		
 	</include>
-	
 	<include name="transition2.5">		
 		<animation type="WindowOpen" condition="Skin.HasSetting(FanartGlobal) | Skin.HasSetting(backgroundVideoGlobal)">
 			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
@@ -284,7 +127,7 @@
 			<effect type="zoom" time="250" center="640,360" start="100" end="180" tween="cubic" easing="in" />
 			<effect type="fade" time="250" center="640,360" start="95" easing="in" end="0" />
 		</animation>
-		
+
 		<animation type="WindowOpen" condition="![Skin.HasSetting(FanartGlobal) | Skin.HasSetting(backgroundVideoGlobal)]">
 			<effect type="zoom" time="400" center="640,360" start="180" end="100" tween="cubic" easing="out" />
 			<effect type="fade" time="400" center="640,360" start="0" easing="out" end="100" />
@@ -294,8 +137,6 @@
 			<effect type="fade" time="250" center="640,360" start="100" easing="in" end="0" />
 		</animation>
 	</include>
-
-	
 	<include name="transition3">		
 		<animation type="WindowOpen">
 			<effect type="zoom" time="400" center="640,360" start="50" end="100" tween="cubic" easing="out" />
@@ -306,88 +147,63 @@
 			<effect type="fade" time="250" center="640,360" start="100" end="0" />
 		</animation>
 	</include>
-	
-	<include name="transition4">
-		<animation type="Conditional" condition="ControlGroup(9000).HasFocus">
-			<effect type="zoom" time="250" center="640,360" start="100" end="60" />
-			<effect type="fade" time="250" center="640,360" start="100" end="30" />
-		</animation>			
-		<animation type="Conditional" condition="!ControlGroup(9000).HasFocus">
-			<effect type="zoom" time="250" center="640,360" start="140" end="100" />
-			<effect type="fade" time="250" center="640,360" start="30" end="100" />
-		</animation>
-	</include>
-	
 
 
-	<include name="transSlideView">		
-		<animation type="WindowOpen">
-			<effect type="fade" start="0" end="100" time="500" />
-			<effect type="Slide" start="-30" end="0" tween="Back" easing="Out" time="600" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="fade" start="100" end="0" time="300" />
-			<effect type="Slide" start="0" end="30" tween="Quadratic" easing="In" time="400" />
-		</animation>
-	</include>
-
-	<include name="transGalleryView">		
-		<animation type="WindowOpen">
-			<effect type="fade" start="0" end="100" time="300" />
-			<effect type="zoom" start="90" end="100" easing="Out" center="640,360" time="400" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="fade" start="100" end="0" time="300" />
-			<effect type="zoom" start="100" end="90" easing="Out" center="640,360" time="400" />
-		</animation>
-	</include>
-
-	<include name="infoPageSlide">		
-		<animation type="WindowOpen">
-			<effect type="slide" start="-430" end="0" time="250" tween="Cubic" Easing="In" />
-			<effect type="fade" start="0" end="100" time="250" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="slide" start="0" end="-430" time="150" tween="Cubic" Easing="In" delay="200" />
-			<effect type="fade" start="100" end="0" time="150" />
-		</animation>
-	</include>
-	<include name="infoPagePosterSlide">
-		<animation type="WindowOpen">
-			<effect type="slide" start="-300" end="0" time="430" tween="Cubic" Easing="In" delay="200"/>
-			<effect type="fade" start="0" end="100" time="300" delay="100"/>
-		</animation>
-		<animation type="WindowClose">
-			<effect type="slide" start="0" end="-430" time="150" tween="Cubic" Easing="In" />
-			<effect type="fade" start="100" end="0" time="150" delay="150"/>
-		</animation>
-	</include>
-
-	<include name="contextSlide">		
-		<animation type="WindowOpen">
-			<effect type="slide" start="-245" end="0" time="200" tween="Cubic" Easing="In" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="slide" start="0" end="-245" time="150" tween="Cubic" Easing="In" />
-		</animation>
-	</include>
-
-	<include name="shortFade">	
+<!-- TOGGLES / SELECTS ------------------------------------------------------------------------->	
+	<include name="pagemenus">
 		<animation type="Visible">
-			<effect type="fade" start="0" end="100" time="150" />
+			<effect type="slide" start="0" end="275" time="150" reversible="false" />
+			<effect type="zoom" time="400" center="640,360" start="140" end="100" tween="cubic" easing="out" />
+			<effect type="fade" time="400" center="640,360" start="0" end="100" />
+		</animation>			
+		<animation type="Hidden">
+			<effect type="zoom" time="250" center="640,360" start="100" end="140" tween="cubic" easing="in" />
+			<effect type="fade" time="250" center="640,360" start="100" end="0" />
+		</animation>	
+	</include>	
+	<include name="dialogOpen">
+		<animation type="WindowOpen">
+			<effect type="zoom" start="80" end="100" center="640,360" tween="back" time="250" />
+			<effect type="fade" start="0" end="100" time="400" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="zoom" start="100" end="90" center="640,360" time="150" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+		<animation type="Visible">
+			<effect type="zoom" start="90" end="100" center="640,360" tween="back" time="250" />
+			<effect type="fade" start="0" end="100" time="400" />
 		</animation>
 		<animation type="Hidden">
-			<effect type="fade" start="100" end="0" time="150" />
+			<effect type="zoom" start="100" end="90" center="640,360" time="150" />
+			<effect type="fade" start="100" end="0" time="200" />
 		</animation>
 	</include>
 	
-	<include name="fanartViewWindow">	
-		<animation effect="fade" start="0" end="90" time="200" >WindowOpen</animation>
-		<animation effect="fade" start="90" end="0" time="200" >WindowClose</animation>
+	
+	<include name="infoDialogHide">		
+		<animation type="Conditional" condition="[Window.IsActive(2003) | Window.IsActive(2001)]">
+			<effect type="fade" start="100" end="0" time="250" />
+			<effect type="zoom" start="100" end="80" tween="Cubic" easing="Out" center="640,360" time="250"/>
+		</animation>
+		<animation type="Conditional" condition="![Window.IsActive(2003) | Window.IsActive(2001)]">
+			<effect type="fade" start="0" end="100" time="150" />
+			<effect type="zoom" start="40" end="100" tween="Quadratic" easing="Out" center="640,360" time="250"/>
+		</animation>
 	</include>
-	
-	
-	
+	<include name="contextMenuHide">
+		<animation type="Conditional" condition="[ControlGroup(300).HasFocus | Window.IsActive(111)]">
+			<effect type="zoom" time="250" center="640,360" start="100" end="55" />
+			<effect type="fade" time="250" center="640,360" start="100" end="20" />
+		</animation>			
+		<animation type="Conditional" condition="![ControlGroup(300).HasFocus | Window.IsActive(111)]">
+			<effect type="zoom" time="250" center="640,360" start="140" end="100" />
+			<effect type="fade" time="250" center="640,360" start="20" end="100" />
+		</animation>
+	</include>
+
+
+<!-- HOME ------------------------------------------------------------------------->		
 	<include name="homeMenuToggle">
 		<animation type="Hidden">
 			<effect type="zoom" start="100" end="130" center="auto" time="250" tween="Cubic" easing="In"/>
@@ -397,7 +213,6 @@
 			<effect type="zoom" start="130" end="100" center="auto" time="250" tween="Cubic" />
 			<effect type="fade" start="0" end="100" time="250" />
 		</animation>
-
 		<animation type="WindowClose">
 			<effect type="fade" start="100" end="0" time="150" />
 		</animation>
@@ -405,19 +220,12 @@
 			<effect type="fade" start="0" end="100" time="350" />
 			<effect type="slide" start="-400" end="0" center="auto" tween="Cubic" easing="Out" time="350" />
 		</animation>
-
 		<animation type="WindowOpen" condition="Window.Previous(12999)">
 			<effect type="fade" start="0" end="100" time="350" delay="350" />
 			<effect type="slide" start="-400" end="0" center="auto" tween="Cubic" easing="Out" time="350" delay="350"/>
 		</animation>
 	</include>
-	
-	
-	
-	
-	
-	
-	
+		
 	<include name="homeSubFocus">
 		<animation type="Focus">
 			<effect type="slide" start="0" end="800" center="auto" time="0" />
@@ -435,22 +243,14 @@
 		</animation>
 	</include>
 	
-	
-	<include name="ListScroll">
-		<animation effect="slide" start="0,-40" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext">focus</animation>
-		<animation effect="slide" start="0,40" end="0,0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container.OnPrevious">focus</animation>
-	</include>
 	<include name="homeListScroll">
-		<animation effect="slide" start="0,-45" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(9000).OnNext | Container(1110).OnNext | Container(1120).OnNext | Container(1130).OnNext | Container(1140).OnNext | Container(1150).OnNext | Container(1160).OnNext">focus</animation>
-		<animation effect="slide" start="0,45" end="0,0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container(9000).OnPrevious | Container(1110).OnPrevious | Container(1120).OnPrevious | Container(1130).OnPrevious | Container(1140).OnPrevious | Container(1150).OnPrevious | Container(1160).OnPrevious">focus</animation>
+		<animation effect="slide" start="0,-45" end="0,0" time="100" reversible="false" tween="quadratic" easing="out" condition="Container(300).OnNext | Container(1110).OnNext | Container(1120).OnNext | Container(1130).OnNext | Container(1140).OnNext | Container(1150).OnNext | Container(1160).OnNext">focus</animation>
+		<animation effect="slide" start="0,45" end="0,0" time="100" reversible="false"  tween="quadratic" easing="out" condition="Container(300).OnPrevious | Container(1110).OnPrevious | Container(1120).OnPrevious | Container(1130).OnPrevious | Container(1140).OnPrevious | Container(1150).OnPrevious | Container(1160).OnPrevious">focus</animation>
 	</include>
-	
-	
-	
-	
-	
-	<!-- OSD INCLUDES --------------------------------------------------------------------------------------------------------->
-	<include name="OSDcontrolSlide">
+
+
+<!-- OSD --------------------------------------------------------------------------------------------------------->	
+	<include name="state_OSD">
 		<animation type="WindowOpen">
 			<effect type="slide" start="0,75" end="0,0" tween="Cubic" easing="Out" time="250" />
 		</animation>
@@ -464,7 +264,20 @@
 			<effect type="slide" start="0,0" end="0,75" tween="Cubic" easing="In" time="250" />
 		</animation>
 	</include>
-	
+	<include name="open_PlayerControls">
+		<animation type="WindowOpen">
+			<effect type="slide" start="0,75" end="0,0" tween="Cubic" easing="Out" time="250" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="slide" start="0,0" end="0,75" tween="Cubic" easing="In" time="250" />
+		</animation>
+		<animation type="Visible">
+			<effect type="slide" start="0,75" end="0,0" tween="Cubic" easing="Out" time="250" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="slide" start="0,0" end="0,75" tween="Cubic" easing="In" time="250" />
+		</animation>
+	</include>
 	<include name="videoFullScreenInfo">
 		<animation type="Visible">
 			<effect type="slide" start="0,200" end="0,0" tween="Cubic" center="auto" easing="Out" time="400" />
@@ -479,16 +292,6 @@
 			<effect type="slide" start="0,0" end="0,200" tween="Cubic" center="auto" easing="In" time="400" />
 		</animation>
 	</include>
-	
-	<include name="visInfo">
-		<animation type="Visible">
-			<effect type="slide" start="0,300" end="0,0" tween="Cubic" center="auto" easing="Out" time="400" />
-		</animation>
-		<animation type="Hidden">
-			<effect type="slide" start="0,0" end="0,300" tween="Cubic" center="auto" easing="In" time="400" />
-		</animation>
-	</include>
-	
 	<include name="codecInfo">
 		<animation type="Visible">
 			<effect type="slide" start="0,-96" end="0,0" tween="Cubic" center="auto" easing="Out" time="400" />
@@ -503,7 +306,6 @@
 			<effect type="slide" start="0,0" end="0,-96" tween="Cubic" center="auto" easing="Out" time="400" />
 		</animation>
 	</include>
-
 	<include name="osdButtons">
 		<animation type="focus">
 			<effect type="zoom" tween="quadratic" start="100,100" end="130,130" center="auto" time="200" />
@@ -513,18 +315,16 @@
 		</animation>
 	</include>
 	
-
-	<!--
-	<include name="smallDialogOpen">
-		<animation effect="slide" start="0,-48" end="0,0" time="200" tween="Cubic" >WindowOpen</animation>
-		<animation effect="slide" start="0,0" end="0,-48" time="200" tween="Cubic" >WindowClose</animation>
-	</include>
-	<include name="smallDialogOpen2">
-		<animation effect="slide" start="0,0" end="0,24" time="200" tween="Cubic" center="auto" condition="Window.IsActive(100)">Conditional</animation>
-		<animation effect="slide" start="0,24" end="0,0" time="200" tween="Cubic" center="auto" condition="!Window.IsActive(100)">Conditional</animation>
-	</include>
-	-->
 	
-
+	<!--<include name="posterSlideFocusAlt">
+		<animation type="focus">
+			<effect type="zoom" tween="Back" start="100,100" end="170,170" easing="Out" reversible="false" center="105,150" time="250"/>
+		</animation>
+		<animation type="unfocus">
+			<effect type="zoom" tween="Cubic" start="170,170" end="100,100" easing="Out" reversible="false" center="105,150" time="250" />
+		</animation>
+	</include>-->
+	
+	
 	
 </includes>

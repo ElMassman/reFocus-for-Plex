@@ -65,9 +65,9 @@
 			<width>563</width>
 			<height>170</height>
 			<onup>9001</onup>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
-			<ondown>9000</ondown>
+			<onleft>300</onleft>
+			<onright>300</onright>
+			<ondown>300</ondown>
 			<scrolltime>200</scrolltime>
 
 			<itemlayout height="40">
@@ -102,7 +102,7 @@
 			</focusedlayout>
 		</control>
 		
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>34</posx>
 			<posy>240</posy>
 			<control type="button" id="11">
@@ -136,7 +136,6 @@
 			</control>
 		</control>
 
-		
 		<control type="group" id="9001">
 			<posx>34</posx>
 			<posy>320</posy>
@@ -146,7 +145,7 @@
 				<label>186</label>
 				<onleft>19</onleft>
 				<onright>19</onright>
-				<onup>9000</onup>
+				<onup>300</onup>
 				<ondown>10</ondown>
 				<include>dialogConfirmButton</include>
 			</control>
@@ -156,12 +155,10 @@
 				<label>222</label>
 				<onleft>18</onleft>
 				<onright>18</onright>
-				<onup>9000</onup>
+				<onup>300</onup>
 				<ondown>10</ondown>
 				<include>dialogConfirmButton</include>
 			</control>
 		</control>
-		
-		
 	</controls>
 </window>

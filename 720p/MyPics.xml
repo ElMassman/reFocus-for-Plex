@@ -1,27 +1,22 @@
 <window id="2">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<views>50,53,56,572</views>
 
 	<controls>
-	
 		<include>themeBackground2</include>
-		
-		<control type="image">
-			<posx>577</posx>
-			<posy>242</posy>
-			<width>700</width>
-			<height>145</height>
-			<texture border="0,30,0,30">views/list-focus.png</texture>
-			<visible>Control.IsVisible(51) + !IsEmpty(container.folderpath)</visible>
-			<include>contextMenuHide</include>
-			<include>transition2</include>
-		</control>
 
 		<control type="group">
-			<include>ListViewNodesP</include>
-			<include>ListViewPictures</include>
-			<include>ThumbnailsP</include>
+			<include>view_List</include>
+			<include>view_ThumbWide</include>
 			<include>AllViewCommonPageControls</include>
+
+			<control type="label">
+				<label>[LOWERCASE]$LOCALIZE[1][/LOWERCASE]</label>
+				<include>PageLabel</include>
+				<visible>!Container.Scrolling</visible>
+			</control>
+
 
 <!-- FAKE INFO BUTTON ----------------------------------------------->	
 			<control type="button" id="8000">
@@ -34,30 +29,14 @@
 				<visible allowhiddenfocus="true">false</visible>
 			</control>
 
-			<control type="label">
-				<label>[LOWERCASE]$LOCALIZE[1][/LOWERCASE]</label>
-				<include>PageLabel</include>
-				<visible>IsEmpty(Container.PluginName) + !stringcompare(container.folderpath,plugin://pictures/)</visible>
-			</control>
-			<control type="label">
-				<label>[LOWERCASE]$LOCALIZE[31906][/LOWERCASE]</label>
-				<include>PageLabel</include>
-				<visible>stringcompare(container.folderpath,plugin://pictures/)</visible>
-			</control>
-			<control type="label">
-				<label>[LOWERCASE]$INFO[Container.PluginName][/LOWERCASE]</label>
-				<include>PageLabel</include>
-			</control>
-
-
 <!--- LIST VIEW -------------------------->
 			<control type="group">
 				<include>infoDialogHide</include>
 				<include>transition2</include>
 				<include>contextMenuHide</include>
-				<visible>Control.IsVisible(51)</visible>
+				<visible>Control.IsVisible(50) + !IsEmpty(Container.FolderPath)</visible>
 				<control type="group">
-					<posx>10</posx>
+					<posx>640</posx>
 					<posy>100</posy>
 					<include>transition2</include>
 					<control type="image">
@@ -67,14 +46,25 @@
 						<aspectratio>stretch</aspectratio>
 						<include>fanartFadeTime</include>
 					</control>
-					<control type="largeimage">
+					<control type="image">
 						<posx>26</posx>
 						<posy>27</posy>
 						<width>540</width>
 						<height>304</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture fallback="special://skin/backgrounds/library/picturesDefaultSmall.png" background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
+						<texture fallback="thumbs/picture.png" background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
 						<include>fanartFadeTime</include>
+						<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+					</control>
+					<control type="image">
+						<posx>26</posx>
+						<posy>27</posy>
+						<width>540</width>
+						<height>304</height>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<texture diffuse="frames/wideFrameMask.png" background="true">thumbs/picture.png</texture>
+						<include>fanartFadeTime</include>
+						<visible>IsEmpty(ListItem.PictureResolution)</visible>
 					</control>
 				</control>
 			</control>
@@ -83,12 +73,11 @@
 
 <!----- THUMBNAILS VIEW ----->
 		<control type="group">
-			<visible>Control.IsVisible(57)</visible>
+			<visible>Control.IsVisible(572)</visible>
 			<include>transition2</include>
 			<include>contextMenuHide</include>
 			<posx>85</posx>
 			<posy>640</posy>
-
 			<control type="label">
 				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 				<font>special3</font>
@@ -114,121 +103,122 @@
 				<width>750</width>
 			</control>
 		</control>
-			
+
 
 <!----- GALLERY VIEW ----->	
-			<control type="group">
-				<description>normal view</description>
-				<posy>105</posy>
-				<visible>Control.IsVisible(53)</visible>
-				<include>transition3</include>
-				<include>contextMenuHide</include>
-				<include>infoDialogHide</include>
-				<control type="label">
-					<posx>265</posx>
-					<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-					<font>special3</font>
-					<textcolor>Color1</textcolor>
-					<align>left</align>
-					<width>750</width>
-					<visible>![Control.HasFocus(8000)]</visible>
-				</control>
-				<control type="label">
-					<posx>1015</posx>
-					<label>[UPPERCASE]$INFO[Container(53).ListItem(1).Label][/UPPERCASE]</label>
-					<font>special3</font>
-					<textcolor>Color1</textcolor>
-					<width>750</width>
-					<visible>Control.IsVisible(53) + ![Control.HasFocus(8000)]</visible>
-					<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
-				</control>
-			</control>
-
-			<control type="group">
+		<control type="group">
+			<description>normal view</description>
+			<posy>105</posy>
+			<visible>Control.IsVisible(53)</visible>
+			<include>transition3</include>
+			<include>contextMenuHide</include>
+			<include>infoDialogHide</include>
+			<control type="label">
 				<posx>265</posx>
-				<posy>585</posy>
-				<visible>Control.IsVisible(53)</visible>
-				<include>transition3</include>
-				<include>contextMenuHide</include>
-				<include>infoDialogHide</include>
-				<control type="label">
-					<label>[UPPERCASE]$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ][/UPPERCASE]</label>
-					<font>normalCaps</font>
-					<textcolor>Color1</textcolor>
-					<align>left</align>
-					<width>940</width>
-				</control>
-
-				<control type="label">
-					<posy>23</posy>
-					<label>[UPPERCASE]$INFO[ListItem.PictureDateTime][/UPPERCASE]</label>
-					<font>normalCaps</font>
-					<textcolor>Color2</textcolor>
-					<align>left</align>
-					<width>750</width>
-				</control>
-				<control type="label">
-					<posy>46</posy>
-					<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
-					<font>normalCaps</font>
-					<textcolor>Color2</textcolor>
-					<align>left</align>
-					<width>750</width>
-				</control>
-			</control>
-
-			<include>GalleryP</include>
-			
-			
-			
-			<include>GalleryFM</include>
-			
-			
-			<control type="image" id="1">
-				<posx>0</posx>
-				<posy>665</posy>
-				<include>screenwidth</include>
-				<height>55</height>
-				<texture flipy="false">OSD/fullscreenInfo.png</texture>
-				<include>videoFullScreenInfo</include>
-				<visible>Control.IsVisible(56)</visible>
-			</control>
-			<control type="image">
-				<posx>10</posx>
-				<posy>684</posy>
-				<width>32</width>
-				<height>24</height>
-				<aspectratio>keep</aspectratio>
-				<texture>dialogs/scrollLeftIndicator.png</texture>
-				<visible>Control.IsVisible(56)</visible>
-				<include>videoFullScreenInfo</include>
-			</control>
-			<control type="image">
-				<posx>42r</posx>
-				<posy>684</posy>
-				<width>32</width>
-				<height>24</height>
-				<aspectratio>keep</aspectratio>
-				<texture>dialogs/scrollRightIndicator.png</texture>
-				<visible>Control.IsVisible(56)</visible>
-				<include>videoFullScreenInfo</include>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+				<font>special3</font>
+				<textcolor>Color1</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>![Control.HasFocus(8000)]</visible>
 			</control>
 			<control type="label">
-				<posx>40</posx>
-				<posy>684</posy>
-				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-				<font>normalCaps</font>
-				<textcolor>Color4</textcolor>
-				<align>center</align>
-				<width>1200</width>
-				<visible>Control.IsVisible(56)</visible>
-				<include>videoFullScreenInfo</include>
+				<posx>1015</posx>
+				<label>[UPPERCASE]$INFO[Container(53).ListItem(1).Label][/UPPERCASE]</label>
+				<font>special3</font>
+				<textcolor>Color1</textcolor>
+				<width>750</width>
+				<visible>Control.IsVisible(53) + ![Control.HasFocus(8000)]</visible>
+				<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
 			</control>
+		</control>
+
+		<control type="group">
+			<posx>265</posx>
+			<posy>585</posy>
+			<visible>Control.IsVisible(53)</visible>
+			<include>transition3</include>
+			<include>contextMenuHide</include>
+			<include>infoDialogHide</include>
+			<control type="label">
+				<label>[UPPERCASE]$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color1</textcolor>
+				<align>left</align>
+				<width>940</width>
+			</control>
+			<control type="label">
+				<posy>23</posy>
+				<label>[UPPERCASE]$INFO[ListItem.PictureDateTime][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+			</control>
+			<control type="label">
+				<posy>46</posy>
+				<label>[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+			</control>
+		</control>
+
+		<include>view_GalleryFull</include>
+
+		<control type="image">
+			<include>screentype</include>	
+			<aspectratio align="left">stretch</aspectratio>
+			<texture>home/menuBackground.png</texture>
+			<include>fadeinout</include>
+			<visible>Control.IsVisible(56) + ControlGroup(300).HasFocus()</visible>
+		</control>
+
+		<control type="image" id="1">
+			<posx>0</posx>
+			<posy>665</posy>
+			<include>screenwidth</include>
+			<height>55</height>
+			<texture flipy="false">OSD/fullscreenInfo.png</texture>
+			<include>videoFullScreenInfo</include>
+			<visible>Control.IsVisible(56)</visible>
+		</control>
+		<control type="image">
+			<posx>10</posx>
+			<posy>684</posy>
+			<width>32</width>
+			<height>24</height>
+			<aspectratio>keep</aspectratio>
+			<texture>dialogs/scrollLeftIndicator.png</texture>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<control type="image">
+			<posx>42r</posx>
+			<posy>684</posy>
+			<width>32</width>
+			<height>24</height>
+			<aspectratio>keep</aspectratio>
+			<texture>dialogs/scrollRightIndicator.png</texture>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
+		<control type="label">
+			<posx>40</posx>
+			<posy>684</posy>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			<font>normalCaps</font>
+			<textcolor>Color4</textcolor>
+			<align>center</align>
+			<width>1200</width>
+			<visible>Control.IsVisible(56)</visible>
+			<include>videoFullScreenInfo</include>
+		</control>
 
 		<include>allscreens</include>
-
+		<include>view_Gallery</include>
 		<include>FilesMenu</include>
-		
 		
 	</controls>
 </window>

@@ -1,5 +1,5 @@
 <window id="7">
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">300</defaultcontrol>
 	<previouswindow>0</previouswindow>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
@@ -9,10 +9,10 @@
 		
 		<control type="group">
 			<control type="image">
-				<posx>175</posx>
+				<posx>185</posx>
 				<posy>580</posy>
 				<width>128</width>
-				<texture>xbmclogo.png</texture>
+				<texture>logos/xbmclogo.png</texture>
 				<colordiffuse>Color1</colordiffuse>
 				<aspectratio>keep</aspectratio>
 				<include>transition2</include>
@@ -21,17 +21,16 @@
 		
 		<control type="label">
 			<include>PageLabel</include>
-			<label>[LOWERCASE]$LOCALIZE[31968][/LOWERCASE]</label>
+			<label>$LOCALIZE[31968]</label>
 		</control>
 		
 		<control type="group">
-			<control type="grouplist" id="9000">
-				<posx>50</posx>
-				<posy>105</posy>
-				<width>271</width>
+			<control type="grouplist" id="300">
+				<posx>15</posx>
+				<posy>125</posy>
 				<itemgap>0</itemgap>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onup>300</onup>
+				<ondown>300</ondown>
 				<include>transition2</include>
 				
 				<control type="button" id="95">
@@ -75,7 +74,7 @@
 
 			<control type="group">
 				<include>transition2</include>
-				<posx>360</posx>
+				<posx>370</posx>
 				<posy>113</posy>
 
 				<control type="label" id="40">
@@ -162,6 +161,17 @@
 					</control>
 				</control>
 			</control>
+			
+			<control type="image">
+				<posx>311</posx>
+				<posy>15</posy>
+				<height>1192</height>
+				<width>29</width>
+				<texture>settings/separator.png</texture>
+				<aspectratio align="right">stretch</aspectratio>
+				<include>transition2</include>
+			</control>
+				
 		</control>
 	</controls>
 </window>

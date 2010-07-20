@@ -1,0 +1,164 @@
+<window>
+	<defaultcontrol>101</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>290</posx>
+		<posy>100</posy>
+	</coordinates>
+
+	<include>dialogOpen</include>
+	
+	<controls>
+		<control type="group">
+
+			<control type="image" id="1">
+				<include>dialogWindow</include>
+				<width>700</width>
+				<height>520</height>
+			</control>
+	
+			<control type="label" id="2">
+				<posx>34</posx>
+				<width>632</width>
+				<label>Gmail Checker</label>
+				<include>dialogHeading</include>
+			</control>
+			<control type="image">
+				<posx>19</posx>
+				<posy>75</posy>
+				<width>662</width>
+				<include>dialogSeparator</include>
+			</control>
+
+
+ <!-- ** Required ** Do not change <id> or <type> -->
+			<control type="label" id="100">
+				<description>textarea</description>
+				<posx>34</posx>
+				<posy>74</posy>
+				<width>632</width>
+				<height>40</height>
+				<font>mediumLow</font>
+				<textcolor>Color4</textcolor>
+				<aligny>center</aligny>
+				<align>left</align>
+				<wrapmultiline>false</wrapmultiline>
+			</control>
+			<control type="image">
+				<posx>19</posx>
+				<posy>115</posy>
+				<width>662</width>
+				<include>dialogSeparator</include>
+			</control>
+      
+			<control type="label" id="101">
+				<description>textarea</description>
+				<posx>666</posx>
+				<posy>74</posy>
+				<width>250</width>
+				<height>40</height>
+				<font>mediumLow</font>
+				<textcolor>Color4</textcolor>
+				<aligny>center</aligny>
+				<align>right</align>
+				<label>(0) New e-mails</label>
+			</control>
+	
+			<control type="label">
+				<description>textarea</description>
+				<posx>34</posx>
+				<posy>448</posy>
+				<width>632</width>
+				<height>40</height>
+				<font>mediumLow</font>
+				<textcolor>Color4</textcolor>
+				<aligny>center</aligny>
+				<align>center</align>
+				<label>$INFO[Container(120).ListItem.Property(updated)]</label>
+			</control>
+
+
+<!-- ** Required ** Do not change <id> or <type> -->
+			<control type="list" id="120">
+				<posx>19</posx>
+				<posy>116</posy>
+				<width>732</width>
+				<height>330</height>
+				<onleft>120</onleft>
+				<onright>120</onright>
+				<onup>110</onup>
+				<ondown>110</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>121</pagecontrol>
+				<scrolltime>200</scrolltime>
+	
+				<itemlayout height="65">
+					<control type="image">
+						<width>662</width>
+						<height>65</height>
+						<texture border="3">dialogs/list-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<posx>15</posx>
+						<width>632</width>
+						<height>35</height>
+						<font>mediumBold</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>Color4</textcolor>
+						<focusedcolor>Color1</focusedcolor>
+					</control>
+					<control type="label">
+						<posx>15</posx>
+						<posy>26</posy>
+						<width>632</width>
+						<height>35</height>
+						<font>mediumLow</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>Color4</textcolor>
+						<focusedcolor>Color1</focusedcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="65">
+					<control type="image">
+						<width>662</width>
+						<height>65</height>
+						<texture border="3">dialogs/list-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>15</posx>
+						<width>632</width>
+						<height>35</height>
+						<font>mediumBold</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>Color1</textcolor>
+					</control>
+					<control type="label">
+						<posx>15</posx>
+						<posy>26</posy>
+						<width>632</width>
+						<height>35</height>
+						<font>mediumLow</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>Color1</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<control type="scrollbar" id="121">
+				  <visible>false</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

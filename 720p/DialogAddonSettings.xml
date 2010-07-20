@@ -5,41 +5,37 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>290</posx>
-		<posy>125</posy>
+		<posx>272</posx>
+		<posy>70</posy>
 	</coordinates>
 
 	<controls>
 		<control type="image">
-			<width>700</width>
-			<height>515</height>
+			<width>737</width>
+			<height>560</height>
 			<include>dialogWindow</include>
 		</control>
 		
 		<control type="label" id="20">
 			<description>heading label</description>
-			<width>532</width>
+			<width>669</width>
 			<include>dialogHeading</include>
 		</control>
 
 		<control type="image">
 			<posx>19</posx>
 			<posy>75</posy>
-			<width>663</width>
+			<width>700</width>
 			<include>dialogSeparator</include>
 		</control>
-		<control type="image">
-			<posx>19</posx>
-			<posy>116</posy>
-			<width>663</width>
-			<include>dialogSeparator</include>
-		</control>
+		
+		
 
 		<control type="grouplist" id="9">
 			<description>button area</description>
 			<posx>19</posx>
 			<posy>76</posy>
-			<width>663</width>
+			<width>720</width>
 			<height>481</height>
 			<itemgap>0</itemgap>
 			<onleft>9</onleft>
@@ -48,69 +44,77 @@
 			<ondown>2</ondown>
 			<orientation>horizontal</orientation>
 		</control>
+		<control type="button" id="13">
+			<width>238</width>
+			<texturenofocus border="0">1dialogs/tab-focus.png</texturenofocus>
+			<texturefocus border="0">1dialogs/tab-focus.png</texturefocus>
+			<font>special2</font>
+			<textoffsetx>16</textoffsetx>
+			<textoffsety>0</textoffsety>
+			<textcolor>Color3</textcolor>
+			<focusedcolor>Color5</focusedcolor>
+			<height>48</height>
+			<align>left</align>
+			<include>dialogButton</include>
+		</control>
+		
+		<control type="image">
+			<posx>19</posx>
+			<posy>123</posy>
+			<width>700</width>
+			<include>dialogSeparator</include>
+		</control>
 		
 		<control type="grouplist" id="2">
 			<description>control area</description>
 			<posx>19</posx>
-			<posy>115</posy>
-			<width>663</width>
-			<height>480</height>
+			<posy>123</posy>
+			<width>700</width>
+			<height>320</height>
 			<itemgap>0</itemgap>
 			<pagecontrol>60</pagecontrol>
-			<onleft>-</onleft>
-			<onright>-</onright>
+			<onleft>9</onleft>
+			<onright>9001</onright>
 			<onup>9</onup>
 			<ondown>9001</ondown>
 		</control>
 		
-		<control type="scrollbar" id="30">
-			<visible>false</visible>
-		</control>
-
-		<control type="button" id="13">
-			<width>221</width>
-			<texturenofocus border="20">-</texturenofocus>
-			<texturefocus border="20">dialogs/list-focus.png</texturefocus>
-			<font>normalBoldLow</font>
-			<height>40</height>
-			<include>dialogButton</include>
-		</control>
-		
 		<control type="button" id="3">
+			<height>40</height>
 			<include>dialogListButton</include>
 		</control>
 		<control type="radiobutton" id="4">
+			<height>40</height>
 			<include>dialogRadio</include>
 		</control>
 		<control type="spincontrolex" id="5">
+			<height>40</height>
 			<include>dialogSpin</include>
 		</control>
-		
 		<control type="label" id="7">
+			<posx>40</posx>
 			<height>45</height>
 			<font>normalLow</font>
 			<label>-</label>
-			<textcolor>Color2</textcolor>
-			<align>left</align>
+			<textcolor>Color5</textcolor>
+			<align>-</align>
+			<textoffsetx>15</textoffsetx>
 			<aligny>center</aligny>
+			<texture>black.png</texture>
 		</control>
-		<control type="image" id="6">
-			<visible>false</visible>
-		</control>
-		
 		<control type="sliderex" id="8">
 			<description>Default Slider</description>
 			<height>40</height>
-			<font>font13</font>
-			<textcolor>grey2</textcolor>
-			<focusedcolor>white</focusedcolor>
+			<font>normalLow</font>
+			<textcolor>Color4</textcolor>
+			<focusedcolor>Color1</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 		</control>
 		
 		<control type="group" id="9001">
 			<posx>34</posx>
-			<posy>440</posy>
+			<posy>480</posy>
 			<control type="button" id="12">
 				<description>Defaults Button</description>
 				<label>409</label>
@@ -122,7 +126,7 @@
 			</control>
 			<control type="button" id="10">
 				<description>Ok Button</description>
-				<posx>375</posx>
+				<posx>414</posx>
 				<label>186</label>
 				<onup>2</onup>
 				<onleft>12</onleft>
@@ -132,7 +136,7 @@
 			</control>
 			<control type="button" id="11">
 				<description>Cancel Button</description>
-				<posx>515</posx>
+				<posx>547</posx>
 				<label>222</label>
 				<onup>2</onup>
 				<onleft>10</onleft>
@@ -141,5 +145,15 @@
 				<include>dialogButton</include>
 			</control>
 		</control>
+
+		<control type="image" id="6">
+			<width>300</width>
+			<height>4</height>
+			<texture>black.png</texture>
+		</control>
+		<control type="scrollbar" id="30">
+			<visible>false</visible>
+		</control>
+		
 	</controls>
 </window>

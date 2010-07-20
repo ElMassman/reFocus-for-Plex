@@ -1,5 +1,7 @@
 <window id="11">
 	<defaultcontrol>8</defaultcontrol>
+	<backgroundcolor>0xff000000</backgroundcolor>
+	
 	<controls>
 		<control type="videowindow" id="20">
 			<description>videowindow</description>
@@ -38,30 +40,23 @@
 			<texturefocus>calibration/pixelratio-focus.png</texturefocus>
 			<texturenofocus>calibration/pixelratio.png</texturenofocus>
 		</control>
-		<control type="image" id="1">
-			<description>rectangle image</description>
-			<posx>0</posx>
-			<posy>256</posy>
-			<width>720</width>
-			<height>57</height>
-			<texture>calibration/bluebar.png</texture>
-		</control>
+
 		<control type="label" id="2">
 			<description>coordinates label</description>
 			<posx>0</posx>
-			<posy>70</posy>
+			<posy>20</posy>
 			<label>-</label>
-			<font>h2</font>
-			<include>screentype</include>
+			<font>special</font>
+			<include>screenwidth</include>
 			<align>center</align>
 		</control>
 		<control type="label" id="3">
 			<description>help information</description>
 			<posx>0</posx>
-			<posy>40</posy>
+			<posy>60</posy>
 			<label>-</label>
-			<font>h1</font>
-			<include>screentype</include>
+			<font>special6</font>
+			<include>screenwidth</include>
 			<align>center</align>
 		</control>
 	</controls>

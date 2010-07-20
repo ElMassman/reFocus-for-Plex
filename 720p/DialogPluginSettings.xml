@@ -45,8 +45,8 @@
 				<itemgap>0</itemgap>
 				<onleft>-</onleft>
 				<onright>-</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onup>300</onup>
+				<ondown>300</ondown>
 			</control>
 			
 			<control type="button" id="3">
@@ -68,7 +68,7 @@
 				<description>separator image</description>
 			</control>
 	
-			<control type="group" id="9000">
+			<control type="group" id="300">
 				<posx>34</posx>
 				<posy>450</posy>
 

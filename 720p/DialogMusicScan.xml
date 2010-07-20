@@ -1,7 +1,7 @@
 <window id="112">
 	<controls>
 		<control type="group">
-			<visible>![Window.IsActive(12999) | Window.IsActive(2005) | Window.IsActive(107)]</visible>
+			<visible>![Window.IsActive(script-XBMC_Lyrics-main.xml)]</visible>
 			<control type="label" id="401">
 				<posx>130r</posx>
 				<include>notificationTop</include>

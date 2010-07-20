@@ -6,16 +6,16 @@
 <!---------- INFO IS ACTIVE -------------------->
 	
 		<control type="group" id="213">
-			<posx>383</posx>
+			<posx>328</posx>
 			<posy>635</posy>
-			<include>OSDcontrolSlide</include>
+			<include>open_PlayerControls</include>
 			<control type="image" id="1">
-				<width>513</width>
+				<width>568</width>
 				<height>72</height>
 				<texture border="48,33,48,33">osd/playerControlsPanel.png</texture>>
 			</control>
 			<control type="image" id="1">
-				<width>513</width>
+				<width>568</width>
 				<height>72</height>
 				<texture border="48,33,48,33">osd/playerControlsPanel.png</texture>
 			</control>
@@ -111,17 +111,29 @@
 					<width>48</width>
 					<height>48</height>
 					<onleft>16</onleft>
-					<onright>406</onright>
+					<onright>606</onright>
 					<texturefocus>osd/osd-button-next-focus.png</texturefocus>
 					<texturenofocus>osd/osd-button-next.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(Next)</onclick>
 					<include>osdButtonsd</include>
 				</control>
-				<control type="button" id="406">
+				<control type="button" id="606">
 					<posx>385</posx>
 					<width>48</width>
 					<height>48</height>
+					<texturefocus>osd/osd-button-stop-focus.png</texturefocus>
+					<texturenofocus>osd/osd-button-stop.png</texturenofocus>
 					<onleft>17</onleft>
+					<onright>406</onright>
+					<ondown>11</ondown>
+					<onleft>107</onleft>
+					<onclick>PlayerControl(Stop)</onclick>
+				</control>
+				<control type="button" id="406">
+					<posx>440</posx>
+					<width>48</width>
+					<height>48</height>
+					<onleft>606</onleft>
 					<onright>407</onright>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
@@ -129,7 +141,7 @@
 					<include>osdButtonsd</include>
 				</control>
 				<control type="image" id="1">
-					<posx>385</posx>
+					<posx>440</posx>
 					<width>48</width>
 					<height>48</height>
 					<texture>osd/osd-button-repeat.png</texture>
@@ -137,7 +149,7 @@
 					<visible>!Control.HasFocus(406)</visible>
 				</control>
 				<control type="image" id="1">
-					<posx>385</posx>
+					<posx>440</posx>
 					<width>48</width>
 					<height>48</height>
 					<texture>osd/osd-button-repeat-focus.png</texture>
@@ -145,7 +157,7 @@
 					<visible>Control.HasFocus(406)</visible>
 				</control>
 				<control type="image" id="1">
-					<posx>385</posx>
+					<posx>440</posx>
 					<width>48</width>
 					<height>48</height>
 					<texture>osd/osd-button-repeatone.png</texture>
@@ -153,7 +165,7 @@
 					<visible>!Control.HasFocus(406)</visible>
 				</control>
 				<control type="image" id="1">
-					<posx>385</posx>
+					<posx>440</posx>
 					<width>48</width>
 					<height>48</height>
 					<texture>osd/osd-button-repeatone-focus.png</texture>
@@ -161,7 +173,7 @@
 					<visible>Control.HasFocus(406)</visible>
 				</control>
 				<control type="image" id="1">
-					<posx>385</posx>
+					<posx>440</posx>
 					<width>48</width>
 					<height>48</height>
 					<texture>osd/osd-button-repeatall.png</texture>
@@ -169,7 +181,7 @@
 					<visible>!Control.HasFocus(406)</visible>
 				</control>
 				<control type="image" id="1">
-					<posx>385</posx>
+					<posx>440</posx>
 					<width>48</width>
 					<height>48</height>
 					<texture>osd/osd-button-repeatall-focus.png</texture>
@@ -177,7 +189,7 @@
 					<visible>Control.HasFocus(406)</visible>
 				</control>
 				<control type="togglebutton" id="407">
-					<posx>440</posx>
+					<posx>495</posx>
 					<width>48</width>
 					<height>48</height>
 					<onleft>406</onleft>

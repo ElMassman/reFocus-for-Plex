@@ -1,55 +1,55 @@
 <window id="12">
-	<defaultcontrol>0</defaultcontrol>
+	<defaultcontrol>888</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<previouswindow>Home</previouswindow>
 
 	<controls>
 		<include>themeBackground2</include>
 		<include>allscreens</include>
+
 		<control type="group">
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[UPPERCASE]$LOCALIZE[10507] [/UPPERCASE]</label>
+				<label>$LOCALIZE[10507] </label>
 				<visible>Window.IsActive(settings)</visible>
 			</control>
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[5] [COLOR=Color2]$LOCALIZE[480][/COLOR][/LOWERCASE]</label>
+				<label>$LOCALIZE[5] [COLOR=Color2]$LOCALIZE[480][/COLOR]</label>
 				<visible>Window.IsActive(appearancesettings)</visible>
 			</control>
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<label>$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[5][/COLOR]</label>
 				<visible>Window.IsActive(videossettings)</visible>
 			</control>
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[0] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<label>$LOCALIZE[0] [COLOR=Color2]$LOCALIZE[5][/COLOR]</label>
 				<visible>Window.IsActive(programssettings)</visible>
 			</control>
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<label>$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[5][/COLOR]</label>
 				<visible>Window.IsActive(musicsettings)</visible>
 			</control>
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[1] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<label>$LOCALIZE[1] [COLOR=Color2]$LOCALIZE[5][/COLOR]</label>
 				<visible>Window.IsActive(picturessettings)</visible>
 			</control>
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[705] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<label>$LOCALIZE[705] [COLOR=Color2]$LOCALIZE[5][/COLOR]</label>
 				<visible>Window.IsActive(networksettings)</visible>
 			</control>
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[12600] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>>
+				<label>$LOCALIZE[12600] [COLOR=Color2]$LOCALIZE[5][/COLOR]</label>>
 				<visible>Window.IsActive(weathersettings)</visible>
 			</control>
 			<control type="label">
 				<include>PageLabel</include>
-				<label>[LOWERCASE]$LOCALIZE[13000] [COLOR=Color2]$LOCALIZE[5][/COLOR][/LOWERCASE]</label>
+				<label>$LOCALIZE[13000] [COLOR=Color2]$LOCALIZE[5][/COLOR]</label>
 				<visible>Window.IsActive(systemsettings)</visible>
 			</control>
 		</control>
@@ -57,9 +57,8 @@
 		<control type="group">
 			<control type="grouplist" id="3">
 				<description>button area</description>
-				<posx>50</posx>
-				<posy>105</posy>
-				<width>271</width>
+				<posx>15</posx>
+				<posy>125</posy>
 				<height>410</height>
 				<itemgap>0</itemgap>
 				<onleft>5</onleft>
@@ -67,11 +66,12 @@
 				<onup>3</onup>
 				<ondown>3</ondown>
 				<include>transition2</include>
+				<visible>!Window.IsActive(progressdialog)</visible>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<posx>350</posx>
-				<posy>105</posy>
+				<posx>340</posx>
+				<posy>90</posy>
 				<width>850</width>
 				<height>600</height>
 				<itemgap>0</itemgap>
@@ -80,6 +80,7 @@
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<include>transition2</include>
+				<visible>!Window.IsActive(progressdialog)</visible>
 			</control>
 
 			<control type="button" id="7">
@@ -92,7 +93,6 @@
 			</control>
 			<control type="spincontrolex" id="9">
 				<description>Default SpinControlex</description>
-				<reverse>yes</reverse>
 				<include>settingsButton</include>
 			</control>
 			<control type="button" id="10">
@@ -101,5 +101,17 @@
 				<include>categoryButton</include>
 			</control>
 		</control>
+		
+		<control type="image">
+			<posx>311</posx>
+			<posy>15</posy>
+			<height>1192</height>
+			<width>29</width>
+			<texture>settings/separator.png</texture>
+			<aspectratio align="right">stretch</aspectratio>
+			<include>transition2</include>
+			<visible>!Window.IsActive(progressdialog)</visible>
+		</control>
+		
 	</controls>
 </window>

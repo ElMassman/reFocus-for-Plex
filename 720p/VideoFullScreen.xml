@@ -8,7 +8,7 @@
 			<include>codecInfo</include>
 			<control type="image" id="1">
 				<include>screenwidth</include>
-				<height>96</height>
+				<height>134</height>
 				<texture flipy="false">OSD/controlsFrame.png</texture>
 				<visible>Control.IsVisible(10)</visible>
 			</control>
@@ -25,7 +25,7 @@
 			<control type="label" id="11">
 				<description>row 2 label</description>
 				<posx>20</posx>
-				<posy>27</posy>
+				<posy>31</posy>
 				<width>1260</width>
 				<label>-</label>
 				<align>left</align>
@@ -37,6 +37,7 @@
 				<posx>20</posx>
 				<posy>48</posy>
 				<width>1260</width>
+				<height>60</height>
 				<label>-</label>
 				<align>left</align>
 				<textcolor>Color4</textcolor>

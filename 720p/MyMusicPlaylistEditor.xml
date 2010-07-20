@@ -65,7 +65,7 @@
 					<control type="image">
 						<width>550</width>
 						<height>45</height>
-						<texture border="16,16,16,16">settings/list-focus.png</texture>
+						<texture border="16,16,16,16">settings/list-focus2.png</texture>
 					</control>
 					<control type="label">
 						<posx>15</posx>
@@ -122,7 +122,7 @@
 					<control type="image">
 						<width>550</width>
 						<height>45</height>
-						<texture border="16,16,16,16">settings/list-focus.png</texture>
+						<texture border="16,16,16,16">settings/list-focus2.png</texture>
 					</control>
 					<control type="label">
 						<posx>15</posx>

@@ -2,17 +2,17 @@
 
 	<include name="LibraryVideoMenu">
 
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>
-			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus</visible>
+			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus</visible>
 			<onright>50</onright>
 			<include>pagemenus</include>
 			<include>transition2</include>
 			
 			<control type="button" id="1">
 				<description>Choose Viewtype</description>
-				<label>[LOWERCASE]$LOCALIZE[31930][/LOWERCASE]</label>
+				<label>$LOCALIZE[31930]</label>
 				<onright>50</onright>
 				<onup>90</onup>
 				<ondown>3</ondown>
@@ -31,23 +31,23 @@
 				<visible allowhiddenfocus="true">ControlGroup(40).HasFocus()</visible>
 				
 				<control type="button" id="41">
-					<label>[LOWERCASE]$LOCALIZE[535][/LOWERCASE]</label>
+					<label>$LOCALIZE[535]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onup>1</onup>
 					<onclick>Container.SetViewMode(50)</onclick>
 					<include>contextButton</include>
 				</control>
-				<!--<control type="button" id="42">
-					<label>[LOWERCASE]$LOCALIZE[537][/LOWERCASE]</label>
+				<control type="button" id="42">
+					<label>$LOCALIZE[537]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(51)</onclick>
 					<include>contextButton</include>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
-				</control>-->
+					<visible>Container.Content(episodes)</visible>
+				</control>
 				<control type="button" id="43">
-					<label>[LOWERCASE]$LOCALIZE[31003][/LOWERCASE]</label>
+					<label>$LOCALIZE[31003]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(52)</onclick>
@@ -55,7 +55,7 @@
 					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 				</control>
 				<control type="button" id="44">
-					<label>[LOWERCASE]$LOCALIZE[31014][/LOWERCASE]</label>
+					<label>$LOCALIZE[31014]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(57)</onclick>
@@ -63,31 +63,38 @@
 					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 				</control>
 				<control type="button" id="45">
-					<label>[LOWERCASE]$LOCALIZE[31093][/LOWERCASE]</label>
+					<label>$LOCALIZE[31008]</label>
+					<onleft>1</onleft>
+					<onright>1</onright>
+					<onclick>Container.SetViewMode(557)</onclick>
+					<include>contextButton</include>
+					<visible>![IsEmpty(Container.FolderPath) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(genres) | Container.Content(actors) | Container.Content(artists) | Container.Content(studios) | Container.Content(years) | Container.Content(countries) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)]</visible>
+				</control>
+				<control type="button" id="46">
+					<label>$LOCALIZE[31093]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(54)</onclick>
 					<include>contextButton</include>
 					<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowBanners)</visible>
 				</control>
-				<control type="button" id="46">
-					<label>[LOWERCASE]$LOCALIZE[31003][/LOWERCASE]</label>
+				<control type="button" id="47">
+					<label>$LOCALIZE[31003]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(58)</onclick>
 					<include>contextButton</include>
 					<visible>Container.Content(episodes)</visible>
 				</control>
-				<control type="button" id="47">
-					<label>[LOWERCASE]$LOCALIZE[31002][/LOWERCASE]</label>
+				<control type="button" id="48">
+					<label>$LOCALIZE[31002]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(53)</onclick>
 					<include>contextButton</include>
-					<visible>Container.Content(tvshows) | [Container.Content(movies) + ![stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)]]</visible>
-					<enable></enable>
+					<visible>[Container.Content(tvshows) | Container.Content(movies)]</visible>
 				</control>
-				<control type="button" id="48">
+				<control type="button" id="49">
 					<label>next</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
@@ -96,94 +103,10 @@
 				</control>
  			</control>
 			
-			<!--<control type="grouplist" id="80">
-				<onup>40</onup>
-				<ondown>40</ondown>
-				<onleft>77</onleft>
-				<onright>77</onright>
-				<itemgap>-125</itemgap>
-				<visible allowhiddenfocus="true">ControlGroup(80).HasFocus() + !ControlGroup(40).HasFocus()</visible>
-				
-				<control type="button" id="81">
-					<label>31934</label>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<onclick>Skin.ToggleSetting(ListViewFanart)</onclick>
-					<include>contextButton</include>
-					<visible>Control.IsVisible(50) + Skin.HasSetting(ListViewFanart) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-				</control>
-				<control type="button" id="82">
-					<label>31935</label>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<onclick>Skin.ToggleSetting(ListViewFanart)</onclick>
-					<include>contextButton</include>
-					<visible>Control.IsVisible(50) + !Skin.HasSetting(ListViewFanart) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-				</control>
-				<control type="button" id="83">
-					<label>[LOWERCASE]$LOCALIZE[31062][/LOWERCASE]</label>
-					<onleft>1</onleft>
-					<onright>1</onright>
-					<onclick>Skin.ToggleSetting(biglistFanart)</onclick>
-					<include>contextButton</include>
-					<visible>[Container.Content(movies) | Container.Content(tvshows)] + Control.IsVisible(51) + Skin.HasSetting(biglistFanart)</visible>
-				</control>
-				<control type="button" id="84">
-					<label>[LOWERCASE]$LOCALIZE[31061][/LOWERCASE]</label>
-					<onleft>1</onleft>
-					<onright>1</onright>
-					<onclick>Skin.ToggleSetting(biglistFanart)</onclick>
-					<include>contextButton</include>
-					<visible>[Container.Content(movies) | Container.Content(tvshows)] + Control.IsVisible(51) + !Skin.HasSetting(biglistFanart)</visible>
-				</control>-->
-				<!--<control type="radiobutton" id="85">
-					<label>31058</label>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<onclick>Skin.ToggleSetting(galleryFull)</onclick>
-					<onclick>Container.SetViewMode(53)</onclick>
-					<selected>!Skin.HasSetting(galleryFull)</selected>
-					<include>contextButton</include>
-					<visible>Control.IsVisible(56)</visible>
-				</control>
-				<control type="radiobutton" id="86">
-					<label>31058</label>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<onclick>Skin.ToggleSetting(galleryFull)</onclick>
-					<onclick>Container.SetViewMode(56)</onclick>
-					<selected>Skin.HasSetting(galleryFull)</selected>
-					<include>contextButton</include>
-					<visible>Control.IsVisible(53)</visible>
-				</control>-->
-				<!--<control type="button" id="89">
-					<label>use posters</label>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<onclick>Container.SetViewMode(52)</onclick>
-					<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
-					<selected>Skin.HasSetting(slideViewFanart)</selected>
-					<include>contextButton</include>
-					<visible>Control.IsVisible(55) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-				</control>
-				<control type="button" id="90">
-					<label>use fanart</label>
-					<onleft>2</onleft>
-					<onright>2</onright>
-					<onclick>Container.SetViewMode(55)</onclick>
-					<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
-					<selected>!Skin.HasSetting(slideViewFanart)</selected>
-					<include>contextButton</include>
-					<visible>Control.IsVisible(52) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
-				</control>
-			</control>-->
-			
-			
-			
 			<control type="button" id="3">
 				<description>Sort by button</description>
 				<posy>43</posy>
-				<label>[LOWERCASE]$LOCALIZE[103][/LOWERCASE]</label>
+				<label>$LOCALIZE[103]</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>1</onup>
@@ -210,8 +133,8 @@
 			<control type="togglebutton" id="5">
 				<description>Library button</description>
 				<posy>129</posy>
-				<label>[LOWERCASE]$LOCALIZE[14022] $LOCALIZE[456][/LOWERCASE]</label>
-				<altlabel>[LOWERCASE]$LOCALIZE[31901][/LOWERCASE]</altlabel>
+				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
+				<altlabel>$LOCALIZE[31901]</altlabel>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>4</onup>
@@ -225,8 +148,8 @@
 			<control type="togglebutton" id="14">
 				<description>Watched Toggle</description>
 				<posy>172</posy>
-				<label>[LOWERCASE]$LOCALIZE[20367][/LOWERCASE]</label>
-				<altlabel>[LOWERCASE]$LOCALIZE[31900][/LOWERCASE]</altlabel>
+				<label>$LOCALIZE[20367]</label>
+				<altlabel>$LOCALIZE[31900]</altlabel>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>5</onup>
@@ -238,7 +161,7 @@
 			<control type="button" id="8">
 				<description>Search Button</description>
 				<posy>215</posy>
-				<label>[LOWERCASE]$LOCALIZE[137][/LOWERCASE]</label>
+				<label>$LOCALIZE[137]</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>14</onup>
@@ -250,7 +173,7 @@
 			<control type="button" id="19">
 				<description>Filter</description>
 				<posy>258</posy>
-				<label>[LOWERCASE]$LOCALIZE[587][/LOWERCASE]</label>
+				<label>$LOCALIZE[587]</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>8</onup>
@@ -262,20 +185,21 @@
 			<control type="button" id="16">
 				<description>Party Mode Button</description>
 				<posy>301</posy>
-				<label>[LOWERCASE]$LOCALIZE[589][/LOWERCASE]</label>
+				<label>$LOCALIZE[589]</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>19</onup>
 				<ondown>17</ondown>
 				<include>contextButton</include>
 				<visible>!ControlGroup(40).HasFocus()</visible>
+				<enable>Container.Content(musicvideos)</enable>
 			</control>
 
 			<control type="togglebutton" id="17">
 				<description>Flatten Button</description>
 				<posy>344</posy>
-				<label>[LOWERCASE]$LOCALIZE[20411][/LOWERCASE]</label>
-				<altlabel>[LOWERCASE]$LOCALIZE[31107][/LOWERCASE]</altlabel>
+				<label>$LOCALIZE[20411]</label>
+				<altlabel>$LOCALIZE[31107]</altlabel>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>16</onup>
@@ -287,7 +211,7 @@
 			<control type="button" id="11">
 				<description>Trailer Button</description>
 				<posy>387</posy>
-				<label>[LOWERCASE]$LOCALIZE[20410][/LOWERCASE]</label>
+				<label>$LOCALIZE[20410]</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>17</onup>
@@ -301,7 +225,7 @@
 			<control type="button" id="30">
 				<description>Favourites Button</description>
 				<posy>430</posy>
-				<label>[LOWERCASE]$LOCALIZE[1036][/LOWERCASE]</label>
+				<label>$LOCALIZE[1036]</label>
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onclick>ActivateWindow(Favourites)</onclick>
@@ -310,10 +234,7 @@
 				<include>contextButton</include>
 				<visible>!ControlGroup(40).HasFocus()</visible>
 			</control>
-			
-			
-			
-			
+
 			<control type="button" id="90">
 				<description>SLIDE: use posters</description>
 				<label>$LOCALIZE[31061]</label>
@@ -326,7 +247,7 @@
 				<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
 				<selected>Skin.HasSetting(slideViewFanart)</selected>
 				<include>contextButton</include>
-				<visible>Control.IsVisible(55) + ![stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)] + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
+				<visible>Control.IsVisible(55) + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
 			</control>
 			<control type="button" id="90">
 				<description>SLIDE: use fanart</description>
@@ -340,7 +261,7 @@
 				<onclick>Skin.ToggleSetting(slideViewFanart)</onclick>
 				<selected>!Skin.HasSetting(slideViewFanart)</selected>
 				<include>contextButton</include>
-				<visible>Control.IsVisible(52) + ![stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)] + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
+				<visible>Control.IsVisible(52) + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
 			</control>
 
 			<control type="button" id="90">
@@ -369,7 +290,7 @@
 				<onclick>Container.SetViewMode(56)</onclick>
 				<selected>Skin.HasSetting(galleryFull)</selected>
 				<include>contextButton</include>
-				<visible>Control.IsVisible(53)+ IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
+				<visible>Control.IsVisible(53) + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
 			</control>
 			
 			<control type="togglebutton" id="90">
@@ -384,10 +305,37 @@
 				<onclick>Skin.ToggleSetting(ListViewFanart)</onclick>
 				<selected>!Skin.HasSetting(ListViewFanart)</selected>
 				<include>contextButton</include>
-				<visible>Control.IsVisible(50)+ IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
+				<visible>Control.IsVisible(50) + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
 			</control>
-
-														
+			
+			<control type="button" id="90">
+				<description>THUMBS: info</description>
+				<label>$LOCALIZE[31975]</label>
+				<posy>473</posy>
+				<onleft>2</onleft>
+				<onright>50</onright>
+				<onup>30</onup>
+				<ondown>1</ondown>
+				<onclick>Skin.ToggleSetting(thumbInfo)</onclick>
+				<onclick>Container.SetViewMode(571)</onclick>
+				<selected>!Skin.HasSetting(thumbInfo)</selected>
+				<include>contextButton</include>
+				<visible>Control.IsVisible(57) + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
+			</control>
+			<control type="button" id="90">
+				<description>THUMBS: no info</description>
+				<label>$LOCALIZE[31974]</label>
+				<posy>473</posy>
+				<onleft>2</onleft>
+				<onright>50</onright>
+				<onup>30</onup>
+				<ondown>1</ondown>
+				<onclick>Skin.ToggleSetting(thumbInfo)</onclick>
+				<onclick>Container.SetViewMode(57)</onclick>
+				<selected>Skin.HasSetting(thumbInfo)</selected>
+				<include>contextButton</include>
+				<visible>Control.IsVisible(571) + [Container.Content(movies) | Container.Content(tvshows)] + !ControlGroup(40).HasFocus()</visible>
+			</control>	
 		</control>
 	</include>
 </includes>

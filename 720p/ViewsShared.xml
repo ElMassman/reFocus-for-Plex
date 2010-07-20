@@ -1,0 +1,794 @@
+<includes>
+	<include name="view_List">
+		<control type="list" id="50">
+			<viewtype label="535">List</viewtype>
+			<posy>85</posy>
+			<width>625</width>
+			<height>605</height>
+			<onleft>300</onleft>
+			<onright>23</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<scrolltime>150</scrolltime>	
+			<focusposition>3</focusposition>
+			<pagecontrol>23</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>!Window.IsActive(progressdialog)</visible>
+	
+			<itemlayout width="625" height="40">
+				<control type="image">
+					<posy>-28</posy>
+					<width>650</width>
+					<height>100</height>
+					<texture border="0,30,0,30">1black.png</texture>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<width>570</width>
+					<label>$INFO[ListItem.Label]</label>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<width>570</width>
+					<label>$INFO[ListItem.Label][COLOR=Color2]$INFO[ListItem.Label2, - ][/COLOR]</label>
+					<include>listMenu</include>
+					<visible>![Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActice(mymusicfiles)]</visible>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<width>570</width>
+					<align>right</align>
+					<label>$INFO[ListItem.Label2]</label>
+					<textcolor>Color2</textcolor>
+					<font>normal</font>
+					<include>listMenu</include>
+					<visible>Window.IsActive(mymusicfiles) + !Window.IsActive(programs)</visible>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<width>570</width>
+					<align>right</align>
+					<label>$INFO[ListItem.Label2]</label>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+					<visible>Window.IsActive(addonbrowser)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout width="625" height="40">
+				<control type="image">
+					<posy>-28</posy>
+					<width>650</width>
+					<height>100</height>
+					<texture border="0,30,0,30">views/list-focus.png</texture>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<width>570</width>
+					<label>$INFO[ListItem.Label]</label>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<width>570</width>
+					<label>$INFO[ListItem.Label][COLOR=Color2]$INFO[ListItem.Label2, - ][/COLOR]</label>
+					<font>normal</font>
+					<include>listMenuFocus</include>
+					<visible>![Window.IsActive(programs) | Window.IsActive(pictures) | Window.IsActice(mymusicfiles)]</visible>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<width>570</width>
+					<align>right</align>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>normal</font>
+					<include>listMenuFocus</include>
+					<visible>Window.IsActive(mymusicfiles) + !Window.IsActive(programs)</visible>
+				</control>
+				<control type="label">
+					<posx>560</posx>
+					<width>570</width>
+					<align>right</align>
+					<label>$INFO[ListItem.Label2]</label>
+					<include>listMenuFocus</include>
+					<visible>Window.IsActive(addonbrowser)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+
+	<include name="view_Addons">
+		<control type="panel" id="573">
+			<viewtype label="Thumbnails">bigicons</viewtype>
+			<posx>75</posx>
+			<posy>110</posy>
+			<width>1110</width>
+			<height>370</height>
+			<onleft>300</onleft>
+			<onright>75</onright>
+			<onup>573</onup>
+			<ondown>573</ondown>
+			<preloaditems>4</preloaditems>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>75</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>		
+			<visible>!Window.IsActive(progressdialog)</visible>
+
+			<itemlayout height="185" width="185">
+				<control type="image">
+					<width>184</width>
+					<height>184</height>
+					<texture border="30">frames/albumFrameSmall.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>165</width>
+					<height>165</height>
+					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+					<texture background="true" diffuse="frames/albumFrameMaskSmall.png" fallback="thumbs/addon.png">$INFO[ListItem.Thumb]</texture>
+				</control>
+			</itemlayout>											
+			<focusedlayout height="185" width="185">
+				<control type="image">
+					<width>184</width>
+					<height>184</height>
+					<texture border="30">frames/albumFrameSmall.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>focus_Thumbs</include>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>165</width>
+					<height>165</height>
+					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+					<texture background="true" diffuse="frames/albumFrameMaskSmall.png" fallback="thumbs/addon.png">$INFO[ListItem.Thumb]</texture>
+					<include>focus_Thumbs</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	<!--<include name="view_Addons">
+		<control type="panel" id="510">
+			<viewtype label="535">icons</viewtype>
+			<posx>55</posx>
+			<posy>95</posy>
+			<width>1280</width>
+			<height>600</height>
+			<onleft>300</onleft>
+			<onright>23</onright>
+			<onup>510</onup>
+			<ondown>510</ondown>
+			<scrolltime>200</scrolltime>	
+			<pagecontrol>23</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+
+			<itemlayout width="600" height="150">
+				<control type="image">
+					<posy>0</posy>
+					<width>550</width>
+					<height>138</height>
+					<texture border="0">1black.png</texture>
+				</control>
+				
+				<control type="image">
+					<posx>2</posx>
+					<posy>2</posy>
+					<width>131</width>
+					<height>131</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture>frames/squareFrame.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>128</width>
+					<height>128</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture diffuse="frames/1squareFrameMask.png" fallback="addons/noIcon.png">$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>100</width>
+					<height>128</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture>frames/posterGloss.png</texture>
+				</control>
+				
+				<control type="label">
+					<posx>150</posx>
+					<posy>0</posy>
+					<width>570</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>special2</font>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>30</posy>
+					<width>570</width>
+					<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+					<visible>![Window.IsActive(programs) | Window.IsActive(pictures)]</visible>
+				</control>
+				<control type="textbox">
+					<posx>150</posx>
+					<posy>74</posy>
+					<width>405</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+					<textcolor>Color1</textcolor>
+					<font>mediumLow</font>
+				</control>
+			</itemlayout>
+			<focusedlayout width="600" height="150">
+				<control type="image">
+					<posy>0</posy>
+					<width>550</width>
+					<height>138</height>
+					<texture border="0">views/addonFocus.png</texture>
+				</control>
+
+				<control type="image">
+					<posx>2</posx>
+					<posy>2</posy>
+					<width>131</width>
+					<height>131</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture>frames/squareFrame.png</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>128</width>
+					<height>128</height>
+					<aspectratio align="center">stretch</aspectratio>
+					<texture diffuse="frames/1squareFrameMask.png" fallback="addons/noIcon.png">$INFO[ListItem.Thumb]</texture>
+				</control>
+				
+				<control type="label">
+					<posx>150</posx>
+					<posy>0</posy>
+					<width>570</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>special2</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>30</posy>
+					<width>570</width>
+					<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+					<include>listMenuFocus</include>
+					<visible>![Window.IsActive(programs) | Window.IsActive(pictures)]</visible>
+				</control>
+				<control type="textbox">
+					<posx>150</posx>
+					<posy>74</posy>
+					<width>405</width>
+					<height>60</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+					<font>mediumLow</font>
+					<include>listMenuFocus</include>
+					
+				</control>
+			</focusedlayout>
+		</control>
+	</include>-->
+
+	
+<!--- THUMBS VIEW ---------->
+	<include name="view_Thumbs">
+		<control type="panel" id="572">
+			<viewtype label="Thumbnails">icons</viewtype>
+			<posx>45</posx>
+			<posy>95</posy>
+			<width>1240</width>
+			<height>505</height>
+			<onleft>300</onleft>
+			<onright>64</onright>
+			<onup>572</onup>
+			<ondown>572</ondown>
+			<preloaditems>4</preloaditems>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>64</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>!Window.IsActive(progressdialog)</visible>
+			
+			<itemlayout height="168" width="168">
+				<control type="image">
+					<width>169</width>
+					<height>169</height>
+					<texture border="30">frames/albumFrameSmall.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>150</width>
+					<height>150</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" diffuse="frames/albumFrameMaskSmall.png" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>150</width>
+					<height>150</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>frames/albumFrameGloss.png</texture>
+				</control>
+			</itemlayout>											
+			<focusedlayout height="168" width="168">
+				<control type="image">
+					<width>169</width>
+					<height>169</height>
+					<texture border="30">frames/albumFrameSmall.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>focus_Thumbs</include>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>150</width>
+					<height>150</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" diffuse="frames/albumFrameMaskSmall.png" fallback="thumbs/album.png">$INFO[ListItem.Thumb]</texture>
+					<include>focus_Thumbs</include>
+				</control>
+				<control type="image">
+					<posx>5</posx>
+					<posy>4</posy>
+					<width>150</width>
+					<height>150</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>frames/albumFrameGloss.png</texture>
+					<include>focus_Thumbs</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	
+	<include name="view_ThumbWide">
+		<control type="panel" id="572">
+			<viewtype label="Thumbnails">bigicons</viewtype>
+			<posx>75</posx>
+			<posy>90</posy>
+			<width>1240</width>
+			<height>510</height>
+			<onleft>300</onleft>
+			<onright>75</onright>
+			<onup>572</onup>
+			<ondown>572</ondown>
+			<preloaditems>4</preloaditems>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>75</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>!IsEmpty(Container.FolderPath) + !Window.IsActive(progressdialog)</visible>
+
+			<itemlayout height="170" width="220">
+				<control type="image">
+					<width>219</width>
+					<height>169</height>
+					<texture border="30">frames/albumFrameSmall.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>200</width>
+					<height>150</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" diffuse="frames/albumFrameMaskSmall.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Thumb]</texture>
+				</control>
+			</itemlayout>											
+			<focusedlayout height="170" width="220">
+				<control type="image">
+					<width>219</width>
+					<height>169</height>
+					<texture border="30">frames/albumFrameSmall.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<include>focus_WideThumbs</include>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>200</width>
+					<height>150</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" diffuse="frames/albumFrameMaskSmall.png" fallback="thumbs/pictureSmall.png">$INFO[ListItem.Thumb]</texture>
+					<include>focus_WideThumbs</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	
+	
+	
+	
+	<!--
+	<include name="view_ThumbWide">
+		<control type="panel" id="557">
+			<viewtype label="Thumbnails">webvideo</viewtype>
+			<posx>25</posx>
+			<posy>100</posy>
+			<width>1280</width>
+			<height>500</height>
+			<onleft>557</onleft>
+			<onright>557</onright>
+			<onup>300</onup>
+			<ondown>-</ondown>
+			<scrolltime>100</scrolltime>
+			<orientation>horizontal</orientation>
+			<pagecontrol>75</pagecontrol>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+			<visible>!Container.HasFolders + Window.IsActive(myvideolibrary)</visible>
+
+			<itemlayout width="290" height="250">
+				<control type="image">
+					<width>280</width>
+					<height>169</height>
+					<texture border="30">frames/albumFrameSmall.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>260</width>
+					<height>150</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" diffuse="frames/albumFrameMaskSmall.png" fallback="pictureThumb.png">$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="textbox">
+					<posx>10</posx>
+					<posy>170</posy>
+					<width>250</width>
+					<height>60</height>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<font>mediumLow</font>
+					<autoscroll delay="100000" time="1000" repeat="0">Control.HasFocus(557)</autoscroll>
+					<wrapmultiline>true</wrapmultiline>
+					<include>listMenu</include>
+				</control>
+			</itemlayout>											
+			<focusedlayout  width="290" height="250">
+				<control type="image">
+					<width>280</width>
+					<height>169</height>
+					<texture border="30">frames/albumFrameSmall.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>260</width>
+					<height>150</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" diffuse="frames/albumFrameMaskSmall.png" fallback="pictureThumb.png">$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="image">
+					<posx>98</posx>
+					<posy>43</posy>
+					<width>64</width>
+					<height>64</height>
+					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+					<texture>osd/osd-button-play-focus.png</texture>
+				</control>
+				<control type="textbox">
+					<posx>10</posx>
+					<posy>170</posy>
+					<width>250</width>
+					<height>60</height>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<font>mediumLow</font>
+					<wrapmultiline>true</wrapmultiline>
+					<autoscroll delay="2000" time="3000" repeat="4">Control.HasFocus(557)</autoscroll>
+					<include>listMenu</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>-->
+	
+	
+	<!--<include name="view_Addons">
+		<control type="list" id="558">
+			<viewtype label="535">list</viewtype> 	
+			<posy>80</posy>
+			<width>700</width>
+			<height>608</height>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<onleft>300</onleft>
+			<onright>23</onright>
+			<pagecontrol>23</pagecontrol>
+			<scrolltime>150</scrolltime>
+			<orientation>vertical</orientation>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+
+			<itemlayout width="625" height="124">
+				<control type="image">
+					<posx>40</posx>
+					<posy>2</posy>
+					<width>112</width>
+					<height>112</height>
+					<texture>white.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>2</posy>
+					<width>112</width>
+					<height>112</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<width>500</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow</font>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<posy>30</posy>
+					<width>500</width>
+					<label>version $INFO[ListItem.Property(Addon.Version)] by $INFO[ListItem.Property(Addon.Creator)]</label>
+					<align>left</align>
+					<font>mediumCaps</font>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<posy>60</posy>
+					<width>500</width>
+					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+					<align>left</align>
+					<font>normalLow</font>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+				</control>
+			</itemlayout>
+			<focusedlayout width="625" height="124">
+				
+				<control type="image">
+					<posy>-28</posy>
+					<width>625</width>
+					<height>171</height>
+					<texture border="0,30,0,30">views/list-focus.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>2</posy>
+					<width>112</width>
+					<height>112</height>
+					<texture>white.png</texture>
+				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>2</posy>
+					<width>112</width>
+					<height>112</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<width>500</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<posy>30</posy>
+					<width>500</width>
+					<label>version $INFO[ListItem.Property(Addon.Version)] by $INFO[ListItem.Property(Addon.Creator)]</label>
+					<align>left</align>
+					<font>mediumCaps</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>180</posx>
+					<posy>60</posy>
+					<width>500</width>
+					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+					<align>left</align>
+					<font>normalLow</font>
+					<include>listMenuFocus</include>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>-->
+	
+	
+
+<!--- GALLERY VIEW --->	
+	<include name="view_Gallery">																					
+		<control type="group">
+			<visible>Control.IsVisible(53)</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<include>infoDialogHide</include>
+			<control type="image">
+				<posy>106</posy>
+				<width>1280</width>
+				<height>478</height>
+				<aspectratio align="center">stretch</aspectratio>
+				<texture border="29">frames/panelFrame.png</texture>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Window.IsActive(2)] + Control.IsVisible(53) + !Window.IsActive(progressdialog)</visible>
+				<include>transition2</include>
+				<include>contextMenuHide</include>
+				<include>infoDialogHide</include>
+			</control>
+		</control>
+	
+		<control type="wraplist" id="53">
+			<viewtype label="Gallery">bigwrap</viewtype>
+			<posx>-485</posx>
+			<posy>135</posy>
+			<width>1900</width>
+			<height>800</height>
+			<onleft>53</onleft>
+			<onright>53</onright>
+			<onup>300</onup>
+			<ondown>8000</ondown>
+			<scrolltime>250</scrolltime>
+			<orientation>horizontal</orientation>
+			<focusposition>1</focusposition>
+			<preloaditems>3</preloaditems>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Window.IsActive(2)] + !Window.IsActive(progressdialog) + !IsEmpty(Container.FolderPath)</visible>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<include>infoDialogHide</include>
+	
+			<itemlayout height="800" width="749">
+				<control type="image">
+					<width>750</width>
+					<height>422</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="thumbs/movie.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<width>750</width>
+					<height>422</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="thumbs/tvshow.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<control type="image">
+					<width>750</width>
+					<height>422</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="thumbs/picture.png">$INFO[ListItem.FilenameAndPath]</texture>
+					<visible>Window.IsActive(2)</visible>
+				</control>
+				<control type="image">
+					<posx>720</posx>
+					<posy>395</posy>
+					<include>watchedOverlay</include>
+					<animation effect="fade" start="100" end="30" time="0" condition="true">Conditional</animation>
+					<visible>!Control.HasFocus(8000) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="800" width="750">
+				<control type="image">
+					<width>750</width>
+					<height>422</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="thumbs/movie.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>Container.Content(movies)</visible>
+					<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.Title)">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>750</width>
+					<height>422</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="thumbs/tvshow.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>Container.Content(tvshows)</visible>
+					<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000) + !IsEmpty(ListItem.TVShowTitle)">Conditional</animation>
+				</control>
+				<control type="image">
+					<width>750</width>
+					<height>422</height>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="thumbs/picture.png">$INFO[ListItem.FilenameAndPath]</texture>
+					<visible>Window.IsActive(2)</visible>
+					<animation effect="zoom" start="100" end="173" time="200" center="362,185" tween="Cubic" condition="Control.HasFocus(8000)">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>720</posx>
+					<posy>395</posy>
+					<include>watchedOverlay</include>
+					<visible>!Control.HasFocus(8000) + [Container.Content(movies) + Skin.HasSetting(overlayMovies) | Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+
+	<include name="view_GalleryFull">																																																																
+		<control type="wraplist" id="56">
+			<viewtype label="Gallery">bigicons</viewtype>
+			<width>1280</width>
+			<height>720</height>
+			<onleft>56</onleft>
+			<onright>56</onright>
+			<onup>300</onup>
+			<ondown>8000</ondown>
+			<scrolltime>300</scrolltime>
+			<preloaditems>3</preloaditems>
+			<orientation>horizontal</orientation>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Window.IsActive(2)] + !Window.IsActive(progressdialog) + !IsEmpty(Container.FolderPath)</visible>
+			<include>transition2</include>
+			<include>infoDialogHide</include>
+
+			<itemlayout height="720" width="1280">
+				<control type="image">
+					<include>screentype</include>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="thumbs/movie.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<include>screentype</include>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="thumbs/tvshow.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<control type="image">
+					<include>screentype</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="thumbs/picture.png">$INFO[ListItem.FilenameAndPath]</texture>
+					<visible>Window.IsActive(2)</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="720" width="1280">
+				<control type="image">
+					<include>screentype</include>
+					<aspectratio aligny="left">scale</aspectratio>
+					<texture background="true" fallback="thumbs/movie.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<include>screentype</include>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="thumbs/tvshow.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+				<control type="image">
+					<include>screentype</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" fallback="thumbs/picture.png">$INFO[ListItem.FilenameAndPath]</texture>
+					<visible>Window.IsActive(2)</visible>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>	
+
+</includes>

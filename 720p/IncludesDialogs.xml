@@ -153,6 +153,7 @@
 		<textoffsetx>15</textoffsetx>
 		<textoffsety>-3</textoffsety>
 		<aligny>center</aligny>
+		<height>40</height>
 		<texturefocus border="3">dialogs/list-focus.png</texturefocus>
 		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
 		<textureup>dialogs/scrollUp.png</textureup>

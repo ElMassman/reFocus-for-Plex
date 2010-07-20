@@ -1,18 +1,17 @@
 <window id="502">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<views>50,52,53,55,572</views>
 	
 	<controls>
-		
 		<include>themeBackground2</include>
 		<include>allscreens</include>
+		<include>AllViewCommonPageControls</include>
 		
-		<control type="group">
-			<include>AllViewCommonPageControls</include>
-			<include>MusicSlide</include>
-			<include>ThumbnailsM</include>
-			<include>ArtSlideM</include>
-			<include>ListViewCommon</include>
+		<include>view_SlideMusic</include>
+		<include>view_Thumbs</include>
+		<include>view_SlideWideMusic</include>
+		<!--<include>ListViewCommon</include>-->
 
 <!-- FAKE INFO BUTTON ----------------------------------------------->	
 			<control type="button" id="8000">
@@ -27,87 +26,8 @@
 
 
 <!----- LIST VIEW (ALBUMS & SONGS) ---------------------------------------------------------------------------------------------------------------->
-			<control type="image">
-				<posx>437</posx>
-				<posy>242</posy>
-				<width>700</width>
-				<height>145</height>
-				<texture border="0,30,0,30">views/list-focus.png</texture>
-				<visible>Control.IsVisible(50) + !Window.IsActive(2001) + [Container.Content(albums) | Container.Content(songs)]</visible>
-				<include>contextMenuHide</include>
-				<include>transition2</include>
-				<include>infoDialogHide</include>
-			</control>
-			<control type="image">
-				<posx>535</posx>
-				<posy>210</posy>
-				<width>700</width>
-				<height>110</height>
-				<texture border="0,30,0,30">views/list-focus.png</texture>
-				<visible>Control.IsVisible(50) + [Container.Content(artists)] + ![Window.IsActive(2001)]</visible>
-				<include>contextMenuHide</include>
-				<include>transition2</include>
-				<animation effect="slide" start="0" end="40" time="0" condition="true">Conditional</animation>
-			</control>
-	
-			<include>ListViewMusic</include>
-		
-			<control type="group">
-				<posx>10</posx>
-				<posy>95</posy>
-				<visible>Control.IsVisible(50) + [Container.Content(albums) | Container.Content(songs)]</visible>
-				<include>infoDialogHide</include>
-				<include>transition2</include>
-				<include>contextMenuHide</include>
-				<control type="group">
-					<control type="image">
-						<width>454</width>
-						<height>454</height>
-						<texture border="55">frames/albumFrame.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<include>thumbFadeTime</include>
-					</control>
-					<control type="largeimage">
-						<posx>26</posx>
-						<posy>27</posy>
-						<width>400</width>
-						<height>400</height>
-						<texture background="true" diffuse="frames/albumFrameMask.png" scalediffuse="false">AlbumThumb.png</texture>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<include>thumbFadeTime</include>
-						<visible>IsEmpty(ListItem.Thumb)</visible>
-					</control>
-					<control type="largeimage">
-						<posx>26</posx>
-						<posy>27</posy>
-						<width>400</width>
-						<height>400</height>
-						<texture background="true" diffuse="frames/albumFrameMask.png" scalediffuse="false">$INFO[ListItem.Thumb]</texture>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<include>thumbFadeTime</include>
-					</control>
-				</control>
-			</control>
-	
-			<control type="group">
-				<posx>35</posx>
-				<posy>560</posy>
-				<visible>Control.IsVisible(50) + [Container.Content(albums) | Container.Content(songs)]</visible>
-				<include>infoDialogHide</include>
-				<include>transition2</include>
-				<include>contextMenuHide</include>
-				<control type="image">
-					<posy>0</posy>
-					<width>387</width>
-					<height>150</height>
-					<texture border="0">-black.png</texture>
-				</control>
-				<control type="group">
-					<posx>129</posx>
-					<posy>0</posy>
-					<include>labelFlagsBig</include>
-				</control>
-			</control>
+			<include>view_ListMusic</include>
+			<include>info_MusicList</include>
 
 
 <!----- LIST VIEW (ARTISTS) ---------------------------------------------------------------------------------------------------------------->
@@ -117,48 +37,48 @@
 				<include>infoDialogHide</include>
 				<include>contextMenuHide</include>
 				<control type="group">
-					<posx>10</posx>
-					<posy>100</posy>
+					<posx>665</posx>
+					<posy>185</posy>
 					<control type="image">
-						<width>589</width>
-						<height>357</height>
+						<width>563</width>
+						<height>340</height>
 						<texture border="48">frames/wideFrame.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<include>thumbFadeTime</include>
 					</control>
-					<control type="largeimage">
-						<posx>25</posx>
+					<control type="image">
+						<posx>26</posx>
 						<posy>27</posy>
-						<width>540</width>
-						<height>304</height>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<width>510</width>
+						<height>287</height>
+						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 						<texture background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 						<include>thumbFadeTime</include>
 						<visible>!IsEmpty(ListItem.Property(Fanart_Image))</visible>
 					</control>
-					<control type="largeimage">
-						<posx>25</posx>
+					<control type="image">
+						<posx>26</posx>
 						<posy>27</posy>
-						<width>540</width>
-						<height>304</height>
+						<width>510</width>
+						<height>287</height>
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<texture background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
 						<include>thumbFadeTime</include>
 						<visible>IsEmpty(ListItem.Property(Fanart_Image))</visible>
 					</control>
-					<control type="largeimage">
-						<posx>25</posx>
+					<control type="image">
+						<posx>26</posx>
 						<posy>27</posy>
-						<width>540</width>
-						<height>304</height>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<width>510</width>
+						<height>287</height>
+						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 						<texture background="true" diffuse="frames/wideFrameMask.png">special://skin/backgrounds/library/artistNoFanartSmall.png</texture>
 						<include>thumbFadeTime</include>
 						<visible>IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(ListItem.Thumb)</visible>
 					</control>
 				</control>
 			</control>
-			
+
 
 <!----- SLIDE VIEW -------------------------------------------------------------------------------------------------------------------------->
 			<control type="group">
@@ -237,7 +157,7 @@
 				<control type="label">
 					<posy>35</posy>
 					<width>980</width>
-					<label>[UPPERCASE]$INFO[ListItem.Property(Artist_Genre)][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Property(Artist_Genre)]</label>
 					<align>left</align>
 					<include>Heading3</include>
 					<visible>!Container.Content(songs)</visible>
@@ -266,11 +186,12 @@
 					<include>textBox</include>
 					<visible>Container.Content(albums)</visible>
 				</control>
-			</control>		
+			</control>
+					
 			<control type="group">
-				<posx>90</posx>
-				<posy>448</posy>
-				<include>labelFlags</include>
+				<posx>75</posx>
+				<posy>442</posy>
+				<include>labelFlags52</include>
 				<visible>Control.IsVisible(52) | Control.IsVisible(55)</visible>
 				<include>transition3</include>
 				<include>infoDialogHide</include>
@@ -280,7 +201,7 @@
 
 <!----- THUMBNAILS VIEW --------------------------------------------------------------------------------------------------------------------->
 			<control type="group">
-				<visible>Control.IsVisible(57) + Container.Content(albums)</visible>
+				<visible>Control.IsVisible(572) + Container.Content(albums)</visible>
 				<include>transition3</include>
 				<include>contextMenuHide</include>
 				<include>infoDialogHide</include>
@@ -289,40 +210,26 @@
 	
 				<control type="label">
 					<align>left</align>
-					<label>[UPPERCASE]$INFO[ListItem.Album][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Album]</label>
 					<include>screenwidth</include>
 					<include>Heading1</include>
 				</control>
 				<control type="label">
 					<posy>30</posy>
 					<align>left</align>
-					<label>[UPPERCASE]$INFO[ListItem.Artist] • $INFO[ListItem.Year] • $INFO[ListItem.Genre][/UPPERCASE]</label>
+					<label>$INFO[ListItem.Artist] • $INFO[ListItem.Year] • $INFO[ListItem.Genre]</label>
 					<include>screenwidth</include>
 					<include>Heading3</include>
 				</control>
 			</control>
 			<control type="group">
-				<posx>1080</posx>
-				<posy>625</posy>
-				<include>labelFlags</include>
-				<visible>Control.IsVisible(57) + Container.Content(albums)</visible>
+				<posx>1090</posx>
+				<posy>632</posy>
+				<include>labelFlags57</include>
+				<visible>Control.IsVisible(572) + Container.Content(albums)</visible>
 				<include>contextMenuHide</include>
 				<include>infoDialogHide</include>	
 			</control>	
-		</control>
-
-		<control type="label" id="18">
-			<description>No Info Scanned Label</description>
-			<posx>190</posx>
-			<posy>200</posy>
-			<width>485</width>
-			<height>150</height>
-			<font>h2</font>
-			<label>-</label>
-			<textcolor>list-text</textcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-		</control>
 
 		<include>MusicLibPageLabels</include>
 		<include>musicOverlay</include>

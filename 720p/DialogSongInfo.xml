@@ -3,8 +3,8 @@
 	
 	<coordinates>
 		<system>1</system>
-		<posx>348</posx>
-		<posy>100</posy>
+		<posx>351</posx>
+		<posy>143</posy>
 	</coordinates>
 	
 	<include>dialogOpen</include>
@@ -16,20 +16,41 @@
 			
 			<control type="image">
 				<width>578</width>
-				<height>474</height>
+				<height>434</height>
 				<include>dialogWindow</include>
 			</control>
-	
+			
 			<control type="label" id="1">
-				<description>heading label</description>
-				<width>532</width>
-				<label>$INFO[ListItem.Title]</label>
-				<include>dialogHeading</include>
+				<posx>34</posx>
+				<posy>34</posy>
+				<width>500</width>
+				<align>left</align>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<textcolor>Color4</textcolor>
+				<font>special3</font>	
+			</control>
+			<control type="label" id="1">
+				<posx>34</posx>
+				<posy>57</posy>
+				<width>500</width>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<align>left</align>
+				<textcolor>Color4</textcolor>
+				<font>osd2</font>
+			</control>
+			<control type="label" id="1">
+				<posx>34</posx>
+				<posy>78</posy>
+				<width>500</width>
+				<label>$INFO[MusicPlayer.Album]</label>
+				<align>left</align>
+				<textcolor>Color4</textcolor>
+				<font>osd3</font>
 			</control>
 	
 			<control type="group">
 				<posx>19</posx>
-				<posy>75</posy>
+				<posy>115</posy>
 				<control type="image">
 					<width>542</width>
 					<include>dialogSeparator</include>
@@ -54,74 +75,62 @@
 					<width>542</width>
 					<include>dialogSeparator</include>
 				</control>
-				<control type="image">
-					<posy>200</posy>
-					<width>542</width>
-					<include>dialogSeparator</include>
-				</control>
-				<control type="image">
-					<posy>240</posy>
-					<width>542</width>
-					<include>dialogSeparator</include>
-				</control>
 			</control>
 	
 			<control type="grouplist" id="1">
-				<posx>19</posx>
-				<posy>72</posy>
+				<posx>34</posx>
+				<posy>123</posy>
 				<width>548</width>
 				<height>305</height>
-				<itemgap>0</itemgap>
-				<onleft>9000</onleft>
+				<itemgap>18</itemgap>
+				<onleft>300</onleft>
 				<onright>60</onright>
 				<onup>2</onup>
 				<ondown>2</ondown>
-				<control type="label" id="1">
-					<width>548</width>
-					<label>[B]$LOCALIZE[557]:[/B] $INFO[ListItem.Artist]</label>
-					<include>dialogLabel</include>
-				</control>
-				<control type="label" id="2">
-					<width>548</width>
-					<label>[B]$LOCALIZE[558]:[/B] $INFO[ListItem.Album]</label>
-					<include>dialogLabel</include>
-				</control>
+		
 				<control type="label" id="3">
 					<width>548</width>
-					<label>[B]$LOCALIZE[515]:[/B] $INFO[ListItem.Genre]</label>
-					<include>dialogLabel</include>
+					<label>[B]$LOCALIZE[515][/B] $INFO[ListItem.Genre]</label>
+					<textcolor>Color4</textcolor>
+					<font>mediumCaps</font>
+					<include>infoDialogMeta</include>
 				</control>
 				<control type="label" id="4">
 					<width>548</width>
-					<label>[B]$LOCALIZE[562]:[/B] $INFO[ListItem.Year]</label>
-					<include>dialogLabel</include>
+					<label>[B]$LOCALIZE[562][/B] $INFO[ListItem.Year]</label>
+					<textcolor>Color4</textcolor>
+					<font>mediumCaps</font>
+					<include>infoDialogMeta</include>
 				</control>
 				<control type="label" id="5">
 					<width>548</width>
-					<label>[B]$LOCALIZE[554]:[/B] $INFO[ListItem.TrackNumber]</label>
-					<include>dialogLabel</include>
+					<label>[B]$LOCALIZE[554][/B] $INFO[ListItem.TrackNumber]</label>
+					<textcolor>Color4</textcolor>
+					<font>mediumCaps</font>
+					<include>infoDialogMeta</include>
 				</control>
 				<control type="label" id="6">
 					<width>548</width>
-					<label>[B]$LOCALIZE[563]:[/B]</label>
-					<include>dialogLabel</include>
+					<label>[B]$LOCALIZE[563][/B]</label>
+					<textcolor>Color4</textcolor>
+					<font>mediumCaps</font>
+					<include>infoDialogMeta</include>
 				</control>
 			</control>
 	
 			<control type="image">
 				<description>Rating value</description>
 				<posx>125</posx>
-				<posy>283</posy>
+				<posy>242</posy>
 				<width>160</width>
 				<height>24</height>
 				<aspectratio align="left">keep</aspectratio>
 				<info>ListItem.StarRating</info>
-				<colordiffuse>Color4</colordiffuse>
 			</control>
 	
 			<control type="group" id="900">
 				<posx>34</posx>
-				<posy>330</posy>
+				<posy>300</posy>
 				<control type="button" id ="14">
 					<description>rating decrease</description>
 					<onleft>12</onleft>
@@ -167,7 +176,7 @@
 	
 			<control type="group" id="901">
 				<posx>34</posx>
-				<posy>395</posy>
+				<posy>355</posy>
 				<control type="button" id ="10">
 					<description>Ok button</description>
 					<posx>260</posx>

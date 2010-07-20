@@ -1,22 +1,25 @@
 ﻿<window id="107">
 	<controls>
-		<control type="label" id="401">
-			<posx>25r</posx>
-			<width>800</width>
-			<include>notificationTop</include>
-		</control>
-		<control type="label" id="402">	
-			<posx>25r</posx>
-			<width>800</width>
-			<include>notificationBottom</include>
-		</control>
-		<control type="image">
-			<posx>55r</posx>
-			<posy>19</posy>
-			<width>38</width>
-			<height>38</height>
-			<texture>dialogs/notificationIcon.png</texture>
-			<include>fadeinout</include>
-		</control>
-	</controls>
+		<control type="group">
+			<visible>![Window.IsActive(12999) | Window.IsActive(107) | Window.IsActive(script-XBMC_Lyrics-main.xml)]</visible>
+			<control type="label" id="401">
+				<posx>25r</posx>
+				<width>800</width>
+				<include>notificationTop</include>
+			</control>
+			<control type="label" id="402">	
+				<posx>25r</posx>
+				<width>800</width>
+				<include>notificationBottom</include>
+			</control>
+			<control type="image">
+				<posx>55r</posx>
+				<posy>19</posy>
+				<width>38</width>
+				<height>38</height>
+				<texture>dialogs/notificationIcon.png</texture>
+				<include>fadeinout</include>
+			</control>
+		</controls>
+	</control>
 </window>

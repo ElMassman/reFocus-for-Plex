@@ -1,5 +1,5 @@
 <window id="103">
-	<defaultcontrol always="true">68</defaultcontrol>
+	<defaultcontrol always="true">65</defaultcontrol>
 	<coordinates>
 		<system>2</system>
 		<posx>335</posx>
@@ -48,6 +48,7 @@
 				<width>542</width>
 				<height>38</height>
 				<font>medium</font>
+				<ondown>52</ondown>
 				<textcolor>Color4</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>

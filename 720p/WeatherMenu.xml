@@ -3,10 +3,10 @@
 	
 		<include>pageContextMenu</include>
 		
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>
-			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
+			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus(0)</visible>
 			<onright>8000</onright>
 			<include>pagemenus</include>
 			<include>transition2</include>
@@ -35,7 +35,7 @@
 				<control type="button" id="30">
 					<description>Favourites Button</description>
 					<posy>86</posy>
-					<label>[LOWERCASE]$LOCALIZE[1036][/LOWERCASE]</label>
+					<label>$LOCALIZE[1036]</label>
 					<onleft>-</onleft>
 					<onright>8000</onright>
 					<onclick>ActivateWindow(Favourites)</onclick>

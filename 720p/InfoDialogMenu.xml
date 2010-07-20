@@ -4,27 +4,27 @@
 
 		<include>pageContextMenu</include>
 		
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>
 			<width>800</width>
 			<height>800</height>
-			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus + !Window.IsActive(101)</visible>
+			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus + ![Window.IsActive(101) | Window.IsActive(filebrowser)]</visible>
 			<orientation>vertical</orientation>
 			<include>pagemenus</include>
 
 			<control type="button" id="5">
-				<label>[UPPERCASE]$LOCALIZE[206][/UPPERCASE]</label>
+				<label>$LOCALIZE[206]</label>
 				<width>275</width>
 				<onup>11</onup>
 				<ondown>8</ondown>
-				<onright>8000</onright>
+				<onright>7000</onright>
 				<include>contextButton</include>
-				<onclick>SetFocus(9001)</onclick>
+				<onclick>Skin.ToggleSetting(foo)</onclick>
 			</control>
 			<control type="button" id="8">
 				<posy>43</posy>
-				<label>[UPPERCASE]$LOCALIZE[208][/UPPERCASE]</label>
+				<label>$LOCALIZE[208]</label>
 				<width>275</width>
 				<onup>5</onup>
 				<ondown>6</ondown>
@@ -33,7 +33,7 @@
 			</control>
 			<control type="button" id="6">
 				<posy>86</posy>
-				<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
+				<label>$LOCALIZE[184]</label>
 				<width>275</width>
 				<onup>8</onup>
 				<ondown>10</ondown>
@@ -42,44 +42,47 @@
 			</control>
 			<control type="button" id="10">
 				<posy>129</posy>
-				<label>[UPPERCASE]$LOCALIZE[31054][/UPPERCASE]</label>
+				<label>$LOCALIZE[31054]</label>
 				<width>275</width>
 				<onup>6</onup>
 				<ondown>12</ondown>
 				<onright>8000</onright>
 				<include>contextButton</include>
+				<onclick>SetFocus(5000)</onclick>
 				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 			</control>
 			<control type="button" id="10">
 				<posy>129</posy>
-				<label>[UPPERCASE]$LOCALIZE[31019][/UPPERCASE]</label>
+				<label>$LOCALIZE[31019]</label>
 				<width>275</width>
 				<onup>6</onup>
 				<ondown>12</ondown>
 				<onright>8000</onright>
 				<include>contextButton</include>
+				<onclick>SetFocus(5000)</onclick>
 				<visible>Container.Content(episodes) | Container.Content(musicvideos)</visible>
 			</control>
 			<control type="button" id="12">
 				<posy>172</posy>
-				<label>[UPPERCASE]Fanart[/UPPERCASE]</label>
+				<label>Fanart</label>
 				<width>275</width>
 				<onup>10</onup>
 				<ondown>11</ondown>
 				<onright>8000</onright>
 				<include>contextButton</include>
 				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+				
 			</control>
 			<control type="button" id="11">
 				<posy>215</posy>
-				<label>[UPPERCASE]$LOCALIZE[20410][/UPPERCASE]</label>
+				<label>$LOCALIZE[20410]</label>
 				<width>275</width>
 				<onup>12</onup>
 				<ondown>5</ondown>
 				<onright>8000</onright>
 				<include>contextButton</include>
 				<enable>!IsEmpty(ListItem.Trailer)</enable>
-				<visible>Container.Content(movies) + ![stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)]</visible>
+				<visible>Container.Content(movies)</visible>
 			</control>
 		</control>
 				
@@ -90,28 +93,27 @@
 
 		<include>pageContextMenu</include>
 
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>
 			<width>800</width>
 			<height>800</height>
-			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus + !Window.IsActive(101)</visible>
+			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus + !Window.IsActive(101)</visible>
 			<onright>50</onright>
 			<orientation>vertical</orientation>
 			<include>pagemenus</include>
 
 			<control type="button" id="5">
-				<label>[UPPERCASE]$LOCALIZE[182][/UPPERCASE]</label>
+				<label>$LOCALIZE[182]</label>
 				<width>275</width>
 				<onup>12</onup>
 				<ondown>6</ondown>
 				<onright>8000</onright>
 				<include>contextButton</include>
-				<onclick>SetFocus(9001)</onclick>
 			</control>
 			<control type="button" id="6">
 				<posy>43</posy>
-				<label>[UPPERCASE]$LOCALIZE[184][/UPPERCASE]</label>
+				<label>$LOCALIZE[184]</label>
 				<width>275</width>
 				<onup>5</onup>
 				<ondown>10</ondown>
@@ -120,7 +122,7 @@
 			</control>
 			<control type="button" id="10">
 				<posy>86</posy>
-				<label>[UPPERCASE]$LOCALIZE[31019][/UPPERCASE]</label>
+				<label>$LOCALIZE[31019]</label>
 				<width>275</width>
 				<onup>6</onup>
 				<ondown>12</ondown>
@@ -129,7 +131,7 @@
 			</control>
 			<control type="button" id="12">
 				<posy>129</posy>
-				<label>[UPPERCASE]Fanart[/UPPERCASE]</label>
+				<label>Fanart</label>
 				<width>275</width>
 				<onup>10</onup>
 				<ondown>5</ondown>

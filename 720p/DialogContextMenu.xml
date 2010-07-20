@@ -27,9 +27,10 @@
 		<control type="image" id="998">
 			<description>background bottom image</description>
 			<posx>-1</posx>
+			<posy>45</posy>
 			<width>371</width>
 			<height>30</height>
-			<texture border="45,0,45,49">dialogs/contextmenu-bottom.png</texture>
+			<texture border="45,0,45,0">dialogs/contextmenu-bottom.png</texture>
 		</control>
 		
 		<control type="image" id="1">

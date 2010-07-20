@@ -7,69 +7,50 @@
 		<include>allscreens</include>
 		
 		<control type="label">
-			<label>[LOWERCASE]$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[559][/COLOR][/LOWERCASE]</label>
+			<label>$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[559][/COLOR]</label>
 			<include>videoPageLabel</include>
 		</control>
 
 		<include>LibraryPlaylistMenu</include>
 		
-		<control type="image">
-			<posx>577</posx>
-			<posy>242</posy>
-			<width>665</width>
-			<height>145</height>
-			<texture border="0,30,0,30">views/list-focus.png</texture>
-			<visible>Control.IsVisible(50) + !Window.IsActive(2001)</visible>
-			<include>contextMenuHide</include>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-		</control>
-		
-		<control type="group">
-			<include>PlaylistView</include>
-			<include>AllViewCommonPageControls</include>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
+		<include>view_List</include>
+		<include>AllViewCommonPageControls</include>
+		<include>transition2</include>
+		<include>infoDialogHide</include>
+		<include>contextMenuHide</include>
 			
+			
+			
+			
+		<control type="group">
+			<include>infoDialogHide</include>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+			<visible>Player.HasVideo</visible>
+
 			<control type="group">
-				<posx>10</posx>
-				<posy>100</posy>
+				<posx>675</posx>
+				<posy>75</posy>
+
 				<control type="image">
-					<width>589</width>
-					<height>357</height>
+					<width>562</width>
+					<height>340</height>
 					<texture border="48">frames/wideFrame.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<include>thumbFadeTime</include>
 				</control>
-				<control type="image">
-					<posx>26</posx>
-					<posy>27</posy>
-					<width>540</width>
-					<height>304</height>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" diffuse="frames/wideFrameMask.png">black.png</texture>
-					<include>thumbFadeTime</include>
-				</control>
-				<control type="largeimage">
-					<posx>26</posx>
-					<posy>27</posy>
-					<width>540</width>
-					<height>304</height>
-					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
-					<include>thumbFadeTime</include>
-					<visible>!Player.HasVideo</visible>
-				</control>
 				<control type="videowindow">
 					<posx>26</posx>
 					<posy>27</posy>
-					<width>540</width>
-					<height>304</height>
-					<visible>!ControlGroup(9000).HasFocus(0)</visible>
+					<width>510</width>
+					<height>287</height>
+					<visible>!ControlGroup(300).HasFocus(0)</visible>
 				</control>
-				
 			</control>
+		</control>
+			
+			
+
 		
 		<control type="image">
 			<posx>203</posx>
@@ -77,16 +58,6 @@
 			<texture fallback="flags/default.png">$INFO[VideoPlayer.studio,special://skin/extras/studios/,.png]</texture>
 			<include>studioFlags</include>
 		</control>
-		
-		<!--<control type="image">
-			<posy>565</posy>
-			<width>535</width>
-			<height>25</height>
-			<info>ListItem.StarRating</info>
-			<colordiffuse>Color7</colordiffuse>
-			<aspectratio align="center">keep</aspectratio>
-			<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.StarRating) + ![stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)]</visible>
-		</control>-->
-		</control>	
+
 	</controls>
 </window>

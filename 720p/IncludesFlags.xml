@@ -25,225 +25,596 @@
 		<colordiffuse>Color7</colordiffuse>
 		<animation effect="fade" end="80" time="0" condition="true">Conditional</animation>
 	</include>
-	
-	<!--<include name="typeFlagsSmall">
-		<control type="group" id="66">
-			<control type="image">
-				<texture>special://skin/flags/type/hd-small.png</texture>
-				<visible>substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)</visible>
-				<include>ratingsFlag</include>
-				<aspectratio align="right">keep</aspectratio>
-			</control>
-		</control>
-	</include>-->
+
 	
 	<include name="typeFlag">
 		<height>24</height>
 		<aspectratio align="left">keep</aspectratio>
 	</include>		
 	
-	<include name="typeFlagsGroup">
-		<control type="grouplist" id="100">
-			<width>900</width>
-			<height>64</height>
-			<itemgap>20</itemgap>
-			<orientation>horizontal</orientation>
-			<include>fadeinout</include>
-			<control type="image">
-				<width>110</width>
-				<include>typeFlag</include>
-				<info>ListItem.StarRating</info>
-				<colordiffuse>Color7</colordiffuse>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/480p.png</texture>
-				<visible>substring(ListItem.VideoResolution,480)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/540p.png</texture>
-				<visible>substring(ListItem.VideoResolution,540)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/720p.png</texture>
-				<visible>substring(ListItem.VideoResolution,720)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/1080p.png</texture>
-				<visible>substring(ListItem.VideoResolution,1080)</visible>
-				<include>typeFlag</include>
-			</control>
-		</control>
-	</include>
-	<include name="typeFlagV">
-		<height>24</height>
-		<aspectratio align="center">keep</aspectratio>
-	</include>
-	<include name="typeFlagsGroupV">
-		<control type="grouplist" id="100">
-			<width>900</width>
-			<height>64</height>
-			<itemgap>20</itemgap>
-			<orientation>vertical</orientation>
-			<control type="image">
-				<height>22</height>
-				<include>typeFlagV</include>
-				<info>ListItem.StarRating</info>
-				<colordiffuse>Color7</colordiffuse>
-				<visible>!IsEmpty(ListItem.Title)</visible>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/type/480p.png</texture>
-				<visible>substring(ListItem.VideoResolution,480)</visible>
-				<include>typeFlagV</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/type/540p.png</texture>
-				<visible>substring(ListItem.VideoResolution,540)</visible>
-				<include>typeFlagV</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/type/720p.png</texture>
-				<visible>substring(ListItem.VideoResolution,720)</visible>
-				<include>typeFlagV</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/type/1080p.png</texture>
-				<visible>substring(ListItem.VideoResolution,1080)</visible>
-				<include>typeFlagV</include>
-			</control>
-		</control>
-	</include>
-	
-	<include name="typeFlagsGroupI">
-		<control type="grouplist" id="100">
-			<width>900</width>
-			<height>64</height>
-			<itemgap>20</itemgap>
-			<orientation>horizontal</orientation>
-			<control type="image">
-				<width>110</width>
-				<include>typeFlag</include>
-				<info>ListItem.StarRating</info>
-				<colordiffuse>Color7</colordiffuse>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/480p.png</texture>
-				<visible>substring(ListItem.VideoResolution,480)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/540p.png</texture>
-				<visible>substring(ListItem.VideoResolution,540)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/720p.png</texture>
-				<visible>substring(ListItem.VideoResolution,720)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/1080p.png</texture>
-				<visible>substring(ListItem.VideoResolution,1080)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>$INFO[Listitem.VideoCodec,special://skin/flags/type/,.png]</texture>
-				<visible>!IsEmpty(ListItem.VideoCodec)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>$INFO[Listitem.AudioCodec,special://skin/flags/type/,.png]</texture>
-				<visible>!IsEmpty(ListItem.AudioCodec)</visible>
-				<include>typeFlag</include>
-			</control>
-		</control>
-	</include>
-	
-	<include name="typeFlagsGroupD">
+	<include name="typeFlags52">
 		<control type="grouplist" id="100">
 			<width>900</width>
 			<height>64</height>
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
+			<include>fadeinout</include>
 			
 			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/480p.png</texture>
-				<visible>substring(ListItem.VideoResolution,480)</visible>
-				<include>typeFlag</include>
-				<colordiffuse>Color4</colordiffuse>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/540p.png</texture>
-				<visible>substring(ListItem.VideoResolution,540)</visible>
-				<include>typeFlag</include>
-				<colordiffuse>Color4</colordiffuse>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/720p.png</texture>
-				<visible>substring(ListItem.VideoResolution,720)</visible>
-				<include>typeFlag</include>
-				<colordiffuse>Color4</colordiffuse>
-			</control>
-			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/1080p.png</texture>
-				<visible>substring(ListItem.VideoResolution,1080)</visible>
-				<include>typeFlag</include>
-			</control>
-			<control type="image">
-				<width>110</width>
-				<include>typeFlag</include>
+				<width>128</width>
+				<height>32</height>
 				<info>ListItem.StarRating</info>
-				<colordiffuse>Color4</colordiffuse>
+				<colordiffuse>Color7</colordiffuse>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>![Window.IsVisible(VideoFiles) | Container.Content(seasons)]</visible>
+			</control>
+			<control type="image">
+				<width>96</width>
+				<height>34</height>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<aspectratio align="center">keep</aspectratio>
+			</control>
+			<!--control type="image">
+				<width>96</width>
+				<height>34</height>
+				<texture>$INFO[Listitem.VideoResolution,special://skin/flags/type/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+			</control-->
+		</control>
+	</include>
+	<include name="typeFlags62">
+		<control type="grouplist" id="100">
+			<width>900</width>
+			<height>128</height>
+			<itemgap>10</itemgap>
+			<orientation>vertical</orientation>
+			<include>fadeinout</include>
+			<control type="image">
+				<width>128</width>
+				<height>32</height>
+				<info>ListItem.StarRating</info>
+				<colordiffuse>Color7</colordiffuse>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>!Window.IsVisible(VideoFiles)</visible>
+			</control>
+			<control type="image">
+				<width>128</width>
+				<height>34</height>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<aspectratio align="center">keep</aspectratio>
+			</control>
+			<!--control type="image">
+				<width>128</width>
+				<height>34</height>
+				<texture>$INFO[Listitem.VideoResolution,special://skin/flags/type/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+			</control-->
+		</control>
+	</include>
+	
+	
+	
+	<include name="typeFlagV">
+		<height>24</height>
+		<aspectratio align="center">keep</aspectratio>
+	</include>
+	
+	
+	<include name="typeFlags58">
+		<control type="grouplist" id="100">
+			<width>900</width>
+			<height>64</height>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
+			<include>fadeinout</include>
+	
+			<control type="image">
+				<width>96</width>
+				<height>34</height>
+				<texture>$INFO[Listitem.VideoResolution,special://skin/flags/type/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+			</control>	
+			<!--control type="image">
+				<width>96</width>
+				<height>34</height>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<aspectratio align="center">keep</aspectratio>
+			</control-->
+			<control type="image">
+				<width>128</width>
+				<height>32</height>
+				<info>ListItem.StarRating</info>
+				<colordiffuse>Color7</colordiffuse>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.StarRating)</visible>
 			</control>
 		</control>
 	</include>
 	
-	<include name="typeFlagsMovies">
+	<include name="flags53">
+		<control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<info>Listitem.Property(mediaTag::Studio)</info>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<!--control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<texture>$INFO[Listitem.studio,special://skin/flags/studios/,.png]</texture>
+			<visible>Container.Content(movies)</visible>
+		</control-->
+		<control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<info>Listitem.Property(mediaTag::Studio)</info>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+		<!--control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<texture>$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<visible>Container.Content(tvshows)</visible>
+		</control-->
+	</include>
+	
+	<include name="typeFlagsGroup50">
+		<control type="grouplist" id="100">
+			<itemgap>20</itemgap>
+			<orientation>vertical</orientation>
+			<!--
 			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/480p.png</texture>
-				<visible>substring(ListItem.VideoResolution,480)</visible>
-				<include>typeFlag</include>
+				<width>128</width>
+				<height>24</height>
+				<info>ListItem.StarRating</info>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.StarRating)</visible>
+			</control>-->
+			
+			<control type="image">
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<info>Listitem.Property(mediaTag::Studio)</info>
+				<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
+			</control>
+			<!--control type="image">
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<texture>$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+				<visible>Container.Content(tvshows) | Container.Content(episodes)</visible>
+			</control-->
+			<control type="image">
+				<width>128</width>
+				<height>38</height>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<include>typeFlagV</include>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+			</control>
+			<!--control type="image">
+				<width>128</width>
+				<height>38</height>
+				<texture>$INFO[Listitem.VideoResolution,special://skin/flags/type/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<include>typeFlagV</include>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+			</control-->
+			<control type="image">
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<info>Listitem.Property(mediaTag::Studio)</info>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<!--control type="image">
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<texture>$INFO[Listitem.studio,special://skin/flags/studios/,.png]</texture>
+				<visible>Container.Content(movies)</visible>
+			</control-->
+		</control>
+	</include>
+	
+	<include name="labelFlags50">
+		<control type="grouplist" id="100">
+			<itemgap>20</itemgap>
+			<orientation>vertical</orientation>
+			<!--
+			<control type="image">
+				<width>128</width>
+				<height>24</height>
+				<info>ListItem.StarRating</info>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.StarRating)</visible>
+			</control>-->
+			<control type="image">
+				<width>128</width>
+				<height>64</height>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<texture fallback="flags/default.png">$INFO[Listitem.Property(Album_Label),special://skin/flags/labels/,.png]</texture>
+			</control>
+		</control>
+	</include>
+	
+	<include name="typeFlags50">
+		<control type="image">
+			<width>39</width>
+			<height>24</height>
+			<aspectratio align="right">keep</aspectratio>
+			<info>Listitem.Property(mediaTag::videoResolution)</info>
+		</control>
+		<!--control type="image">
+			<width>39</width>
+			<height>24</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>views/HD.png</texture>
+			<visible>stringcompare(Listitem.VideoResolution,720) | stringcompare(Listitem.VideoResolution,1080) </visible>
+		</control>
+		<control type="image">
+			<width>39</width>
+			<height>24</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture>views/SD.png</texture>
+			<visible>![stringcompare(Listitem.VideoResolution,720) | stringcompare(Listitem.VideoResolution,1080)]</visible>
+		</control-->
+	</include>
+	
+	<include name="studioFlags52">
+		<control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<info>Listitem.Property(mediaTag::Studio)</info>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<!--control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<texture>$INFO[Listitem.studio,special://skin/flags/studios/,.png]</texture>
+			<visible>Container.Content(movies)</visible>
+		</control-->
+		<control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<info>Listitem.Property(mediaTag::Studio)</info>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+		<!--control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<texture>$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<visible>Container.Content(tvshows)</visible>
+		</control-->
+	</include>
+	
+	<include name="labelFlags52">
+		<control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<texture fallback="flags/default.png">$INFO[Listitem.Property(Album_Label),special://skin/flags/labels/,.png]</texture>
+		</control>
+	</include>
+	
+	<include name="labelFlags57">
+		<control type="image">
+			<width>128</width>
+			<height>48</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<texture fallback="flags/default.png">$INFO[Listitem.Property(Album_Label),special://skin/flags/labels/,.png]</texture>
+		</control>
+	</include>
+	
+	<include name="flags57">
+		<control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<info>Listitem.Property(mediaTag::Studio)</info>
+			<visible>Container.Content(movies)</visible>
+		</control>
+		<!--control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<colordiffuse>Color7</colordiffuse>
+			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/studios/,.png]</texture>
+			<visible>Container.Content(movies)</visible>
+		</control-->
+		<control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<info>Listitem.Property(mediaTag::Studio)</info>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+		<!--control type="image">
+			<width>128</width>
+			<height>64</height>
+			<aspectratio align="right">keep</aspectratio>
+			<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+			<visible>Container.Content(tvshows)</visible>
+		</control-->
+	</include>
+	
+	<include name="labelFlagsInfo">
+		<control type="grouplist" id="100">
+			<itemgap>20</itemgap>
+			<orientation>vertical</orientation>
+			<control type="image">
+				<width>128</width>
+				<height>72</height>
+				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color1</colordiffuse>
+				<texture fallback="flags/default.png">$INFO[Listitem.Property(Album_Label),special://skin/flags/labels/,.png]</texture>
 			</control>
 			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/540p.png</texture>
-				<visible>substring(ListItem.VideoResolution,540)</visible>
-				<include>typeFlag</include>
-				<colordiffuse>Color1</colordiffuse>
+				<width>128</width>
+				<height>32</height>
+				<info>ListItem.StarRating</info>
+				<colordiffuse>Color7</colordiffuse>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(albums)</visible>
+			</control>
+		</control>
+	</include>
+		
+	<include name="typeFlagsInfo">
+		<control type="grouplist" id="100">
+			<width>900</width>
+			<height>64</height>
+			<itemgap>20</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>148</width>
+				<height>60</height>
+				<info>ListItem.StarRating</info>
+				<colordiffuse>Color7</colordiffuse>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>!IsEmpty(ListItem.StarRating)</visible>
 			</control>
 			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/720p.png</texture>
-				<visible>substring(ListItem.VideoResolution,720)</visible>
+				<width>96</width>
+				<height>64</height>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<!--control type="image">
+				<width>96</width>
+				<height>64</height>
+				<texture>$INFO[Listitem.VideoResolution,special://skin/flags/type/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(movies) + !IsEmpty(Listitem.VideoResolution)</visible>
+			</control-->
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<info>Listitem.Property(mediaTag::videoCodec)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
+			</control>
+			<!--control type="image">
+				<width>96</width>
+				<height>64</height>
+				<texture>$INFO[Listitem.VideoCodec,special://skin/flags/type/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>[Container.Content(movies) | Container.Content(episodes)] + !IsEmpty(Listitem.VideoCodec)</visible>
+			</control-->
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<info>Listitem.Property(mediaTag::audioCodec)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
+			</control>
+			<!--control type="image">
+				<width>96</width>
+				<height>64</height>
+				<texture>$INFO[Listitem.AudioCodec,special://skin/flags/type/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>[Container.Content(movies) | Container.Content(episodes)] + !IsEmpty(Listitem.AudioCodec)</visible>
+			</control-->
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<info>Listitem.Property(mediaTag::aspectRatio)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
+			</control>
+			<!--control type="image">
+				<width>96</width>
+				<height>64</height>
+				<texture>$INFO[Listitem.VideoAspect,special://skin/flags/type/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>Color7</colordiffuse>
+				<visible>[Container.Content(movies) | Container.Content(episodes)] + !IsEmpty(Listitem.VideoAspect)</visible>
+			</control-->
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<colordiffuse>Color7</colordiffuse>
+				<info>Listitem.Property(mediaTag::Studio)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(movies)</visible>
+			</control>
+			<!--control type="image">
+				<width>96</width>
+				<height>64</height>
+				<colordiffuse>Color7</colordiffuse>
+				<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/studios/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(movies)</visible>
+			</control-->
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<colordiffuse>Color7</colordiffuse>
+				<info>Listitem.Property(mediaTag::Studio)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(tvshows)</visible>
+			</control>
+			<!--control type="image">
+				<width>96</width>
+				<height>64</height>
+				<colordiffuse>Color7</colordiffuse>
+				<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(tvshows)</visible>
+			</control-->
+			<control type="image">
+				<width>72</width>
+				<height>64</height>
+				<colordiffuse>Color7</colordiffuse>
+				<info>Listitem.Property(mediaTag::Studio)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(episodes)</visible>
+			</control>
+			<!--control type="image">
+				<width>72</width>
+				<height>64</height>
+				<colordiffuse>Color7</colordiffuse>
+				<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/tvshows/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<visible>Container.Content(episodes)</visible>
+			</control-->
+			<control type="image">
+				<width>96</width>
+				<height>64</height>
+				<colordiffuse>Color7</colordiffuse>
+				<texture fallback="flags/default.png">$INFO[Listitem.studio,special://skin/flags/labels/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+			</control>
+			
+		</control>
+	</include>
+	
+	<include name="typeFlags56">
+		<control type="grouplist" id="100">
+			<width>400</width>
+			<height>42</height>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>128</width>
+				<height>42</height>
 				<include>typeFlag</include>
-				<colordiffuse>Color1</colordiffuse>
+				<texture>$INFO[Listitem.StarRating,special://skin/flags/rating/mono/,.png]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<colordiffuse>Color4</colordiffuse>
 			</control>
 			<control type="image">
-				<width>62</width>
-				<texture>special://skin/flags/type/1080p.png</texture>
-				<visible>substring(ListItem.VideoResolution,1080)</visible>
-				<include>typeFlag</include>
-				<colordiffuse>Color1</colordiffuse>
+				<width>128</width>
+				<height>36</height>
+				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<aspectratio align="center">keep</aspectratio>
+				<include>typeFlagV</include>
+				<colordiffuse>Color4</colordiffuse>
 			</control>
+			<!--control type="image">
+				<width>128</width>
+				<height>36</height>
+				<texture>$INFO[Listitem.VideoResolution,special://skin/flags/type/mono/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<include>typeFlagV</include>
+				<colordiffuse>Color4</colordiffuse>
+			</control-->
+			<control type="label">
+				<label>$INFO[ListItem.Duration]</label>
+				<font>osd1</font>
+				<align>left</align>	
+				<height>36</height>
+				<align>right</align>
+				<textcolor>Color4</textcolor>
+				<include>screenwidth</include>
+				<include>Heading</include>
+				<visible>Container.Content(movies) + !IsEmpty(ListItem.Title)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[ListItem.Property(UnWatchedEpisodes),,/]$INFO[ListItem.Episode]</label>
+				<font>osd1</font>
+				<height>36</height>
+				<width>128</width>
+				<align>right</align>
+				<textcolor>Color4</textcolor>
+				<include>screenwidth</include>
+				<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Title)</visible>
+			</control>
+		</control>
+	</include>
+	
+	<include name="typeFlagsFS">
+		<control type="grouplist" id="100">
+			<width>1280</width>
+			<height>42</height>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<width>128</width>
+				<height>42</height>
+				<aspectratio align="right">keep</aspectratio>
+				<colordiffuse>Color4</colordiffuse>
+				<info>VideoPlayer.Property(mediaTag::videoResolution)</info>
+			</control>
+			<!--control type="image">
+				<width>128</width>
+				<height>42</height>
+				<aspectratio align="right">keep</aspectratio>
+				<colordiffuse>Color4</colordiffuse>
+				<texture fallback="flags/default.png">$INFO[VideoPlayer.studio,special://skin/flags/tvshows/mono/,.png]</texture>
+			</control-->
+			<control type="image">
+				<width>128</width>
+				<height>42</height>
+				<info>VideoPlayer.Property(mediaTag::videoResolution)</info>
+				<aspectratio align="right">keep</aspectratio>
+				<include>typeFlagV</include>
+				<colordiffuse>Color4</colordiffuse>
+			</control>
+			<!--control type="image">
+				<width>128</width>
+				<height>42</height>
+				<texture>$INFO[VideoPlayer.VideoResolution,special://skin/flags/type/mono/,.png]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<include>typeFlagV</include>
+				<colordiffuse>Color4</colordiffuse>
+			</control-->
+		</control>
 	</include>
 	
 	<include name="typeFlagsVis">
@@ -254,20 +625,62 @@
 			<orientation>vertical</orientation>
 			<include>fadeinout</include>
 			<control type="image">
+				<width>128</width>
 				<height>24</height>
 				<info>Player.StarRating</info>
 				<aspectratio align="right">keep</aspectratio>
-				<colordiffuse>Color4</colordiffuse>
 			</control>
 			<control type="image">
+				<width>128</width> 
 				<height>32</height>
-				<texture>$INFO[MusicPlayer.Codec,special://skin/flags/type/,.png]</texture>
+				<info>MusicPlayer.Property(mediaTag::audioCodec)</info>
 				<aspectratio align="right">keep</aspectratio>
 				<colordiffuse>Color4</colordiffuse>
 			</control>
-			
+			<!--control type="image">
+				<width>128</width> 
+				<height>32</height>
+				<texture>$INFO[MusicPlayer.Codec,special://skin/flags/type/mono/,.png]</texture>
+				<aspectratio align="right">keep</aspectratio>
+				<colordiffuse>Color4</colordiffuse>
+			</control-->
 		</control>
 	</include>
+	
+
+	
+	<!--<include name="typeFlagsMovies">
+			<control type="image">
+				<width>62</width>
+				<texture>special://skin/flags/type/480p.png</texture>
+				<visible>substring(ListItem.VideoResolution,480)</visible>
+				<include>typeFlag</include>
+				<colordiffuse>Color1</colordiffuse>
+			</control>
+			<control type="image">
+				<width>62</width>
+				<texture>special://skin/flags/type/540p.png</texture>
+				<visible>substring(ListItem.VideoResolution,540)</visible>
+				<include>typeFlag</include>
+				<colordiffuse>Color1</colordiffuse>
+			</control>
+			<control type="image">
+				<width>62</width>
+				<texture>special://skin/flags/type/720p.png</texture>
+				<visible>substring(ListItem.VideoResolution,720)</visible>
+				<include>typeFlag</include>
+				<colordiffuse>Color1</colordiffuse>
+			</control>
+			<control type="image">
+				<width>62</width>
+				<texture>special://skin/flags/type/1080p.png</texture>
+				<visible>substring(ListItem.VideoResolution,1080)</visible>
+				<include>typeFlag</include>
+				<colordiffuse>Color1</colordiffuse>
+			</control>
+	</include>
+	
+	
 	
 	<include name="typeFlagsVis">
 		<control type="grouplist" id="100">
@@ -397,7 +810,7 @@
 			<visible>!Container.OnNext + !Container.OnPrevious</visible>
 		</control>
 	</include>
-	<include name="labelFlagsBig">
+	<!--<include name="labelFlagsBig">
 		<control type="image">
 			<width>128</width>
 			<height>64</height>
@@ -421,7 +834,7 @@
 	
 	
 
-	<!--<include name="ratingFlagsText">
+	<include name="ratingFlagsText">
 		<control type="group">
 			<control type="label">
 				<label>[UPPERCASE]Rated PG-13[/UPPERCASE]</label>
@@ -459,7 +872,7 @@
 				<align>left</align>
 			</control>
 		</control>
-	</include>-->
+	</include>
 	
 	
 	
@@ -533,7 +946,7 @@
 				<include>ratingsFlag</include>
 			</control>
 		</control>
-	</include>
+	</include>-->
 
 	
 </includes>

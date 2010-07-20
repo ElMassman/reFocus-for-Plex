@@ -1,9 +1,9 @@
 <includes>
 	<include name="LibraryPlaylistEditorMenu">
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>20</posx>
 			<posy>67</posy>
-			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
+			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus(0)</visible>
 			<onright>50</onright>
 			<include>pageslide</include>
 			<include>pagemenus</include>

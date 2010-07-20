@@ -13,11 +13,11 @@
 		</control>
 		
 		<control type="image">
-			<posx>545</posx>
-			<posy>295</posy>
-			<width>245</width>
-			<height>130</height>
-			<texture>startuplogo.png</texture>
+			<posx>512</posx>
+			<posy>333</posy>
+			<width>256</width>
+			<height>53</height>
+			<texture>startup/startuplogo.png</texture>
 			<aspectratio>keep</aspectratio>
 			<animation type="WindowOpen">
 				<effect type="zoom" time="600" center="640,360" start="50" end="100" tween="cubic" easing="out" delay="400"/>
@@ -44,7 +44,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<include>screentype</include>
-				<texture>startupmorning.png</texture>
+				<texture>startup/startupmorning.png</texture>
 				<aspectratio>keep</aspectratio>
 				<include>fadeinout</include>
 				<visible>system.time(00:00,12:00)</visible>
@@ -53,7 +53,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<include>screentype</include>
-				<texture>startupafternoon.png</texture>
+				<texture>startup/startupafternoon.png</texture>
 				<aspectratio>keep</aspectratio>
 				<include>fadeinout</include>
 				<visible>system.time(12:00,18:00)</visible>
@@ -62,11 +62,21 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<include>screentype</include>
-				<texture>startupevening.png</texture>
+				<texture>startup/startupevening.png</texture>
 				<aspectratio>keep</aspectratio>
 				<include>fadeinout</include>
 				<visible>system.time(18:00,00:00)</visible>
 			</control>
 		</control>
+		
+		<!--control type="image">
+			<posx>566</posx>
+			<posy>615</posy>
+			<width>128</width>
+			<height>86</height>
+			<texture>logos/xbmclogo2.png</texture>
+			<include>fadeinout</include>
+		</control-->
+		
 	</controls>
 </window>

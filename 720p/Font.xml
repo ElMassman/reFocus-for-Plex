@@ -6,18 +6,40 @@
 			<name>special</name>
 			<filename>Light.ttf</filename>
 			<size>52</size>
+			<aspect>0.95</aspect>
 		</font>
 		
 <!-- dialogvideoinfo ----------------------------------------------------->		
 		<font>
 			<name>special6</name>
-			<filename>RegularLow.ttf</filename>
+			<filename>RegularCaps.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>special7</name>
+			<filename>RegularOrg.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>special5</name>
 			<filename>LightCaps.ttf</filename>
 			<size>42</size>
+		</font>
+		<font>
+			<name>special2</name>
+			<filename>Light.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>special3</name>
+			<filename>LightAlt.ttf</filename>
+			<size>26</size>
+		</font>
+		
+		<font>
+			<name>special3</name>
+			<filename>LightAlt.ttf</filename>
+			<size>28</size>
 		</font>
 
 <!-- pagemenu ----------------------------------------------------->			
@@ -26,8 +48,6 @@
 			<filename>ZegoeLight-U-L.ttf</filename>
 			<size>34</size>
 		</font>
-		
-		
 		<font>
 			<name>normalBoldLow</name>
 			<filename>Light.ttf</filename>
@@ -42,17 +62,14 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>settings</name>
+			<filename>ZegoeLight-U-L.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
 			<name>special2Low</name>
 			<filename>Light.ttf</filename>
 			<size>42</size>
-		</font>
-
-
-<!-- small titleheader ---------------------------------------------->
-		<font>
-			<name>special3</name>
-			<filename>LightAlt.ttf</filename>
-			<size>28</size>
 		</font>
 
 
@@ -96,6 +113,12 @@
 			<size>20</size>
 		</font>
 		<font>
+			<name>mediumBold</name>
+			<filename>RegularOrg.ttf</filename>
+			<size>20</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>mediumCaps</name>
 			<filename>RegularCaps.ttf</filename>
 			<size>20</size>
@@ -113,8 +136,14 @@
 		<font>
 			<name>bigLow</name>
 			<filename>RegularLow.ttf</filename>
-			<size>30</size>
+			<size>28</size>
 		</font>
+		<font>
+			<name>bigCaps</name>
+			<filename>RegularCaps.ttf</filename>
+			<size>28</size>
+		</font>
+		
 		<font>
 			<name>smallCaps</name>
 			<filename>RegularCaps.ttf</filename>

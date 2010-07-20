@@ -34,7 +34,7 @@
 		
 		<control type="group">
 			<posx>34</posx>
-			<posy>76</posy>
+			<posy>73</posy>
 	
 			<control type="textbox" id="5">
 				<description>textarea</description>
@@ -45,6 +45,7 @@
 				<aligny>top</aligny>
 				<textcolor>Color4</textcolor>
 				<pagecontrol>61</pagecontrol>
+				<font>mediumLow</font>
 				<include>textBox</include>
 			</control>
 	

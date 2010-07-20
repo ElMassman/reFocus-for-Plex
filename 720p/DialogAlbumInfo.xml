@@ -3,9 +3,12 @@
 
 	<controls>
 	
+	<control type="group">
+		<visible>!Window.IsActive(visualisation)</visible>
+	
 		<control type="button" id="8000">
 			<label>SHOULD NOT SEE ME</label>
-			<onleft>9000</onleft>
+			<onleft>300</onleft>
 			<onright>53</onright>
 			<ondown>50</ondown>
 			<width>200</width>
@@ -13,7 +16,7 @@
 		</control>
 		<control type="button" id="7000">
 			<label>SHOULD NOT SEE ME</label>
-			<onleft>9000</onleft>
+			<onleft>300</onleft>
 			<onright>53</onright>
 			<width>200</width>
 			<visible allowhiddenfocus="true">false</visible>
@@ -43,23 +46,34 @@
 				<texture border="48">frames/wideFrame.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="largeimage">
+			<control type="image">
 				<posx>26</posx>
 				<posy>26</posy>
 				<width>348</width>
 				<height>348</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
+				<texture background="true" fallback="thumbs/album.png" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
+				<visible>Container.Content(albums)</visible>
+			</control>
+			<control type="image">
+				<posx>26</posx>
+				<posy>26</posy>
+				<width>348</width>
+				<height>348</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture background="true" fallback="thumbs/artist.png" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
+				<visible>Container.Content(artists)</visible>
 			</control>
 		</control>
-		
 		<control type="group">
 			<posx>150</posx>
-			<posy>495</posy>
-			<include>labelFlagsBig</include>
+			<posy>500</posy>
+			<include>labelFlagsInfo</include>
 			<include>transition2</include>
 			<include>contextMenuHide</include>
 		</control>
+		
+		
 		
 			
 <!--- ALBUMS ---------------------------------------------------------------------------------------------------------------------->
@@ -80,35 +94,41 @@
 			<posy>50</posy>
 			<itemgap>6</itemgap>
 			<visible>!ControlGroup(9001).HasFocus()</visible>
-
+			
 			<control type="label" id="1">
 				<width>770</width>
-				<label>$INFO[ListItem.Genre]</label>
+				<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[21899] [COLOR=Color1]$INFO[ListItem.Property(Album_Label)][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[564] [COLOR=Color1]$INFO[ListItem.Property(Album_Type)][/COLOR]</label>
+				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Property(Album_Type))</visible>
+			</control>
+			<control type="label" id="1">
+				<width>770</width>
+				<label>$LOCALIZE[573] [COLOR=Color1]$INFO[ListItem.Path][/COLOR]</label>
 				<include>infoDialogMeta</include>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
-				<label>$INFO[ListItem.Property(Album_Label)]</label>
+				<label></label>
 				<include>infoDialogMeta</include>
 			</control>
-			<control type="label" id="1">
-				<width>770</width>
-				<label>$INFO[ListItem.Path]</label>
-				<include>infoDialogMeta</include>
+			<control type="textbox" id="4">
+				<width>740</width>
+				<height>385</height>
+				<label>$INFO[ListItem.Property(AlbumReview)]</label>
+				<include>textBox</include>
 			</control>
-		</control>
-		<control type="textbox" id="4">
-			<posy>150</posy>
-			<width>760</width>
-			<height>395</height>
-			<onleft>5</onleft>
-			<onright>999</onright>
-			<onup>50</onup>
-			<ondown>5</ondown>
-			<font>normalLow</font>
-			<label>$INFO[ListItem.Property(AlbumReview)]</label>
-			<textcolor>Color7</textcolor>
-			<include>textBox</include>
 		</control>
 	</control>
 
@@ -131,70 +151,51 @@
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21893] $INFO[ListItem.Property(Born)][/LOWERCASE]</label>
-				<visible>!IsEmpty(ListItem.Property(Born))</visible>
+				<label>$LOCALIZE[515] [COLOR=Color1]$INFO[ListItem.Genre][/COLOR]</label>
 				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Genre)</visible>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21893] $INFO[ListItem.Property(Formed)][/LOWERCASE]</label>
+				<label>$LOCALIZE[21893] [COLOR=Color1]$INFO[ListItem.Property(Artist_Born)][/COLOR]</label>
 				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21894]/$LOCALIZE[21893]: $LOCALIZE[416][/LOWERCASE]</label>
-				<visible>IsEmpty(ListItem.Property(Born)) + IsEmpty(ListItem.Property(Formed))</visible>
+				<label>$LOCALIZE[21894] [COLOR=Color1]$INFO[ListItem.Property(Artist_Formed)][/COLOR]</label>
 				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21897]: $INFO[ListItem.Property(Died)][/LOWERCASE]</label>
-				<visible>!IsEmpty(ListItem.Property(Died))</visible>
+				<label>$LOCALIZE[21897] [COLOR=Color1]$INFO[ListItem.Property(Artist_Died)][/COLOR]</label>
 				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21896]: $INFO[ListItem.Property(Disbanded)][/LOWERCASE]</label>
-				<visible>!IsEmpty(ListItem.Property(Disbanded))</visible>
+				<label>$LOCALIZE[21896] [COLOR=Color1]$INFO[ListItem.Property(Artist_Disbanded)][/COLOR]</label>
 				<include>infoDialogMeta</include>
+				<visible>!IsEmpty(ListItem.Property(Artist_Disbanded))</visible>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21896]: $INFO[ListItem.Property(Disbanded)][/LOWERCASE]</label>
-				<visible>IsEmpty(ListItem.Property(Died)) + IsEmpty(ListItem.Property(Disbanded))</visible>
+				<label>$LOCALIZE[21892] [COLOR=Color1]$INFO[ListItem.Property(Instruments)][/COLOR]</label>
 				<include>infoDialogMeta</include>
-			</control>
-			<control type="label" id="1">
-				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21898]: $INFO[ListItem.Property(YearsActive)][/LOWERCASE]</label>
-				<visible>!IsEmpty(ListItem.Property(YearsActive))</visible>
-				<include>infoDialogMeta</include>
-			</control>
-			<control type="label" id="1">
-				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21892]: $INFO[ListItem.Property(Instruments)][/LOWERCASE]</label>
 				<visible>!IsEmpty(ListItem.Property(Instruments))</visible>
-				<include>infoDialogMeta</include>
 			</control>
 			<control type="label" id="1">
 				<width>770</width>
-				<label>[LOWERCASE]$LOCALIZE[21892]: $LOCALIZE[416][/LOWERCASE]</label>
-				<visible>IsEmpty(ListItem.Property(Instruments))</visible>
+				<label></label>
 				<include>infoDialogMeta</include>
 			</control>
-		</control>
-		<control type="textbox" id="4">
-			<posy>160</posy>
-			<width>760</width>
-			<height>420</height>
-			<onleft>5</onleft>
-			<onright>999</onright>
-			<onup>50</onup>
-			<ondown>5</ondown>
-			<font>normalLow</font>
-			<label>$INFO[ListItem.Plot]</label>
-			<textcolor>Color7</textcolor>
-			<include>textBox</include>
+			<control type="textbox" id="4">
+				<width>740</width>
+				<height>443</height>
+				<label>$INFO[ListItem.Property(Artist_Description)]</label>
+				<include>textBox</include>
+			</control>
 		</control>
 	</control>		
 	
@@ -210,7 +211,7 @@
 				<posy>167</posy>
 				<width>765</width>
 				<height>420</height>
-				<onleft>9000</onleft>
+				<onleft>300</onleft>
 				<onright>-</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
@@ -270,6 +271,8 @@
 		<include>infoDialogSpin</include>
 
 		<include>InfoDialogMenuM</include>
-
+	
+	</control>
+	
 	</controls>
 </window>

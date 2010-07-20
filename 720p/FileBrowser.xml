@@ -150,7 +150,7 @@
 					<width>185</width>
 					<height>104</height>
 					<texture background="true">$INFO[ListItem.Thumb]</texture>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 					<animation effect="fade" end="45" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="image">
@@ -169,7 +169,7 @@
 					<width>185</width>
 					<height>104</height>
 					<texture background="true">$INFO[ListItem.Thumb]</texture>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="image">
 					<posx>60</posx>

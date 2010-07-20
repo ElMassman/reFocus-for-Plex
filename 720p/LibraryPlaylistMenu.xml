@@ -1,10 +1,10 @@
 <includes>
 	<include name="LibraryPlaylistMenu">
 		
-		<control type="group" id="9000">
+		<control type="group" id="300">
 			<posx>-275</posx>
 			<posy>20</posy>
-			<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus(0)</visible>
+			<visible allowhiddenfocus="true">ControlGroup(300).HasFocus(0)</visible>
 			<onright>50</onright>
 			<include>pagemenus</include>
 			<include>transition2</include>
