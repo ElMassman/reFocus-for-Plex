@@ -1,6 +1,6 @@
 <includes>
 	<include name="HomeMenu">
-		<control type="fixedlist" id="300">
+		<control type="list" id="300">
 			<posy>20</posy>
 			<width>1100</width>
 			<height>700</height>
@@ -14,18 +14,18 @@
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>			
 			<content>
-				<!--item id="1">
-					<label>$LOCALIZE[157]</label>
+				<item id="1">
+					<label>File Mode</label>
 					<onclick>SetFocus(1110)</onclick>
-				</item-->
-				<item id="2">
+				</item>
+				<!--item id="2">
 					<label>$LOCALIZE[2]</label>
 					<onclick>SetFocus(1120)</onclick>
 				</item>
 				<item id="3">
 					<label>$LOCALIZE[1]</label>
 					<onclick>SetFocus(1130)</onclick>
-				</item>
+				</item-->
 				<item id="4">
 					<label>$LOCALIZE[31006]</label>
 					<onclick>SetFocus(1140)</onclick>

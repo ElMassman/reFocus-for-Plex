@@ -757,7 +757,7 @@
 		
 		<control type="group">
 			<posy>336</posy>
-			<visible>Control.IsVisible(56) + !ControlGroup(300).HasFocus() + System.IdleTime(5)</visible>
+			<visible>[Control.IsVisible(56) + !ControlGroup(300).HasFocus() + System.IdleTime(5)]</visible>
 			<control type="image">
 				<posx>20</posx>
 				<width>48</width>

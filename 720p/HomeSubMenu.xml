@@ -4,11 +4,11 @@
 	<control type="group" id="1100">
 		<posy>20</posy>
 
-<!-- VIDEO SUBMENU ----------------------------------------------------------------------------------------------->	
+<!-- FILE MODE SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1110">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>900</height>
+				<height>700</height>
 				<onup>1110</onup>
 				<ondown>1110</ondown>
 				<onleft>300</onleft>
@@ -19,24 +19,19 @@
 				<visible allowhiddenfocus="true">Container(300).HasFocus(1)</visible>
 				<content>
 					<item id="1">
-						<label>$LOCALIZE[342]</label>
-						<onclick>ActivateWindow(MyVideoLibrary,movietitles)</onclick>
+						<label>Videos</label>
+						<onclick>ActivateWindow(6)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>!Library.HasContent(Video)</visible>
 					</item>
 					<item id="2">
-						<label>$LOCALIZE[342]</label>
-						<onclick>ActivateWindow(MyVideoLibrary,movietitles)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(movies)</visible>
+						<label>Music</label>
+						<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
 					</item>
 					<item id="3">
-						<label>$LOCALIZE[31023]</label>
-						<onclick>ActivateWindow(MyVideoLibrary,tvshowtitles)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(tvshows)</visible>
+						<label>Pictures</label>
+						<onclick>ActivateWindow(2)</onclick>
 					</item>
-					<item id="4">
+					<!--item id="4">
 						<label>$LOCALIZE[31095]</label>
 						<onclick>ActivateWindow(MyVideoLibrary,recentlyaddedmovies)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
@@ -88,7 +83,7 @@
 						<label>$LOCALIZE[1024]</label>
 						<onclick>ActivateWindow(MyVideoFiles)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
+					</item-->
 				</content>
 			</control>
 
@@ -205,10 +200,10 @@
 		
 		
 <!-- ACCESSORIES SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="fixedlist" id="1140">
+			<control type="list" id="1140">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>800</height>
+				<height>700</height>
 				<onup>1140</onup>
 				<ondown>1140</ondown>
 				<onleft>300</onleft>
@@ -255,11 +250,11 @@
 		
 		
 <!-- SETTINGS SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="fixedlist" id="1150">
+			<control type="list" id="1150">
 				<posx>-800</posx>
 				<posy>-0</posy>
 				<width>900</width>
-				<height>800</height>
+				<height>700</height>
 				<onup>1150</onup>
 				<ondown>1150</ondown>
 				<onleft>300</onleft>
@@ -295,11 +290,11 @@
 						<onclick>ActivateWindow(picturessettings)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 					</item>	
-					<item id="6">
+					<!--item id="6">
 						<label>$LOCALIZE[24001]</label>
 						<onclick>ActivateWindow(addonbrowser)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>	
+					</item-->	
 					<item id="7">
 						<label>$LOCALIZE[13279]</label>
 						<onclick>ActivateWindow(networksettings)</onclick>

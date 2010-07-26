@@ -661,7 +661,7 @@
 <!-- BACKGROUND / FANART INCLUDES -------------------------------------------------------------->
 	<include name="themeBackground2">
 		
-		<control type="image">
+		<control type="largeimage">
 			<include>screentype</include>
 			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>fanartFadeTime</include>
