@@ -108,18 +108,18 @@
 			<orientation>horizontal</orientation>
 			<include>fadeinout</include>
 	
-			<control type="image">
+			<!--control type="image">
 				<width>96</width>
 				<height>34</height>
 				<texture>$INFO[Listitem.VideoResolution,special://skin/flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
-			</control>	
-			<!--control type="image">
+			</control-->	
+			<control type="image">
 				<width>96</width>
 				<height>34</height>
 				<info>Listitem.Property(mediaTag::videoResolution)</info>
 				<aspectratio align="center">keep</aspectratio>
-			</control-->
+			</control>
 			<control type="image">
 				<width>128</width>
 				<height>32</height>

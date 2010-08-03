@@ -16,7 +16,7 @@
 			<control type="button" id="5">
 				<label>$LOCALIZE[206]</label>
 				<width>275</width>
-				<onup>11</onup>
+				<onup>13</onup>
 				<ondown>8</ondown>
 				<onright>7000</onright>
 				<include>contextButton</include>
@@ -67,13 +67,24 @@
 				<label>Fanart</label>
 				<width>275</width>
 				<onup>10</onup>
-				<ondown>11</ondown>
+				<ondown>13</ondown>
 				<onright>8000</onright>
 				<include>contextButton</include>
 				<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 				
 			</control>
-			<control type="button" id="11">
+			<control type="button" id="13">
+				<posy>215</posy>
+				<label>Banner</label>
+				<width>275</width>
+				<onup>12</onup>
+				<ondown>5</ondown>
+				<onright>8000</onright>
+				<include>contextButton</include>
+				<visible>Container.Content(tvshows)</visible>
+				
+			</control>
+			<!--control type="button" id="11">
 				<posy>215</posy>
 				<label>$LOCALIZE[20410]</label>
 				<width>275</width>
@@ -83,7 +94,7 @@
 				<include>contextButton</include>
 				<enable>!IsEmpty(ListItem.Trailer)</enable>
 				<visible>Container.Content(movies)</visible>
-			</control>
+			</control-->
 		</control>
 				
 	</include>

@@ -1085,7 +1085,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>[Container.Content(episodes) + !Window.IsActive(progressdialog)] | [Container.Content(files) + !Window.IsActive(101) + Container(58).HasFiles]</visible>
+			<visible>[Container.Content(episodes) + !Window.IsActive(progressdialog)] | Container.Content(plugincontent)</visible>
 	
 			<itemlayout width="415" height="300">
 				<control type="image">
@@ -1110,7 +1110,7 @@
 					<height>215</height>
 					<texture fallback="backgrounds/library/tvshowsNoFanart.png" background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<visible>Container.Content(episodes)</visible>
+					<visible>Container.Content(episodes) | Container.Content(plugincontent)</visible>
 				</control>
 				<control type="image">
 					<posx>26</posx>
@@ -1154,7 +1154,7 @@
 					<height>215</height>
 					<texture fallback="backgrounds/library/tvshowsNoFanart.png" background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<visible>Container.Content(episodes)</visible>
+					<visible>Container.Content(episodes) | Container.Content(plugincontent)</visible>
 					<include>focus_SlideEpisode</include>
 				</control>
 				<control type="image">

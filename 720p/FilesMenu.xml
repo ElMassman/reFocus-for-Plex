@@ -246,7 +246,7 @@
 					<onclick>Container.SortDirection</onclick>
 					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
 				</control>
-				<control type="togglebutton" id="5">
+				<!--control type="togglebutton" id="5">
 					<description>Library button</description>
 					<posy>129</posy>
 					<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
@@ -259,7 +259,7 @@
 					<ondown>7</ondown>
 					<include>contextButton</include>
 					<visible>!ControlGroup(40).HasFocus()</visible>
-				</control>
+				</control-->
 				<control type="togglebutton" id="7">
 					<description>Stacking</description>
 					<posy>172</posy>
@@ -294,15 +294,15 @@
 					<description>Choose Viewtype</description>
 					<label>$LOCALIZE[31930]</label>
 					<onleft>-</onleft>
-					<onup>90</onup>
-					<ondown>3</ondown>
+					<onup>30</onup>
+					<ondown>30</ondown>
 					<onright>50</onright>
 					<onclick>SetFocus(40)</onclick>
 					<include>contextButton</include>
 					<visible allowhiddenfocus="true">!ControlGroup(40).HasFocus()</visible>
 					<enable>false</enable>
 				</control>
-				<control type="button" id="3">
+				<!--control type="button" id="3">
 					<description>Sort by button</description>
 					<posy>43</posy>
 					<label>103</label>
@@ -326,8 +326,8 @@
 					<onclick>Container.SortDirection</onclick>
 					<onclick>Container.SortDirection</onclick>
 					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
-				</control>
-				<control type="togglebutton" id="5">
+				</control-->
+				<!--control type="togglebutton" id="5">
 					<description>Library button</description>
 					<posy>129</posy>
 					<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
@@ -340,7 +340,7 @@
 					<selected>Window.IsVisible(myvideolibrary)</selected>
 					<include>contextButton</include>
 					<visible>![ControlGroup(40).HasFocus() | ControlGroup(80).HasFocus()]</visible>
-				</control>
+				</control-->
 				<control type="button" id="30">
 					<description>Favourites Button</description>
 					<posy>172</posy>
@@ -348,7 +348,7 @@
 					<onleft>-</onleft>
 					<onright>50</onright>
 					<onclick>ActivateWindow(Favourites)</onclick>
-					<onup>5</onup>
+					<onup>1</onup>
 					<ondown>1</ondown>
 					<include>contextButton</include>
 					<visible>!ControlGroup(40).HasFocus()</visible>

@@ -393,7 +393,7 @@
 				<include>Heading1</include>	
 				<visible>!IsEmpty(ListItem.Title)</visible>
 			</control>
-			<control type="label">
+			<!--control type="label">
 				<width>1080</width>
 				<label>$INFO[ListItem.Label]</label>
 				<include>Heading1</include>	
@@ -404,11 +404,11 @@
 				<label>$INFO[ListItem.TVShowTitle] • $INFO[ListItem.Title]</label>
 				<include>Heading1</include>	
 				<visible>!IsEmpty(ListItem.Title)</visible>
-			</control>
+			</control-->
 			<control type="label">
 				<posy>35</posy>
 				<width>980</width>
-				<label>$LOCALIZE[31087] $INFO[ListItem.Season] • $LOCALIZE[31088] $INFO[ListItem.Episode] • $INFO[ListItem.Premiered]</label>
+				<label>$LOCALIZE[31087] $INFO[ListItem.Season] • $LOCALIZE[31088] $INFO[ListItem.Episode] • $INFO[ListItem.Date]</label>
 				<align>left</align>
 				<include>Heading3</include>
 				<visible>!IsEmpty(ListItem.Title)</visible>

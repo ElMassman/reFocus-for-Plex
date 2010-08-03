@@ -320,10 +320,10 @@
 
 
 <!-- EXIT SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="fixedlist" id="1160">
+			<control type="list" id="1160">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>800</height>
+				<height>700</height>
 				<onup>1160</onup>
 				<ondown>1160</ondown>
 				<onleft>300</onleft>

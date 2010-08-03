@@ -15,7 +15,7 @@
 			<include>homeMenusLayout</include>			
 			<content>
 				<item id="1">
-					<label>File Mode</label>
+					<label>Plug-ins</label>
 					<onclick>SetFocus(1110)</onclick>
 				</item>
 				<!--item id="2">

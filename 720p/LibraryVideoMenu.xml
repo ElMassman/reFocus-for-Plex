@@ -123,14 +123,14 @@
 				<onleft>50</onleft>
 				<onright>50</onright>
 				<onup>3</onup>
-				<ondown>5</ondown>
+				<ondown>14</ondown>
 				<include>contextButton</include>
 				<onclick>Container.SortDirection</onclick>
 				<onclick>Container.SortDirection</onclick>
 				<visible>!ControlGroup(40).HasFocus()</visible>
 			</control>
 			
-			<control type="togglebutton" id="5">
+			<!--control type="togglebutton" id="5">
 				<description>Library button</description>
 				<posy>129</posy>
 				<label>$LOCALIZE[14022] $LOCALIZE[456]</label>
@@ -143,7 +143,7 @@
 				<selected>Window.IsVisible(myvideolibrary)</selected>
 				<include>contextButton</include>
 				<visible>!ControlGroup(40).HasFocus()</visible>
-			</control>
+			</control-->
 			
 			<control type="togglebutton" id="14">
 				<description>Watched Toggle</description>
@@ -152,7 +152,7 @@
 				<altlabel>$LOCALIZE[31900]</altlabel>
 				<onleft>50</onleft>
 				<onright>50</onright>
-				<onup>5</onup>
+				<onup>4</onup>
 				<ondown>8</ondown>
 				<include>contextButton</include>
 				<visible>!ControlGroup(40).HasFocus()</visible>

@@ -294,7 +294,6 @@
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<preloaditems>3</preloaditems>
-			<visible>Container.Content(artists) + !Window.IsActive(progressdialog)</visible>
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
@@ -328,7 +327,7 @@
 					<posy>27</posy>
 					<width>453</width>
 					<height>255</height>
-					<texture background="true" diffuse="frames/wideFrameMask.png">special://skin/backgrounds/library/artistNoFanartSmall.png</texture>
+					<texture background="true" diffuse="frames/wideFrameMask.png">backgrounds/library/artistNoFanartSmall.png</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<visible>IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(ListItem.Title)</visible>
 				</control>
@@ -365,7 +364,7 @@
 					<posy>27</posy>
 					<width>453</width>
 					<height>255</height>
-					<texture background="true" diffuse="frames/wideFrameMask.png">special://skin/backgrounds/library/artistNoFanartSmall.png</texture>
+					<texture background="true" diffuse="frames/wideFrameMask.png">backgrounds/library/artistNoFanartSmall.png</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<visible>IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(ListItem.Title)</visible>
 					<include>focus_SlideWide</include>
