@@ -141,7 +141,7 @@
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
 			<control type="label">
-				<label>[UPPERCASE]$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ][/UPPERCASE]</label>
+				<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
 				<font>normalCaps</font>
 				<textcolor>Color1</textcolor>
 				<align>left</align>

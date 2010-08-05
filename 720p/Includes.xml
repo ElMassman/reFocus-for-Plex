@@ -634,7 +634,7 @@
 		<control type="multiimage" id="1">
 			<include>screentype</include>
 			<aspectratio>scale</aspectratio>
-			<imagepath>special://profile/Thumbnails/Video/Fanart/</imagepath>
+			<imagepath>../../../userdata/Thumbnails/PlexMediaServer/Fanart/</imagepath>
 			<timeperimage>8000</timeperimage>
 			<fadetime>1000</fadetime>
 			<randomize>true</randomize>

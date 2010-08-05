@@ -17,7 +17,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>!Window.IsActive(progressdialog)</visible>
+			<visible>!Window.IsActive(progressdialog) + ![Container.Content(plugincontent)]</visible>
 	
 			<itemlayout condition="IsEmpty(Container.FolderPath) | Window.IsActive(videofiles)" width="625" height="40">
 				<control type="label">
@@ -626,7 +626,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>!Window.IsActive(progressdialog) + Container.Content(episodes)</visible>
+			<visible>[!Window.IsActive(progressdialog) + Container.Content(episodes)] | Container.Content(plugincontent)</visible>
 	
 			<itemlayout width="625" height="147">
 				<control type="image">
@@ -700,6 +700,24 @@
 					<label>$LOCALIZE[31074,,]$INFO[ListItem.Premiered, • ]</label>
 					<font>smallCaps</font>
 					<textcolor>Color2</textcolor>
+				</control>
+				<control type="label" id="1">
+					<posx>270</posx>
+					<posy>70</posy>
+					<width>975</width>
+					<label>$INFO[ListItem.Year]</label>
+					<font>smallCaps</font>
+					<textcolor>Color2</textcolor>
+					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Label2)</visible>
+				</control>
+				<control type="label" id="1">
+					<posx>270</posx>
+					<posy>70</posy>
+					<width>975</width>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>smallCaps</font>
+					<textcolor>Color2</textcolor>
+					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Year)</visible>
 				</control>
 				<control type="image">
 					<posx>1090</posx>
@@ -791,6 +809,24 @@
 					<label>$LOCALIZE[31074,,]$INFO[ListItem.Premiered, • ]</label>
 					<font>smallCaps</font>
 					<textcolor>Focused</textcolor>
+				</control>
+				<control type="label" id="1">
+					<posx>270</posx>
+					<posy>70</posy>
+					<width>975</width>
+					<label>$INFO[ListItem.Year]</label>
+					<font>smallCaps</font>
+					<textcolor>Focused</textcolor>
+					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Label2)</visible>
+				</control>
+				<control type="label" id="1">
+					<posx>270</posx>
+					<posy>70</posy>
+					<width>975</width>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>smallCaps</font>
+					<textcolor>Focused</textcolor>
+					<visible>Container.Content(plugincontent) + IsEmpty(ListItem.Year)</visible>
 				</control>
 				<control type="image">
 					<posx>1090</posx>
@@ -1085,7 +1121,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>[Container.Content(episodes) + !Window.IsActive(progressdialog)] | Container.Content(plugincontent)</visible>
+			<visible>[Container.Content(episodes) + !Window.IsActive(progressdialog)]</visible>
 	
 			<itemlayout width="415" height="300">
 				<control type="image">
