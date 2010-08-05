@@ -3,7 +3,7 @@
 	
 	<controls>		
 		<control type="group">
-			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+			<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<include>state_OSD</include>
 			<control type="image" id="1">
 				<width>1280</width>
@@ -32,7 +32,7 @@
 		<control type="group" id="200">
 			<posx>341</posx>
 			<posy>665</posy>
-			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
+			<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<include>state_OSD</include>
 
 			<control type="button" id="700">
