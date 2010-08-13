@@ -54,9 +54,9 @@
 						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						<texture fallback="thumbs/picture.png" background="true" diffuse="frames/wideFrameMask.png">$INFO[ListItem.Thumb]</texture>
 						<include>fanartFadeTime</include>
-						<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+						<!--visible>!IsEmpty(ListItem.PictureResolution)</visible-->
 					</control>
-					<control type="image">
+					<!--control type="image">
 						<posx>26</posx>
 						<posy>27</posy>
 						<width>540</width>
@@ -65,7 +65,7 @@
 						<texture diffuse="frames/wideFrameMask.png" background="true">thumbs/picture.png</texture>
 						<include>fanartFadeTime</include>
 						<visible>IsEmpty(ListItem.PictureResolution)</visible>
-					</control>
+					</control-->
 				</control>
 			</control>
 		</control>
@@ -87,11 +87,31 @@
 			</control>
 			<control type="label">
 				<posy>25</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posy>25</posy>
 				<label>$INFO[ListItem.PictureResolution,$LOCALIZE[21805] - ]</label>
 				<font>normalCaps</font>
 				<textcolor>Color2</textcolor>
 				<align>left</align>
 				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posx>1075</posx>
+				<posy>25</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>right</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureDateTime)</visible>
 			</control>
 			<control type="label">
 				<posx>1075</posx>
@@ -101,6 +121,7 @@
 				<textcolor>Color2</textcolor>
 				<align>right</align>
 				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
 			</control>
 		</control>
 
@@ -141,11 +162,29 @@
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>
 			<control type="label">
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color1</textcolor>
+				<align>left</align>
+				<width>940</width>
+				<visible>IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
 				<label>[UPPERCASE]$INFO[ListItem.PictureResolution][/UPPERCASE]</label>
 				<font>normalCaps</font>
 				<textcolor>Color1</textcolor>
 				<align>left</align>
 				<width>940</width>
+				<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+			</control>
+			<control type="label">
+				<posy>23</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.PictureDateTime)</visible>
 			</control>
 			<control type="label">
 				<posy>23</posy>
@@ -154,6 +193,16 @@
 				<textcolor>Color2</textcolor>
 				<align>left</align>
 				<width>750</width>
+				<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
+			</control>
+			<control type="label">
+				<posy>46</posy>
+				<label>N/A</label>
+				<font>normalCaps</font>
+				<textcolor>Color2</textcolor>
+				<align>left</align>
+				<width>750</width>
+				<visible>IsEmpty(ListItem.Size)</visible>
 			</control>
 			<control type="label">
 				<posy>46</posy>
@@ -162,6 +211,7 @@
 				<textcolor>Color2</textcolor>
 				<align>left</align>
 				<width>750</width>
+				<visible>!IsEmpty(ListItem.Size)</visible>
 			</control>
 		</control>
 

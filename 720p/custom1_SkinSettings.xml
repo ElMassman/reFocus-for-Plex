@@ -80,10 +80,10 @@
 				<onfocus>Skin.SetString(SkinSettings,6)</onfocus>
 				<onright>600</onright>
 				<onup>14</onup>
-				<ondown>16</ondown>
+				<ondown>17</ondown>
 				<include>categoryButton</include>
 			</control>
-			<control type="button" id="16">
+			<!--control type="button" id="16">
 				<description>Add-ons</description>
 				<posy>252</posy>
 				<label>$LOCALIZE[24001]</label>
@@ -92,13 +92,13 @@
 				<onup>15</onup>
 				<ondown>17</ondown>
 				<include>categoryButton</include>
-			</control>
+			</control-->
 			<control type="button" id="17">
 				<description>Skin credits</description>
-				<posy>294</posy>
+				<posy>252</posy>
 				<label>$LOCALIZE[31909] reFocus</label>
 				<onfocus>Skin.SetString(SkinSettings,8)</onfocus>
-				<onup>16</onup>
+				<onup>15</onup>
 				<ondown>10</ondown>
 				<include>categoryButton</include>
 			</control>
@@ -479,13 +479,13 @@
 				<selected>!Skin.HasSetting(overlay)</selected>
 				<include>settingsButton</include>
 			</control>
-			<control type="radiobutton" id="606">
+			<!--control type="radiobutton" id="606">
 				<description>enable banner viewtype</description>
 				<label>$LOCALIZE[31066]</label>
 				<onclick>Skin.ToggleSetting(tvshowBanners)</onclick>
 				<selected>Skin.HasSetting(tvshowBanners)</selected>
 				<include>settingsButton</include>
-			</control>
+			</control-->
 			<!--<control type="radiobutton" id="607">
 				<description>simple listview</description>
 				<label>simpel</label>

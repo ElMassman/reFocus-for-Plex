@@ -157,7 +157,7 @@
 				<control type="label">
 					<posy>35</posy>
 					<width>980</width>
-					<label>$INFO[ListItem.Property(Artist_Genre)]</label>
+					<label>$INFO[ListItem.Property(Genre)]</label>
 					<align>left</align>
 					<include>Heading3</include>
 					<visible>!Container.Content(songs)</visible>

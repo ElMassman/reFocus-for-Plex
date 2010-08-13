@@ -222,6 +222,12 @@
 						<label>Help</label>
 						<onclick>Plex.ActivateWindow(1,plex://localhost/system/help,return)</onclick>
 					</item>
+					<item id="3">
+						<label>$LOCALIZE[8]</label>
+						<onclick>ActivateWindow(2600)</onclick>
+						<onclick>Dialog.Close(shutdownmenu)</onclick>
+						<visible>!Skin.HasSetting(homemenuWeather)</visible>
+					</item>
 					<item id="1">
 						<label>$LOCALIZE[1036]</label>
 						<onclick>ActivateWindow(Favourites)</onclick>
@@ -234,17 +240,7 @@
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 						<visible>!Skin.HasSetting(homemenuPrograms)</visible>
 					</item>
-					<item id="3">
-						<label>$LOCALIZE[8]</label>
-						<onclick>ActivateWindow(2600)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>!Skin.HasSetting(homemenuWeather)</visible>
-					</item>
-					<item id="4">
-						<label>$LOCALIZE[7]</label>
-						<onclick>ActivateWindow(Filemanager)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
+					
 				</content>
 			</control>
 		
@@ -295,11 +291,6 @@
 						<onclick>ActivateWindow(addonbrowser)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 					</item-->	
-					<item id="7">
-						<label>$LOCALIZE[13279]</label>
-						<onclick>ActivateWindow(networksettings)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
 					<item id="8">
 						<label>$LOCALIZE[8]</label>
 						<onclick>ActivateWindow(weathersettings)</onclick>
@@ -310,9 +301,9 @@
 						<onclick>ActivateWindow(systemsettings)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 					</item>
-					<item id="10">
-						<label>$LOCALIZE[13200]</label>
-						<onclick>ActivateWindow(34)</onclick>
+					<item id="7">
+						<label>Update Plex</label>
+						<onclick>ActivateWindow(networksettings)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 					</item>
 				</content>
