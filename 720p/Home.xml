@@ -17,6 +17,16 @@
 	
 		<include>slideshows</include>
 
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background3.png</texture>
+
+			<animation type="Conditional" condition="True">
+				<effect type="fade" start="0" end="90" time="2000" delay="100" />
+			</animation>
+		</control>
+
 		<control type="videowindow">
 			<include>screentype</include>
 			<visible>!Skin.HasSetting(backgroundVideo) + !Window.IsActive(28)</visible>
@@ -53,6 +63,12 @@
 			<height>720</height>
 			<aspectratio align="left">stretch</aspectratio>
 			<texture>home/menuBackground.png</texture>
+		</control>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio align="right">stretch</aspectratio>
+			<texture>home/menuBackground2.png</texture>
 		</control>
 		<control type="image" id="1">
 			<include>screentype</include>

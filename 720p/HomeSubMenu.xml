@@ -202,15 +202,16 @@
 <!-- ACCESSORIES SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1140">
 				<posx>-800</posx>
+				<posy>380</posy>
 				<width>900</width>
-				<height>700</height>
+				<height>300</height>
 				<onup>1140</onup>
 				<ondown>1140</ondown>
-				<onleft>300</onleft>
+				<onleft>200</onleft>
 				<orientation>vertical</orientation>
 				<focusposition>4</focusposition>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(300).HasFocus(4)</visible>
+				<visible allowhiddenfocus="true">Container(200).HasFocus(4)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
@@ -218,28 +219,28 @@
 						<label>Plex Online</label>
 						<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 					</item>
-					<item id="6">
-						<label>Help</label>
-						<onclick>Plex.ActivateWindow(1,plex://localhost/system/help,return)</onclick>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[8]</label>
-						<onclick>ActivateWindow(2600)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>!Skin.HasSetting(homemenuWeather)</visible>
-					</item>
-					<item id="1">
-						<label>$LOCALIZE[1036]</label>
-						<onclick>ActivateWindow(Favourites)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>!Skin.HasSetting(homemenuFavourites)</visible>
-					</item>
 					<item id="2">
 						<label>$LOCALIZE[0]</label>
 						<onclick>ActivateWindow(Programs,Addons,return)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 						<visible>!Skin.HasSetting(homemenuPrograms)</visible>
 					</item>
+					<!--item id="6">
+						<label>Help</label>
+						<onclick>Plex.ActivateWindow(1,plex://localhost/system/help,return)</onclick>
+					</item-->
+					<item id="3">
+						<label>$LOCALIZE[8]</label>
+						<onclick>ActivateWindow(2600)</onclick>
+						<onclick>Dialog.Close(shutdownmenu)</onclick>
+						<visible>!Skin.HasSetting(homemenuWeather)</visible>
+					</item>
+					<!--item id="1">
+						<label>$LOCALIZE[1036]</label>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						<onclick>Dialog.Close(shutdownmenu)</onclick>
+						<visible>!Skin.HasSetting(homemenuFavourites)</visible>
+					</item-->
 					
 				</content>
 			</control>
@@ -313,15 +314,16 @@
 <!-- EXIT SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1160">
 				<posx>-800</posx>
+				<posy>380</posy>
 				<width>900</width>
-				<height>700</height>
+				<height>300</height>
 				<onup>1160</onup>
 				<ondown>1160</ondown>
-				<onleft>300</onleft>
+				<onleft>200</onleft>
 				<orientation>vertical</orientation>
 				<focusposition>4</focusposition>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(300).HasFocus(11)</visible>
+				<visible allowhiddenfocus="true">Container(200).HasFocus(11)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>

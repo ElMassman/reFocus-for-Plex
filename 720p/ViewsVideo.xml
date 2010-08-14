@@ -1017,7 +1017,7 @@
 			<scrolltime>200</scrolltime>
 			<pagecontrol>66</pagecontrol>
 			<orientation>horizontal</orientation>
-			<focusposition>2</focusposition>
+			<focusposition>1</focusposition>
 			<preloaditems>3</preloaditems>
 			<visible>[Container.Content(movies) | Container.Content(tvshows)] + !Window.IsActive(progressdialog)</visible>
 			<include>transition2</include>
