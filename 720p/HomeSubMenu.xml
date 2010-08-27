@@ -2,13 +2,13 @@
 	<include name="homeSubMenu">
 	
 	<control type="group" id="1100">
-		<posy>20</posy>
+		<posy>100</posy>
 
 <!-- PLUG-IN SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1110">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>900</height>
+				<height>650</height>
 				<onup>1110</onup>
 				<ondown>1110</ondown>
 				<onleft>9000</onleft>
@@ -39,7 +39,7 @@
 			<control type="list" id="1140">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>800</height>
+				<height>650</height>
 				<onup>1140</onup>
 				<ondown>1140</ondown>
 				<onleft>9000</onleft>
@@ -76,7 +76,7 @@
 				<posx>-800</posx>
 				<posy>-0</posy>
 				<width>900</width>
-				<height>800</height>
+				<height>650</height>
 				<onup>1150</onup>
 				<ondown>1150</ondown>
 				<onleft>9000</onleft>
@@ -134,7 +134,7 @@
 			<control type="list" id="1160">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>800</height>
+				<height>650</height>
 				<onup>1160</onup>
 				<ondown>1160</ondown>
 				<onleft>9000</onleft>

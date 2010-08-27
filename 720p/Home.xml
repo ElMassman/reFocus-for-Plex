@@ -85,35 +85,7 @@
 
 
 <!-- TIME -------------------------------------------------------------------------------------------------------------------------->
-	<include condition="Skin.HasSetting(homeTime) + ![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">clock</include>
-
-<!-- RSS FEED -------------------------------------------------------------------------------------------------------------------------->
-		<control type="group">
-			<posy>685</posy>
-			<visible>Skin.HasSetting(enableRSSFeed) + ![Window.IsActive(10133) | Window.IsActive(10112)]</visible>
-			<animation effect="slide" start="0,100" end="0,0" time="200" tween="Quadratic" easing="In">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="0,100" time="200" tween="Quadratic" easing="Out">WindowClose</animation>
-
-			<control type="image">
-				<height>38</height>
-				<texture border="9">home/rssBackground.png</texture>
-				<include>screenwidth</include>
-				<visible>Skin.HasSetting(enableRSSFeed)</visible>
-			</control>	
-			<control type="rss" id="1">
-				<posy>1</posy>
-				<include>screenwidth</include>
-				<font>normalLow</font>
-				<urlset>1</urlset>
-				<height>32</height>
-				<aligny>center</aligny>
-				<textcolor>Color1</textcolor>
-				<titlecolor>Color2</titlecolor>
-				<headlinecolor>Color1</headlinecolor>
-				<highlightcolor>Focused</highlightcolor>
-				<include>fadeinout</include>
-			</control>
-		</control>
+	<include condition="!Skin.HasSetting(homeTime) + ![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">clock</include>
 		
 		
 <!-- CALL MENU -------------------------------------------------------------------------------------------------------------------------->
@@ -201,6 +173,85 @@
 		<onleft>998</onleft>
 		<onright>998</onright>
 	</control>-->
+
+	<!-- Arrows -->
+
+	<control type="image">
+		<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+		<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+		<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+		<posx>350</posx>
+		<posy>320</posy>
+		<width>50</width>
+		<height>50</height>
+		<texture>views/scrollleftindicator.png</texture>
+		<visible>Control.HasFocus(300)</visible>
+	</control>
+
+	<control type="image">
+		<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+		<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+		<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+		<posx>350</posx>
+		<posy>320</posy>
+		<width>50</width>
+		<height>50</height>
+		<texture>views/scrollrightindicator.png</texture>
+		<visible>Control.HasFocus(9000)</visible>
+	</control>
+
+	<!-- Plex Logo -->
+	
+	<control type="image">
+		<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+		<posx>20</posx>
+		<posy>0</posy>
+		<width>245</width>
+		<height>145</height>
+		<texture>home/logo.png</texture>
+	</control>
+
+	<!-- RSS FEED -------------------------------------------------------------------------------------------------------------------------->
+		<control type="group">
+			<posy>685</posy>
+			<visible>!Skin.HasSetting(enableRSSFeed) + ![Window.IsActive(10133) | Window.IsActive(10112)]</visible>
+			<animation effect="slide" start="0,100" end="0,0" time="200" tween="Quadratic" easing="In">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,100" time="200" tween="Quadratic" easing="Out">WindowClose</animation>
+
+			<control type="image">
+				<height>38</height>
+				<texture border="9">home/rssBackground.png</texture>
+				<include>screenwidth</include>
+				<visible>!Skin.HasSetting(enableRSSFeed)</visible>
+			</control>	
+			<control type="rss" id="1">
+				<posy>1</posy>
+				<include>screenwidth</include>
+				<font>normalLow</font>
+				<urlset>1</urlset>
+				<height>32</height>
+				<aligny>center</aligny>
+				<textcolor>Color1</textcolor>
+				<titlecolor>Color2</titlecolor>
+				<headlinecolor>Color1</headlinecolor>
+				<highlightcolor>Focused</highlightcolor>
+				<include>fadeinout</include>
+			</control>
+		</control>
 	
 		
   </controls>
