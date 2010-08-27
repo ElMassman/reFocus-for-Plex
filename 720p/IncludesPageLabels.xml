@@ -67,212 +67,14 @@
 
 	<include name="videoFanartPageLabels">
 
-	<!-- video library ---------------------------------------------------------------->
+	<!-- video ---------------------------------------------------------------->
 		<control type="label">
-			<label>$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[14022][/COLOR]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>videoPageLabel</include>
-			<visible>IsEmpty(Container.FolderPath)</visible>
-		</control>
-	<!-- movies ---------------------------------------------------------------->
-		<control type="label">
-			<label>$LOCALIZE[20342] [COLOR=Color2]$LOCALIZE[14022][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>IsEmpty(Container.PluginName) + Container.Content(movies) + !Window.IsActive(2003)</visible>
-		</control>
-		<!--control type="label">
-			<description>root</description>
-			<label>$LOCALIZE[342]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://1/)</visible>
-		</control>
-		<control type="label">
-			<description>recent</description>
-			<label>$LOCALIZE[31926]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://4/) + !Window.IsActive(2003)</visible>
-		</control-->
-	
-	<!-- tvshows ---------------------------------------------------------------->
-		<control type="label">
-			<description>tv shows</description>
-			<label>$LOCALIZE[20364] [COLOR=Color2]$LOCALIZE[14022][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>Container.Content(tvshows) + !Window.IsActive(2003)</visible>
-		</control>
-		<!--control type="label">
-			<description>root</description>
-			<label>$LOCALIZE[20343]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://2/)</visible>
-		</control-->
-	
-	<!-- seasons ---------------------------------------------------------------->
-		<control type="label">
-			<description>tv shows</description>
-			<label>$INFO[ListItem.TVShowTitle] [COLOR=Color2]$LOCALIZE[33054][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>Container.Content(seasons) + !Window.IsActive(2003)</visible>
-		</control>
-		<!--control type="label">
-			<description>root</description>
-			<label>$LOCALIZE[20343]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://2/)</visible>
-		</control-->
-	
-	<!-- episodes ---------------------------------------------------------------->
-		<control type="label">
-			<description>tv shows</description>
-			<label>$LOCALIZE[20364] [COLOR=Color2]$INFO[ListItem.TVShowTitle][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>Container.Content(episodes) + !Window.IsActive(2003)</visible>
-		</control>
-		<!--control type="label">
-			<description>recent</description>
-			<label>$LOCALIZE[31925]</label>
-			<include>videoPageLabel</include>
-			<visible>!Window.IsActive(2003) + stringcompare(container.folderpath,videodb://5/)</visible>
-		</control-->
-	
-	<!-- musicvideos ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[20389] [COLOR=Color2]$LOCALIZE[14022][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>Container.Content(musicvideos) + !stringcompare(container.folderpath,videodb://6/)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[20389] [COLOR=Color2]$LOCALIZE[132][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>Container.Content(albums)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[20389] [COLOR=Color2]$LOCALIZE[133][/COLOR]</label>
-			<include>musicPageLabel</include>
-			<visible>Container.Content(artists)</visible>
-		</control>
-		<control type="label">
-			<description>root</description>
-			<label>$LOCALIZE[20389]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://3/)</visible>
-		</control>
-		<control type="label">
-			<description>recent</description>
-			<label>$LOCALIZE[31931]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://6/)</visible>
-		</control-->
-	
-	<!-- trailers ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[31011]</label>
-			<include>videoPageLabel</include>
-			<visible>!Control.IsVisible(53) + !Window.IsActive(2003) + [stringcompare(container.folderpath, plugin://plugin.video.applemovietrailerlight/)]</visible>
-		</control-->
-	
-	<!-- add-ons ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[24001][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(Container.folderpath,addons://sources/video/)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[157] [COLOR=Color2]$LOCALIZE[24001][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>Window.IsActive(myvideolibrary) + ![IsEmpty(Container.FolderPath) | stringcompare(container.folderpath,videodb://1/) | stringcompare(container.folderpath,videodb://2/) | stringcompare(container.folderpath,videodb://3/) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(actors) | Container.Content(artists) | Container.Content(directors) | Container.Content(studios) | Container.Content(years) | Container.Content(genres) | Container.Content(albums) | stringcompare(container.folderpath,videodb://1/7/) | stringcompare(container.folderpath,special://videoplaylists/)]</visible>
-		</control-->
-
-
-	<!-- genres ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[20342] [COLOR=Color2]$LOCALIZE[135][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://1/1/)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[20343] [COLOR=Color2]$LOCALIZE[135][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://2/1/)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[20389] [COLOR=Color2]$LOCALIZE[135][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://3/1/)</visible>
-		</control-->
-		
-	
-	<!-- years ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[20342] [COLOR=Color2]$LOCALIZE[652][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://1/3/)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[20343] [COLOR=Color2]$LOCALIZE[652][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://2/3/)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[20389] [COLOR=Color2]$LOCALIZE[652][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://3/3/)</visible>
-		</control-->
-	
-	<!-- actors ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[20342] [COLOR=Color2]$LOCALIZE[344][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://1/4/)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[20343] [COLOR=Color2]$LOCALIZE[344][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://2/4/)</visible>
-		</control-->
-	
-	<!-- directors ---------------------------------------------------------------->
-		<control type="label">
-			<label>$LOCALIZE[20348]</label>
-			<include>videoPageLabel</include>
-			<visible>Container.Content(directors)</visible>
+			<visible>!Window.IsActive(2003)</visible>
 		</control>
 	
-	<!-- studios ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[20342] [COLOR=Color2]$LOCALIZE[20388][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://1/6/)</visible>
-		</control>
-		<control type="label">
-			<label>$LOCALIZE[20343] [COLOR=Color2]$LOCALIZE[20388][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://2/5/)</visible>
-		</control-->
-		<!--<control type="label">
-			<label>$LOCALIZE[20389] [COLOR=Color2]$LOCALIZE[20388][/COLOR]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://3/6/)</visible>
-		</control>-->
-		
-		
-	
-	<!-- countries ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[20451]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,videodb://1/7/)</visible>
-		</control-->
-	
-	<!-- playlists ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>[COLOR=Color2]$LOCALIZE[157][/COLOR] $LOCALIZE[136]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,special://videoplaylists/)</visible>
-		</control-->
-	</include>
-	
-
-<!-- MUSIC PAGELABELS -------------------------------------------------------------------------------------------->			
+	<!-- MUSIC PAGELABELS -------------------------------------------------------------------------------------------->			
 	<include name="musicPageLabel">
 		<posx>34</posx>
 		<posy>25</posy>
@@ -294,82 +96,51 @@
 	
 	<!-- music library ---------------------------------------------------------------->
 		<control type="label">
-			<label>$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[14022][/COLOR]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>musicPageLabel</include>
 			<visible>IsEmpty(container.folderpath) + !Window.IsActive(501)</visible>
 		</control>
 	
-	<!-- albums ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[132][/COLOR]</label>
-			<include>musicPageLabel</include>
-			<visible>!Window.IsActive(2001) + Container.Content(albums) + ![stringcompare(container.folderpath,musicdb://6/) | stringcompare(container.folderpath,musicdb://7/) | stringcompare(container.folderpath,musicdb://8/)]</visible>
-		</control>
-		<control type="label">
-			<description>recent additions</description>
-			<label>$LOCALIZE[31932]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,musicdb://6/) + !Window.IsActive(2001)</visible>
-		</control>
-		<control type="label">
-			<description>recent plays</description>
-			<label>$LOCALIZE[31941]</label>
-			<include>videoPageLabel</include>
-			<visible>stringcompare(container.folderpath,musicdb://7/) + !Window.IsActive(2001)</visible>
-		</control-->
-	
 	<!-- artists ---------------------------------------------------------------->
 		<control type="label">
-			<label>$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[133][/COLOR]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>musicPageLabel</include>
 			<visible>!Window.IsActive(2001) + Container.Content(artists)</visible>
 		</control>
 	
 	<!-- songs ---------------------------------------------------------------->
 		<control type="label">
-			<label>$LOCALIZE[2] [COLOR=Color2]$LOCALIZE[134][/COLOR]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>musicPageLabel</include>
 			<visible>Container.Content(songs) + !Window.IsActive(2001)</visible>
 		</control>
 	
 	<!-- genres ---------------------------------------------------------------->
 		<control type="label">
-			<label>$LOCALIZE[135]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>musicPageLabel</include>
 			<visible>Container.Content(genres)</visible>
 		</control>
 
 	<!-- years ---------------------------------------------------------------->
 		<control type="label">
-			<label>$LOCALIZE[652]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>musicPageLabel</include>
 			<visible>Container.Content(years)</visible>
 		</control>
 	
 	<!-- playlists ---------------------------------------------------------------->
 		<!--control type="label">
-			<label>[COLOR=Color2]$LOCALIZE[2][/COLOR] $LOCALIZE[136]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>musicPageLabel</include>
 			<visible>stringcompare(container.folderpath,special://musicplaylists/)</visible>
 		</control-->
 	
-	<!-- top100 ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>[COLOR=Color2]$LOCALIZE[2][/COLOR] $LOCALIZE[271]</label>
-			<include>musicPageLabel</include>
-			<visible>stringcompare(container.folderpath,musicdb://5/)</visible>
-		</control-->
 	
-	<!-- top100 ---------------------------------------------------------------->
-		<!--control type="label">
-			<label>[COLOR=Color2]$LOCALIZE[2][/COLOR] $LOCALIZE[521]</label>
-			<include>musicPageLabel</include>
-			<visible>stringcompare(container.folderpath,musicdb://8/)</visible>
-		</control-->
 	
 	<!-- plugins ---------------------------------------------------------------->
 		<!--control type="label">
-			<label>$LOCALIZE[31942]</label>
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
 			<include>musicPageLabel</include>
 			<visible>stringcompare(container.folderpath,plugin://music/)</visible>
 		</control>
@@ -409,4 +180,7 @@
 		<include>videoFanartPageLabel</include>
 		<visible>Control.IsVisible(50) + Window.IsActive(10020)</visible>
 	</control-->
+
+	</include>
+
 </includes>

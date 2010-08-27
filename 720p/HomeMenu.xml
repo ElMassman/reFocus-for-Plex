@@ -1,115 +1,77 @@
 <includes>
 	<include name="HomeMenu">
 
-		<control type="list" id="400">
-			<posx>905</posx>
-			<posy>400</posy>
-			<width>1100</width>
-			<height>300</height>
-			<onup>400</onup>
-			<ondown>400</ondown>
-			<onleft>300</onleft>
-			<onright>-</onright>
-			<orientation>vertical</orientation>
-			<focusposition>4</focusposition>
-			<scrolltime>150</scrolltime>
-			<include>transition2</include>
-			<animation effect="fade" start="100" end="30" time="350" condition="[Control.HasFocus(200) | Control.HasFocus(300) | Control.HasFocus(1140) | Control.HasFocus(1160)]">Conditional</animation>
-		<itemlayout width="375" height="55">
-			<control type="label">
-				<posx>355</posx>
-				<posy>70</posy>
-				<posy>100</posy>
-				<width>375</width>
-				<height>52</height>
-				<font>homeMenu</font>
-				<align>right</align>
-				<label>$INFO[ListItem.Label]</label>
-				<textcolor>Color7</textcolor>
-			</control>
-		</itemlayout>
-		<focusedlayout width="375" height="55">
-			<control type="image">
-				<posy>0</posy>
-				<width>375</width>
-				<height>209</height>
-				<aspectratio align="left">stretch</aspectratio>
-				<texture flipx="true" border="1">home/menuSelect.png</texture>
-				<include>homeListScroll</include>
-			</control>
-			<control type="label">
-				<posy>70</posy>
-				<posx>355</posx>
-				<width>375</width>
-				<height>52</height>
-				<font>homeMenu</font>
-				<align>right</align>
-				<textcolor>ff000000</textcolor>
-				<label>$INFO[ListItem.Label]</label>
-				<visible>IsEmpty(Listitem.Label2)</visible>
-			</control>
-			<control type="label">
-				<posy>70</posy>
-				<posx>355</posx>
-				<width>375</width>
-				<height>52</height>
-				<font>homeMenu</font>
-				<align>right</align>
-				<textcolor>ff000000</textcolor>
-				<label>[LOWERCASE]$INFO[ListItem.Label2][/LOWERCASE] [COLOR 99000000]$INFO[ListItem.Label][COLOR]</label>		
-				<visible>!IsEmpty(Listitem.Label2)</visible>
-			</control>
-		</focusedlayout>
-			<content>
-				<item id="1">
-					<label>Video Plug-ins</label>
-					<onclick>ActivateWindow(6)</onclick>
-				</item>
-				<item id="2">
-					<label>Music Plug-ins</label>
-					<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
-				</item>
-				<item id="3">
-					<label>Picture Plug-ins</label>
-					<onclick>ActivateWindow(2)</onclick>
-				</item>
-			</content>
-		</control>
+		<!-- Dynamic PMS Sections -->
 
 		<control type="fixedlist" id="300">
-			<posx>225</posx>
-			<posy>160</posy>
+			<posx>365</posx>
+			<posy>-25</posy>
 			<width>900</width>
-			<height>490</height>
-			<onup>300</onup>
-			<ondown>300</ondown>
-			<onleft>200</onleft>
-			<onright>400</onright>
+			<height>750</height>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>9000</onleft>
+			<onright>-</onright>
 			<wraparound>true</wraparound>
 			<orientation>vertical</orientation>
-			<focusposition>0</focusposition>
+			<focusposition>1</focusposition>
 			<scrolltime>250</scrolltime>
 			<include>transition2</include>
-			<animation effect="fade" start="100" end="50" time="350" condition="[Control.HasFocus(400) | Control.HasFocus(200) | Control.HasFocus(1140) | Control.HasFocus(1160)]">Conditional</animation>
-		<itemlayout width="560" height="65">
-			<control type="label">
-					<posx>350</posx>
-					<width>700</width>
-					<label>$INFO[ListItem.Label]</label>
-					<font>bigLow</font>
-					<include>listMenu</include>
+			<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+		<itemlayout width="560" height="230">
+			<control type="group">
+			<posx>5</posx>
+			<animation effect="fade" start="100" end="90" time="350" condition="true">Conditional</animation>
+			<animation effect="zoom" start="100" end="80" time="0" center="auto" condition="true">Conditional</animation>
+			<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>836</width>
+					<height>295</height>
+					<include>dialogWindow</include>
+					<include>focus_Banner</include>
+				</control>
+				<control type="image">
+					<posx>20</posx>
+					<posy>17</posy>
+					<width>799</width>
+					<height>200</height>
+					<texture diffuse="frames/homemask.png" fallback="thumbs/banner.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<aspectratio scalediffuse="false" align="top">scale</aspectratio>
+					<include>focus_Banner</include>
+				</control>
+				<control type="image">
+					<posx>19</posx>
+					<posy>217</posy>
+					<width>800</width>
+					<include>dialogSeparator</include>
+					<include>focus_Banner</include>
 				</control>
 				<control type="label">
-					<posx>350</posx>
-					<posy>23</posy>
-					<width>700</width>
+					<posx>34</posx>
+					<posy>230</posy>
+					<label>$INFO[ListItem.Label]</label>
+					<font>dialog1</font>
+					<textcolor>Color1</textcolor>
+					<align>left</align>
+					<width>1100</width>
+					<include>focus_Banner</include>
+				</control>
+				<control type="label">
+					<posx>804</posx>
+					<posy>235</posy>
 					<label>$INFO[ListItem.Label2]</label>
-					<font>smallCaps</font>
-					<textcolor>Color2</textcolor>
-					<include>listMenu</include>
+					<font>mediumCaps</font>
+					<textcolor>Color4</textcolor>
+					<align>right</align>
+					<width>800</width>
+					<include>focus_Banner</include>
+				</control>	
 				</control>
 		</itemlayout>
-		<focusedlayout width="560" height="290">
+		<focusedlayout width="560" height="230">
+			<control type="group">
+			<animation effect="zoom" start="100" end="82" time="0" center="auto" condition="true">Conditional</animation>
 			<control type="image">
 					<posx>1</posx>
 					<posy>0</posy>
@@ -154,39 +116,71 @@
 					<width>800</width>
 					<include>focus_Banner</include>
 				</control>
+				</control>
 		</focusedlayout>
 			<content>
 			</content>
 		</control>
+	
+		<!-- Dynamic Home Edge Shadow -->
 
+		<control type="group">
 
-			
-		<control type="list" id="200">
-			<posy>400</posy>
+		<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(9000) | Control.HasFocus(1110) | Control.HasFocus(1140) | Control.HasFocus(1150) | Control.HasFocus(1160)">Conditional</animation>
+
+		<control type="image">
+			<posx>389</posx>
+			<posy>0</posy>
+			<height>720</height>
+			<width>29</width>
+			<texture>settings/separator.png</texture>
+			<aspectratio align="right">stretch</aspectratio>
+			<include>transition2</include>
+		</control>
+
+		<control type="image">
+			<posx>1100</posx>
+			<posy>0</posy>
+			<height>720</height>
+			<width>29</width>
+			<texture flipx="true">settings/separator.png</texture>
+			<aspectratio align="right">stretch</aspectratio>
+			<include>transition2</include>
+		</control>
+
+		</control>
+
+		<!-- Original Home Menu -->
+	
+		<control type="list" id="9000">
+			<posy>20</posy>
 			<width>1100</width>
-			<height>300</height>
-			<onup>200</onup>
-			<ondown>200</ondown>
-			<onleft>-</onleft>
+			<height>700</height>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
 			<onright>300</onright>
+			<onleft>9000</onleft>
 			<orientation>vertical</orientation>
-			<focusposition>4</focusposition>
 			<scrolltime>150</scrolltime>
-			<animation effect="fade" start="100" end="30" time="350" condition="[Control.HasFocus(400) | Control.HasFocus(300)]">Conditional</animation>
-			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>		
+			<visible allowhiddenfocus="true">![ControlGroup(1100).HasFocus() | ControlGroup(4000).HasFocus() | ControlGroup(2100).HasFocus()]</visible>	
+			<animation effect="fade" start="100" end="20" time="350" condition="Control.HasFocus(300)">Conditional</animation>	
 			<include>homeMenuToggle</include>
-			<include>homeMenusLayout</include>			
+			<include>homeMenusLayout</include>
 			<content>
-				<!--item id="1">
+				<item id="99">
+					<label>Plex Online</label>
+					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+				</item>
+				<item id="1">
 					<label>Plug-ins</label>
 					<onclick>SetFocus(1110)</onclick>
-				</item-->
+				</item>
 				<!--item id="2">
-					<label>$LOCALIZE[2]</label>
+					<label>Music Plug-ins</label>
 					<onclick>SetFocus(1120)</onclick>
 				</item>
 				<item id="3">
-					<label>$LOCALIZE[1]</label>
+					<label>Picture Plug-ins</label>
 					<onclick>SetFocus(1130)</onclick>
 				</item-->
 				<item id="4">
@@ -197,6 +191,12 @@
 				<item id="5">
 					<label>$LOCALIZE[5]</label>
 					<onclick>ActivateWindow(4)</onclick>
+					<visible>Skin.HasSetting(homemenuSettings)</visible>
+				</item>
+				<item id="5">
+					<label>$LOCALIZE[5]</label>
+					<onclick>SetFocus(1150)</onclick>
+					<visible>!Skin.HasSetting(homemenuSettings)</visible>
 				</item>
 				<item id="6">
 					<label>$LOCALIZE[8]</label>
@@ -204,7 +204,6 @@
 					<onclick>ActivateWindow(weather)</onclick>
 					<visible>Skin.HasSetting(homemenuWeather)</visible>
 				</item>
-
 				<item id="9">
 					<label>$LOCALIZE[1036]</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
@@ -232,8 +231,10 @@
 					<visible>Player.HasVideo + Skin.HasSetting(homemenuNP)</visible>
 					<label2>$INFO[VideoPlayer.TVShowTitle,,: ]$INFO[VideoPlayer.Artist,, - ]$INFO[VideoPlayer.Title]</label2>
 				</item>
+				
 			</content>
 		</control>
 		<include>homeSubMenu</include>
+		<include>homeRecent</include>
 	</include>
 </includes>

@@ -20,10 +20,10 @@
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background3.png</texture>
+			<texture background="true">backgrounds/background.png</texture>
 
 			<animation type="Conditional" condition="True">
-				<effect type="fade" start="0" end="90" time="2000" delay="100" />
+				<effect type="fade" start="0" end="50" time="2000" delay="100" />
 			</animation>
 		</control>
 

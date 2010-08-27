@@ -4,220 +4,56 @@
 	<control type="group" id="1100">
 		<posy>20</posy>
 
-<!-- FILE MODE SUBMENU ----------------------------------------------------------------------------------------------->	
+<!-- PLUG-IN SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1110">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>700</height>
+				<height>900</height>
 				<onup>1110</onup>
 				<ondown>1110</ondown>
-				<onleft>300</onleft>
+				<onleft>9000</onleft>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
-				<visible allowhiddenfocus="true">Container(300).HasFocus(1)</visible>
+				<visible allowhiddenfocus="true">Container(9000).HasFocus(1)</visible>
 				<content>
 					<item id="1">
-						<label>Videos</label>
+						<label>Video Plug-ins</label>
 						<onclick>ActivateWindow(6)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
 					</item>
 					<item id="2">
-						<label>Music</label>
-						<onclick>XBMC.ActivateWindow(MyMusic)</onclick>
+						<label>Music Plug-ins</label>
+						<onclick>ActivateWindow(MyMusic)</onclick>
 					</item>
 					<item id="3">
-						<label>Pictures</label>
+						<label>Picture Plug-ins</label>
 						<onclick>ActivateWindow(2)</onclick>
 					</item>
-					<!--item id="4">
-						<label>$LOCALIZE[31095]</label>
-						<onclick>ActivateWindow(MyVideoLibrary,recentlyaddedmovies)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(movies)</visible>
-					</item>
-					<item id="5">
-						<label>$LOCALIZE[31094]</label>
-						<onclick>ActivateWindow(MyVideoLibrary,recentlyaddedepisodes)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(tvshows)</visible>
-					</item>
-					<item id="6">
-						<label>$LOCALIZE[31024]</label>
-						<onclick>ActivateWindow(MyVideoLibrary,musicvideotitles)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(musicvideos)</visible>
-					</item>
-					<item id="7">
-						<label>$INFO[Skin.String(homemenuPlaylist1_Label)]</label>
-						<onclick>ActivateWindow(myvideolibrary,$INFO[Skin.String(homemenuPlaylist1_Path)])</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Skin.HasSetting(homemenuPlaylist1)</visible>
-					</item>
-					<item id="8">
-						<label>$INFO[Skin.String(homemenuPlaylist2_Label)]</label>
-						<onclick>ActivateWindow(myvideolibrary,$INFO[Skin.String(homemenuPlaylist2_Path)])</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Skin.HasSetting(homemenuPlaylist2)</visible>
-					</item>
-					<item id="9">
-						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(VideoLibrary,Addons)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(Video)</visible>
-					</item>
-					<item id="10">
-						<label>$LOCALIZE[31052]</label>
-						<onclick>XBMC.ActivateWindow(MyVideoLibrary, plugin://plugin.video.apple.movie.trailers.lite/)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Skin.HasSetting(homemenuTrailers)</visible>
-					</item>
-					<item id="11">
-						<label>$LOCALIZE[136]</label>
-						<onclick>ActivateWindow(MyVideoLibrary,playlists)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Skin.HasSetting(homemenuVideoPlaylists)</visible>
-					</item>
-					<item id="12">
-						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(MyVideoFiles)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item-->
 				</content>
 			</control>
 
 
-<!-- MUSIC SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="list" id="1120">
-				<posx>-800</posx>
-				<width>900</width>
-				<height>800</height>
-				<onup>1120</onup>
-				<ondown>1120</ondown>
-				<onleft>300</onleft>
-				<orientation>vertical</orientation>
-				<scrolltime>150</scrolltime>
-				<visible>Container(300).HasFocus(2)</visible>
-				<include>homeSubFocus</include>
-				<include>homeMenusLayout</include>
-				<content>
-					<item id="1">
-						<label>$LOCALIZE[132]</label>
-						<onclick>ActivateWindow(MyMusicLibrary,albums)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(Music)</visible>
-					</item>
-					<item id="2">
-						<label>$LOCALIZE[31970]</label>
-						<onclick>ActivateWindow(MyMusicLibrary,recentlyaddedalbums)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(homemenuRecentMusic)</visible>
-					</item>
-					<item id="3">
-						<label>$LOCALIZE[31971]</label>
-						<onclick>ActivateWindow(MyMusicLibrary,recentlyplayedalbums)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(homemenuRecentMusic)</visible>
-					</item>
-					<item id="4">
-						<label>$LOCALIZE[133]</label>
-						<onclick>ActivateWindow(MyMusicLibrary,artists)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(homemenuArtists)</visible>
-					</item>
-					<item id="5">
-						<label>$LOCALIZE[135]</label>
-						<onclick>ActivateWindow(MyMusicLibrary,genres)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(homemenuMusicGenres)</visible>
-					</item>
-					<item id="9">
-						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(MusicLibrary,Addons)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(Music)</visible>
-					</item>
-					<item id="6">
-						<label>$LOCALIZE[136]</label>
-						<onclick>ActivateWindow(MyMusicLibrary,playlists)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Skin.HasSetting(homemenuMusicPlaylists)</visible>
-					</item>
-					<item id="7">
-						<label>$LOCALIZE[589]</label>
-						<onclick>XBMC.PlayerControl(Partymode)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(Music) + Skin.HasSetting(homemenuPartyMode)</visible>
-					</item>
-					<item id="8">
-						<label>LastFM</label>
-						<onclick>ActivateWindow(MyMusicLibrary,lastfm://)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>AudioScrobbler.Enabled</visible>
-					</item>
-					<item id="9">
-						<label>$LOCALIZE[31024]</label>
-						<onclick>ActivateWindow(MyVideoLibrary,musicvideotitles)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>Library.HasContent(musicvideos)</visible>
-					</item>
-					<item id="10">
-						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(MyMusicFiles)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
-				</content>
-			</control>
 
-
-<!-- PICTURES SUBMENU ----------------------------------------------------------------------------------------------->	
-			<control type="list" id="1130">
-				<posx>-800</posx>
-				<width>900</width>
-				<height>800</height>
-				<onup>1130</onup>
-				<ondown>1130</ondown>
-				<onleft>300</onleft>
-				<orientation>vertical</orientation>
-				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(300).HasFocus(3)</visible>
-				<include>homeSubFocus</include>
-				<include>homeMenusLayout</include>
-				<content>
-					<item id="1">
-						<label>$LOCALIZE[1024]</label>
-						<onclick>ActivateWindow(2)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
-					<item id="2">
-						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(Pictures,Addons)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
-				</content>
-			</control>
-		
-		
 <!-- ACCESSORIES SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1140">
 				<posx>-800</posx>
-				<posy>380</posy>
 				<width>900</width>
-				<height>300</height>
+				<height>800</height>
 				<onup>1140</onup>
 				<ondown>1140</ondown>
-				<onleft>200</onleft>
+				<onleft>9000</onleft>
 				<orientation>vertical</orientation>
-				<focusposition>4</focusposition>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(200).HasFocus(4)</visible>
+				<visible allowhiddenfocus="true">Container(9000).HasFocus(4)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
-					<item id="5">
-						<label>Plex Online</label>
-						<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+					<item id="1">
+						<label>$LOCALIZE[1036]</label>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						<onclick>Dialog.Close(shutdownmenu)</onclick>
+						<visible>!Skin.HasSetting(homemenuFavourites)</visible>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[0]</label>
@@ -225,23 +61,12 @@
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 						<visible>!Skin.HasSetting(homemenuPrograms)</visible>
 					</item>
-					<!--item id="6">
-						<label>Help</label>
-						<onclick>Plex.ActivateWindow(1,plex://localhost/system/help,return)</onclick>
-					</item-->
 					<item id="3">
 						<label>$LOCALIZE[8]</label>
 						<onclick>ActivateWindow(2600)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 						<visible>!Skin.HasSetting(homemenuWeather)</visible>
 					</item>
-					<!--item id="1">
-						<label>$LOCALIZE[1036]</label>
-						<onclick>ActivateWindow(Favourites)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-						<visible>!Skin.HasSetting(homemenuFavourites)</visible>
-					</item-->
-					
 				</content>
 			</control>
 		
@@ -251,14 +76,13 @@
 				<posx>-800</posx>
 				<posy>-0</posy>
 				<width>900</width>
-				<height>700</height>
+				<height>800</height>
 				<onup>1150</onup>
 				<ondown>1150</ondown>
-				<onleft>300</onleft>
+				<onleft>9000</onleft>
 				<orientation>vertical</orientation>
-				<focusposition>4</focusposition>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(300).HasFocus(5)</visible>
+				<visible allowhiddenfocus="true">Container(9000).HasFocus(5)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
@@ -286,12 +110,12 @@
 						<label>$LOCALIZE[10002]</label>
 						<onclick>ActivateWindow(picturessettings)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>	
-					<!--item id="6">
-						<label>$LOCALIZE[24001]</label>
-						<onclick>ActivateWindow(addonbrowser)</onclick>
+					</item>
+					<item id="7">
+						<label>Update Plex</label>
+						<onclick>ActivateWindow(networksettings)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item-->	
+					</item>
 					<item id="8">
 						<label>$LOCALIZE[8]</label>
 						<onclick>ActivateWindow(weathersettings)</onclick>
@@ -302,11 +126,6 @@
 						<onclick>ActivateWindow(systemsettings)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 					</item>
-					<item id="7">
-						<label>Update Plex</label>
-						<onclick>ActivateWindow(networksettings)</onclick>
-						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
 				</content>
 			</control>
 
@@ -314,16 +133,14 @@
 <!-- EXIT SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1160">
 				<posx>-800</posx>
-				<posy>380</posy>
 				<width>900</width>
-				<height>300</height>
+				<height>800</height>
 				<onup>1160</onup>
 				<ondown>1160</ondown>
-				<onleft>200</onleft>
+				<onleft>9000</onleft>
 				<orientation>vertical</orientation>
-				<focusposition>4</focusposition>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(200).HasFocus(11)</visible>
+				<visible allowhiddenfocus="true">Container(9000).HasFocus(11)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>

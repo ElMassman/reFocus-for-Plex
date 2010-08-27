@@ -154,7 +154,7 @@
 						<label>Update</label>
 						<label2>Update all Skins</label2>
 						<icon>settings/addons.png</icon>
-						<onclick>../extra/update.sh</onclick>
+						<onclick>Updater/PlexSkinInstaller.sh</onclick>
 					</item>
 				</content>
 			</control>  
