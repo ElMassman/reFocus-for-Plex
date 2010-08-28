@@ -219,6 +219,7 @@
 	<!-- Arrows -->
 
 	<control type="image">
+		<include>transition2</include>
 		<animation type="WindowOpen" condition="Window.Previous(2999)">
 				<effect type="fade" start="0" end="100" time="2000" delay="100" />
 			</animation>
@@ -237,6 +238,7 @@
 	</control>
 
 	<control type="image">
+		<include>transition2</include>
 		<animation type="WindowOpen" condition="Window.Previous(2999)">
 				<effect type="fade" start="0" end="100" time="2000" delay="100" />
 			</animation>
@@ -257,6 +259,7 @@
 	<!-- Plex Logo -->
 	
 	<control type="image">
+		<include>transition2</include>
 		<animation type="WindowOpen" condition="Window.Previous(2999)">
 				<effect type="fade" start="0" end="100" time="2000" delay="100" />
 			</animation>

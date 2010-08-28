@@ -145,6 +145,7 @@
 			<control type="radiobutton" id="106">
 				<label>31987</label>
 				<onclick>Skin.ToggleSetting(hometimebackgrounds)</onclick>
+				<selected>!Skin.ToggleSetting(hometimebackgrounds)</selected>
 				<include>settingsButton</include>
 			</control>
 			<control type="radiobutton" id="103">
