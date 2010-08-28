@@ -44,7 +44,7 @@
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(51)</onclick>
 					<include>contextButton</include>
-					<visible>Container.Content(episodes)</visible>
+					<visible>Container.Content(episodes) | Container.Content(plugincontent)</visible>
 				</control>
 				<control type="button" id="43">
 					<label>$LOCALIZE[31003]</label>
@@ -62,21 +62,21 @@
 					<include>contextButton</include>
 					<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 				</control>
-				<control type="button" id="45">
+				<!--control type="button" id="45">
 					<label>$LOCALIZE[31008]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(557)</onclick>
 					<include>contextButton</include>
-					<visible>![IsEmpty(Container.FolderPath) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(genres) | Container.Content(actors) | Container.Content(artists) | Container.Content(studios) | Container.Content(years) | Container.Content(countries) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)]</visible>
-				</control>
+					<visible>![IsEmpty(Container.FolderPath) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(genres) | Container.Content(actors) | Container.Content(artists) | Container.Content(studios) | Container.Content(years) | Container.Content(countries) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos) | Container.Content(plugincontents)]</visible>
+				</control-->
 				<control type="button" id="46">
 					<label>$LOCALIZE[31093]</label>
 					<onleft>1</onleft>
 					<onright>1</onright>
 					<onclick>Container.SetViewMode(54)</onclick>
 					<include>contextButton</include>
-					<visible>Container.Content(tvshows) + Skin.HasSetting(tvshowBanners)</visible>
+					<visible>Container.Content(tvshows) </visible>
 				</control>
 				<control type="button" id="47">
 					<label>$LOCALIZE[31003]</label>

@@ -6,6 +6,25 @@
 		<include>themeBackground2</include>
 		<include>allscreens</include>
 
+		<control type="image">
+			<posx>90</posx>
+			<posy>590</posy>
+			<width>224</width>
+			<texture>logos/refocuslogo.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<include>transition2</include>
+		</control>
+
+		<control type="image">
+			<posx>120</posx>
+			<posy>620</posy>
+			<width>193</width>
+			<height>70</height>
+			<texture>home/forplexlogo.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<include>transition2</include>
+		</control>
+
 		<control type="group">
 			<control type="label">
 				<include>PageLabel</include>

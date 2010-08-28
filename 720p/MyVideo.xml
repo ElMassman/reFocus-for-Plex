@@ -38,6 +38,28 @@
 			<include>contextMenuHide</include>
 			<visible>Control.IsVisible(50)</visible>
 
+			<control type="image">
+				<posx>671</posx>
+				<posy>173</posy>
+				<width>450</width>
+				<height>450</height>
+				<texture>frames/albumframe.png</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<include>thumbFadeTime</include>
+				<visible>Container.Content(plugincontent)</visible>
+			</control>
+
+			<control type="image">
+				<posx>698</posx>
+				<posy>200</posy>
+				<width>396</width>
+				<height>396</height>
+				<texture diffuse="frames/albumframemask.png" fallback="thumbs/actor.png">$INFO[ListItem.Thumb]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<include>thumbFadeTime</include>
+				<visible>Container.Content(plugincontent)</visible>
+			</control>
+
 			<control type="group">
 				<posx>665</posx>
 				<posy>75</posy>

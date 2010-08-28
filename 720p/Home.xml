@@ -218,7 +218,7 @@
 
 	<!-- Arrows -->
 
-	<control type="image">
+	<!--control type="image">
 		<include>transition2</include>
 		<animation type="WindowOpen" condition="Window.Previous(2999)">
 				<effect type="fade" start="0" end="100" time="2000" delay="100" />
@@ -254,11 +254,30 @@
 		<height>50</height>
 		<texture>views/scrollrightindicator.png</texture>
 		<visible>Control.HasFocus(9000)</visible>
-	</control>
+	</control-->
 
 	<!-- Plex Logo -->
-	
+
 	<control type="image">
+			<posx>30</posx>
+			<posy>30</posy>
+			<width>224</width>
+			<texture>logos/refocuslogo.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<include>transition2</include>
+		</control>
+
+		<control type="image">
+			<posx>60</posx>
+			<posy>60</posy>
+			<width>193</width>
+			<height>70</height>
+			<texture>home/forplexlogo.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<include>transition2</include>
+		</control>
+	
+	<!--control type="image">
 		<include>transition2</include>
 		<animation type="WindowOpen" condition="Window.Previous(2999)">
 				<effect type="fade" start="0" end="100" time="2000" delay="100" />
@@ -268,7 +287,7 @@
 		<width>245</width>
 		<height>145</height>
 		<texture>home/logo.png</texture>
-	</control>
+	</control-->
 
 	<!-- RSS FEED -------------------------------------------------------------------------------------------------------------------------->
 		<control type="group">
