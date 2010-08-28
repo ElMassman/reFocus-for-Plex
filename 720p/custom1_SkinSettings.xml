@@ -1,5 +1,5 @@
 <window id="59">
-	<defaultcontrol always="true">12</defaultcontrol>
+	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 
 	<controls>
@@ -15,6 +15,16 @@
 			<posy>590</posy>
 			<width>224</width>
 			<texture>logos/refocuslogo.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+			<include>transition2</include>
+		</control>
+
+		<control type="image">
+			<posx>120</posx>
+			<posy>620</posy>
+			<width>193</width>
+			<height>70</height>
+			<texture>home/forplexlogo.png</texture>
 			<aspectratio align="right">keep</aspectratio>
 			<include>transition2</include>
 		</control>
@@ -40,10 +50,10 @@
 				<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
 				<onright>200</onright>
 				<onup>10</onup>
-				<ondown>12</ondown>
+				<ondown>14</ondown>
 				<include>categoryButton</include>
 			</control>
-			<control type="button" id="12">
+			<!--control type="button" id="12">
 				<description>Home Video Menu Settings</description>
 				<posy>84</posy>
 				<label>$LOCALIZE[31962]</label>
@@ -62,20 +72,20 @@
 				<onup>12</onup>
 				<ondown>14</ondown>
 				<include>categoryButton</include>
-			</control>
+			</control-->
 			<control type="button" id="14">
 				<description>Fanart Settings</description>
-				<posy>168</posy>
+				<posy>84</posy>
 				<label>Fanart</label>
 				<onfocus>Skin.SetString(SkinSettings,5)</onfocus>
 				<onright>500</onright>
-				<onup>13</onup>
+				<onup>11</onup>
 				<ondown>15</ondown>
 				<include>categoryButton</include>
 			</control>
 			<control type="button" id="15">
 				<description>View Settings</description>
-				<posy>210</posy>
+				<posy>126</posy>
 				<label>$LOCALIZE[31015]</label>
 				<onfocus>Skin.SetString(SkinSettings,6)</onfocus>
 				<onright>600</onright>
@@ -95,7 +105,7 @@
 			</control-->
 			<control type="button" id="17">
 				<description>Skin credits</description>
-				<posy>252</posy>
+				<posy>168</posy>
 				<label>$LOCALIZE[31909] reFocus</label>
 				<onfocus>Skin.SetString(SkinSettings,8)</onfocus>
 				<onup>15</onup>
@@ -132,6 +142,11 @@
 				<enable>Skin.HasSetting(FanartSlideShow)</enable>
 				<include>settingsButton</include>
 			</control>
+			<control type="radiobutton" id="106">
+				<label>31987</label>
+				<onclick>Skin.ToggleSetting(hometimebackgrounds)</onclick>
+				<include>settingsButton</include>
+			</control>
 			<control type="radiobutton" id="103">
 				<description>video behind background</description>
 				<label>31028</label>
@@ -140,8 +155,8 @@
 				<include>settingsButton</include>
 			</control>
 			<control type="radiobutton" id="104">
-				<description>enable RSS</description>
-				<label>13305</label>
+				<description>disable RSS</description>
+				<label>31977</label>
 				<onclick>Skin.ToggleSetting(enableRSSFeed)</onclick>
 				<selected>Skin.HasSetting(enableRSSFeed)</selected>
 				<include>settingsButton</include>
@@ -211,12 +226,12 @@
 				<selected>!Skin.HasSetting(homemenuExit)</selected>
 				<include>settingsButton</include>
 			</control>
-			<control type="radiobutton" id="207">
+			<!--control type="radiobutton" id="207">
 				<label>31927</label>
 				<onclick>Skin.ToggleSetting(advancedShutdown)</onclick>
 				<selected>Skin.HasSetting(advancedShutdown)</selected>
 				<include>settingsButton</include>
-			</control>
+			</control-->
 			<control type="radiobutton" id="208">
 				<description>settings screen toggle</description>
 				<label>31125</label>
@@ -228,7 +243,7 @@
 
 
 <!--- VIDEO MENU SETTINGS --------------------------------->	
-		<control type="grouplist" id="300">
+		<!--control type="grouplist" id="300">
 			<posx>340</posx>
 			<posy>93</posy>
 			<width>850</width>
@@ -325,11 +340,11 @@
 				<enable>Skin.HasSetting(homemenuPlaylist2)</enable>
 				<include>settingsButton</include>
 			</control>
-		</control>
+		</control-->
 
 
 <!--- HOME MUSIC MENU SETTINGS --------------------------------->	
-		<control type="grouplist" id="400">
+		<!--control type="grouplist" id="400">
 			<posx>340</posx>
 			<posy>93</posy>
 			<width>850</width>
@@ -376,7 +391,7 @@
 				<selected>Skin.HasSetting(homemenuMusicPlaylists)</selected>
 				<include>settingsButton</include>
 			</control>
-		</control>
+		</control-->
 
 
 <!--- FANART SETTINGS --------------------------------->
@@ -597,10 +612,20 @@
 			<control type="textbox">
 				<label>31000</label>
 				<width>850</width>
-				<height>680</height>
+				<height>300</height>
 				<onleft>15</onleft>
 				<align>left</align>
-				<autoscroll time="1000" delay="5000" repeat="5000">true</autoscroll>
+				<textcolor>Color1</textcolor>
+				<font>mediumLow</font>
+				<include>textBox</include>
+			</control>
+			<control type="textbox">
+				<label>31978</label>
+				<posy>200</posy>
+				<width>850</width>
+				<height>300</height>
+				<onleft>15</onleft>
+				<align>left</align>
 				<textcolor>Color1</textcolor>
 				<font>mediumLow</font>
 				<include>textBox</include>

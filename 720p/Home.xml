@@ -14,6 +14,48 @@
 				<effect type="fade" start="0" end="100" time="2000" delay="100" />
 			</animation>
 		</control>
+
+		<control type="multiimage">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<imagepath>backgrounds/Morning</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+			<visible>Skin.HasSetting(hometimebackgrounds) + system.time(00:00,12:00)</visible>
+		</control>
+
+		<control type="multiimage">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<imagepath>backgrounds/afternoon</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+			<visible>Skin.HasSetting(hometimebackgrounds) + system.time(12:00,18:00)</visible>
+		</control>
+
+		<control type="multiimage">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<imagepath>backgrounds/Evening</imagepath>
+			<timeperimage>7000</timeperimage>
+			<fadetime>850</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<animation type="WindowOpen" condition="Window.Previous(2999)">
+				<effect type="fade" start="0" end="100" time="2000" delay="100" />
+			</animation>
+			<visible>Skin.HasSetting(hometimebackgrounds) + system.time(18:00,00:00)</visible>
+		</control>
 	
 		<include>slideshows</include>
 

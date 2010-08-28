@@ -168,25 +168,23 @@
 			<include>homeMenusLayout</include>
 			<content>
 				<item id="99">
-					<label>Plex Online</label>
+					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
 				</item>
 				<item id="1">
-					<label>Plug-ins</label>
+					<label>31914</label>
 					<onclick>SetFocus(1110)</onclick>
 				</item>
-				<!--item id="2">
-					<label>Music Plug-ins</label>
-					<onclick>SetFocus(1120)</onclick>
-				</item>
-				<item id="3">
-					<label>Picture Plug-ins</label>
-					<onclick>SetFocus(1130)</onclick>
-				</item-->
 				<item id="4">
 					<label>$LOCALIZE[31006]</label>
 					<onclick>SetFocus(1140)</onclick>
 					<visible>!Skin.HasSetting(homemenuAccessories)</visible>
+				</item>
+				<item id="6">
+					<label>$LOCALIZE[0]</label>
+						<onclick>ActivateWindow(Programs)</onclick>
+						<onclick>Dialog.Close(shutdownmenu)</onclick>
+						<visible>Skin.HasSetting(homemenuPrograms)</visible>
 				</item>
 				<item id="5">
 					<label>$LOCALIZE[5]</label>

@@ -10,11 +10,7 @@ Team-XBMC for creating the most advanced and versatile mediacenter available. Th
 Special thanks to Christopher Meredith for the use of his photographs [B]monopedilos.com/photoblog[/B]
 
 [B][COLOR=Color2]TRANSLATION[/COLOR][/B]
-MaDDoGo (spanish)
-
-[B][COLOR=Color2]AVAILABILITY[/COLOR][/B]
-Compiled reFocus builds are available on the google code page [B]code.google.com/p/xbmc-focus/[/B]
-For more information visit the Focus section at [B]forum.xbmc.org[/B]
+[B]MaDDoGo[/B] (spanish)
 
 [B][COLOR=Color2]FINAL NOTE[/COLOR][/B]
 Please consider supporting the development of XBMC by making a donation.
@@ -157,7 +153,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31904">System settings</string>
 <string id="31905">[COLOR=Color2]$LOCALIZE[0][/COLOR] Plugins</string>
 <string id="31906">[COLOR=Color2]$LOCALIZE[1][/COLOR] Plugins</string>
-<string id="31907">Display Time</string>
+<string id="31907">Hide Time</string>
 <string id="31908">Backgrounds</string>
 <string id="31909">About</string>
 <string id="31910">Shutdown System</string>
@@ -203,7 +199,7 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31953">Show Trailers</string>
 <string id="31954">Home Menu Options</string>
 <string id="31955">Show Accessories</string>
-<string id="31956">Show Programs in Main Menu</string>
+<string id="31956">Show Applications in Main Menu</string>
 <string id="31957">Show Weather in Main Menu</string>
 <string id="31958">Show Exit Options</string>
 <string id="31959">Show Favourites In Main Menu</string>
@@ -225,9 +221,27 @@ Please consider supporting the development of XBMC by making a donation.
 <string id="31974">Large Grid</string>
 <string id="31975">Small Grid</string>
 
-<!--addons-->
-<string id="31976">Enable Subtitles Add-on</string>
-<string id="31977">Select Add-on</string>
-<string id="31978">Enable Lyrics Add-on</string>
+<!--plex-->
+<string id="31976">Plex Online</string>
+<string id="31977">Disable RSS Feed</string>
+<string id="31978">[COLOR=Color2][B][UPPERCASE]reFocus for Plex[/UPPERCASE][/B][/COLOR]
+is a port of reFocus by [COLOR=Color2][B][UPPERCASE]Jeroen[/UPPERCASE][/B][/COLOR], a skin for XBMC adapted for use with [B]Plex[/B] by [B]El Massman[/B].
+
+[B][COLOR=Color2]THANKS[/COLOR][/B]
+to the entire Plex team and everyone over at the Plex Forums, specifically the Plex/Nine alpha team for their rigorous testing and helpful suggestions. Please consider paying us a visit over at forums.plexapp.com
+
+[B][COLOR=Color2]PLEX TRANSLATION[/COLOR][/B]
+[B]Nerpissad[/B] (spanish)</string>
+
+<string id="31979">exif</string>
+<string id="31980">Update Plex</string>
+<string id="31981">Plex Automatic Updates</string>
+<string id="31982">Video</string>
+<string id="31983">Audio</string>
+<string id="31984">Media Server</string>
+<string id="31985">Energy Saving</string>
+<string id="31986">Fanart</string>
+<string id="31987">Use Time Sensitive Slideshow</string>
+
 
 </strings>
