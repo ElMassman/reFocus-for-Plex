@@ -46,7 +46,7 @@
 				<info>ListItem.StarRating</info>
 				<colordiffuse>Color7</colordiffuse>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>![Window.IsVisible(VideoFiles) | Container.Content(seasons)]</visible>
+				<visible>!Container.Content(seasons)</visible>
 			</control>
 			<control type="image">
 				<width>96</width>
@@ -75,7 +75,6 @@
 				<info>ListItem.StarRating</info>
 				<colordiffuse>Color7</colordiffuse>
 				<aspectratio align="center">keep</aspectratio>
-				<visible>!Window.IsVisible(VideoFiles)</visible>
 			</control>
 			<control type="image">
 				<width>128</width>
@@ -170,7 +169,6 @@
 		<control type="grouplist" id="100">
 			<itemgap>20</itemgap>
 			<orientation>vertical</orientation>
-			<!--
 			<control type="image">
 				<width>128</width>
 				<height>24</height>
@@ -178,7 +176,7 @@
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color7</colordiffuse>
 				<visible>!IsEmpty(ListItem.Title) + !IsEmpty(ListItem.StarRating)</visible>
-			</control>-->
+			</control>
 			
 			<control type="image">
 				<width>128</width>
@@ -828,14 +826,14 @@
 			<colordiffuse>Color4</colordiffuse>
 			<texture fallback="flags/default.png">$INFO[VideoPlayer.Studio,special://skin/flags/labels/,.png]</texture>
 		</control>
-	</include>
+	</include-->
 	
 	
 	
 	
 
 	<include name="ratingFlagsText">
-		<control type="group">
+		<!--control type="group">
 			<control type="label">
 				<label>[UPPERCASE]Rated PG-13[/UPPERCASE]</label>
 				<visible>substring(listitem.mpaa,Rated PG, Left)</visible>
@@ -871,7 +869,7 @@
 				<textcolor>Color5</textcolor>
 				<align>left</align>
 			</control>
-		</control>
+		</control-->
 	</include>
 	
 	
@@ -880,28 +878,7 @@
 		<control type="group">
 			<visible>Skin.HasSetting(ratingFlag) + Container.Content(movies)</visible>
 			<control type="image">
-				<texture>special://skin/flags/ratings/ratedPG.png</texture>
-				<visible>substring(listitem.mpaa,Rated PG-13,Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedPG-13.png</texture>
-				<visible>substring(listitem.mpaa,Rated PG-13, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedR.png</texture>
-				<visible>substring(listitem.mpaa,Rated R, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedG.png</texture>
-				<visible>substring(listitem.mpaa,Rated G, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedNC-17.png</texture>
-				<visible>substring(listitem.mpaa,Rated NC-17, Left)</visible>
+				<texture>$INFO[ListItem.Property(mediaTag::contentRating)]</texture>
 				<include>ratingsFlag</include>
 			</control>
 		</control>
@@ -911,42 +888,11 @@
 		<control type="group">
 			<visible>Skin.HasSetting(ratingFlag) + Container.Content(tvshows)</visible>
 			<control type="image">
-				<texture>special://skin/flags/ratings/ratedTV-14.png</texture>
-				<visible>substring(listitem.mpaa,TV-14, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedTV-MA.png</texture>
-				<visible>substring(listitem.mpaa,TV-MA, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedTV-PG.png</texture>
-				<visible>substring(listitem.mpaa,TV-PG, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedTV-G.png</texture>
-				<visible>substring(listitem.mpaa,TV-G, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedTV-Y.png</texture>
-				<visible>substring(listitem.mpaa,TV-Y, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedTV-Y7.png</texture>
-				<visible>substring(listitem.mpaa,TV-Y7, Left)</visible>
-				<include>ratingsFlag</include>
-			</control>
-			<control type="image">
-				<texture>special://skin/flags/ratings/ratedTV-14.png</texture>
-				<visible>substring(listitem.mpaa,TV-14, Left)</visible>
+				<texture>$INFO[ListItem.Property(mediaTag::contentRating)]</texture>
 				<include>ratingsFlag</include>
 			</control>
 		</control>
-	</include>-->
+	</include>
 
 	
 </includes>
