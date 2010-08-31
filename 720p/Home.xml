@@ -59,6 +59,9 @@
 	
 		<include>slideshows</include>
 
+		<control type="group">
+			<visible>!Skin.HasSetting(originalhome)</visible>
+	
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
@@ -80,6 +83,8 @@
 			</animation>
 			<visible>Skin.HasSetting(FanartGlobalAlt)</visible>
 	
+		</control>
+
 		</control>
 
 		<control type="videowindow">
