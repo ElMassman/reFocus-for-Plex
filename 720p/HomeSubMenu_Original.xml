@@ -1,22 +1,22 @@
 <includes>
-	<include name="homeSubMenu">
+	<include name="homeSubMenu_Original">
 	
 	<control type="group" id="1100">
-		<posy>100</posy>
+		<posy>20</posy>
 
 <!-- PLUG-IN SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1110">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>650</height>
+				<height>900</height>
 				<onup>1110</onup>
 				<ondown>1110</ondown>
-				<onleft>9000</onleft>
+				<onleft>300</onleft>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
-				<visible allowhiddenfocus="true">Container(9000).HasFocus(1)</visible>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(1)</visible>
 				<content>
 					<item id="1">
 						<label>Video Plug-ins</label>
@@ -31,21 +31,19 @@
 						<onclick>ActivateWindow(2)</onclick>
 					</item>
 				</content>
-			</control>
-
-
-
+			</control>		
+		
 <!-- ACCESSORIES SUBMENU ----------------------------------------------------------------------------------------------->	
 			<control type="list" id="1140">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>650</height>
+				<height>800</height>
 				<onup>1140</onup>
 				<ondown>1140</ondown>
-				<onleft>9000</onleft>
+				<onleft>300</onleft>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(9000).HasFocus(4)</visible>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(4)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
@@ -81,13 +79,13 @@
 				<posx>-800</posx>
 				<posy>-0</posy>
 				<width>900</width>
-				<height>650</height>
+				<height>800</height>
 				<onup>1150</onup>
 				<ondown>1150</ondown>
-				<onleft>9000</onleft>
+				<onleft>300</onleft>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(9000).HasFocus(5)</visible>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(5)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
@@ -139,13 +137,13 @@
 			<control type="list" id="1160">
 				<posx>-800</posx>
 				<width>900</width>
-				<height>650</height>
+				<height>800</height>
 				<onup>1160</onup>
 				<ondown>1160</ondown>
-				<onleft>9000</onleft>
+				<onleft>300</onleft>
 				<orientation>vertical</orientation>
 				<scrolltime>150</scrolltime>
-				<visible allowhiddenfocus="true">Container(9000).HasFocus(11)</visible>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(11)</visible>
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>

@@ -144,7 +144,8 @@
 		
 		
 <!-- CALL MENU -------------------------------------------------------------------------------------------------------------------------->
-	<include>HomeMenu</include>
+	<include condition="!Skin.HasSetting(originalhome)">HomeMenu</include>
+	<include condition="Skin.HasSetting(originalhome)">HomeMenu_Original</include>
 
 	<!--<control type="group" id="888">
 		<posx>365</posx>
@@ -270,6 +271,9 @@
 	</control-->
 
 	<!-- Plex Logo -->
+	
+	<control type="group">
+		<visible>!Skin.HasSetting(originalhome)</visible>
 
 	<control type="image">
 			<posx>30</posx>
@@ -289,6 +293,7 @@
 			<aspectratio align="right">keep</aspectratio>
 			<include>transition2</include>
 		</control>
+	</control>
 	
 	<!--control type="image">
 		<include>transition2</include>

@@ -171,6 +171,13 @@
 				<selected>Skin.HasSetting(homeTime)</selected>
 				<include>settingsButton</include>
 			</control>
+			<control type="radiobutton" id="107">
+				<description>Original Home Screen</description>
+				<label>Use Original reFocus Home Screen</label>
+				<onclick>Skin.ToggleSetting(originalhome)</onclick>
+				<selected>Skin.HasSetting(originalhome)</selected>
+				<include>settingsButton</include>
+			</control>
 		</control>
 
 
@@ -235,6 +242,13 @@
 				<selected>Skin.HasSetting(advancedShutdown)</selected>
 				<include>settingsButton</include>
 			</control-->
+			<control type="radiobutton" id="209">
+				<description>Plex Online Accessories</description>
+				<label>Hide Plex Online from Main Menu</label>
+				<onclick>Skin.ToggleSetting(plexonlineaccessories)</onclick>
+				<selected>Skin.HasSetting(plexonlineaccessories)</selected>
+				<include>settingsButton</include>
+			</control>
 			<control type="radiobutton" id="208">
 				<description>settings screen toggle</description>
 				<label>31125</label>

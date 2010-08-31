@@ -9,7 +9,9 @@
 	<include file="ViewsShared.xml">-</include>
 	
 	<include file="HomeMenu.xml">-</include>
+	<include file="HomeMenu_Original.xml">-</include>
 	<include file="HomeSubMenu.xml">-</include>
+	<include file="HomeSubMenu_Original.xml">-</include>
 	<include file="HomeMusicMenu.xml">-</include>
 	<include file="HomeVideoMenu.xml">-</include>
 	<include file="HomePicturesMenu.xml">-</include>

@@ -170,6 +170,7 @@
 				<item id="99">
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+				<visible>!Skin.HasSetting(plexonlineaccessories)</visible>
 				</item>
 				<item id="1">
 					<label>31914</label>
