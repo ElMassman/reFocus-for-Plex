@@ -51,7 +51,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>34</height>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 			</control>
 			<!--control type="image">
@@ -79,7 +79,7 @@
 			<control type="image">
 				<width>128</width>
 				<height>34</height>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 			</control>
 			<!--control type="image">
@@ -116,7 +116,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>34</height>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 			</control>
 			<control type="image">
@@ -197,7 +197,7 @@
 			<control type="image">
 				<width>128</width>
 				<height>38</height>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<include>typeFlagV</include>
 				<colordiffuse>Color7</colordiffuse>
@@ -258,7 +258,7 @@
 			<width>39</width>
 			<height>24</height>
 			<aspectratio align="right">keep</aspectratio>
-			<info>Listitem.Property(mediaTag::videoResolution)</info>
+			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 		</control>
 		<!--control type="image">
 			<width>39</width>
@@ -403,7 +403,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -417,7 +417,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
-				<info>Listitem.Property(mediaTag::videoCodec)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoCodec),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color7</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
@@ -433,7 +433,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
-				<info>Listitem.Property(mediaTag::audioCodec)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-audioCodec),flags/type/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color7</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
@@ -449,7 +449,7 @@
 			<control type="image">
 				<width>96</width>
 				<height>64</height>
-				<info>Listitem.Property(mediaTag::aspectRatio)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-aspectRatio),flags/aspect/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>Color7</colordiffuse>
 				<visible>[Container.Content(movies) | Container.Content(episodes)]</visible>
@@ -538,7 +538,7 @@
 			<control type="image">
 				<width>128</width>
 				<height>36</height>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/gallery/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<include>typeFlagV</include>
 				<colordiffuse>Color4</colordiffuse>
@@ -587,7 +587,7 @@
 				<height>42</height>
 				<aspectratio align="right">keep</aspectratio>
 				<colordiffuse>Color4</colordiffuse>
-				<info>VideoPlayer.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 			</control>
 			<!--control type="image">
 				<width>128</width>
@@ -599,7 +599,7 @@
 			<control type="image">
 				<width>128</width>
 				<height>42</height>
-				<info>VideoPlayer.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/,.png]</texture>
 				<aspectratio align="right">keep</aspectratio>
 				<include>typeFlagV</include>
 				<colordiffuse>Color4</colordiffuse>

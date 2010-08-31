@@ -841,7 +841,7 @@
 				</control>
 				<control type="label">
 					<posx>175</posx>
-					<posy>55</posy>
+					<posy>70</posy>
 					<width>400</width>
 					<height>20</height>
 					<info>Listitem.Label2</info>
@@ -886,7 +886,7 @@
 				</control>
 				<control type="label">
 					<posx>175</posx>
-					<posy>55</posy>
+					<posy>70</posy>
 					<width>400</width>
 					<height>20</height>
 					<info>Listitem.Label2</info>

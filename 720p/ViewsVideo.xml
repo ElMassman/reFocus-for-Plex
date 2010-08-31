@@ -656,7 +656,7 @@
 					<posy>137</posy>
 					<width>39</width>
 					<height>24</height>
-					<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 					<aspectratio align="right">keep</aspectratio>
 				</control>
 				<!--control type="image">
@@ -770,11 +770,11 @@
 					<visible>!IsEmpty(ListItem.Title) + [stringcompare(Listitem.VideoResolution,720) | stringcompare(Listitem.VideoResolution,1080)]</visible>
 				</control-->
 				<control type="image">
-					<posx>40</posx>
+					<posx>36</posx>
 					<posy>137</posy>
 					<width>39</width>
 					<height>24</height>
-					<info>Listitem.Property(mediaTag::videoResolution)</info>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 					<aspectratio align="right">keep</aspectratio>
 				</control>
 				<!--control type="label" id="1">
