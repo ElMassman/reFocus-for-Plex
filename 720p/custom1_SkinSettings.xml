@@ -549,6 +549,12 @@
 				<selected>Skin.HasSetting(backgroundVideoGlobal)</selected>
 				<include>settingsButton</include>
 			</control>
+			<control type="radiobutton" id="614">
+				<label>Extra Flags in Slide View</label>
+				<onclick>Skin.ToggleSetting(extraslideflags)</onclick>
+				<selected>Skin.HasSetting(extraslideflags)</selected>
+				<include>settingsButton</include>
+			</control>
 		</control>
 
 

@@ -216,11 +216,11 @@
 				<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
 			</control>
 			<control type="image">
-				<posx>39</posx>
+				<posx>35</posx>
 				<posy>585</posy>
 				<width>64</width>
 				<height>28</height>
-				<info>Listitem.Property(mediaTag::videoResolution)</info>
+				<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/listviewposter/,.png]</texture>
 				<aspectratio align="left">keep</aspectratio>
 			</control>
 			<!--control type="image">

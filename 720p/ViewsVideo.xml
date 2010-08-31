@@ -1542,7 +1542,7 @@
 					<height>48</height>
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 					<colordiffuse>Color4</colordiffuse>
-					<info>Listitem.Property(mediaTag::Studio)</info>
+					<texture>$INFO[Listitem.Property(mediaTag-Studio),flags/tvshows/mono/,.png]</texture>
 					<include>focus_Banner</include>
 					<visible>!IsEmpty(ListItem.TVShowTitle)</visible>
 				</control>
