@@ -39,6 +39,13 @@
 				<width>482</width>
 				<include>dialogLine</include>
 			</control>
+			<!--control type="image">	
+				<posx>229</posx>
+				<posy>80</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>dialogs/pms.png</texture>
+			</control-->
 			<control type="button" id="10">
 				<posx>223</posx>
 				<posy>175</posy>

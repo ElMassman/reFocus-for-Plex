@@ -794,62 +794,113 @@
 	<include name="view_EmuInfo">
 		<control type="panel" id="579">
 			<viewtype label="31009">bigicon</viewtype>	
-			<posx>55</posx>
+			<posx>40</posx>
 			<posy>105</posy>
-			<width>720</width>
+			<width>1200</width>
 			<height>600</height>
 			<onleft>300</onleft>
 			<onright>23</onright>
-			<onup>571</onup>
-			<ondown>571</ondown>
+			<onup>579</onup>
+			<ondown>579</ondown>
 			<scrolltime>150</scrolltime>
 			<pagecontrol>23</pagecontrol>
 			<orientation>vertical</orientation>
 			<preloaditems>4</preloaditems>
-			<visible>Container.Content(plugincontent)</visible>
 			<include>transition2</include>
 			<include>contextMenuHide</include>
 			<include>infoDialogHide</include>	
 
-			<itemlayout height="200" width="200">
-				<!--control type="image">
-					<width>180</width>
-					<height>180</height>
-					<texture border="48">frames/posterFrameSquare.png</texture>
+			<itemlayout height="200" width="600">
+				<control type="group">	
+				
+					<animation effect="fade" end="50" time="0" condition="True">Conditional</animation>
+				<control type="image">
+					<width>600</width>
+					<height>200</height>
+					<texture>frames/panel.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<include>thumbFadeTime</include>
-					<include>fadeinout</include>
-				</control-->
+				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>200</width>
-					<height>200</height>
-					<aspectratio scalediffuse="true" align="center">keep</aspectratio>
-					<texture background="true" fallback="thumbs/tvshowSmall.png" border="5" diffuse="frames/posterFrameSquare.png">$INFO[ListItem.Thumb]</texture>
-					<visible>Container.Content(plugincontent)</visible>
+					<posx>35</posx>
+					<posy>35</posy>
+					<width>130</width>
+					<height>130</height>
+					<texture>$INFO[Listitem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+					<include>thumbFadeTime</include>
+				</control>
+				<control type="label">
+					<posx>175</posx>
+					<posy>40</posy>
+					<width>400</width>
+					<height>20</height>
+					<info>Listitem.Label</info>
+					<font>dialog1</font>
+					<textcolor>Color4</textcolor>
+				</control>
+				<control type="label">
+					<posx>175</posx>
+					<posy>55</posy>
+					<width>400</width>
+					<height>20</height>
+					<info>Listitem.Label2</info>
+					<font>dialog1</font>
+					<textcolor>Color2</textcolor>
+				</control>
+				<!--control type="label">
+					<posx>175</posx>
+					<posy>75</posy>
+					<width>380</width>
+					<height>90</height>
+					<info>Listitem.Plot</info>
+				</control-->
 				</control>
 				
 			</itemlayout>											
-			<focusedlayout height="250" width="250">
-				<!--control type="image">
-					<width>180</width>
-					<height>180</height>
-					<texture border="48">frames/posterFrameSquare.png</texture>
+			<focusedlayout height="200" width="600">
+				<control type="image">
+					<width>600</width>
+					<height>200</height>
+					<texture>frames/panel.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<include>thumbFadeTime</include>
-					<include>focus_ThumbPosterInfo</include>
-				</control-->
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>200</width>
-					<height>200</height>
-					<aspectratio scalediffuse="true" align="center">keep</aspectratio>
-					<texture background="true" fallback="thumbs/tvshowSmall.png" border="1" diffuse="frames/posterFrameSquare.png">$INFO[ListItem.Thumb]</texture>
-					<include>focus_ThumbPosterInfo</include>
-					<visible>Container.Content(plugincontent)</visible>
 				</control>
+				<control type="image">
+					<posx>35</posx>
+					<posy>35</posy>
+					<width>130</width>
+					<height>130</height>
+					<texture>$INFO[Listitem.Thumb]</texture>
+					<aspectratio>keep</aspectratio>
+					<include>thumbFadeTime</include>
+				</control>
+				<control type="label">
+					<posx>175</posx>
+					<posy>40</posy>
+					<width>400</width>
+					<height>20</height>
+					<info>Listitem.Label</info>
+					<font>dialog1</font>
+					<textcolor>Color4</textcolor>
+				</control>
+				<control type="label">
+					<posx>175</posx>
+					<posy>55</posy>
+					<width>400</width>
+					<height>20</height>
+					<info>Listitem.Label2</info>
+					<font>dialog1</font>
+					<textcolor>Color2</textcolor>
+				</control>
+				<!--control type="label">
+					<posx>175</posx>
+					<posy>75</posy>
+					<width>380</width>
+					<height>90</height>
+					 <wrapmultiline>true</wrapmultiline>
+					<info>Listitem.Plot</info>
+				</control-->
 			</focusedlayout>
 		</control>
 	</include>

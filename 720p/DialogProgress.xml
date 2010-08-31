@@ -1,8 +1,6 @@
 <window id="101">
 	<defaultcontrol>10</defaultcontrol>
 	
-	<include>dialogOpen</include>
-	
 	<coordinates>
 		<system>1</system>
 		<posx>365</posx>

@@ -201,7 +201,7 @@
 
 <!----- THUMBNAILS VIEW --------------------------------------------------------------------------------------------------------------------->
 			<control type="group">
-				<visible>Control.IsVisible(572) + Container.Content(albums)</visible>
+				<visible>Control.IsVisible(572)</visible>
 				<include>transition3</include>
 				<include>contextMenuHide</include>
 				<include>infoDialogHide</include>
@@ -210,16 +210,25 @@
 	
 				<control type="label">
 					<align>left</align>
+					<label>$INFO[ListItem.Title]</label>
+					<include>screenwidth</include>
+					<include>Heading1</include>
+					<visible>!Container.Content(albums)</visible>
+				</control>
+				<control type="label">
+					<align>left</align>
 					<label>$INFO[ListItem.Album]</label>
 					<include>screenwidth</include>
 					<include>Heading1</include>
+				<visible>Container.Content(albums)</visible>
 				</control>
 				<control type="label">
 					<posy>30</posy>
 					<align>left</align>
-					<label>$INFO[ListItem.Artist] • $INFO[ListItem.Year] • $INFO[ListItem.Genre]</label>
+					<label>$INFO[ListItem.Artist] • $INFO[ListItem.Year]</label>
 					<include>screenwidth</include>
 					<include>Heading3</include>
+				<visible>Container.Content(albums)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -231,7 +240,7 @@
 				<include>infoDialogHide</include>	
 			</control>	
 
-		<include>MusicLibPageLabels</include>
+		<include>videoFanartPageLabels</include>
 		<include>musicOverlay</include>
 		<include>indicatorScrolling</include>
 		<include>LibraryMusicMenu</include>

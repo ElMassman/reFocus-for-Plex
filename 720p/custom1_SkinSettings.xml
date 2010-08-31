@@ -132,6 +132,7 @@
 			<control type="radiobutton" id="101">
 				<label>31936</label>
 				<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
+<onclick>Skin.ToggleSetting(hometimebackgrounds)</onclick>
 				<selected>!Skin.HasSetting(FanartSlideShow)</selected>
 				<include>settingsButton</include>
 			</control>
@@ -145,6 +146,7 @@
 			<control type="radiobutton" id="106">
 				<label>31987</label>
 				<onclick>Skin.ToggleSetting(hometimebackgrounds)</onclick>
+<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
 				<selected>!Skin.ToggleSetting(hometimebackgrounds)</selected>
 				<include>settingsButton</include>
 			</control>

@@ -1,16 +1,11 @@
 <window id="1">
-	<defaultcontrol always="true">573</defaultcontrol>
+	<defaultcontrol always="true">579</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<previouswindow>Home</previouswindow>
 	
-	<views>573,579</views>
+	<views>579</views>
 	
 	<controls>
-				
-		<control type="label">
-			<label>$LOCALIZE[0]</label>
-			<include>PageLabel</include>
-		</control>
 
 		<include>themeBackground2</include>	
 		
@@ -19,76 +14,11 @@
 		<include>view_Addons</include>
 		<include>view_EmuInfo</include>
 		<include>allscreens</include>
+		<control type="label">
+			<label>$INFO[Container.FirstTitle] [COLOR=Color2]$INFO[Container.SecondTitle][/COLOR]</label>
+			<include>PageLabel</include>
+		</control>
 		<include>FilesMenu</include>
-
-		<control type="textbox" id="8">
-			<include>transition2</include>
-			<include>contextMenuHide</include>
-			<posx>276</posx>
-			<posy>585</posy>
-			<width>960</width>
-			<height>120</height>
-			<align>left</align>
-			<aligny>top</aligny>
-			<label>$INFO[ListItem.Plot]</label>
-			<textcolor>text</textcolor>
-			<font>normalLow</font>
-			<visible>Control.IsVisible(573)</visible>
-		</control>
-
-		<!--control type="image">
-			<posx>25</posx>
-			<posy>570</posy>
-			<width>250</width>
-			<height>107</height>
-			<texture>$INFO[listitem.label2,flags/consoles/,.png]</texture>
-			<visible>Control.IsVisible(573)</visible>
-		</control-->
-
-		<control type="group">
-			<include>info_AddonList</include>
-		</control>
-
-		<control type="grouplist" id="1000">
-			<visible>Control.IsVisible(579) + Container.Content(plugincontent)</visible>
-			<include>transition2</include>
-			<include>infoDialogHide</include>
-			<include>contextMenuHide</include>
-			<posx>760</posx>
-			<posy>115</posy>
-			<itemgap>4</itemgap>
-			<control type="label" id="1">
-				<width>450</width>
-				<label>$INFO[ListItem.Title]</label>
-				<textcolor>Color1</textcolor>
-				<include>infoDialogMeta</include>
-			</control>
-			<control type="label" id="1">
-				<width>450</width>
-				<label>$INFO[ListItem.Year]</label>
-				<include>infoDialogMeta</include>
-				<visible>!IsEmpty(ListItem.Year)</visible>
-			</control>
-			<control type="image">
-			<posx>25</posx>
-			<posy>570</posy>
-			<width>250</width>
-			<height>107</height>
-			<texture>$INFO[listitem.label2,flags/consoles/,.png]</texture>
-		</control>
-			<!--control type="label" id="1">
-				<label></label>
-			</control-->
-			<control type="textbox" id="4">
-				<width>450</width>
-				<height>415</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<label>$INFO[ListItem.Plot]</label>
-				<textcolor>Color1</textcolor>
-				<font>normalLow</font>
-			</control>
-		</control>
 
 	</controls>
 </window>

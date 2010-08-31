@@ -181,7 +181,7 @@
 					<onleft>-</onleft>
 					<onup>30</onup>
 					<ondown>3</ondown>
-					<onright>573</onright>
+					<onright>579</onright>
 					<onclick>SetFocus(40)</onclick>
 					<include>contextButton</include>
 					<visible allowhiddenfocus="true">!ControlGroup(40).HasFocus()</visible>
@@ -196,18 +196,11 @@
 					<visible allowhiddenfocus="true">ControlGroup(40).HasFocus()</visible>
 
 					<control type="button" id="41">
-						<label>$LOCALIZE[535]</label>
+						<label>App Panel</label>
 						<onleft>1</onleft>
 						<onright>1</onright>
 						<onup>1</onup>
-						<onclick>Container.SetViewMode(50)</onclick>
-						<include>contextButton</include>
-					</control>
-					<control type="button" id="43">
-						<label>$LOCALIZE[31014]</label>
-						<onleft>1</onleft>
-						<onright>1</onright>
-						<onclick>Container.NextViewMode(573)</onclick>
+						<onclick>Container.SetViewMode(579)</onclick>
 						<include>contextButton</include>
 					</control>
 				</control>
