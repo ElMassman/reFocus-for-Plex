@@ -1403,6 +1403,7 @@
 					<height>24</height>
 					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 					<aspectratio align="right">keep</aspectratio>
+					<visible>Skin.HasSetting(onlyfocusflagpanel)</visible>
 				</control>
 			</itemlayout>											
 			<focusedlayout height="260" width="200">
@@ -1520,6 +1521,7 @@
 					<height>24</height>
 					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
 					<aspectratio align="right">keep</aspectratio>
+					<visible>Skin.HasSetting(onlyfocusflagpanel)</visible>
 				</control>
 			</itemlayout>											
 			<focusedlayout height="190" width="133">

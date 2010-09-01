@@ -180,7 +180,7 @@
 			</control>
 			<control type="radiobutton" id="108">
 				<description>Original Home Screen</description>
-				<label>Use Blue Overlay On Original Home Screen</label>
+				<label>Use Blue Overlay (Original Home Screen)</label>
 				<onclick>Skin.ToggleSetting(blueoriginalhome)</onclick>
 				<selected>Skin.HasSetting(blueoriginalhome)</selected>
 				<include>settingsButton</include>
@@ -571,9 +571,15 @@
 				<include>settingsButton</include>
 			</control>
 			<control type="radiobutton" id="614">
-				<label>Extra Flags in Slide View</label>
+				<label>Extra Flags (Slide View)</label>
 				<onclick>Skin.ToggleSetting(extraslideflags)</onclick>
 				<selected>Skin.HasSetting(extraslideflags)</selected>
+				<include>settingsButton</include>
+			</control>
+			<control type="radiobutton" id="615">
+				<label>Only Use HD Flag on Focused Item (thumbnails view)</label>
+				<onclick>Skin.ToggleSetting(onlyfocusflagpanel)</onclick>
+				<selected>Skin.HasSetting(onlyfocusflagpanel)</selected>
 				<include>settingsButton</include>
 			</control>
 		</control>
