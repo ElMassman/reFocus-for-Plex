@@ -390,7 +390,7 @@
 					<posx>40</posx>
 					<posy>27</posy>
 					<width>560</width>
-					<label>$LOCALIZE[31074] • $INFO[ListItem.Premiered]</label>
+					<label>$LOCALIZE[31074] • $INFO[ListItem.date]</label>
 					<font>smallCaps</font>
 					<include>listMenuFocus</include>
 					<visible>!IsEmpty(ListItem.Title)</visible>
@@ -697,7 +697,7 @@
 					<posx>270</posx>
 					<posy>70</posy>
 					<width>975</width>
-					<label>$LOCALIZE[31074,,]$INFO[ListItem.Premiered, • ]</label>
+					<label>$LOCALIZE[31074,,]$INFO[ListItem.Date, • ]</label>
 					<font>smallCaps</font>
 					<textcolor>Color2</textcolor>
 				</control>
@@ -806,7 +806,7 @@
 					<posx>270</posx>
 					<posy>70</posy>
 					<width>975</width>
-					<label>$LOCALIZE[31074,,]$INFO[ListItem.Premiered, • ]</label>
+					<label>$LOCALIZE[31074,,]$INFO[ListItem.date, • ]</label>
 					<font>smallCaps</font>
 					<textcolor>Focused</textcolor>
 				</control>

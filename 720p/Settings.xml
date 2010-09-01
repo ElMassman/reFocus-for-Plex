@@ -52,7 +52,7 @@
 						<height>48</height>
 						<posx>10</posx>
 						<posy>22</posy>
-						<info>ListItem.Icon</info>
+						<info>ListItem.thumb</info>
 					</control>
 					<control type="label">
 						<posx>90</posx>
@@ -90,7 +90,7 @@
 						<posy>22</posy>
 						<width>48</width>
 						<height>48</height>
-						<info>ListItem.Icon</info>
+						<info>ListItem.thumb</info>
 					</control>
 					<control type="label">
 						<posx>90</posx>
@@ -117,56 +117,56 @@
 			 	<content>
 					<item id="1">
 						<label>3</label>
-						<icon>settings/video.png</icon>
+						<thumb>settings/video.png</thumb>
 						<onclick>ActivateWindow(MyVideosSettings)</onclick>
 						<label2>$LOCALIZE[31120]</label2>
 					</item>
 					<item id="2">
 						<label>2</label>
 						<label2>$LOCALIZE[31120]</label2>
-						<icon>settings/music.png</icon>
+						<thumb>settings/music.png</thumb>
 						<onclick>ActivateWindow(MyMusicSettings)</onclick>
 					</item>
 					<item id="3">
 						<label>1</label>
 						<label2>$LOCALIZE[108] · $LOCALIZE[31979]</label2>
-						<icon>settings/pictures.png</icon>
+						<thumb>settings/pictures.png</thumb>
 						<onclick>ActivateWindow(MyPicturesSettings)</onclick>
 					</item>
 					<item id="5">
 						<label>8</label>
 						<label2>$LOCALIZE[396]</label2>
-						<icon>settings/weather.png</icon>
+						<thumb>settings/weather.png</thumb>
 						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 					</item>
 					<item id="6">
 						<label>$LOCALIZE[31980]</label>
 						<label2>$LOCALIZE[31980]</label2>
-						<icon>settings/network.png</icon>
+						<thumb>settings/network.png</thumb>
 						<onclick>ActivateWindow(NetworkSettings)</onclick>
 					</item>
 					<item id="7">
 						<label>13000</label>
 						<label2>$LOCALIZE[31982] · $LOCALIZE[31983] · $LOCALIZE[31984] · $LOCALIZE[31985]</label2>
-						<icon>settings/system.png</icon>
+						<thumb>settings/system.png</thumb>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
 					</item>
 					<item id="8">
 						<label>480</label>
 						<label2>$LOCALIZE[166] · $LOCALIZE[248] · $LOCALIZE[360]</label2>
-						<icon>settings/appearance.png</icon>
+						<thumb>settings/appearance.png</thumb>
 						<onclick>ActivateWindow(AppearanceSettings)</onclick>
 					</item>
 					<!--item id="9">
 						<label>13200</label>
 						<label2>$LOCALIZE[20067] · $LOCALIZE[20096]</label2>
-						<icon>settings/profiles.png</icon>
+						<thumb>settings/profiles.png</thumb>
 						<onclick>ActivateWindow(Profiles)</onclick>
 					</item-->
 					<item id="10">
 						<label>20077</label>
 						<label2>$LOCALIZE[31124] · $LOCALIZE[31015] · $LOCALIZE[31986]</label2>
-						<icon>settings/skin.png</icon>
+						<thumb>settings/skin.png</thumb>
 						<onclick>ActivateWindow(59)</onclick>
 					</item>
 				</content>
