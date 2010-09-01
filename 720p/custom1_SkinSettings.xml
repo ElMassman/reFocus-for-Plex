@@ -178,6 +178,13 @@
 				<selected>Skin.HasSetting(originalhome)</selected>
 				<include>settingsButton</include>
 			</control>
+			<control type="radiobutton" id="108">
+				<description>Original Home Screen</description>
+				<label>Use Blue Overlay On Original Home Screen</label>
+				<onclick>Skin.ToggleSetting(blueoriginalhome)</onclick>
+				<selected>Skin.HasSetting(blueoriginalhome)</selected>
+				<include>settingsButton</include>
+			</control>
 		</control>
 
 

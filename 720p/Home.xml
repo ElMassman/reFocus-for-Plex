@@ -60,7 +60,7 @@
 		<include>slideshows</include>
 
 		<control type="group">
-			<visible>!Skin.HasSetting(originalhome)</visible>
+			<visible>!Skin.HasSetting(originalhome) | [Skin.HasSetting(originalhome) + Skin.HasSetting(blueoriginalhome)]</visible>
 	
 		<control type="image">
 			<aspectratio>scale</aspectratio>
