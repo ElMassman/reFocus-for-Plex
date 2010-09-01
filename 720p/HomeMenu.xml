@@ -167,6 +167,14 @@
 			<include>homeMenuToggle</include>
 			<include>homeMenusLayout</include>
 			<content>
+				<!--item id="101">
+					<label>Recently Added Movies</label>
+					<onclick>ActivateWindow(10024,plex://CHANGEME.local./library/sections/1/recentlyAdded/,return)</onclick>
+				</item>
+				<item id="102">
+					<label>Recently Added TV Shows</label>
+					<onclick>ActivateWindow(10024,plex://CHANGEME.local./library/sections/2/recentlyAdded/,return)</onclick>
+				</item-->
 				<item id="99">
 					<label>31976</label>
 					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>

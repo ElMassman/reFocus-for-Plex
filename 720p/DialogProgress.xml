@@ -43,6 +43,14 @@
 				<posy>115</posy>
 				<include>dialogLine</include>
 			</control>
+
+			<control type="image">	
+				<posx>228</posx>
+				<posy>88</posy>
+				<width>100</width>
+				<height>97</height>
+				<texture>dialogs/pms.png</texture>
+			</control>
 			
 			<control type="progress" id="20">
 				<description>progress control</description>

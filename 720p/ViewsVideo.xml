@@ -851,8 +851,132 @@
 			</focusedlayout>
 		</control>
 
-		<control type="group">
+		<control type="group"> 
+		<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+		<control type="textbox" id="4002">
+					<posx>270</posx>
+					<posy>317</posy>
+					<width>950</width>
+					<height>60</height>
+					<label>$INFO[ListItem(-1).Plot]</label>
+					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<font>mediumLow</font>
+					<include>textBox</include>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.OnNext</visible>
+					<animation effect="slide" start="0,0" end="0,-147" time="150" easing="out" condition="true">Hidden</animation>
+				</control>
 
+		<control type="textbox" id="4002">
+					<posx>270</posx>
+					<posy>464</posy>
+					<width>950</width>
+					<height>60</height>
+					<label>$INFO[ListItem(0).Plot]</label>
+					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<font>mediumLow</font>
+					<textcolor>Focused</textcolor>
+					<include>textBox</include>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.OnNext</visible>
+					<animation effect="slide" start="0,0" end="0,-147" time="150" easing="out" condition="true">Hidden</animation>
+				</control>
+
+		<control type="textbox" id="4002">
+					<posx>270</posx>
+					<posy>611</posy>
+					<width>950</width>
+					<height>60</height>
+					<label>$INFO[ListItem(1).Plot]</label>
+					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<font>mediumLow</font>
+					<include>textBox</include>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.OnNext</visible>
+					<animation effect="slide" start="0,0" end="0,-147" time="150" easing="out" condition="true">Hidden</animation>
+				</control>
+
+		<control type="textbox" id="4002">
+					<posx>270</posx>
+					<posy>758</posy>
+					<width>950</width>
+					<height>60</height>
+					<label>$INFO[ListItem(2).Plot]</label>
+					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<font>mediumLow</font>
+					<include>textBox</include>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.OnNext</visible>
+					<animation effect="slide" start="0,0" end="0,-147" time="150" easing="out" condition="true">Hidden</animation>
+				</control>
+			</control>
+
+		<control type="group"> 
+		<include>transition2</include>
+			<include>infoDialogHide</include>
+			<include>contextMenuHide</include>
+		<control type="textbox" id="4001">
+					<posx>270</posx>
+					<posy>23</posy>
+					<width>950</width>
+					<height>60</height>
+					<label>$INFO[ListItem(-1).Plot]</label>
+					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<font>mediumLow</font>
+					<include>textBox</include>
+					<visible>Control.IsVisible(51)</visible>
+					<animation effect="slide" start="0,0" end="0,147" time="150" easing="out" condition="true">Hidden</animation>
+					<visible>Container.OnPrevious</visible>
+				</control>
+
+		<control type="textbox" id="4001">
+					<posx>270</posx>
+					<posy>170</posy>
+					<width>950</width>
+					<height>60</height>
+					<label>$INFO[ListItem(0).Plot]</label>
+					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<font>mediumLow</font>
+					<textcolor>Focused</textcolor>
+					<include>textBox</include>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="slide" start="0,0" end="0,147" time="150" easing="out" condition="true">Hidden</animation>
+				</control>
+
+		<control type="textbox" id="4001">
+					<posx>270</posx>
+					<posy>317</posy>
+					<width>950</width>
+					<height>60</height>
+					<label>$INFO[ListItem(1).Plot]</label>
+					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<font>mediumLow</font>
+					<include>textBox</include>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="slide" start="0,0" end="0,147" time="150" easing="out" condition="true">Hidden</animation>
+				</control>
+
+		<control type="textbox" id="4001">
+					<posx>270</posx>
+					<posy>464</posy>
+					<width>950</width>
+					<height>60</height>
+					<label>$INFO[ListItem(2).Plot]</label>
+					<autoscroll delay="300000" time="1000">!Control.HasFocus(13)</autoscroll>
+					<font>mediumLow</font>
+					<include>textBox</include>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>Container.OnPrevious</visible>
+					<animation effect="slide" start="0,0" end="0,147" time="150" easing="out" condition="true">Hidden</animation>
+				</control>
+			</control>
+
+		<control type="group" id="4000"> 
+		<visible>![Control.IsVisible(4001) | Control.IsVisible(4002)]</visible>
 		<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
@@ -1272,6 +1396,14 @@
 					<include>watchedOverlay</include>
 					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
 				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>217</posy>
+					<width>39</width>
+					<height>24</height>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
 			</itemlayout>											
 			<focusedlayout height="260" width="200">
 				<control type="image">
@@ -1310,6 +1442,15 @@
 					<height>20</height>
 					<include>watchedOverlay</include>
 					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+					<include>focus_ThumbPoster</include>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>217</posy>
+					<width>39</width>
+					<height>24</height>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
 					<include>focus_ThumbPoster</include>
 				</control>
 			</focusedlayout>
@@ -1372,6 +1513,14 @@
 					<include>watchedOverlay</include>
 					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
 				</control>
+				<control type="image">
+					<posx>8</posx>
+					<posy>155</posy>
+					<width>39</width>
+					<height>24</height>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+				</control>
 			</itemlayout>											
 			<focusedlayout height="190" width="133">
 				<control type="image">
@@ -1410,6 +1559,15 @@
 					<include>watchedOverlay</include>
 					<include>focus_ThumbPosterInfo</include>
 					<visible>[Container.Content(movies) + Skin.HasSetting(overlayMovies)] | [Container.Content(tvshows) + Skin.HasSetting(overlayTVShows)]</visible>
+				</control>
+				<control type="image">
+					<posx>7</posx>
+					<posy>175</posy>
+					<width>39</width>
+					<height>24</height>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<include>focus_ThumbPoster</include>
 				</control>
 			</focusedlayout>
 		</control>
