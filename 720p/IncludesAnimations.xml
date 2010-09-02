@@ -170,14 +170,14 @@
 			<effect type="zoom" start="100" end="90" center="640,360" time="150" />
 			<effect type="fade" start="100" end="0" time="200" />
 		</animation>
-		<animation type="Visible">
+		<!--animation type="Visible">
 			<effect type="zoom" start="90" end="100" center="640,360" tween="back" time="250" />
 			<effect type="fade" start="0" end="100" time="400" />
 		</animation>
 		<animation type="Hidden">
 			<effect type="zoom" start="100" end="90" center="640,360" time="150" />
 			<effect type="fade" start="100" end="0" time="200" />
-		</animation>
+		</animation-->
 	</include>
 	
 	

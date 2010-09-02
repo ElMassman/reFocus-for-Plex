@@ -483,6 +483,13 @@
 				<enable>Skin.HasSetting(musicVis)</enable>
 				<include>settingsButton</include>
 			</control>
+			<control type="radiobutton" id="507">
+				<label>Use Black Background (for Plex theme)</label>
+				<onclick>Skin.ToggleSetting(plex)</onclick>
+				<onclick>XBMC.ReloadSkin()</onclick>
+				<selected>Skin.HasSetting(plex)</selected>
+				<include>settingsButton</include>
+			</control>
 		</control>
 
 

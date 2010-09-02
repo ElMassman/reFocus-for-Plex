@@ -724,6 +724,14 @@
 			<include>screentype</include>
 			<visible>Skin.HasSetting(backgroundVideoGlobal) + ![Window.IsActive(pictures) + Control.IsVisible(56)]</visible>
 		</control>
+
+		<include condition="!Skin.HasSetting(plex)">bluethemeback</include>
+		<include condition="Skin.HasSetting(plex)">blackthemeback</include>
+	</include>
+
+
+	<include name="bluethemeback">
+
 		<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
@@ -738,6 +746,26 @@
 			<visible>[![Window.IsActive(2) + Control.IsVisible(52)] + !Window.IsActive(2006)] + Skin.HasSetting(FanartGlobalAlt)</visible>
 			<include>transition2.5</include>
 		</control>
+
+	</include>
+
+	<include name="blackthemeback">
+
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background_plex.png</texture>
+			<visible>[![Window.IsActive(2) + Control.IsVisible(52)] + !Window.IsActive(2006)] + !Skin.HasSetting(FanartGlobalAlt)</visible>
+			<include>transition2.5</include>
+		</control>
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background2_plex.png</texture>
+			<visible>[![Window.IsActive(2) + Control.IsVisible(52)] + !Window.IsActive(2006)] + Skin.HasSetting(FanartGlobalAlt)</visible>
+			<include>transition2.5</include>
+		</control>
+
 	</include>
 	
 	

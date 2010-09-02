@@ -6,6 +6,8 @@
 		<posx>365</posx>
 		<posy>210</posy>
 	</coordinates>
+
+	<!--include>dialogOpen</include-->
 	
 	<controls>
 		
