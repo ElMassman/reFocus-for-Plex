@@ -281,7 +281,7 @@
 				<width>920</width>
 				<label>$INFO[ListItem.Year] • $INFO[ListItem.Duration] $LOCALIZE[12391] • $INFO[ListItem.Genre]</label>
 				<align>left</align>
-				<textcolor>data</textcolor>
+				<textcolor>Color2</textcolor>
 				<include>Heading3</include>
 				<visible>!IsEmpty(ListItem.Title) + Container.Content(movies)</visible>
 			</control>
