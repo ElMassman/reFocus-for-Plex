@@ -139,12 +139,12 @@
 						<thumb>settings/weather.png</thumb>
 						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
 					</item>
-					<item id="6">
+					<!--item id="6">
 						<label>$LOCALIZE[31980]</label>
 						<label2>$LOCALIZE[31980]</label2>
 						<thumb>settings/network.png</thumb>
 						<onclick>ActivateWindow(NetworkSettings)</onclick>
-					</item>
+					</item-->
 					<item id="7">
 						<label>13000</label>
 						<label2>$LOCALIZE[31982] · $LOCALIZE[31983] · $LOCALIZE[31984] · $LOCALIZE[31985]</label2>

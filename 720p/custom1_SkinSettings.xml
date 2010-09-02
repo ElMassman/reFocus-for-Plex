@@ -132,7 +132,6 @@
 			<control type="radiobutton" id="101">
 				<label>31936</label>
 				<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
-<onclick>Skin.ToggleSetting(hometimebackgrounds)</onclick>
 				<selected>!Skin.HasSetting(FanartSlideShow)</selected>
 				<include>settingsButton</include>
 			</control>
@@ -146,7 +145,6 @@
 			<control type="radiobutton" id="106">
 				<label>31987</label>
 				<onclick>Skin.ToggleSetting(hometimebackgrounds)</onclick>
-<onclick>Skin.ToggleSetting(FanartSlideShow)</onclick>
 				<selected>!Skin.ToggleSetting(hometimebackgrounds)</selected>
 				<include>settingsButton</include>
 			</control>
@@ -183,6 +181,19 @@
 				<label>Use Blue Overlay (Original Home Screen)</label>
 				<onclick>Skin.ToggleSetting(blueoriginalhome)</onclick>
 				<selected>Skin.HasSetting(blueoriginalhome)</selected>
+				<include>settingsButton</include>
+			</control>
+			<!--control type="button" id="109">
+				<description>Original Home Screen</description>
+				<label>Set Mac Name for Recently Added</label>
+				<onclick>Skin.SetString(string[macname])</onclick>
+				<include>settingsButton</include>
+			</control-->
+			<control type="radiobutton" id="110">
+				<description>Original Home Screen</description>
+				<label>Disable reFocus for Plex Logo (Default Home Screen)</label>
+				<onclick>Skin.ToggleSetting(plexhomelogo)</onclick>
+				<selected>Skin.HasSetting(plexhomelogo)</selected>
 				<include>settingsButton</include>
 			</control>
 		</control>

@@ -192,14 +192,14 @@
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenu</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenu</include>
 					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
@@ -208,7 +208,7 @@
 					<posy>25</posy>
 					<width>560</width>
 					<label>$LOCALIZE[31073]</label>
-					<font>smallCaps</font>
+					<font>listInfo</font>
 					<textcolor>Color2</textcolor>
 					<include>listMenu</include>
 				</control>
@@ -230,21 +230,21 @@
 					<width>650</width>
 					<height>128</height>
 					<texture border="0,30,0,30">views/list-focus.png</texture>
-					<visible>!ControlGroup(300).HasFocus</visible>
+					<visible>!ControlGroup(9000).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenuFocus</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>bigLow</font>
+					<font>listBig</font>
 					<include>listMenuFocus</include>
 					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
@@ -253,7 +253,7 @@
 					<posy>25</posy>
 					<width>560</width>
 					<label>$LOCALIZE[31073]</label>
-					<font>smallCaps</font>
+					<font>listInfo</font>
 					<include>listMenuFocus</include>
 				</control>
 				<control type="image">
@@ -264,6 +264,50 @@
 					<info>ListItem.StarRating</info>
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
+			</focusedlayout>
+			
+			<itemlayout condition="Container.Content(seasons)" width="560" height="69">
+				<control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>listBig</font>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>25</posy>
+					<width>540</width>
+					<label>$LOCALIZE[31073]</label>
+					<font>listInfo</font>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+				</control>
+			</itemlayout>
+			<focusedlayout condition="Container.Content(seasons)" width="560" height="69">
+				<control type="image">
+					<posy>-28</posy>
+					<width>650</width>
+					<height>122</height>
+					<texture border="0,30,0,30">views/list-focus.png</texture>
+					<visible>!ControlGroup(9000).HasFocus</visible>
+					<include>fadeinout</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<width>540</width>
+					<label>$INFO[ListItem.Label]</label>
+					<font>listBig</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>25</posy>
+					<width>540</width>
+					<label>$LOCALIZE[31073]</label>
+					<font>listInfo</font>
+					<include>listMenuFocus</include>
 				</control>
 			</focusedlayout>
 			
@@ -652,7 +696,7 @@
 					<include>watchedOverlay</include>
 				</control>
 				<control type="image">
-					<posx>40</posx>
+					<posx>36</posx>
 					<posy>137</posy>
 					<width>39</width>
 					<height>24</height>
@@ -1179,7 +1223,7 @@
 					<posx>453</posx>
 					<posy>256</posy>
 					<include>watchedOverlay</include>
-					<visible>!Control.HasFocus(8000) + [Container.Content(overlayEpisodes) + Skin.HasSetting(overlayTVShows) | Container.Content(videofiles) + Skin.HasSetting(overlayFiles)]</visible>
+					<visible>!Control.HasFocus(8000) + [Container.Content(overlayEpisodes) | Skin.HasSetting(overlayTVShows) | Container.Content(videofiles) | Skin.HasSetting(overlayFiles)]</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout height="300" width="485">
@@ -1218,7 +1262,7 @@
 					<posy>256</posy>
 					<include>watchedOverlay</include>
 					<include>focus_SlideWideOverlay</include>
-					<visible>!Control.HasFocus(8000) + [Container.Content(overlayEpisodes) + Skin.HasSetting(overlayTVShows) | Container.Content(videofiles) + Skin.HasSetting(overlayFiles)]</visible>
+					<visible>!Control.HasFocus(8000) + [Container.Content(overlayEpisodes) | Skin.HasSetting(overlayTVShows) | Container.Content(videofiles) | Skin.HasSetting(overlayFiles)]</visible>
 				</control>
 			</focusedlayout>	
 		</control>

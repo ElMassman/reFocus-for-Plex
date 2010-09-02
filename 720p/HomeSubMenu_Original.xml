@@ -30,6 +30,11 @@
 						<label>Picture Plug-ins</label>
 						<onclick>ActivateWindow(2)</onclick>
 					</item>
+					<item id="99">
+					<label>31976</label>
+					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
+				<visible>Skin.HasSetting(plexonlineaccessories)</visible>
+				</item>
 				</content>
 			</control>		
 		
@@ -47,11 +52,6 @@
 				<include>homeSubFocus</include>
 				<include>homeMenusLayout</include>
 				<content>
-					<item id="99">
-					<label>31976</label>
-					<onclick>Plex.ActivateWindow(1,plex://localhost/system/appstore,return)</onclick>
-				<visible>Skin.HasSetting(plexonlineaccessories)</visible>
-				</item>
 					<item id="1">
 						<label>$LOCALIZE[1036]</label>
 						<onclick>ActivateWindow(Favourites)</onclick>
@@ -114,11 +114,11 @@
 						<onclick>ActivateWindow(picturessettings)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
 					</item>
-					<item id="7">
+					<!--item id="7">
 						<label>Update Plex</label>
 						<onclick>ActivateWindow(networksettings)</onclick>
 						<onclick>Dialog.Close(shutdownmenu)</onclick>
-					</item>
+					</item-->
 					<item id="8">
 						<label>$LOCALIZE[8]</label>
 						<onclick>ActivateWindow(weathersettings)</onclick>

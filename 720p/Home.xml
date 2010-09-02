@@ -124,12 +124,12 @@
 			<aspectratio align="left">stretch</aspectratio>
 			<texture>home/menuBackground.png</texture>
 		</control>
-		<control type="image">
+		<!--control type="image">
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio align="right">stretch</aspectratio>
 			<texture>home/menuBackground2.png</texture>
-		</control>
+		</control-->
 		<control type="image" id="1">
 			<include>screentype</include>
 			<texture>home/homeOverlay.png</texture>
@@ -278,7 +278,7 @@
 	<!-- Plex Logo -->
 	
 	<control type="group">
-		<visible>!Skin.HasSetting(originalhome)</visible>
+		<visible>![Skin.HasSetting(originalhome) | Skin.HasSetting(plexhomelogo)]</visible>
 
 	<control type="image">
 			<posx>30</posx>

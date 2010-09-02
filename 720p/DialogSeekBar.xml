@@ -1,4 +1,4 @@
-﻿<window id="115">
+<window id="115">
 	<defaultcontrol>901</defaultcontrol>
 	<visible>![Window.IsVisible(script-XBMC-Subtitles-main.xml) | Window.IsActive(101) | Window.IsActive(2901) | Window.IsActive(142) ] + [Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
 

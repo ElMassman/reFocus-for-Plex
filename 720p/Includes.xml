@@ -1,7 +1,8 @@
 <includes>
 	<include file="Defaults.xml">-</include>
+	<include file="Includes_Plex.xml">-</include>
 	
-	<!--<include file="ViewsFiles.xml">-</include>-->
+	<include file="ViewsFiles.xml">-</include>
 	<include file="ViewsMusic.xml">-</include>
 	<include file="ViewsVideo.xml">-</include>
 	<include file="ViewsPictures.xml">-</include>
