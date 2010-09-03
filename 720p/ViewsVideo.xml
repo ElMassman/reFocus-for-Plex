@@ -19,7 +19,7 @@
 			<include>contextMenuHide</include>
 			<visible>!Window.IsActive(progressdialog)</visible>
 	
-			<itemlayout condition="IsEmpty(Container.FolderPath) | Window.IsActive(videofiles)" width="625" height="40">
+			<itemlayout condition="[IsEmpty(Container.FolderPath) | Window.IsActive(videofiles)] + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(plugincontent)]" width="625" height="40">
 				<control type="label">
 					<posx>40</posx>
 					<width>500</width>
@@ -36,7 +36,7 @@
 					<include>listMenu</include>
 				</control>
 			</itemlayout>
-			<focusedlayout condition="IsEmpty(Container.FolderPath) | Window.IsActive(videofiles)" width="625" height="40">
+			<focusedlayout condition="[IsEmpty(Container.FolderPath) | Window.IsActive(videofiles)] + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(plugincontent)]" width="625" height="40">
 				<control type="image">
 					<posy>-28</posy>
 					<width>650</width>
@@ -187,28 +187,28 @@
 				</control>
 			</focusedlayout>
 	
-			<itemlayout condition="Container.Content(tvshows)" width="560" height="67">
+			<itemlayout condition="Container.Content(tvshows)" width="560" height="69">
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
-					<font>listBig</font>
+					<font>bigLow</font>
 					<include>listMenu</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>listBig</font>
+					<font>bigLow</font>
 					<include>listMenu</include>
 					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
-					<posy>25</posy>
+					<posy>27</posy>
 					<width>560</width>
 					<label>$LOCALIZE[31073]</label>
-					<font>listInfo</font>
+					<font>smallCaps</font>
 					<textcolor>Color2</textcolor>
 					<include>listMenu</include>
 				</control>
@@ -223,37 +223,44 @@
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
 			</itemlayout>
-			<focusedlayout condition="Container.Content(tvshows)" width="560" height="65">
+			<focusedlayout condition="Container.Content(tvshows)" width="560" height="85">
 				<control type="image">
-					<posx>0</posx>
-					<posy>-30</posy>
+					<posy>-28</posy>
 					<width>650</width>
-					<height>128</height>
+					<height>145</height>
 					<texture border="0,30,0,30">views/list-focus.png</texture>
-					<visible>!ControlGroup(9000).HasFocus</visible>
+					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Title]</label>
-					<font>listBig</font>
+					<font>bigLow</font>
 					<include>listMenuFocus</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>listBig</font>
+					<font>bigLow</font>
 					<include>listMenuFocus</include>
 					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<posx>40</posx>
-					<posy>25</posy>
+					<posy>27</posy>
+					<width>560</width>
+					<label>$INFO[ListItem.Genre]</label>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>48</posy>
 					<width>560</width>
 					<label>$LOCALIZE[31073]</label>
-					<font>listInfo</font>
+					<font>smallCaps</font>
 					<include>listMenuFocus</include>
 				</control>
 				<control type="image">
@@ -272,46 +279,47 @@
 					<posx>40</posx>
 					<width>540</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>listBig</font>
+					<font>bigLow</font>
 					<include>listMenu</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
-					<posy>25</posy>
+					<posy>27</posy>
 					<width>540</width>
 					<label>$LOCALIZE[31073]</label>
-					<font>listInfo</font>
+					<font>smallCaps</font>
 					<textcolor>Color2</textcolor>
 					<include>listMenu</include>
 				</control>
 			</itemlayout>
 			<focusedlayout condition="Container.Content(seasons)" width="560" height="69">
 				<control type="image">
-					<posy>-28</posy>
+					<posx>0</posx>
+					<posy>-26</posy>
 					<width>650</width>
 					<height>122</height>
 					<texture border="0,30,0,30">views/list-focus.png</texture>
-					<visible>!ControlGroup(9000).HasFocus</visible>
+					<visible>!ControlGroup(300).HasFocus</visible>
 					<include>fadeinout</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
 					<width>540</width>
 					<label>$INFO[ListItem.Label]</label>
-					<font>listBig</font>
+					<font>bigLow</font>
 					<include>listMenuFocus</include>
 				</control>
 				<control type="label">
 					<posx>40</posx>
-					<posy>25</posy>
+					<posy>27</posy>
 					<width>540</width>
 					<label>$LOCALIZE[31073]</label>
-					<font>listInfo</font>
+					<font>smallCaps</font>
 					<include>listMenuFocus</include>
 				</control>
 			</focusedlayout>
 			
-			<itemlayout condition="Container.Content(seasons)" width="560" height="69">
+			<itemlayout condition="Container.Content(plugincontent)" width="560" height="69">
 				<control type="label">
 					<posx>40</posx>
 					<width>540</width>
@@ -321,15 +329,24 @@
 				</control>
 				<control type="label">
 					<posx>40</posx>
-					<posy>25</posy>
+					<posy>27</posy>
 					<width>540</width>
-					<label>$LOCALIZE[31073]</label>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>smallCaps</font>
+					<textcolor>Color2</textcolor>
+					<include>listMenu</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>27</posy>
+					<width>540</width>
+					<label>$INFO[ListItem.Year]</label>
 					<font>smallCaps</font>
 					<textcolor>Color2</textcolor>
 					<include>listMenu</include>
 				</control>
 			</itemlayout>
-			<focusedlayout condition="Container.Content(seasons)" width="560" height="69">
+			<focusedlayout condition="Container.Content(plugincontent)" width="560" height="69">
 				<control type="image">
 					<posy>-28</posy>
 					<width>650</width>
@@ -347,9 +364,17 @@
 				</control>
 				<control type="label">
 					<posx>40</posx>
-					<posy>25</posy>
+					<posy>27</posy>
 					<width>540</width>
-					<label>$LOCALIZE[31073]</label>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>smallCaps</font>
+					<include>listMenuFocus</include>
+				</control>
+				<control type="label">
+					<posx>40</posx>
+					<posy>27</posy>
+					<width>540</width>
+					<label>$INFO[ListItem.Year]</label>
 					<font>smallCaps</font>
 					<include>listMenuFocus</include>
 				</control>
@@ -363,7 +388,7 @@
 					<font>bigLow</font>
 					<include>listMenu</include>
 				</control>
-				<control type="label">
+				<!--control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Title]</label>
@@ -377,12 +402,12 @@
 					<font>bigLow</font>
 					<include>listMenu</include>
 					<visible>IsEmpty(ListItem.Title)</visible>
-				</control>
+				</control-->
 				<control type="label">
 					<posx>40</posx>
 					<posy>27</posy>
 					<width>540</width>
-					<label>$LOCALIZE[31074]</label>
+					<label>$LOCALIZE[31074] • $INFO[ListItem.date]</label>
 					<font>smallCaps</font>
 					<textcolor>Color2</textcolor>
 					<include>listMenu</include>
@@ -415,7 +440,7 @@
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
 				</control>
-				<control type="label">
+				<!--control type="label">
 					<posx>40</posx>
 					<width>440</width>
 					<label>$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Title]</label>
@@ -429,7 +454,7 @@
 					<font>bigLow</font>
 					<include>listMenuFocus</include>
 					<visible>IsEmpty(ListItem.Title)</visible>
-				</control>
+				</control-->
 				<control type="label">
 					<posx>40</posx>
 					<posy>27</posy>
