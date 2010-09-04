@@ -34,6 +34,72 @@
 	<include file="IncludesDialogs.xml">-</include>
 	<include file="IncludesPageControl.xml">-</include>
 
+	<!-- Theme overlays -->
+
+		<include name="bluethemeoverlay">
+		
+			<control type="group">
+			<visible>!Skin.HasSetting(originalhome) | [Skin.HasSetting(originalhome) + Skin.HasSetting(blueoriginalhome)]</visible>
+	
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background.png</texture>
+
+			<animation type="Conditional" condition="True">
+				<effect type="fade" start="0" end="50" time="2000" delay="100" />
+			</animation>
+			<visible>!Skin.HasSetting(FanartGlobalAlt)</visible>
+		</control>
+
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background2.png</texture>
+
+			<animation type="Conditional" condition="True">
+				<effect type="fade" start="0" end="80" time="2000" delay="100" />
+			</animation>
+			<visible>Skin.HasSetting(FanartGlobalAlt)</visible>
+	
+		</control>
+
+		</control>
+
+		</include>
+	
+		<include name="plexthemeoverlay">
+		
+			<control type="group">
+			<visible>!Skin.HasSetting(originalhome) | [Skin.HasSetting(originalhome) + Skin.HasSetting(blueoriginalhome)]</visible>
+	
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background_plex.png</texture>
+
+			<animation type="Conditional" condition="True">
+				<effect type="fade" start="0" end="50" time="2000" delay="100" />
+			</animation>
+			<visible>!Skin.HasSetting(FanartGlobalAlt)</visible>
+		</control>
+
+		<control type="image">
+			<aspectratio>scale</aspectratio>
+			<include>screentype</include>
+			<texture background="true">backgrounds/background2_plex.png</texture>
+
+			<animation type="Conditional" condition="True">
+				<effect type="fade" start="0" end="80" time="2000" delay="100" />
+			</animation>
+			<visible>Skin.HasSetting(FanartGlobalAlt)</visible>
+	
+		</control>
+
+		</control>
+
+		</include>
+
 
 <!-- ALL SCREEN INCLUDES --------------------------------------------------------------------->
 	<include name="allscreens">

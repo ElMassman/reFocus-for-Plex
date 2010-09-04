@@ -557,6 +557,13 @@
 				<selected>Skin.HasSetting(listEpisodePlot)</selected>
 				<include>settingsButton</include>
 			</control>
+			<control type="radiobutton" id="618">
+				<description>enable episode plot in episode listview</description>
+				<label>Enable Plot in Movie Fanart List View</label>
+				<onclick>Skin.ToggleSetting(listMoviePlot)</onclick>
+				<selected>Skin.HasSetting(listMoviePlot)</selected>
+				<include>settingsButton</include>
+			</control>
 			<control type="radiobutton" id="609">
 				<label>31922</label>
 				<onclick>Skin.ToggleSetting(overlayMovies)</onclick>

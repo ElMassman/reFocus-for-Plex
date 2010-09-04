@@ -132,7 +132,7 @@
 			<control type="group">
 				<posx>700</posx>
 				<posy>415</posy>
-				<visible>Control.IsVisible(50) + Container.Content(episodes) + Skin.HasSetting(listEpisodePlot)</visible>
+				<visible>Control.IsVisible(50) + [[Container.Content(movies) + Skin.HasSetting(listMoviePlot) + Skin.HasSetting(ListViewFanart)] | [Container.Content(episodes) + Skin.HasSetting(listEpisodePlot)]]</visible>
 				<include>transition2</include>
 				<control type="textbox" id="8">
 					<width>485</width>
@@ -147,7 +147,7 @@
 			<control type="group">
 				<posx>891</posx>
 				<posy>450</posy>
-				<visible>[[Container.Content(movies) | Container.Content(tvshows)] + Skin.HasSetting(ListViewFanart)] | [Container.Content(episodes) + !Skin.HasSetting(listEpisodePlot)]</visible>
+				<visible>[Container.Content(tvshows) + Skin.HasSetting(ListViewFanart)] | [Container.Content(episodes) + !Skin.HasSetting(listEpisodePlot)] | [Container.Content(movies) + ![Skin.HasSetting(listMoviePlot) + Skin.HasSetting(ListViewFanart)]]</visible>
 				<include>typeFlagsGroup50</include>
 			</control>
 		</control>
@@ -233,6 +233,21 @@
 				<aspectratio align="left">keep</aspectratio>
 			</control-->
 		</control>
+
+			<control type="image">
+					<posx>692</posx>
+					<posy>363</posy>
+					<width>39</width>
+					<height>24</height>
+					<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/biglistresolution/,.png]</texture>
+					<aspectratio align="right">keep</aspectratio>
+					<visible>Control.IsVisible(50) + [[Container.Content(movies) + Skin.HasSetting(listMoviePlot)] | [Container.Content(episodes) + Skin.HasSetting(listEpisodePlot)]] + Skin.HasSetting(ListViewFanart)</visible>
+			<include>infoDialogHide</include>
+			<include>transition2</include>
+			<include>contextMenuHide</include>
+				</control>
+
+		
 
 
 <!-- SLIDE VIEW MOVIES & TVSHOWS ----------------------------------------------------------------------------------------------->

@@ -59,33 +59,10 @@
 	
 		<include>slideshows</include>
 
-		<control type="group">
-			<visible>!Skin.HasSetting(originalhome) | [Skin.HasSetting(originalhome) + Skin.HasSetting(blueoriginalhome)]</visible>
-	
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screentype</include>
-			<texture background="true">backgrounds/background.png</texture>
+		<include condition="!Skin.HasSetting(plex)">bluethemeoverlay</include>
 
-			<animation type="Conditional" condition="True">
-				<effect type="fade" start="0" end="50" time="2000" delay="100" />
-			</animation>
-			<visible>!Skin.HasSetting(FanartGlobalAlt)</visible>
-		</control>
+		<include condition="Skin.HasSetting(plex)">plexthemeoverlay</include>
 
-		<control type="image">
-			<aspectratio>scale</aspectratio>
-			<include>screentype</include>
-			<texture background="true">backgrounds/background2.png</texture>
-
-			<animation type="Conditional" condition="True">
-				<effect type="fade" start="0" end="80" time="2000" delay="100" />
-			</animation>
-			<visible>Skin.HasSetting(FanartGlobalAlt)</visible>
-	
-		</control>
-
-		</control>
 
 		<control type="videowindow">
 			<include>screentype</include>
@@ -145,7 +122,7 @@
 
 
 <!-- TIME -------------------------------------------------------------------------------------------------------------------------->
-	<include condition="!Skin.HasSetting(homeTime) + ![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">clock</include>
+	<include condition="!Skin.HasSetting(homeTime) + ![Window.IsActive(10112) | Window.IsActive(10133) | Window.IsActive(107)]">libClock</include>
 		
 		
 <!-- CALL MENU -------------------------------------------------------------------------------------------------------------------------->
