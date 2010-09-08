@@ -181,7 +181,7 @@
 					<onleft>-</onleft>
 					<onup>30</onup>
 					<ondown>3</ondown>
-					<onright>579</onright>
+					<onright>573</onright>
 					<onclick>SetFocus(40)</onclick>
 					<include>contextButton</include>
 					<visible allowhiddenfocus="true">!ControlGroup(40).HasFocus()</visible>
@@ -195,12 +195,21 @@
 					<itemgap>-125</itemgap>
 					<visible allowhiddenfocus="true">ControlGroup(40).HasFocus()</visible>
 
-					<control type="button" id="41">
+					<!--control type="button" id="41">
 						<label>App Panel</label>
 						<onleft>1</onleft>
 						<onright>1</onright>
 						<onup>1</onup>
+						<ondown>42</ondown>
 						<onclick>Container.SetViewMode(579)</onclick>
+						<include>contextButton</include>
+					</control-->
+					<control type="button" id="42">
+						<label>Plug-ins</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onup>41</onup>
+						<onclick>Container.SetViewMode(573)</onclick>
 						<include>contextButton</include>
 					</control>
 				</control>
@@ -222,7 +231,7 @@
 					<posy>86</posy>
 					<label>1036</label>
 					<onleft>50</onleft>
-					<onright>50</onright>
+					<onright>573</onright>
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<onup>3</onup>
 					<ondown>1</ondown>

@@ -209,6 +209,7 @@
 		<lefttexture>-</lefttexture>
 		<midtexture border="10.5">dialogs/progressSlider.png</midtexture>
 		<righttexture>-</righttexture>
+		<colordiffuse>ProgressSlider</colordiffuse>
 		<overlaytexture>dialogs/progress_over.png</overlaytexture>
 	</default>
 	
