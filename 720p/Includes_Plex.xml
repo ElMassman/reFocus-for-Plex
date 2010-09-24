@@ -79,8 +79,8 @@
       <control type="label">
         <posx>500</posx>
         <width>500</width>
-        <font>NPArtistFont</font>
-        <textcolor>blue</textcolor>
+        <font>mediumBold</font>
+        <textcolor>Color0</textcolor>
         <label>$INFO[MusicPlayer.Artist]</label>
         <align>right</align>
       </control>
@@ -89,8 +89,8 @@
         <posx>500</posx>
         <posy>35</posy>
         <width>500</width>
-        <font>NPTitleFont</font>
-        <textcolor>grey2</textcolor>
+        <font>medium</font>
+        <textcolor>Color3</textcolor>
         <label>$INFO[MusicPlayer.Album]</label>
         <align>right</align>
       </control>
@@ -99,8 +99,8 @@
         <posx>500</posx>
         <posy>108</posy>
         <width>500</width>
-        <font>NPAlbumFont</font>
-        <textcolor>white</textcolor>
+        <font>mediumBold</font>
+        <textcolor>Color2</textcolor>
         <label>$INFO[MusicPlayer.Title]</label>
         <align>right</align>
       </control>
@@ -115,8 +115,8 @@
         <posx>500</posx>
 	<posy>76</posy>
         <width>500</width>
-        <font>NPNextFont</font>
-        <textcolor>Darker</textcolor>
+        <font>mediumBold</font>
+        <textcolor>Color0</textcolor>
         <label>Next Track</label>
         <align>right</align>
       </control>
@@ -125,8 +125,8 @@
         <posx>500</posx>
         <posy>30</posy>
         <width>500</width>
-        <font>NPNextFont</font>
-        <textcolor>blue</textcolor>
+        <font>medium</font>
+        <textcolor>Color3</textcolor>
         <label>$INFO[MusicPlayer.Offset(1).Artist]</label>
         <align>right</align>
       </control>
@@ -135,8 +135,8 @@
         <posx>500</posx>
         <posy>53</posy>
         <width>500</width>
-        <font>NPNextFont</font>
-        <textcolor>white</textcolor>
+        <font>mediumBold</font>
+        <textcolor>Color2</textcolor>
         <label>$INFO[MusicPlayer.Offset(1).Title]</label>
         <align>right</align>
       </control>
@@ -150,8 +150,8 @@
       <control type="label">
         <posx>0</posx>
         <width>500</width>
-        <font>NPArtistFont</font>
-        <textcolor>blue</textcolor>
+        <font>mediumBold</font>
+        <textcolor>Color0</textcolor>
         <label>$INFO[MusicPlayer.Artist]</label>
         <align>left</align>
       </control>
@@ -160,8 +160,8 @@
         <posx>0</posx>
         <posy>35</posy>
         <width>500</width>
-        <font>NPTitleFont</font>
-        <textcolor>grey2</textcolor>
+        <font>medium</font>
+        <textcolor>Color3</textcolor>
         <label>$INFO[MusicPlayer.Album]</label>
         <align>left</align>
       </control>
@@ -170,8 +170,8 @@
         <posx>0</posx>
         <posy>108</posy>
         <width>500</width>
-        <font>NPAlbumFont</font>
-        <textcolor>white</textcolor>
+        <font>mediumBold</font>
+        <textcolor>Color2</textcolor>
         <label>$INFO[MusicPlayer.Title]</label>
         <align>left</align>
       </control>
@@ -186,8 +186,8 @@
         <posx>0</posx>
 	<posy>76</posy>
         <width>500</width>
-        <font>NPNextFont</font>
-        <textcolor>Darker</textcolor>
+        <font>mediumBold</font>
+        <textcolor>Color0</textcolor>
         <label>Next Track</label>
         <align>left</align>
       </control>
@@ -196,8 +196,8 @@
         <posx>0</posx>
         <posy>30</posy>
         <width>500</width>
-        <font>NPNextFont</font>
-        <textcolor>blue</textcolor>
+        <font>medium</font>
+        <textcolor>Color3</textcolor>
         <label>$INFO[MusicPlayer.Offset(1).Artist]</label>
         <align>left</align>
       </control>
@@ -206,8 +206,8 @@
         <posx>0</posx>
         <posy>53</posy>
         <width>500</width>
-        <font>NPNextFont</font>
-        <textcolor>white</textcolor>
+        <font>mediumBold</font>
+        <textcolor>Color2</textcolor>
         <label>$INFO[MusicPlayer.Offset(1).Title]</label>
         <align>left</align>
       </control>

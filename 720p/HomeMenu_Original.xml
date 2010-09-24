@@ -31,6 +31,11 @@
 					<label>31914</label>
 					<onclick>SetFocus(1110)</onclick>
 				</item>
+				<item id="2">
+					<label>iTunes</label>
+					<onclick>SetFocus(1120)</onclick>
+					<visible>Skin.HasSetting(iTunesHome)</visible>
+				</item>
 				<item id="4">
 					<label>$LOCALIZE[31006]</label>
 					<onclick>SetFocus(1140)</onclick>

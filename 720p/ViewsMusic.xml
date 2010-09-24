@@ -20,7 +20,7 @@
 			<include>contextMenuHide</include>
 			<visible>!Window.IsActive(progressdialog)</visible>
 	
-			<itemlayout condition="Window.IsActive(musicplaylist)" width="625" height="40">
+			<!--itemlayout condition="Window.IsActive(musicplaylist)" width="625" height="40">
 				<control type="label">
 					<posx>40</posx>
 					<width>500</width>
@@ -82,7 +82,7 @@
 					<include>listMenuFocus</include>
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
-			</focusedlayout>
+			</focusedlayout-->
 	
 			<itemlayout condition="IsEmpty(Container.FolderPath) | Container.Content(artists)" width="625" height="40">
 				<control type="image">

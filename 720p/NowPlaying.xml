@@ -17,13 +17,18 @@
 	<control type="image">
 			<aspectratio>scale</aspectratio>
 			<include>screentype</include>
-			<texture background="true">backgrounds/background2.png</texture>
+			<texture background="true">$INFO[MusicPlayer.Fanart]</texture>
 
 			<animation type="Conditional" condition="True">
 				<effect type="fade" start="0" end="100" time="2000" delay="0" />
 			</animation>
 	
 		</control>
+
+	<include condition="!Skin.HasSetting(plex)">bluethemeoverlay
+</include>
+
+		<include condition="Skin.HasSetting(plex)">plexthemeoverlay</include>
     
     <!-- Normal view -->
     <control type="group">

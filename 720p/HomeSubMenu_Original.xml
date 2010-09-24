@@ -36,6 +36,39 @@
 				<visible>Skin.HasSetting(plexonlineaccessories)</visible>
 				</item>
 				</content>
+			</control>
+
+<!-- PLUG-IN SUBMENU ----------------------------------------------------------------------------------------------->	
+			<control type="list" id="1120">
+				<posx>-800</posx>
+				<width>900</width>
+				<height>900</height>
+				<onup>1120</onup>
+				<ondown>1120</ondown>
+				<onleft>300</onleft>
+				<orientation>vertical</orientation>
+				<scrolltime>150</scrolltime>
+				<include>homeSubFocus</include>
+				<include>homeMenusLayout</include>
+				<visible allowhiddenfocus="true">Container(300).HasFocus(2)</visible>
+				<content>
+					<item id="1">
+						<label>Artists</label>
+						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Artists/,return)</onclick>
+					</item>
+					<item id="2">
+						<label>Compilations</label>
+						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Compilations/,return)</onclick>
+					</item>
+					<item id="3">
+						<label>Tracks</label>
+						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Tracks/,return)</onclick>
+					</item>
+					<item id="3">
+						<label>Playlists</label>
+						<onclick>ActivateWindow(10501,plex://localhost./music/iTunes/Playlists/,return)</onclick>
+					</item>
+				</content>
 			</control>		
 		
 <!-- ACCESSORIES SUBMENU ----------------------------------------------------------------------------------------------->	

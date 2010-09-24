@@ -28,6 +28,7 @@
 					<posx>40</posx>
 					<width>570</width>
 					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow</font>
 					<include>listMenu</include>
 				</control>
 				<control type="label">
@@ -68,6 +69,7 @@
 					<posx>40</posx>
 					<width>570</width>
 					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow</font>
 					<include>listMenuFocus</include>
 				</control>
 				<control type="label">

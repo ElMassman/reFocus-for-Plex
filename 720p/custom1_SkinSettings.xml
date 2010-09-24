@@ -212,6 +212,13 @@
 			<itemgap>0</itemgap>
 			<visible>Skin.String(SkinSettings,2)</visible>
 			<include>transition2</include>
+			<control type="radiobutton" id="299">
+				<description>show iTunes entry</description>
+				<label>Show iTunes in Main Menu</label>
+				<onclick>Skin.ToggleSetting(iTunesHome)</onclick>
+				<selected>!Skin.HasSetting(iTunesHome)</selected>
+				<include>settingsButton</include>
+			</control>
 			<control type="radiobutton" id="201">
 				<description>show accessories entry</description>
 				<label>31955</label>

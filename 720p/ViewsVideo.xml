@@ -24,6 +24,7 @@
 					<posx>40</posx>
 					<width>500</width>
 					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow</font>
 					<include>listMenu</include>
 				</control>
 				<control type="label">
@@ -47,6 +48,7 @@
 					<posx>40</posx>
 					<width>500</width>
 					<label>$INFO[ListItem.Label]</label>
+					<font>bigLow</font>
 					<include>listMenuFocus</include>
 				</control>
 				<control type="label">
@@ -112,6 +114,14 @@
 					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+					</control>
 			</itemlayout>
 			<focusedlayout condition="Container.Content(movies)" width="560" height="85">
 				<control type="image">
@@ -185,6 +195,13 @@
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
 			</focusedlayout>
 	
 			<itemlayout condition="Container.Content(tvshows)" width="560" height="69">
@@ -222,6 +239,14 @@
 					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+					</control>
 			</itemlayout>
 			<focusedlayout condition="Container.Content(tvshows)" width="560" height="85">
 				<control type="image">
@@ -272,6 +297,13 @@
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
 			</focusedlayout>
 			
 			<itemlayout condition="Container.Content(seasons)" width="560" height="69">
@@ -291,6 +323,14 @@
 					<textcolor>Color2</textcolor>
 					<include>listMenu</include>
 				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+					</control>
 			</itemlayout>
 			<focusedlayout condition="Container.Content(seasons)" width="560" height="69">
 				<control type="image">
@@ -317,6 +357,13 @@
 					<font>smallCaps</font>
 					<include>listMenuFocus</include>
 				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
 			</focusedlayout>
 			
 			<itemlayout condition="Container.Content(plugincontent)" width="560" height="69">
@@ -422,6 +469,14 @@
 					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<animation effect="fade" end="30" time="0" condition="true">Conditional</animation>
+					</control>
 			</itemlayout>
 			<focusedlayout condition="Container.Content(episodes)" width="560" height="69">
 				<control type="image">
@@ -473,6 +528,13 @@
 					<aspectratio align="right">keep</aspectratio>
 					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>13</posy>
+					<width>20</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					</control>
 			</focusedlayout>
 	
 			<itemlayout condition="Container.Content(musicvideos)" width="560" height="65">
