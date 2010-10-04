@@ -76,12 +76,6 @@
 		</control>
 		<control type="label">
 			<width>750</width>
-			<label>$INFO[ListItem.PlotOutline]</label>
-			<include>Heading1</include>
-			<visible>Container.Content(movies) + IsEmpty(ListItem.Tagline) + IsEmpty(ListItem.Property(ReleaseDate)) + !IsEmpty(ListItem.PlotOutline)</visible>
-		</control>
-		<control type="label">
-			<width>750</width>
 			<label>$INFO[ListItem.Plot]</label>
 			<include>Heading1</include>
 			<visible>Container.Content(movies) + [IsEmpty(ListItem.Tagline) + IsEmpty(ListItem.PlotOutline) + IsEmpty(ListItem.Property(ReleaseDate))]</visible>
@@ -130,9 +124,9 @@
 		</control>
 		<control type="label" id="1">
 			<width>740</width>
-			<label>$LOCALIZE[572] [COLOR=Color1]$INFO[ListItem.Studio][/COLOR]</label>
+			<label>$LOCALIZE[572] [COLOR=Color1]$INFO[Listitem.Property(mediaTag-Studio)][/COLOR]</label>
 			<include>infoDialogMeta</include>
-			<visible>!IsEmpty(ListItem.Studio) + !stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
+			<visible>!IsEmpty(Listitem.Property(mediaTag-Studio))</visible>
 		</control>
 		<control type="label" id="1">
 			<width>740</width>
@@ -157,12 +151,6 @@
 		</control>
 		<control type="label" id="1">
 			<width>740</width>
-			<label>$INFO[ListItem.Studio]</label>
-			<include>infoDialogMeta</include>
-			<visible>stringcompare(container.folderpath,plugin://video/Apple Movie Trailers Lite) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers II) | stringcompare(container.folderpath,plugin://video/Apple Movie Trailers)</visible>
-		</control>
-		<control type="label" id="1">
-			<width>740</width>
 			<label>$LOCALIZE[563] [COLOR=Color1]$INFO[ListItem.MPAA][/COLOR]</label>
 			<include>infoDialogMeta</include>
 			<visible>!IsEmpty(ListItem.MPAA)</visible>
@@ -180,7 +168,7 @@
 		</control>
 		<control type="textbox" id="4">
 			<width>740</width>
-			<height>147</height>
+			<height>183</height>
 			<label>$INFO[ListItem.PlotOutline]</label>
 			<include>textBox</include>
 		</control>
