@@ -17,7 +17,7 @@
 			<include>transition2</include>
 			<include>infoDialogHide</include>
 			<include>contextMenuHide</include>
-			<visible>!Window.IsActive(progressdialog)</visible>
+			<visible>!Container.Content(plugincontent)</visible>
 	
 			<itemlayout condition="[IsEmpty(Container.FolderPath) | Window.IsActive(videofiles)] + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(plugincontent)]" width="625" height="40">
 				<control type="label">

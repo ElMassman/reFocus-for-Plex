@@ -212,6 +212,13 @@
 						<onclick>Container.SetViewMode(573)</onclick>
 						<include>contextButton</include>
 					</control>
+					<control type="button" id="45">
+						<label>next</label>
+						<onleft>1</onleft>
+						<onright>1</onright>
+						<onclick>Container.NextViewMode</onclick>
+						<include>contextButton</include>
+					</control>
 				</control>
 				
 				<control type="button" id="3">
